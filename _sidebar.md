@@ -1,0 +1,2 @@
+* [Home](/)
+* [Troubleshooting](Troubleshooting.md)
