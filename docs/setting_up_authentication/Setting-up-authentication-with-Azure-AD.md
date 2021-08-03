@@ -1,3 +1,5 @@
+# Setting up authentication with Azure AD
+
 The following guide will assist you in configuring your application to use Azure Active Directory for authentication. 
 ## Part 1: Configure a new application in Azure AD
 1. Log into portal.azure.com with administrative credentials, select `All services` and select `Azure Active Directory`
@@ -20,7 +22,7 @@ The following guide will assist you in configuring your application to use Azure
 5. Specify the `client secret` obtained from the Azure AD setup process.
 6. Set the authority as appropriate for your tenant eg for `lithnet.io` it would be `https://login.microsoftonline.com/lithnet.io`
 
-![](images/ui-page-authentication-oidc-azuread.png)
+![](../images/ui-page-authentication-oidc-azuread.png)
 
 ## Part 3: Enable multi-factor authentication
 For further security, you can set up a conditional access policy to require multi-factor authentication for the app

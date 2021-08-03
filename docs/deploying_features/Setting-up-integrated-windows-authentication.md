@@ -1,3 +1,5 @@
+# Setting up integrated windows authentication
+
 The following guide will assist you in configuring your application to use Integrated Windows Authentication (IWA).
 
 Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multi-factor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [[Azure AD|Setting up authentication with Azure AD]] and [[Okta|Setting up authentication with Okta]]. 
@@ -20,7 +22,7 @@ setspn -s HTTP/accessmanager.lithnet.local AMSWEB01
 ```
 
 ## Part 2: Configure Lithnet Access Manager
-![](images/ui-page-authentication-iwa.png)
+![](../images/ui-page-authentication-iwa.png)
 
 1. Select `Integrated windows authentication` as the authentication provider
 2. Select `Negotiate` for the authentication scheme. 

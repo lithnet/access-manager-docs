@@ -1,4 +1,6 @@
-# Prerequisites
+# Installing the Access Manager Agent
+
+## Prerequisites
 In order to install the Access Manager Agent, the following prerequisites must be met
 1. Windows 8.1 or Windows Server 2012 R2 or later 
 2. [.NET Framework Runtime](https://dotnet.microsoft.com/download) 4.7.2 or later installed
@@ -11,4 +13,4 @@ We recommend using a configuration management tool such as SCCM to deploy the ag
 2. Run the AMA installation package. Follow the prompts to install the application.
 
 ## Configure the agent via Group Policy
-The Access Manager agent doesn't do anything until it's configured via a group policy. Follow the [[[password encryption and history setup guide|Setting up password encryption and history]] for the correct process of setting up the relevant group policy settings.
+The Access Manager agent doesn't do anything until it's configured via a group policy. Follow the [password encryption and history setup guide](/deploying_features/Setting-up-password-encryption-and-history) for the correct process of setting up the relevant group policy settings.

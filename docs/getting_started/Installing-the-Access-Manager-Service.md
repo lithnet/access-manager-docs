@@ -1,4 +1,6 @@
-# Prerequisites
+# Installing the Access Manager Service
+
+## Prerequisites
 In order to install the Access Manager Service, the following prerequisites must be met;
 1. Windows Server 2012 R2 or later 
 2. [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
@@ -23,7 +25,7 @@ Determine the host name you will use to access AMS and request an SSL certificat
 ## Step 4: Configure the web host
 Run the Access Manager Service configuration tool. You'll be prompted to set up the web host.
 
-![](images/ui-page-webhosting-notconfigured.png)
+<img src="../images/ui-page-webhosting-notconfigured.png" alt="localadminpasswords" width="1000px">
 
 Click the `Select from store...` button and select the certificate you installed in step 2.
 
@@ -36,36 +38,42 @@ AMS supports several different authentication providers. Read the guide on [[con
 
 The following pages will guide you through the process of configuring the relevant authentication provider for use with Access Manager.
 
-* [[Setting up authentication with Azure AD]]
+* [Setting up authentication with Azure AD](../setting_up_authentication/Setting-up-authentication-with-Azure-AD)
 * [[Setting up authentication with Okta]]
 * [[Setting up authentication with ADFS]]
 
 ## Step 6: Configure the Web User Interface
-![](images/ui-page-userinterface.png)
+
+<img src="../images/ui-page-userinterface.png" alt="localadminpasswords" width="1000px">
+
 Configure the user interface as per your organization's requirements. You can customize the name of the application, provide your own logo and even provide some custom policy text for the access request page.
 
 [[More information on user interface settings|User Interface Page]]
 
 ## Step 7: Configure Email server
-![](images/ui-page-email.png)
+<img src="../images/ui-page-email.png" alt="localadminpasswords" width="1000px">
+
 You'll need to configure an outbound mail server in order to receive audit alerts via email.
 
 [[More information on email settings|Email Page]]
 
 ## Step 8: Configure Rate Limits
-![](images/ui-page-ratelimits.png)
+
+<img src="../images/ui-page-ratelimits.png" alt="localadminpasswords" width="1000px">
 In order to ensure that your service is not used inappropriately, you can place limits of the number of requests a user can make in a given time. You should set these high enough that your users are not going to encounter rate limit issues under normal usage, but low enough to limit the impact of inappropriate or malicious usage of the service.
 
 [[More information on rate limiting|Rate Limits Page]]
 
 ## Step 9: Configure IP Detection
-![](images/ui-page-ip-detection.png)
+
+<img src="../images/ui-page-ip-detection.png" alt="localadminpasswords" width="1000px">
 If you put AMS behind a reverse proxy or load balancer, you'll need to configure IP address detection. This is to ensure that AMS logs the correct IP address in audit logs, and applies rate limiting correctly. 
 
 [[More information on IP address detection|IP Address Detection Page]]
 
 ## Step 10: Configure Active Directory permissions
-![](images/ui-page-activedirectory.png)
+
+<img src="../images/ui-page-activedirectory.png" alt="localadminpasswords" width="1000px">
 
 From the `Active Directory` tab, check that the AMS service account is a member of the `Windows Authorization Access Group` and `Access Control Assistance Operators` built-in groups within each domain. This is required for the AMS service account to be able to calculate access permissions for users and computers within these domains.
 
@@ -76,7 +84,8 @@ Don't worry about the schema section at this stage, if you need to deploy any sc
 [[More information on configuring Active Directory|Active Directory Page]]
 
 ## Step 11: Configure Auditing
-![](images/ui-page-auditing-smtp.png)
+
+<img src="../images/ui-page-auditing-smtp.png" alt="localadminpasswords" width="1000px">
 AMS has a powerful auditing engine that allows you to receive notifications when access is granted or denied to a user. AMS logs audit events to the Windows event log all the time, but you can also send audit events via email, through a custom PowerShell script, or even to Slack or Microsoft Teams using a web hook.
 
 [[More information on Auditing|Auditing Page]]
@@ -85,7 +94,7 @@ AMS has a powerful auditing engine that allows you to receive notifications when
 
 Now that you have the core application set up, you can configure the Access Manager features you are interested in;
 
-- [[Setting up JIT access]]
-- [[Setting up Microsoft LAPS]]
-- [[Setting up password encryption and history]]
-- [[Setting up BitLocker access]]
+- [Setting up Microsoft LAPS](/deploying_features/Setting-up-Microsoft-LAPS)
+- [Setting up password encryption and history](/deploying_features/Setting-up-password-encryption-and-history)
+- [Setting up JIT access](/deploying_features/Setting-up-JIT-access)
+- [Setting up BitLocker access](/deploying_features/Setting-up-BitLocker-access)

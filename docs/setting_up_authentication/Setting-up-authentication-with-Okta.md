@@ -1,3 +1,5 @@
+# Setting up authentication with Okta
+
 The following guide will assist you in configuring your application to use Okta for authentication. 
 
 ## Configure a new application in Okta
@@ -20,7 +22,7 @@ The following guide will assist you in configuring your application to use Okta 
 3. Enter the URL of your okta tenant in the `Issuer/Authority` field
 4. Enter the client ID and secret obtained from the Okta setup process
 
-![](images/ui-page-authentication-oidc.png)
+![](../images/ui-page-authentication-oidc.png)
 
 ## Enable multi-factor authentication
 We strongly recommend to modify your application sign-on policy to require multi-factor authentication for the use of this app.

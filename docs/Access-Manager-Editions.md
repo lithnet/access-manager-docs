@@ -1,18 +1,21 @@
+# Access Manager Editions
+
 Access Manager comes in two editions - Standard and Enterprise.
 
-# Standard Edition
+## Standard Edition
 Access Manager Standard edition is our core offering, that contains all the features that an organization need to help defend themselves from lateral movement-based attacks. You can provide your users full access to Microsoft LAPS passwords and request just-in-time admin access to computers all from the convenience of their browser.
 
 Standard edition is completely free for any organization of any size to use.
 
-# Enterprise Edition
+## Enterprise Edition
  Enterprise edition adds additional functionality, such as support for Microsoft Failover Clusters for high availability, as well as additional features like just-in-time access to any service you can manage with AD, or with a PowerShell script.
 
 See the [[licensing]] page for information on how to trial or purchase an Enterprise Edition license.
 
-# Feature comparison
+## **Feature comparison**
+---
 
-## Web Interface features
+### Web Interface features
 | Feature | Standard Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Access to local admin passwords | x | x |
@@ -23,7 +26,7 @@ See the [[licensing]] page for information on how to trial or purchase an Enterp
 | Access to local admin password history |  | x |
 | Just-in-time access requests to admin-defined roles^ |  | x |
 
-## Local admin password features 
+### Local admin password features 
 | Feature | Standard Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Read passwords set by the Microsoft LAPS client | x | x |
@@ -34,14 +37,14 @@ See the [[licensing]] page for information on how to trial or purchase an Enterp
 | PowerShell access to encrypted local admin passwords (from the AMS server only) | x | x |
 | PowerShell access to encrypted local admin password history (from the AMS server only) | x | x |
 
-## Just-in-time access features
+### Just-in-time access features
 | Feature | Standard Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Just-in-time access to Windows computers | x | x |
 | Just-in-time access to Active Directory groups^ |  | x |
 | Just-in-time access to 3rd party services using custom PowerShell scripts^ |  | x |
 
-## BitLocker features
+### BitLocker features
 | Feature | Standard Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Read BitLocker recovery passwords from AD | x | x |

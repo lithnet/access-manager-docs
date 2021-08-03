@@ -1,3 +1,4 @@
+# Frequently asked Questions
 ## Do I need to deploy the Lithnet Access Manager Agent?
 The Lithnet Access Manager Agent is only required if you have one of the following requirements
 1. You want your local admin passwords encrypted in the directory

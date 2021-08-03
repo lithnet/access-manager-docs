@@ -9,12 +9,12 @@ The second component is an optional agent, called the Access Manager Agent (AMA)
 
 This document will guide you through the process for configuring Lithnet Access Manager, and the features you want to use in your environment.
 
-# Installation
+## Installation
 You'll need to first install and configure the Access Manager Service application. 
 
 [[Installing the Access Manager Service]]
 
-# Choosing the services to use
+## Choosing the services to use
 Once you've installed AMS, you need to decide if you need to deploy the Microsoft LAPS agent, or the Lithnet Access Manager agent. Use the following table below to map the AMS features you want to use with the agent you need to deploy.
 
 | Feature | Requires Microsoft LAPS Agent | Requires Lithnet Access Manager Agent |
@@ -30,7 +30,7 @@ AMS is fully compatible with Microsoft LAPS, but the Access Manager Agent provid
 Note, that if the Microsoft LAPS agent is installed and enabled on a machine, the Lithnet LAPS agent will not take over password management. Either the Microsoft LAPS agent needs to be disabled by group policy, or uninstalled.
 
 Once you've chosen the features to enable, follow the instructions in the relevant getting started guides.
-- [[Setting up Microsoft LAPS]]
-- [[Setting up password encryption and history]]
-- [[Setting up JIT access]]
-- [[Setting up BitLocker access]]
+- [Setting up Microsoft LAPS](/deploying_features/Setting-up-Microsoft-LAPS)
+- [Setting up password encryption and history](/deploying_features/Setting-up-password-encryption-and-history)
+- [Setting up JIT access](/deploying_features/Setting-up-JIT-access)
+- [Setting up BitLocker access](/deploying_features/Setting-up-BitLocker-access)
