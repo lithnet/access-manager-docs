@@ -1,6 +1,12 @@
-> ![](images/badge-enterprise-edition-rocket.svg)  High availability is an [[Enterprise edition feature|Access Manager Editions]]
+<img src="images/badge-enterprise-edition-rocket.svg" alt="localadminpasswords"> High availability is an [Enterprise edition feature](Access-Manager-Editions)
 
-![](images/ui-page-highavailability.png)
+# High Availability
+
+
+
+
+
+<img src="images/ui-page-highavailability.png" alt="localadminpasswords" width="1000px">
 
 ## Database configuration
 By default, Access Manager uses an internal database instance, based on Microsoft SQL LocalDB. For most use cases, this database type is fine. 
