@@ -1,5 +1,4 @@
-<img src="images/badge-enterprise-edition-rocket.svg" alt="localadminpasswords"> 
-High availability is an [Enterprise edition feature](Access-Manager-Editions)
+<img src="images/badge-enterprise-edition-rocket.svg" alt="localadminpasswords"> High availability is an [Enterprise edition feature](Access-Manager-Editions)
 
 # Installing Access Manager in a Failover Cluster
 ## Prerequisites
