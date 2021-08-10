@@ -1,3 +1,5 @@
+# Access evaluation in Access Manager Service (AMS)
+
 AMS uses the built-in Windows authorization system to determine if a user is authorized to access a resource.
 
 When a user requests access to a computer, AMS will obtain an 'identification token' from the domain where the _computer_ resource is located. This identification token will contain the group membership of the user, from the perspective of the computer that is being accessed. All groups that are visible from the computer's domain will be included in the token. This is similar to a token a user would get had they logged onto that computer directly.

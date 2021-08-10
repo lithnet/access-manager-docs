@@ -1,5 +1,6 @@
 # SMTP Server Settings
-![](images/ui-page-email.png)
+
+<img src="images/ui-page-email.png" alt="email" width="1000px">
 
 #### SMTP Server
 Enter the host name of the SMTP server used to deliver email

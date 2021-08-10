@@ -25,7 +25,7 @@ Determine the host name you will use to access AMS and request an SSL certificat
 ## Step 4: Configure the web host
 Run the Access Manager Service configuration tool. You'll be prompted to set up the web host.
 
-<img src="../images/ui-page-webhosting-notconfigured.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-webhosting-notconfigured.png" alt=! width="1000px">
 
 Click the `Select from store...` button and select the certificate you installed in step 2.
 
@@ -44,14 +44,14 @@ The following pages will guide you through the process of configuring the releva
 
 ## Step 6: Configure the Web User Interface
 
-<img src="../images/ui-page-userinterface.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-userinterface.png" alt="!" width="1000px">
 
 Configure the user interface as per your organization's requirements. You can customize the name of the application, provide your own logo and even provide some custom policy text for the access request page.
 
 [[More information on user interface settings|User Interface Page]]
 
 ## Step 7: Configure Email server
-<img src="../images/ui-page-email.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-email.png" alt="!" width="1000px">
 
 You'll need to configure an outbound mail server in order to receive audit alerts via email.
 
@@ -59,21 +59,21 @@ You'll need to configure an outbound mail server in order to receive audit alert
 
 ## Step 8: Configure Rate Limits
 
-<img src="../images/ui-page-ratelimits.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-ratelimits.png" alt="!" width="1000px">
 In order to ensure that your service is not used inappropriately, you can place limits of the number of requests a user can make in a given time. You should set these high enough that your users are not going to encounter rate limit issues under normal usage, but low enough to limit the impact of inappropriate or malicious usage of the service.
 
 [[More information on rate limiting|Rate Limits Page]]
 
 ## Step 9: Configure IP Detection
 
-<img src="../images/ui-page-ip-detection.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-ip-detection.png" alt="!" width="1000px">
 If you put AMS behind a reverse proxy or load balancer, you'll need to configure IP address detection. This is to ensure that AMS logs the correct IP address in audit logs, and applies rate limiting correctly. 
 
 [[More information on IP address detection|IP Address Detection Page]]
 
 ## Step 10: Configure Active Directory permissions
 
-<img src="../images/ui-page-activedirectory.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-activedirectory.png" alt="!" width="1000px">
 
 From the `Active Directory` tab, check that the AMS service account is a member of the `Windows Authorization Access Group` and `Access Control Assistance Operators` built-in groups within each domain. This is required for the AMS service account to be able to calculate access permissions for users and computers within these domains.
 
@@ -85,7 +85,7 @@ Don't worry about the schema section at this stage, if you need to deploy any sc
 
 ## Step 11: Configure Auditing
 
-<img src="../images/ui-page-auditing-smtp.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-auditing-smtp.png" alt="!" width="1000px">
 AMS has a powerful auditing engine that allows you to receive notifications when access is granted or denied to a user. AMS logs audit events to the Windows event log all the time, but you can also send audit events via email, through a custom PowerShell script, or even to Slack or Microsoft Teams using a web hook.
 
 [[More information on Auditing|Auditing Page]]

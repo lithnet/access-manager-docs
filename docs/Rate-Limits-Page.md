@@ -1,6 +1,7 @@
 Access Manager allows you to limit the number of requests per minute, hour and per day for a given user. 
 
-![](images/ui-page-ratelimits.png)
+<img src="images/ui-page-ratelimits.png" alt="rate_limits" width="1000px">
+
 # Per-user and Per-IP rate limits
 #### Enabled
 Enables rate limiting according to the specified thresholds

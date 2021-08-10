@@ -20,21 +20,21 @@ If you are setting up a cluster containing an even number of nodes, you must con
 - Open the `Disk Management` tool, and bring the AMS storage volume online. Initialize the disk, format it, and assign it a drive letter (for the purposes of this guide, we will refer to the AMS storage volume as `S:`)
 - Open the `Failover Cluster Manager` tool, expand the cluster in the left hand side tree view, and select `Storage` followed by `Disks`
 
-<img src="images/Cluster-1-Storage.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-1-Storage.png" alt="cluster_storage" width="1000px">
 
 - Select `Add Disk` from the right-hand actions menu, and add the appropriate disk to the cluster. 
 
-<img src="images/Cluster-2-AddDisk.png" alt="localadminpasswords" width="500">
-<img src="images/Cluster-3-DiskAdded.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-2-AddDisk.png" alt="add_disk" width="500">
+<img src="images/Cluster-3-DiskAdded.png" alt="disk_added" width="1000px">
 
 ### 4. Install Access Manager
 - On the first node, run the Access Manager Service installer.
 - When prompted to provide the installation paths, set the log and config folders to be on the `S:` drive. Eg `S:\AMS\logs` and `S:\AMS\config`
 
-<img src="images/Cluster-4-InstallerPaths.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-4-InstallerPaths.png" alt="installer_paths" width="1000px">
 - We also recommend using a group-managed service account for AMS. You must use the same account on all cluster nodes.
 
-<img src="images/Cluster-5-InstallerServiceAccount.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-5-InstallerServiceAccount.png" alt="service_account" width="1000px">
 - When the installer finishes, do not run the configuration utility when prompted.
 - Exit the installer and return to the `Failover Cluster Manager`
 - From the actions pane, select `Move Available Storage` and select the next node in the cluster. Confirm that the `owner node` for the storage has changed to the correct node.
@@ -47,21 +47,21 @@ If you are setting up a cluster containing an even number of nodes, you must con
 - Click `Configure rule...` from the actions pane
 - Select `Generic service` as the role type
 
-<img src="images/Cluster-6-GenericService.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-6-GenericService.png" alt="generic_service" width="1000px">
 - Select `Lithnet Access Manager Service` from the services list
 
-<img src="images/Cluster-7-SelectService.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-7-SelectService.png" alt="select_service" width="1000px">
 - Provide an IP address and name for your client access point. This will be the name of the clustered service, and by default, forms the AD hostname of the cluster.
 
-<img src="images/Cluster-8-SelectCap.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-8-SelectCap.png" alt="select_cap" width="1000px">
 - Select the storage volume that contains the AMS configuration
 
-<img src="images/Cluster-9-SelectStorage.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-9-SelectStorage.png" alt="select_storage" width="1000px">
 
 - Click `Add` on the `replicate registry settings` screen, and specify the following value `SOFTWARE\Lithnet\Access Manager Service\Parameters`
 - Complete the remaining steps of the wizard, and ensure the new role transitions to an 'online' state
 
-<img src="images/Cluster-10-Online.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-10-Online.png" alt="ckuster_online" width="1000px">
 
 ### 6. Configure AMS for high availability
 - Use the `Failover Cluster Manager` to determine which node currently hosts the AMS service, and log onto that node

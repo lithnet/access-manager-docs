@@ -1,9 +1,9 @@
-Access Manager always logs events to the Windows event log, but you can also have it deliver notifications via email, web hooks, or even PowerShell.
+ßßAccess Manager always logs events to the Windows event log, but you can also have it deliver notifications via email, web hooks, or even PowerShell.
 
 # Notification Channels
 Access Manager uses the concept of a notification channel to define what event information should be sent to where, and how it should be delivered. Notification channels are attached to authorization targets and are sent when access to a computer is granted or denied.
 
-![](images/ui-page-auditing-smtp.png)
+ç
 
 **SMTP channels** allow for the delivery of audit events via a HTML formatted email. 
 
@@ -25,7 +25,7 @@ A friendly name that is used through the configuration tool to refer to this not
 
 ## SMTP Channels
 
-![](images/ui-page-auditing-smtp-channel.png)
+<img src="../images/ui-page-auditing-smtp-channel.png" alt="ui-page-auditing" width="1000px">
 
 #### Audit success content template
 A HTML file used as a template for a successful access request
@@ -40,7 +40,7 @@ A list of email recipients that the audit notification should be sent to
 
 ## Webhook Channels
 
-![](images/ui-page-auditing-webhook-channel-slack.png)
+<img src="../images/ui-page-auditing-webhook-channel-slack.png" alt="webhook_slack" width="1000px">
 
 #### URL
 This is the webhook URL provided by the target application. 
@@ -58,7 +58,9 @@ A file containing the payload to send to the webhook for a successful access req
 A file containing the payload to send to the webhook for a failed access request
 
 ## PowerShell Channels
-![](images/ui-page-auditing-powershell-channel.png)
+<img src="../images/ui-page-auditing-powershell-channel.png" alt="powershell_channel" width="1000px">
+
+ 
 
 #### Script
 Select the PowerShell script file to execute. You can select an existing file, create a new file from the built-in template, or open the specified file in the default PowerShell script editor (usually PowerShell ISE)

@@ -1,4 +1,4 @@
-## Authentication Provider
+# Authentication Provider
 The Access Manager web service allows you to choose one of several different types of authentication providers. It is recommended to use modern authentication using a mechanism such as OpenID Connect, where an identity provider can provider high assurance authentication utilizing passwordless or multi-factor authentication.
 
 Access Manager supports modern identity providers such as Azure AD and Okta out of the box.
@@ -8,7 +8,9 @@ OpenID Connect is the preferred authentication provider. Coupled with a modern I
 
 Using OpenID Connect requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
-![](images/ui-page-authentication-oidc.png)
+
+<img src="../images/ui-page-authentication-oidc.png" alt="authentication_oidc" width="1000px">
+
 
 ## WS-Federation
 WS-Federation can be used to delegate the authentication process to an on-prem ADFS or similar product. Read the [[setup guide|Setting-up-authentication-with-ADFS]] for configuring Access Manager to work with ADFS.
@@ -22,7 +24,7 @@ Certificates must contain a `principal name` attribute in their `Subject Alterna
 
 Limited support is available for use of [[altSecurityIdentities|Enabling AltSecurityIdentities]] in cases where certificates are used without a UPN, however these are not supported outside the forest where AMS is located.
 
-![](images/ui-page-authentication-smartcard.png)
+<img src="../images/ui-page-authentication-smartcard.png" alt="authentication_smartcard" width="1000px">
 
 ### Additional mandatory EKUs
 Specify any custom EKUs that must be present in the certificate for the authentication to be successful.
@@ -42,7 +44,7 @@ This option allows you to import a specific certificate authority's certificate 
 ## Integrated Windows Authentication
 The Integrated Windows Authentication (IWA) provider allows users to login with NTLM or Kerberos authentication. In order to use kerberos, the web site host name must be registered on the SPN of the computer object (not the service account). Eg if using a hostname of `accessmanager.lithnet.io`, you'll need to register the SPN `http/accessmanager.lithnet.io` or `host/accessmanager.lithnet.io`. If the host name matches the AD computer name, then no additional SPNs are required.
 
-![](images/ui-page-authentication-iwa.png)
+<img src="../images/ui-page-authentication-iwa.png" alt="authentication_iwa" width="1000px">
 
 ### Authentication Scheme
 Select one of the following authentication options

@@ -1,9 +1,10 @@
-![](images/ui-page-localadminpasswords.png)
+
+<img src="images/ui-page-localadminpasswords.png" alt="local_passwords" width="1000px">
 
 # Microsoft LAPS agent
 If you plan on using Lithnet Access Manager to read Microsoft LAPS passwords, you'll need to delegate permission for the AMS service account to read those passwords. You can use the built-in cmdlets from the AdmPwd PowerShell module, or click the `Delegate Microsoft LAPS Permissions` button to generate a script to do this automatically. 
 
-![](images/ui-page-script-delegate-mslaps.png)
+<img src="images/ui-page-script-delegate-mslaps.png" alt="delegate" width="1000px">
 
 Copy or save the script, modify the `$OU` variable as appropriate, and run it in with domain admin rights.
 
@@ -12,7 +13,8 @@ If you want to use the Lithnet Access Manager agent instead of the Microsoft LAP
 
 Click the `Delegate Lithnet AMA Permissions` button to generate a script to do this automatically.
 
-![](images/ui-page-script-delegate-ama.png)
+<img src="images/ui-page-script-delegate-ama.png" alt="delegate_ama" width="1000px">
+
 
 Copy or save the script, modify the `$OU` variable as appropriate, and run it in with domain admin rights.
 
@@ -46,8 +48,8 @@ If there are previously used certificates shown here, don't remove them. If clie
 ## Backing up the private key
 It is imperative that you have a safe and secure backup of your encryption keys. Select a certificate to back up and click `View Certificate`. From the `Details` tab, click `Copy to file...`. This will launch the export certificate wizard, which will allow you to export the certificate and private key to a PFX file. Choose a strong password for the PFX, and store the file somewhere safe. It's best to have multiple copies of the file, including an 'offline' copy.
 
-![](images/ui-page-localadminpasswords-certificate-details.png)
+<img src="images/ui-page-localadminpasswords-certificate-details.png" alt="certificate_details" width="1000px">
 
-See the guide on [[restoring an encryption certificate from backup|Backup and restore]] for details on how to restore an existing key from a backup.
+See the guide on [restoring an encryption certificate from backup|Backup-and-restore] for details on how to restore an existing key from a backup.
 
-If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the [[recovering from a lost encryption certificate]]] guide. Unfortunately, there is no way to recover the encrypted password history.
+If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the [recovering from a lost encryption certificate](Recovering-from-a-lost-encryption-certificate) guide. Unfortunately, there is no way to recover the encrypted password history.

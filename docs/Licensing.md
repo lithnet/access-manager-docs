@@ -1,4 +1,4 @@
-Lithnet Access Manager comes in [[two editions|Access Manager Editions]]!
+Lithnet Access Manager comes in [two editions](Access Manager Editions)!
 
 Standard edition is the core product that is free for all organizations to use. It allows organizations to build in-depth defenses against lateral movement-based attacks.
 

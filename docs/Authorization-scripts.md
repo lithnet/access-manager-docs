@@ -1,5 +1,5 @@
 ## Script-based authorization
-![](images/ui-page-authz-accesscontrol-script.png)
+<img src="images/ui-page-authz-accesscontrol-script.png" alt="acl_script" width="1000px">
 
 If you'd like to make authorization decisions outside of a static ACL model, you can utilize a PowerShell script to do this.
 
