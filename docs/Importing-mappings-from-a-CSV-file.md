@@ -34,19 +34,20 @@ There should be one computer and one principal per line. For each principal that
 ## Open the import wizard
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-![](images/ui-page-authz.png)
+
+<img src="images/ui-page-authz.png" alt="authz" width="1000px">
 
 ## Select the import type
 Select the CSV import type, and click `Next`
-![](images/ui-page-import-type-csv.png)
+<img src="images/ui-page-import-type-csv.png" alt="csv" width="1000px">
 
 ## Select the CSV file
 Specify the path to the CSV file, and check the box if your CSV file has a header row.
-![](images/ui-page-import-csvsettings.png)
+<img src="images/ui-page-import-csvsettings.png" alt="csv_settings" width="1000px">
 
 
 ## Specify discovery settings
-![](images/ui-page-import-container-csv.png)
+<img src="images/ui-page-import-container-csv.png" alt="container_csv" width="1000px">
 
 Select the container where Access Manager will find the computers specified in the CSV file. 
 
@@ -61,12 +62,12 @@ You can also choose to ignore certain computers from the import process. For the
 ## Specify rule settings
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply. 
 
-![](images/ui-page-import-rulesettings.png)
+<img src="images/ui-page-import-rulesettings.png" alt="rule_settings" width="1000px">
 
 ## Review discovery results
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store. 
 
-![](images/ui-page-import-results.png)
+<img src="images/ui-page-import-results.png" alt="import_results" width="1000px">
 
 ### Merge settings
 When a new rule is discovered for a target (computer, group or container) that matches the target of an existing rule, Access Manager will just add the new permissions to the existing rule, rather than create a new rule. You can control this behavior with by unselecting the corresponding check box. 

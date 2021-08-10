@@ -1,4 +1,5 @@
-![](images/ui-page-userinterface.png)
+
+<img src="images/ui-page-userinterface.png" alt="ui" width="1000px">
 
 # User interface customization
 #### Web site title

@@ -1,4 +1,5 @@
-![](images/ui-page-jitaccess.png)
+
+<img src="images/ui-page-jitaccess.png" alt="jitaccess" width="1000px">
 
 Lithnet Access Manager supports granting access to computers using a just-in-time access model. 
 
@@ -20,7 +21,7 @@ Select `Enable automatic JIT group creation` and press the `Add...` button to cr
 
 ## JIT group mapping
 
-![](images/ui-page-jitaccess-groupmapping.png)
+<img src="images/ui-page-jitaccess-groupmapping.png" alt="groupmap" width="1000px">
 
 #### Computer OU
 Select the container that contains the computers you want to create JIT groups for, and select if access manager should find computers that exist in all child containers, or just the container specified.

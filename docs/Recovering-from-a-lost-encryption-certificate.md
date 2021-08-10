@@ -7,7 +7,7 @@ In order to restore local admin password access to your environment, you need to
 ### Step 1: Generate a new certificate
 From the Access Manager Service configuration tool, visit the [[local admin passwords page]], select the forest you need to recover from the drop-down list, and click `Generate new...`. 
 
-![](images/ui-page-localadminpasswords.png)
+<img src="images/ui-page-localadminpasswords.png" alt="local_admin" width="1000px">
 
 ### Step 2: Backup the new certificate
 Once the certificate has been generated, click `View certificate...` and on the `Details` tab, select `Copy to file...` to backup this key. Make sure you select the option to export the private key. Choose a strong password, and keep this file safe, preferably in an offline location.

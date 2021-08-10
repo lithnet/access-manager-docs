@@ -24,7 +24,7 @@ When a user is granted JIT access to a computer, Access Manager creates a new te
 If you are operating at this forest functional level, you must create an OU in your directory where AMS can create the dynamic group objects. From the [[JIT Access Page|Jit-Access-Page]], select your forest, click `Set Dynamic Group OU` button. Choose an OU in your directory. Once you have done that, use the `Delegate dynamic group permission` script to grant the AMS service account rights to create groups in this OU.
 
 
-<img src="../images/ui-page-jitaccess-jitmode.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-jitaccess-jitmode.png" alt="!" width="1000px">
 
 ### Windows Server 2016 forest functional level and above
 In Active Directory forests with a Windows 2016 or higher forest functional levels can take advantage of a new feature called time-based membership. This has several advantages over the dynamic group model. In this model when a user is granted JIT access to a computer, Access Manager adds the user directly to the JIT group, but it can tell Active Directory that the group membership itself is time-limited. The user is added to the group with a time-to-live value and after that time, the user is automatically removed from the group by Active Directory. 
@@ -42,11 +42,11 @@ If you do not wish to enable the PAM feature, you can follow the steps above to 
 ## Step 2: Creating the JIT groups
 Best practice for JIT is that each computer that you want to enable JIT for, has a dedicated JIT group created for it in AD. The Access Manager Service contains a feature that allows you to automatically create a JIT group for each computer.
 
-<img src="../images/ui-page-jitaccess-groupcreation.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-jitaccess-groupcreation.png" alt="!" width="1000px">
 
 From the [[Jit Access|Jit-Access-Page]] page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
 
-<img src="../images/ui-page-jitaccess-groupmapping.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-jitaccess-groupmapping.png" alt="!" width="1000px">
 
 Select the OU that contains the computers you want to create JIT groups for and select a different OU where the JIT groups should be created. 
 
@@ -65,19 +65,19 @@ Note, using AMS specifically to create JIT groups is not required for JIT to wor
 Using the group policy editor, create a new group policy object and link it to the OU containing your computer objects. Open the policy and navigate to `Computer Configuration`, `Preferences`, `Control Panel Settings`, `Local Users and Groups`.
 
 
-<img src="../images/group-policy-local-users-and-groups.png" alt="localadminpasswords" width="1000px">
+<img src="../images/group-policy-local-users-and-groups.png" alt="!" width="1000px">
 
 Right click the `Local users and groups` node, and select `New`, `Local group`. Click the drop down arrow on the `Group name` field, and select `Administrators (built-in)`. 
 
-<img src="../images/group-policy-local-users-and-groups-new-group.png" alt="localadminpasswords" width="1000px">
+<img src="../images/group-policy-local-users-and-groups-new-group.png" alt="!" width="1000px">
 
 Click the `Add` button, and the group, using the `%computername%` variable, specify the templated name of the group set in step 2.
 
-<img src="../images/group-policy-local-users-and-groups-add-member.png" alt="localadminpasswords" width="1000px">
+<img src="../images/group-policy-local-users-and-groups-add-member.png" alt="!" width="1000px">
 
 Add the built-in admin account, by creating a new member entry for `Administrator`.
 
-<img src="../images/group-policy-local-users-and-groups-complete.png" alt="localadminpasswords" width="1000px">
+<img src="../images/group-policy-local-users-and-groups-complete.png" alt="!" width="1000px">
 
 If you are ready to enforce JIT access, select the `Delete all member users` tick box, as well as the `Delete all member groups`. This will ensure that only the built-in administrator, the JIT group and any members specified in this policy are in the local administrators group.
 
@@ -92,11 +92,11 @@ Once the policy configured you can now configure access to individual users and 
 
 From the `Authorization` page, select `Add...` to create a new target. Select the OU containing the computers enabled for JIT and provide a friendly description for this rule. This will appear in audit logs if a user is granted access. 
 
-<img src="../images/ui-page-authz-jit-target.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-authz-jit-target.png" alt="!" width="1000px">
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to allow JIT access.
 
-<img src="../images/ui-page-authz-editsecurity-jit.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-authz-editsecurity-jit.png" alt="!" width="1000px">
 
 You must provide the group name or template in the `Just-in-time access settings` area, as well as the length of time until the access is expired.  
 

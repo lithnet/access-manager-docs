@@ -1,5 +1,8 @@
 ## Customized auditing with PowerShell notification channels
-![](images/ui-page-auditing-powershell-channel.png)
+
+<img src="../images/ui-page-auditing-powershell-channel.png" alt="auditing_powershell_channel" width="1000px">
+
+
 
 Access Manager's auditing framework allows you to extend the product's auditing capabilities through the use of PowerShell scripts. Using a PowerShell notification channel, you can send audit events to any system you can connect to with PowerShell.
 

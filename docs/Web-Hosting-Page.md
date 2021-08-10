@@ -1,5 +1,5 @@
 
-![](images/ui-page-webhosting.png)
+<img src="images/ui-page-webhosting.png" alt="web_hosting" width="1000px">
 
 ## Service
 ### Service account

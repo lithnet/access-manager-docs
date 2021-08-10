@@ -1,3 +1,4 @@
+# Audit variables
 The following variables are available for use in events processed by audit notification channels. Where information is not available or not applicable to an audit event, the placeholder value will be replaced with an empty string.
 
 ### {user.SamAccountName}
