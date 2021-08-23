@@ -8,7 +8,7 @@ In order to install the Access Manager Service, the following prerequisites must
 4. An SSL certificate for the AMS web site
 
 ## Step 1: Create a service account
-The Access Manger Service needs to run under the context of a domain user account. We strongly recommend using a group-managed service account for this purpose. We've created a [[guide for setting up a GMSA|Creating-a-service-account-for-the-Access-Manager-Service]] which includes a script to get you up and running quickly.
+The Access Manger Service needs to run under the context of a domain user account. We strongly recommend using a group-managed service account for this purpose. [We've created a guide for setting up a GMSA](Creating-a-service-account-for-the-Access-Manager-Service) which includes a script to get you up and running quickly.
 
 Do not grant any specific permissions to this account and most certainly don't add it to super-privileged groups like Domain Administrators. As you go through the setup process, you'll be given scripts to delegate permissions specific to the functionality you want to enable.
 

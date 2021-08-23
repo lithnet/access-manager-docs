@@ -1,3 +1,5 @@
+# Performing an offline discovery of local admins
+
 While Access Manager provides the ability to import local administrators from computers by querying them remotely, network accessibility and permissions issues may prevent this method from working across an entire domain. 
 
 In this scenario, we can use a script, combined with group policy or another deployment tool to query the administrators group locally on each computer, and save the results to a file share. Once all the computers have uploaded their files, they can then be merged into a single CSV file that can be imported into Access Manager using the CSV import function.

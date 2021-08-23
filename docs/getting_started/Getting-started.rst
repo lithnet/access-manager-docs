@@ -1,4 +1,5 @@
-# About
+What is Lithnet Access Manager?
+####################################
 Lithnet Access Manager is a web-based service that allows users to request access to local admin passwords, bitlocker recovery keys, and request just-in-time access to computers. 
 
 The service itself consists of two components.
@@ -34,3 +35,5 @@ Once you've chosen the features to enable, follow the instructions in the releva
 - [Setting up password encryption and history](/deploying_features/Setting-up-password-encryption-and-history)
 - [Setting up JIT access](/deploying_features/Setting-up-JIT-access)
 - [Setting up BitLocker access](/deploying_features/Setting-up-BitLocker-access)
+
+{ref}`test link<Installing the Access Manager Agent>`
