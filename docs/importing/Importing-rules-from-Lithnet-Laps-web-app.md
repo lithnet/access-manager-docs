@@ -3,26 +3,26 @@ If you had the [Lithnet LAPS Web App](https://github.com/lithet/laps-web) instal
 ## Open the import wizard
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-<img src="images/ui-page-authz.png" alt="authz" width="1000px">
+<img src="../images/ui-page-authz.png" alt="authz" width="1000px">
 
 ## Select the import type
 Select the Lithnet LAPS web app import type, and click `Next`
 
-<img src="images/ui-page-import-type-lapsweb.png" alt="laps_web" width="1000px">
+<img src="../images/ui-page-import-type-lapsweb.png" alt="laps_web" width="1000px">
 
 ## Select the web.config file
 Specify the path to the web.config file, and check the box if you'd like to also import your email notification settings.
-<img src="images/ui-page-import-lapsweb.png" alt="laps_web" width="1000px">
+<img src="../images/ui-page-import-lapsweb.png" alt="laps_web" width="1000px">
 
 ## Specify rule settings
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply. 
 
-<img src="images/ui-page-import-rulesettings.png" alt="rule_setting" width="1000px">
+<img src="../images/ui-page-import-rulesettings.png" alt="rule_setting" width="1000px">
 
 ## Review discovery results
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store. 
 
-<img src="images/ui-page-import-results.png" alt="import_results" width="1000px">
+<img src="../images/ui-page-import-results.png" alt="import_results" width="1000px">
 
 ### Merge settings
 When a new rule is discovered for a target (computer, group or container) that matches the target of an existing rule, Access Manager will just add the new permissions to the existing rule, rather than create a new rule. You can control this behavior with by unselecting the corresponding check box. 

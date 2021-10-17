@@ -3,14 +3,14 @@ If you have delegated permissions to read BitLocker recovery passwords in your e
 ## Open the import wizard
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-<img src="images/ui-page-authz.png" alt="authz" width="1000px">
+<img src="../images/ui-page-authz.png" alt="authz" width="1000px">
 ## Select the import type
 Select the BitLocker import type, and click `Next`
 
-<img src="images/ui-page-import-type-bitlocker.png" alt="bitlocker" width="1000px">
+<img src="../images/ui-page-import-type-bitlocker.png" alt="bitlocker" width="1000px">
 
 ## Specify discovery settings
-<img src="images/ui-page-import-container.png" alt="import_container" width="1000px">
+<img src="../images/ui-page-import-container.png" alt="import_container" width="1000px">
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will evaluate the ACLs on each computer object found in this section of the directory tree, looking for users and groups that have `read` and `control access` permissions on the `msFVE-RecoveryPassword` attribute
 
@@ -23,12 +23,12 @@ You can also choose to ignore certain computers from the import process. For the
 ## Specify rule settings
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply. 
 
-<img src="images/ui-page-import-rulesettings.png" alt="rule_settings" width="1000px">
+<img src="../images/ui-page-import-rulesettings.png" alt="rule_settings" width="1000px">
 
 ## Review discovery results
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store. 
 
-<img src="images/ui-page-import-results.png" alt="import_results" width="1000px">
+<img src="../images/ui-page-import-results.png" alt="import_results" width="1000px">
 
 
 ### Merge settings

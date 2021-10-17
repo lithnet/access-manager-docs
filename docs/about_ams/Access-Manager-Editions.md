@@ -1,14 +1,16 @@
 # Access Manager Editions
 
-Access Manager comes in two editions - Standard and Enterprise.
+Access Manager comes in two editions - Community and Enterprise.
 
-## Standard Edition
-Access Manager Standard edition is our core offering, that contains all the features that an organization need to help defend themselves from lateral movement-based attacks. You can provide your users full access to Microsoft LAPS passwords and request just-in-time admin access to computers all from the convenience of their browser.
+## Community Edition
+Access Manager Community edition is our core offering, that contains all the features that an organization need to help defend themselves from lateral movement-based attacks. You can provide your users full access to Microsoft LAPS passwords and request just-in-time admin access to computers all from the convenience of their browser.
 
-Standard edition is completely free for any organization of any size to use.
+Community edition is completely free for any organization of any size to use.
 
 ## Enterprise Edition
- Enterprise edition adds additional functionality, such as support for Microsoft Failover Clusters for high availability, as well as additional features like just-in-time access to any service you can manage with AD, or with a PowerShell script.
+ Enterprise edition adds additional functionality, such as support for Microsoft Failover Clusters for high availability.
+
+Enterprise edition customers can deploy the Lithnet Access Manager Agent, which enables LAPS support for devices that aren't joined to your Active Directory domain. The agent runs on Windows, macOS, and Linux, and supports Azure Active Directory joined and registered devices.
 
 See the [[licensing]] page for information on how to trial or purchase an Enterprise Edition license.
 
@@ -16,87 +18,84 @@ See the [[licensing]] page for information on how to trial or purchase an Enterp
 ---
 
 ### Web Interface features
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Access to local admin passwords | x | x |
-| Access to BitLocker recovery passwords | x | x |
-| Just-in-time access requests for local admin access on computers | x | x |
-| 'Read aloud' function for passwords (where supported by the browser) | x | x |
-| Phonetic display of passwords | x | x |
-| Access to local admin password history |  | x |
-| Just-in-time access requests to admin-defined roles^ |  | x |
+| Access to local admin passwords set by the Microsoft LAPS agent | ✔ | ✔ |
+| Access to local admin passwords set by the Lithnet Access Manager Agent <sup>1</sup>|  | ✔ |
+| Access to BitLocker recovery passwords | ✔ | ✔ |
+| Just-in-time access requests for local admin access on computers | ✔ | ✔ |
+| 'Read aloud' function for passwords (where supported by the browser) | ✔ | ✔ |
+| Phonetic display of passwords | ✔ | ✔ |
+| Access to local admin password history <sup>1</sup> |  | ✔ |
+| Show the local admin username <sup>1</sup> |  | ✔ |
 
-### Local admin password features 
-| Feature | Standard Edition | Enterprise Edition |
+### Access Manager Agent password management features 
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Read passwords set by the Microsoft LAPS client | x | x |
-| Read passwords set by the Lithnet Access Manager agent | x | x |
-| Encrypt local admin passwords using the Access Manager agent | x | x |
-| Retain historical local admin passwords using the Access Manager agent | x | x |
-| Trigger LAPS password change when the password has been accessed | x | x |
-| PowerShell access to encrypted local admin passwords (from the AMS server only) | x | x |
-| PowerShell access to encrypted local admin password history (from the AMS server only) | x | x |
+| Manage local admin passwords and store them in Active Directory (domain-joined Windows clients only) |  | ✔ |
+| Manage local admin passwords and store them in AMS |  | ✔ |
+| Encrypted storage of passwords |  | ✔ |
+| Retain historical local admin password history |  | ✔ |
+| Trigger LAPS password change when the password has been accessed | ✔ | ✔ |
+| Support for domain-joined windows devices | ✔ | ✔ |
+| Support for macOS devices (Intel and M1) |  | ✔ |
+| Support for Azure AD joined and registered Windows 10 and higher devices |  | ✔ |
+| Support for non-domain joined Windows 8.1 and above clients | | ✔ |
+| Support for linux distributions (x64 and arm64) <sup>2</sup> | | ✔ |
 
 ### Just-in-time access features
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Just-in-time access to Windows computers | x | x |
-| Just-in-time access to Active Directory groups^ |  | x |
-| Just-in-time access to 3rd party services using custom PowerShell scripts^ |  | x |
+| Just-in-time administrative access to Windows computers | ✔ | ✔ |
 
 ### BitLocker features
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Read BitLocker recovery passwords from AD | x | x |
-
+| Read BitLocker recovery passwords from AD | ✔ | ✔ |
 
 ## Authentication features
 Access Manager supports many different authentication mechanisms. Use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Support for Integrated Windows Authentication | x | x |
-| Support for OpenID Connect | x | x |
-| Support for WS-Federation | x | x | 
-| Support for smart-card authentication | x | x |
+| Support for Integrated Windows Authentication | ✔ | ✔ |
+| Support for OpenID Connect | ✔ | ✔ |
+| Support for WS-Federation | ✔ | ✔ | 
+| Support for smart-card authentication | ✔ | ✔ |
 
 ## Auditing and analytics features
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Log events to the Windows event log | x | x |
-| Send audit notifications via webhooks | x | x |
-| Send audit notifications via email | x | x | 
-| Send audit notifications via custom PowerShell scripts | x | x | 
-| Query access history from within the app^ |  | x |
-| Email summary reports^ | | x |
+| Log events to the Windows event log | ✔ | ✔ |
+| Send audit notifications via webhooks | ✔ | ✔ |
+| Send audit notifications via email | ✔ | ✔ | 
+| Send audit notifications via custom PowerShell scripts | ✔ | ✔ | 
 
 ## Infrastructure 
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Multi-domain support | x | x |
-| Cross-forest trust support | x | x |
-| Single-server deployments | x | x |
-| Windows Failover Cluster deployments |  | x |
-| Database support | SQL LocalDB  | SQL LocalDB<br>SQL Server Standard or Enterprise | 
+| Multi-domain support | ✔ | ✔ |
+| Cross-forest trust support | ✔ | ✔ |
+| Single-server deployments | ✔ | ✔ |
+| Windows Failover Cluster deployments |  | ✔ |
+| Database support | SQL Express  | SQL Express<br>SQL Server Standard or Enterprise | 
 
 ## Authorization features
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| ACL-based authorization | x | x |
-| Custom PowerShell script-based authorization | | x |
-| Global rate-limiting on requests | x | x |
-| Granular rate-limiting policies for users and groups^ |  | x |
-| Import Microsoft LAPS permissions from Active Directory | x | x |
-| Import BitLocker recovery password permissions from Active Directory | x | x |
-| Import local admin permissions from computers | x | x | 
-| Import permissions from CSV file | x | x |
-| Import LAPS permissions from the Lithnet LAPS Web App | x | x |
+| ACL-based authorization | ✔ | ✔ |
+| Custom PowerShell script-based authorization | | ✔ |
+| Global rate-limiting on requests | ✔ | ✔ |
+| Import Microsoft LAPS permissions from Active Directory | ✔ | ✔ |
+| Import BitLocker recovery password permissions from Active Directory | ✔ | ✔ |
+| Import local admin permissions from computers | ✔ | ✔ | 
+| Import permissions from CSV file | ✔ | ✔ |
+| Import LAPS permissions from the Lithnet LAPS Web App | ✔ | ✔ |
 
 ## Support
-| Feature | Standard Edition | Enterprise Edition |
+| Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Community support via GitHub | x | x |
-| Priority support via email |  | x |
+| Community support via GitHub | ✔ | ✔ |
+| Priority support by Lithnet |  | ✔ |
 
-
-
-***^ Denotes features that are planned and coming soon***
+1. Requires the use of the Lithnet Access Manager Agent
+2. See the page on [[linux support]] for more details
