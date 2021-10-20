@@ -29,18 +29,23 @@ See the [[licensing]] page for information on how to trial or purchase an Enterp
 | Access to local admin password history <sup>1</sup> |  | ✔ |
 | Show the local admin username <sup>1</sup> |  | ✔ |
 
-### Access Manager Agent password management features 
+### Common password management features
+| Feature | Community Edition | Enterprise Edition |
+| --- | :---: | :---: |
+| Trigger LAPS password change when the password has been accessed | ✔ | ✔ |
+
+### Lithnet Access Manager Agent password management features 
 | Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Manage local admin passwords and store them in Active Directory (domain-joined Windows clients only) |  | ✔ |
 | Manage local admin passwords and store them in AMS |  | ✔ |
 | Encrypted storage of passwords |  | ✔ |
 | Retain historical local admin password history |  | ✔ |
-| Trigger LAPS password change when the password has been accessed | ✔ | ✔ |
-| Support for domain-joined windows devices | ✔ | ✔ |
+| Support for domain-joined windows devices | | ✔ |
+| Support for non-domain joined Windows above clients | | ✔ |
 | Support for macOS devices (Intel and M1) |  | ✔ |
-| Support for Azure AD joined and registered Windows 10 and higher devices |  | ✔ |
-| Support for non-domain joined Windows 8.1 and above clients | | ✔ |
+| Support for Azure AD joined Windows 10 and higher devices |  | ✔ |
+| Support for Azure AD registered Windows 10 and higher devices |  | ✔ |
 | Support for linux distributions (x64 and arm64) <sup>2</sup> | | ✔ |
 
 ### Just-in-time access features
@@ -95,7 +100,7 @@ Access Manager supports many different authentication mechanisms. Use a modern a
 | Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Community support via GitHub | ✔ | ✔ |
-| Priority support by Lithnet |  | ✔ |
+| Enterprise support by Lithnet |  | ✔ |
 
 1. Requires the use of the Lithnet Access Manager Agent
 2. See the page on [[linux support]] for more details

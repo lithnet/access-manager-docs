@@ -1,5 +1,10 @@
-# Agent Operating System Support
+# Server Operating System Support
+The Lithnet Access Manager Service requires Windows Server 2012 R2 or higher.
 
+### Dependencies
+The server requires .NET Core 3.1 to be installed.
+
+# Agent Operating System Support
 The Lithnet Access Manager agent is supported on Windows, macOS, and Linux. Each operating system family has slightly different requirements.
 
 ## Windows requirements

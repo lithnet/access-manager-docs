@@ -5,7 +5,9 @@ In order to install the Access Manager Service, the following prerequisites must
 1. Windows Server 2012 R2 or later 
 2. [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
 3. [ASP.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
-4. An SSL certificate for the AMS web site
+4. Microsoft SQL Express, if hosting the database locally, or a separate SQL Standard or Enterprise edition server. (SQL express is installed by default)
+5. An SSL certificate for the AMS web site
+
 
 ## Step 1: Create a service account
 The Access Manger Service needs to run under the context of a domain user account. We strongly recommend using a group-managed service account for this purpose. [We've created a guide for setting up a GMSA](Creating-a-service-account-for-the-Access-Manager-Service) which includes a script to get you up and running quickly.
