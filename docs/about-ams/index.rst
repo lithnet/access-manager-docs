@@ -1,6 +1,8 @@
 About Access Manager
 ========================================================
 
+.. include:: README.rst
+
 .. toctree::
    :maxdepth: 2
 
