@@ -1,13 +1,13 @@
-Planning
+About Access Manager
 ========================================================
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Planning:
+   :maxdepth: 2
+   :caption: About Access Manager:
 
-   Preventing-lateral-movement-with-Access-Manager
-   Choosing-a-local-admin-password-strategy
-   Performing-an-offline-discovery-of-local-admins
+   How-does-Access-Manager-help-prevent-lateral-movement
+   Access-Manager-Editions
+   Licensing
 
 
 
