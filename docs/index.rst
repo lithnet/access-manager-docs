@@ -10,6 +10,7 @@
    :maxdepth: 3
    :caption: Contents:
 
+   Home <about-ams/README.rst>
    about-ams/index
    installation/index
    configuration/index
