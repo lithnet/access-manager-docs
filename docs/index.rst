@@ -7,12 +7,25 @@
 
 .. toctree::
    :hidden:
-   :maxdepth: 3
-   :caption: Contents:
 
-   Home <about-ams/README.rst>
+   Home <self>
+
+.. toctree::
+   :maxdepth: 3
+   :caption: About AMS
+
    about-ams/index
-   installation/index
+
+   .. toctree::
+   :maxdepth: 3
+   :caption: Installation
+
+   installation
+
+   .. toctree::
+   :maxdepth: 3
+   :caption: Configuration
+
    configuration/index
    installation/downloads   
 
