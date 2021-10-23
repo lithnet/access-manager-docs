@@ -6,5 +6,5 @@ Configuration
    :caption: Configuration:
 
    Setting-up-authentication
-   Deploying-features
+   deploying-features
 
