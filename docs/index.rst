@@ -17,14 +17,14 @@
    about-ams/index
 
 
-   .. toctree::
+.. toctree::
    :maxdepth: 3
    :caption: Installation
 
    installation/index
 
 
-   .. toctree::
+.. toctree::
    :maxdepth: 3
    :caption: Configuration
 
