@@ -8,7 +8,7 @@
 
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your Active Directory environment in a modern and user-friendly way.
 
-It provides a web-based interface that allows users to request local admin passwords, bitlocker recovery keys, and grant just-in-time administrative access to their own accounts. 
+It provides a web-based interface that allows users to request local admin passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts. 
 
 It is fully compatible and works out-of-the-box with Microsoft LAPS, or you can replace the Microsoft LAPS agent with the Lithnet Access Manager Agent, which encrypts local admin passwords in the directory, and can optionally save a history of local admin passwords. 
 
