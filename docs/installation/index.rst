@@ -4,7 +4,7 @@ Installation
 .. include:: Getting-started.md
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Getting Started:
 
    Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents
@@ -16,4 +16,4 @@ Installation
 
    Installing-the-Access-Manager-Agent-on-Windows
    Installing-the-Access-Manager-Agent-on-Linux
-   Installing-the-Access-Manager-Agent-on-macOS
+   Installing-the-Access-Manager-Agent-on-macOs
