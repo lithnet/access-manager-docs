@@ -22,7 +22,7 @@ copyright = '2021, Lithnet'
 author = 'Lithnet'
 
 # The full version, including alpha/beta/rc tags
-release = '2.0-beta1'
+release = '2.0-beta.1'
 
 # -- General configuration ---------------------------------------------------
 
