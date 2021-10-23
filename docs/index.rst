@@ -7,14 +7,11 @@
 
 .. toctree::
    :hidden:
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Contents:
 
-   Access-Manager-Editions
-   planning/index
-   getting_started/index
-   setting_up_authentication/index
-   deploying_features/index
-   help/index
-   
+   about-ams/index
+   installation/index
+   configuration/index
+   installation/downloads   
 
