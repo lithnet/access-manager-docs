@@ -14,6 +14,4 @@ Installation
    Installing-Access-Manager-in-a-Failover-Cluster
    SQL-installation-options
 
-   Installing-the-Access-Manager-Agent-on-Windows
-   Installing-the-Access-Manager-Agent-on-Linux
-   Installing-the-Access-Manager-Agent-on-macOs
+   Installing-the-Access-Manager-Agent
