@@ -11,8 +11,8 @@ Installation
    System-requirements
 
    Installing-the-Access-Manager-Service
-      Installing-Access-Manager-in-a-Failover-Cluster
-      SQL-installation-options
+   Installing-Access-Manager-in-a-Failover-Cluster
+   SQL-installation-options
 
    Installing-the-Access-Manager-Agent-on-Windows
    Installing-the-Access-Manager-Agent-on-Linux
