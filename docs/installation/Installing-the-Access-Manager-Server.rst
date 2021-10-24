@@ -1,5 +1,5 @@
-Installing the Access Manager Agent
-===================================
+Installing the Access Manager Server
+====================================
 
 .. toctree::
    :maxdepth: 2

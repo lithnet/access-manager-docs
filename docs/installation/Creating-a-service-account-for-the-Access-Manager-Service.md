@@ -1,26 +1,28 @@
-### Account type
+# Creating a service account for the Access Manager Service
+
+## Account type
 We strongly recommend using a [group-managed service account (GMSA)](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) for the service process to run under.
 
 Group-managed service accounts, introduced in Windows Server 2012, provide a fantastic way to secure your service account by letting the Active Directory itself take care of generating, and rotating, the password. Just like a computer account, the password is a strong, random sequence of 128 bits. You'll find a script at the end of this page for creating a GMSA.
 
 You can use a standard user account if you prefer, but make sure you keep the service account password safe and secure. Access to this service account means access to large numbers of machines in your Active Directory. Treat the Access Manager server and service account with the same level of security as you would a domain controller or domain admin account.
 
-### An important note about delegation
+## An important note about delegation
 One of the most important protections you should implement, is ensuring that the AMS service account cannot be delegated. That is, other services in your domain that are allowed to impersonate other users in the domain, should be explicitly prevented from being able to impersonate the AMS service account. This is achieved through the use of the `Account is sensitive and cannot be delegated` userAccountControl flag. This is accessible in the properties window of an AD account for a standard user, but must be set with PowerShell for a GMSA. The GMSA script provided below already takes care of this.
 
-<img src="../images/aduc-account-is-sensitive.png" alt="account_sensitive" width="1000px">
+<img src="../images/aduc-account-is-sensitive.png" alt="account_sensitive" >
 
-### Domain permissions
+## Domain permissions
 AMS does need specific rights depending on how you plan to use it. For example, if you are reading Microsoft LAPS passwords, then you'll need to ensure the appropriate read permissions are granted. If you are using it for JIT access, then the ability to modify membership of certain groups is needed. The AMS configuration tool provides all the scripts needed to delegate just the permissions that are needed for the scenarios you want to use.
 
 Resist the temptation to add the AMS service account to groups such as domain admins. It doesn't need those rights, no service ever does. If you are having access issues, raise an issue on github and we'll be happy to troubleshoot and help you resolve the problem.
 
-### User interface warnings
+## User interface warnings
 We do take these recommendations seriously, and as such, the UI will alert you in the event of a change of configuration
 
-<img src="../images/delegation-warning.png" alt="delegation_warning" width="1000px">
+<img src="../images/delegation-warning.png" alt="delegation_warning">
 
-### Create a group-managed service account
+## Create a group-managed service account
 ```powershell
 # Create-GroupManagedServiceAccount
 #
