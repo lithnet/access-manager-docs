@@ -90,6 +90,10 @@ Enterprise edition customer benefit from the following capabilities when they de
 | --- | :---: | :---: |
 | Read BitLocker recovery passwords from AD | ✔ | ✔ |
 
+| <div style="width:1000px">Feature</div> | Community Edition | Enterprise Edition |
+| --- | :---: | :---: |
+| Read BitLocker recovery passwords from AD | ✔ | ✔ |
+
 
 ### Authentication features
 Access Manager supports many different authentication mechanisms. Use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
