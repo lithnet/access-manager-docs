@@ -1,12 +1,13 @@
 |
 
-##############################################
-
 .. image:: images/access-manager-logo.png
    :align: center
    :alt: Access Manager Logo
 
 |
+
+Home
+##############################################
 
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your Active Directory environment in a modern and user-friendly way.
 
