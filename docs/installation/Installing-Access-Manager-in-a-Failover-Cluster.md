@@ -61,7 +61,7 @@ If you are setting up a cluster containing an even number of nodes, you must con
 - Click `Add` on the `replicate registry settings` screen, and specify the following value `SOFTWARE\Lithnet\Access Manager Service\Parameters`
 - Complete the remaining steps of the wizard, and ensure the new role transitions to an 'online' state
 
-<img src="../images/Cluster-10-Online.png" alt="ckuster_online" width="1000px">
+<img src="../images/Cluster-10-Online.png" alt="cluster_online" width="1000px">
 
 ### 6. Configure AMS for high availability
 - Use the `Failover Cluster Manager` to determine which node currently hosts the AMS service, and log onto that node

@@ -1,12 +1,15 @@
 # System Requirements
 
-## Access Manager Server Operating System Support
+## Access Manager Server (AMS) Operating System Support
+### Operating system requirements
 The Lithnet Access Manager Service requires Windows Server 2012 R2 or higher.
 
 #### Dependencies
-The server requires .NET Core 3.1 to be installed.
+* [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
+* [ASP.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
+* Microsoft SQL Express 2017, if hosting the database locally, or a separate SQL Server 2017 or later, Standard or Enterprise edition server. (SQL express is installed by default). See the [SQL installation options](SQL-installation-options.md) page for more details
 
-## Access Manager Agent Operating System Support
+## Access Manager Agent (AMA) Operating System Support
 The Lithnet Access Manager agent is supported on Windows, macOS, and Linux. Each operating system family has slightly different requirements.
 
 ### Windows requirements

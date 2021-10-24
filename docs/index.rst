@@ -6,14 +6,10 @@
 .. include:: about-ams/README.rst
 
 .. toctree::
-   :hidden:
-
-   Home <self>
-
-.. toctree::
    :maxdepth: 2
    :caption: About Lithnet Access Manager
 
+   Home <self>
    about-ams/How-does-Access-Manager-help-prevent-lateral-movement
    about-ams/Access-Manager-Editions
    about-ams/Licensing
