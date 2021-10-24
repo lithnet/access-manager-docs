@@ -13,7 +13,7 @@ Enterprise edition also enables additional functionality, such as support for Mi
 
 See the [licensing](about-ams/Licensing) page for information on how to trial or purchase an Enterprise Edition license.
 
-## **Feature comparison**
+## Feature comparison
 
 ### Web Interface features
 The Access Manager web interface is the main feature of the product that your support staff and end users will be interacting with.
