@@ -32,7 +32,7 @@ release = '2.0-beta.1'
 extensions = ['myst_parser'
 ]
 
-myst_enable_extensions = ["html_image",]
+myst_enable_extensions = ["html_image","colon_fence","html_admonition",]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

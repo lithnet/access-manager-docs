@@ -6,10 +6,6 @@
 
 ----
 
-``` {note} 
-Notes require **no** arguments, so content can start here.
-```
-
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your Active Directory environment in a modern and user-friendly way.
 
 It provides a web-based interface that allows users to request local admin passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts. 
@@ -20,8 +16,8 @@ Access Manager provides a granular permission model, coupled with a detailed aud
 
 Modern authentication is a key feature of Access Manager, with support for OpenID Connect, allowing strong authentication and MFA with cloud-based identity providers such as Azure AD and Okta. On-premises providers have not been forgotten, with full support for WS-Federation (ADFS), smart cards, and if you need it, integrated windows authentication.
 
-**Defend against ransomware and other lateral movement-based attacks**
-######################################################################
+***Defend against ransomware and other lateral movement-based attacks***
+########################################################################
 ----
 
 Access Manager has one simple goal. To reduce the likelihood and impact of a wide-spread compromise in your environment by removing permanent administrative access to your workstations and servers. By making sure every computer has a unique local admin password (through the use of Microsoft LAPS or the Lithnet Access Manager Agent), and removing all other members of the built-in local `Administrators` group, you can limit the ability for credential-stealing ransomware to move laterally across your environment. Access Manager makes it as seamless as possible for admins to access LAPS passwords, or grant themselves temporary just-in-time admin access. Access Manager isn't a silver bullet guaranteed to protect you from these sort of attacks, but it forms a fundamental part of a defence-in-depth strategy against them. 
