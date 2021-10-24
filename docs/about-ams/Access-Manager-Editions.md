@@ -18,6 +18,7 @@ See the [[licensing]] page for information on how to trial or purchase an Enterp
 
 ### Web Interface features
 The Access Manager web interface is the main feature of the product that your support staff and end users will be interacting with.
+<div align="left">
 | Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Access to local admin passwords set by the Microsoft LAPS agent | ✔ | ✔ |
@@ -29,6 +30,7 @@ The Access Manager web interface is the main feature of the product that your su
 | Access to local admin password history <sup>1</sup> |  | ✔ |
 | Show the local admin username <sup>1</sup> |  | ✔ |
 
+</div>
 ### Common password management features
 These features are support for customers using the Microsoft LAPS agent, as well as the Lithnet Access Manager Agent.
 | Feature | Community Edition | Enterprise Edition |

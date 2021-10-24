@@ -6,6 +6,9 @@
 
 ----
 
+```{note} Notes require **no** arguments, so content can start here.
+```
+
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your Active Directory environment in a modern and user-friendly way.
 
 It provides a web-based interface that allows users to request local admin passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts. 
