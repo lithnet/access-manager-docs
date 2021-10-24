@@ -10,7 +10,7 @@
    :caption: About Lithnet Access Manager
 
    Home <self>
-   about-ams/How-does-Access-Manager-help-prevent-lateral-movement
+   about-ams/Preventing-lateral-movement
    about-ams/Access-Manager-Editions
    about-ams/Licensing
 
