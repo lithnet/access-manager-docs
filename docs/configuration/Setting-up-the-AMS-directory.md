@@ -18,9 +18,9 @@ From the `Directory configuration/Access Manager Directory` page, select mechani
 If you do not plan on using AAD device registration, then the setup process is complete.
 
 ## Step 3: Configure Azure Active Directory tenant details
-If you enable Azure Active Directory device registration, you must register you Azure Active Directory tenant details, and grant permission for the service to read information from your AAD.
+If you enable Azure Active Directory device registration, you must register your Azure Active Directory tenant details, and grant permission for the service to read information from your AAD.
 
-If you are using Azure AD authentication for AMS, you can reused the app registration created for authentication. Skip to the section labelled `Granting directory permissions`.
+If you are using Azure AD authentication for AMS, you can reuse the app registration created for authentication. Skip to the section labelled `Granting directory permissions`.
 
 If you are not using Azure AD for authentication, or you'd like to create a separate application for the directory access, then follow these steps to create a new application in Azure AD. 
 

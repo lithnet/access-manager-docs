@@ -30,4 +30,4 @@ Note that Microsoft LAPS does not support storing of LAPS history, so granting t
 
 You can optionally choose to expire the local admin password a period of time after it has been accessed. This will cause the LAPS agent to generate a new password _after_ its next check-in time. It may be up to 90 minutes after the time you specify.
 
-If you'd like to be notified when someone accesses a LAPS password, select the  notification channels you'd like to send to for success and failure events.
+If you'd like to be notified when someone accesses a LAPS password, select the notification channels you'd like to send to for success and failure events.

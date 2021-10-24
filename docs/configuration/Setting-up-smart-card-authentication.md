@@ -1,4 +1,4 @@
-# Setting up authentication with Smart cards
+# Setting up smart card authentication
 Certificate-based authentication is provided by Access Manager, with the optional support for requiring smart-card authentication.
 
 Certificates must contain a `principal name` attribute in their `Subject Alternative Names` which specifies the user's UPN as found in Active Directory.

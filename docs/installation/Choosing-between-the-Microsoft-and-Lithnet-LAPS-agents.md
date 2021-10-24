@@ -56,7 +56,7 @@ _1. Enabling auditing of access to Microsoft LAPS passwords requires enabling di
 
 _2. LAPS events can be lost in a sea of other directory-related audit events_
 
-The Access Manager Service is designed to take the pain away from desktop and server admins who have to use feature-limited tools to access these passwords. It also puts control in the hands of LAPS administrators and makes sure they can easy control who has access to the local admin passwords and keeps robust and detailed records of access events. It's the next generation of our trusted and proven [Lithnet LAPS Web App](https://github.com/lithnet/laps-web).
+The Access Manager Service is designed to take the pain away from desktop and server admins who have to use feature-limited tools to access these passwords. It also puts control in the hands of LAPS administrators and makes sure they can easily control who has access to the local admin passwords and keeps robust and detailed records of access events. It's the next generation of our trusted and proven [Lithnet LAPS Web App](https://github.com/lithnet/laps-web).
 
 ## Generating and storing local admin passwords
 Lithnet Access Manager has its own agent you can deploy to computers to manage the admin password. It behaves in much the same way as the Microsoft LAPS agent with a few important differences. 
@@ -67,7 +67,7 @@ For devices that are domain-joined, the Access Manager Agent stores them in the 
 
 ### Feature comparison between the Microsoft LAPS agent and the Lithnet Access Manager Agent
 
-| Feature | Microsoft LAPS Agent | Lithnet Access Manager Agent  |
+| Feature | Microsoft LAPS Agent | Lithnet Access Manager Agent |
 | -- | -- | -- |
 | Regularly rotates the local admin password | ✔ | ✔ |
 | Requires a custom AD schema | ✔ | ✔ <sup>1<sup> |
@@ -82,7 +82,7 @@ _2. Access Manager agent can store unencrypted passwords in the Microsoft LAPS a
 ### Compatibility
 You can use the Access Manager Service with the Microsoft LAPS agent without having to deploy the Access Manager Agent. However, if you deploy the Access Manager Agent, you'll need to use the Access Manager Service.
 
-|  | Microsoft LAPS Agent Passwords | Access Manager Agent Passwords |
+| | Microsoft LAPS Agent Passwords | Access Manager Agent Passwords |
 | -- | -- | -- |
 | Microsoft LAPS Client | ✔ | ❌ | 
 | Access Manager Service | ✔ | ✔ | 

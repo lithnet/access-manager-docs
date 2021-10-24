@@ -1,7 +1,7 @@
 ## Script-based authorization
 <img src="../images/ui-page-authz-accesscontrol-script.png" alt="acl_script" width="1000px">
 
-If you'd like to make authorization decisions outside of a static ACL model, you can utilize a PowerShell script to do this.
+If you'd like to make authorization decisions outside of the static ACL model, you can utilize a PowerShell script to do this.
 
 Access Manager can call a script that contains a function called `Get-AuthorizationResponse` that takes a user, computer, and logger as input parameters. From there you can make a decision on what the user should be allowed or denied access to, or choose to not make an authorization decision at all.
 
@@ -47,25 +47,25 @@ Scripts that take longer than 30 seconds to complete will be terminated by Acces
 The user object has the following properties you can access
 
 ### MsDsPrincipalName
-The NT4-style name of the user (eg `DOMAIN\user`)
+The NT4-style name of the user (e.g. `DOMAIN\user`)
 
 ### Sid
-The Security Identifier of the user (eg `S-1-5-x`)
+The Security Identifier of the user (e.g. `S-1-5-x`)
 
 ### SamAccountName
-The samAccountName of the user (eg `user`)
+The samAccountName of the user (e.g. `user`)
 
 ### DisplayName 
 The display name of the user
 
 ### UserPrincipalName
-The user's UPN (eg `user@domain.local`)
+The user's UPN (e.g. `user@domain.local`)
 
 ### Description
 The value of the description field in active directory, if present
 
 ### EmailAddress
-The user's email address (eg `user@domain.com`)
+The user's email address (e.g. `user@domain.com`)
 
 ### GivenName
 The user's given name
@@ -77,13 +77,13 @@ The user's surname
 The computer object has the following properties you can access
 
 ### MsDsPrincipalName
-The NT4-style name of the computer (eg `DOMAIN\PC1$`)
+The NT4-style name of the computer (e.g. `DOMAIN\PC1$`)
 
 ### Sid
-The Security Identifier of the computer (eg `S-1-5-x`)
+The Security Identifier of the computer (e.g. `S-1-5-x`)
 
 ### SamAccountName
-The samAccountName of the computer (eg `PC1`)
+The samAccountName of the computer (e.g. `PC1`)
 
 ### DisplayName 
 The display name of the computer

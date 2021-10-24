@@ -1,5 +1,4 @@
-# How does Access Manager help prevent lateral movement?
-----
+# How does Lithnet Access Manager help prevent lateral movement?
 
 Lateral movement is a technique used by attackers, where after gaining initial access to one system, they obtain credentials that allow them to move into other hosts on the network.
 
@@ -19,13 +18,13 @@ This is why Microsoft LAPS is so important. It randomizes the password on each i
 
 Unfortunately, accessing the Microsoft LAPS password is not the most user-friendly experience. You need to install a thick client, or use the advanced attribute editor of the Active Directory Users and Computers tool. For technicians out in the field this can be problematic, as they may be at a customer site without their own computer.
 
-Fortunately, Lithnet Access Manager Service (AMS) provides mobile-friendly web-based access to LAPS passwords so they can be accessed from any device with a browser. Combined with the ability to support modern authentication protocols like OpenID Connect, you can protect access to these passwords with multi-factor authentication.
+Fortunately, Lithnet Access Manager Service (AMS) provides mobile-friendly web-based access to LAPS passwords so that they can be accessed from any device with a browser. Combined with the ability to support modern authentication protocols like OpenID Connect, you can protect access to these passwords with multifactor authentication.
 
-The Enterprise Edition of Access Manager includes the Lithnet Access Manager Agent (AMA) which can be used to manage the local admin password where Microsoft LAPS isn't or can't used. It does not require Active Directory to operate, and therefore allows us to support macOS, Linux, non-domain joined Windows devices, as well as Azure AD joined and registered devices. You can of course also use it on Active Directory joined devices, and benefit from some of the other advanced features of the agent.
+The Enterprise Edition of Access Manager includes the Lithnet Access Manager Agent (AMA) which can be used to manage the local admin password where Microsoft LAPS isn't or can't be used. It does not require Active Directory to operate, and therefore allows us to support macOS, Linux, non-domain joined Windows devices, as well as Azure AD joined and registered devices. You can of course also use it on Active Directory joined devices, and benefit from the other advanced features of the agent.
 
 The AMA also helps in scenarios where machines are rolled back from a snapshot or restored from a backup. Using Microsoft LAPS can be problematic in this case. If the machine account password has been changed since the snapshot was taken, no one can log onto the machine with a domain account. If the LAPS password was rotated since the snapshot was taken, then not even the local administrator can log in. AMA can store the previous passwords in the directory, and record when they were in use, so you can easily get back into the computer in this scenario.
 
-For added protection, it is highly recommended to [Deny local accounts access to the computer over the network](https://support.microsoft.com/en-au/help/4488256/how-to-block-remote-use-of-local-accounts-in-windows). This will ensure that the local admin password cannot be used over the network at all. It will only work for local logins.
+For added protection, it is highly recommended that you [deny local accounts access to the computer over the network](https://support.microsoft.com/en-au/help/4488256/how-to-block-remote-use-of-local-accounts-in-windows). This will ensure that the local admin password cannot be used over the network at all. It will only work for local logins.
 
 ## 2. Removing everyone from the local administrators group
 
@@ -37,7 +36,7 @@ One of the simplest to achieve technically, that has a high degree of effectiven
 
 While this sounds scary, Access Manager takes the technical complexity away from making such a change. Your administrators of course, will need to adapt to a new way of working, so getting appropriate buy-in from senior management is important. Like the other mitigations, it's not foolproof, and it's not perfect. It is however a relatively low complexity solution, that offers a high value.
 
-The theory behind this approach, quite simply, is that if a computer is compromised, and the user is a local admin on that computer but no where else, then lateral movement with that account becomes very difficult. So instead of having all your admins as members of the local administrators group, you assign them 'just-in-time access' (JIT) rights in Access Manager. When they need to access a computer, they visit the Access Manager web site, request JIT access to the computer, and Access Manager will grant them the appropriate rights for the length of time you allow. They can then logon to the server, and perform whatever work they need to, just as they did before. You can read more about exactly[how Access Manager performs just-in-time access](/deploying_features/Setting-up-JIT-access).
+The theory behind this approach, quite simply, is that if a computer is compromised, and the user is a local admin on that computer but nowhere else, then lateral movement with that account becomes very difficult. So instead of having all your admins as members of the local administrators group, you assign them 'just-in-time access' (JIT) rights in Access Manager. When they need to access a computer, they visit the Access Manager website, request JIT access to the computer, and Access Manager will grant them the appropriate rights for the length of time you allow. They can then log on to the server, and perform whatever work they need to, just as they did before. You can read more about exactly[how Access Manager performs just-in-time access](/deploying_features/Setting-up-JIT-access).
 
 The difference here is that they are entitled to be an administrator of the computers you specify in the Access Manager configuration tool, but they only get promoted to administrator when they need and request it.
 

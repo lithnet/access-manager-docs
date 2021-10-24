@@ -9,7 +9,7 @@ The following guide will assist you in configuring your application to use Azure
 5. In the `redirect URI` field, enter the base URL where your Access Manager web app is hosted followed by `/auth/` (eg `https://accessmanager.lithnet.local/auth/`)
 6. Click `Register`
 7. Take note of the `Application ID` value, this is our OpenID Connect client ID
-8. From the left-hand menu, click `Authentication` and then `Properties`. Set the Logout URL to be the same as your base URL, with `/auth/logout` appended to it. (eg `https://accessmanager.lithnet.local/auth/logout`)
+8. From the left-hand menu, click `Authentication` and then `Properties`. Set the Logout URL to be the same as your base URL, with `/auth/logout` appended to it. (e.g. `https://accessmanager.lithnet.local/auth/logout`)
 9. Save the settings
 10. From the `API permissions` page, use the `grant admin consent` if you want to prevent users from being prompted for their consent when logging into the app.
 11. From the `Certificates and secrets` page, click `new client secret`, give your secret a name, and then take note of the value provided.
@@ -20,9 +20,9 @@ The following guide will assist you in configuring your application to use Azure
 3. Select `Open ID Connect` as the authentication provider
 4. Use the `application id` obtained from the Azure AD setup process as the `client ID` value
 5. Specify the `client secret` obtained from the Azure AD setup process.
-6. Set the authority as appropriate for your tenant eg for `lithnet.io` it would be `https://login.microsoftonline.com/lithnet.io`
+6. Set the authority as appropriate for your tenant (e.g. for `lithnet.io` it would be `https://login.microsoftonline.com/lithnet.io`)
 
 <img src="../images/ui-page-authentication-oidc-azuread.png" alt=! width="1000px">
 
-## Part 3: Enable multi-factor authentication
-For further security, you can set up a conditional access policy to require multi-factor authentication for the app
+## Part 3: Enable multifactor authentication
+For further security, you can set up a conditional access policy to require multifactor authentication for the app

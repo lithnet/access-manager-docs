@@ -7,7 +7,7 @@ Access Manager Community edition is our core offering, that contains all the fea
 Community edition is completely free for any organization of any size to use.
 
 ## Enterprise Edition
- Enterprise edition customers can deploy the Lithnet Access Manager Agent, which enables LAPS support for devices that aren't joined to your Active Directory domain. The agent runs on Windows, macOS, and Linux, and supports Azure Active Directory joined and registered devices.
+Enterprise edition customers can deploy the Lithnet Access Manager Agent, which enables LAPS support for devices that aren't joined to your Active Directory domain. The agent runs on Windows, macOS, and Linux, and supports Azure Active Directory joined and registered devices.
 
 Enterprise edition also enables additional functionality, such as support for Microsoft Failover Clusters for high availability, and advanced custom authorization rules.
 
@@ -32,11 +32,7 @@ The Access Manager web interface is the main feature of the product that your su
 | Show the local admin username <sup>1</sup> |  <img src="../images/dash.png" width=15 /> | <img src="../images/check2.png" width=20 /> |
 :::
 
-Learn more about [the differences between the Microsoft and Lithnet LAPS Agents](../installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents)
-
-Learn more about [the differences between the Microsoft and Lithnet LAPS Agents](installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents)
-
-Learn more about [the differences between the Microsoft and Lithnet LAPS Agents](/installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents)
+Learn more about [the differences between the Microsoft and Lithnet LAPS Agents](/installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents).
 
 ### Common password management features
 These features are supported for customers using the Microsoft LAPS agent, as well as the Lithnet Access Manager Agent.
@@ -49,7 +45,7 @@ These features are supported for customers using the Microsoft LAPS agent, as we
 :::
 
 ### Lithnet Access Manager Agent password management features 
-Enterprise edition customer benefit from the following capabilities when they deploy the Lithnet Access Manager agent to their devices to manage LAPS passwords.
+Enterprise edition customers benefit from the following capabilities when they deploy the Lithnet Access Manager agent to their devices to manage LAPS passwords.
 
 :::{table}
 :align: left
@@ -72,7 +68,7 @@ Enterprise edition customer benefit from the following capabilities when they de
 :align: left
 | Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
-| Just-in-time administrative access to Windows computers | <img src="../images/check2.png" width=20 /> | <img src="../images/check2.png" width=20 /> |
+| Just-in-time administrative access to Windows computers |<img src="../images/check2.png" width=20 /> |<img src="../images/check2.png" width=20 /> |
 :::
 
 ### BitLocker features
@@ -84,7 +80,7 @@ Enterprise edition customer benefit from the following capabilities when they de
 :::
 
 ### Authentication features
-Access Manager supports many different authentication mechanisms. Use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
+Access Manager supports several authentication mechanisms. You can use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
 
 :::{table}
 :align: left
@@ -116,7 +112,7 @@ Access Manager supports many different authentication mechanisms. Use a modern a
 | Cross-forest trust support | <img src="../images/check2.png" width=20 /> | <img src="../images/check2.png" width=20 /> |
 | Single-server deployments | <img src="../images/check2.png" width=20 /> | <img src="../images/check2.png" width=20 /> |
 | Windows Failover Cluster deployments |  <img src="../images/dash.png" width=15 /> | <img src="../images/check2.png" width=20 /> |
-| Database support | SQL Express  | SQL Express<br>SQL Server Standard or Enterprise | 
+| Database support | SQL Express | SQL Express<br>SQL Server Standard or Enterprise | 
 :::
 
 ### Authorization features
@@ -144,4 +140,4 @@ Access Manager supports many different authentication mechanisms. Use a modern a
 :::
 
 1. Requires the use of the Lithnet Access Manager Agent
-2. See the page on [supported linux operating systems](../installation/System-Requirements#Linux requirements) for more details
+2. See the page on [supported Linux operating systems](installation/System-Requirements#Linux requirements) for more details

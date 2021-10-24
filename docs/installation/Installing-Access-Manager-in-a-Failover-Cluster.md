@@ -18,11 +18,11 @@ If you are setting up a cluster containing an even number of nodes, you must con
 
 ### 3. Configure the AMS storage volume online
 - Open the `Disk Management` tool, and bring the AMS storage volume online. Initialize the disk, format it, and assign it a drive letter (for the purposes of this guide, we will refer to the AMS storage volume as `S:`)
-- Open the `Failover Cluster Manager` tool, expand the cluster in the left hand side tree view, and select `Storage` followed by `Disks`
+- Open the `Failover Cluster Manager` tool, expand the cluster in the left-hand side tree view, and select `Storage` followed by `Disks`
 
 <img src="../images/Cluster-1-Storage.png" alt="cluster_storage" width="1000px">
 
-- Select `Add Disk` from the right-hand actions menu, and add the appropriate disk to the cluster. 
+- Select `Add Disk` from the right-hand `actions` menu, and add the appropriate disk to the cluster. 
 
 <img src="../images/Cluster-2-AddDisk.png" alt="add_disk" width="500">
 <img src="../images/Cluster-3-DiskAdded.png" alt="disk_added" width="1000px">
@@ -37,14 +37,14 @@ If you are setting up a cluster containing an even number of nodes, you must con
 <img src="../images/Cluster-5-InstallerServiceAccount.png" alt="service_account" width="1000px">
 - When the installer finishes, do not run the configuration utility when prompted.
 - Exit the installer and return to the `Failover Cluster Manager`
-- From the actions pane, select `Move Available Storage` and select the next node in the cluster. Confirm that the `owner node` for the storage has changed to the correct node.
+- From the `actions` pane, select `Move Available Storage` and select the next node in the cluster. Confirm that the `owner node` for the storage has changed to the correct node.
 - Log onto the next node, and ensure the `S:` drive is present. 
 - Run the AMS installer again, providing the exact same paths and service account as you did on the primary node.
 - Repeat this process for all remaining cluster nodes
 
 ### 5. Install the cluster role
 - Once AMS has been installed on all nodes, open the `Failover Cluster Manager` and go to the `Roles` node of the cluster
-- Click `Configure rule...` from the actions pane
+- Click `Configure rule...` from the `actions` pane
 - Select `Generic service` as the role type
 
 <img src="../images/Cluster-6-GenericService.png" alt="generic_service" width="1000px">
@@ -68,7 +68,7 @@ If you are setting up a cluster containing an even number of nodes, you must con
 - Open the AMS configuration utility
 - From the `Web hosting` page, select or import the SSL certificate 
 - From the `Licensing` page, click `Enter license key` and provide your enterprise license
-- From the `High availability` page, select `Enable cluster-compatible secret encryption` and `Enable encryption certificate synchronization` (unless you are storing your certificates in a HSM).
+- From the `High availability` page, select `Enable cluster-compatible secret encryption` and `Enable encryption certificate synchronization` (unless you are storing your certificates in an HSM).
 - Save the configuration at this point. Restart the service when prompted.
 - Close the AMS configuration utility
 > Note, the configuration utility requires access to the configuration file, and therefore can only be active on the cluster node that has access to the share storage volume. Always ensure you close the configuration utility before failing over to another node.
@@ -79,9 +79,4 @@ If you are setting up a cluster containing an even number of nodes, you must con
 - Repeat the certificate selection process on the remaining nodes in the cluster.
 
 At this point, the cluster-specific configure is complete. You can now follow the steps in the [[installation guide|Installing the Access Manager Service]] for configuring the AMS features as appropriate for your environment.
-
-
-
-
-
 

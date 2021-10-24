@@ -15,7 +15,7 @@ One of the most important protections you should implement, is ensuring that the
 ## Domain permissions
 AMS does need specific rights depending on how you plan to use it. For example, if you are reading Microsoft LAPS passwords, then you'll need to ensure the appropriate read permissions are granted. If you are using it for JIT access, then the ability to modify membership of certain groups is needed. The AMS configuration tool provides all the scripts needed to delegate just the permissions that are needed for the scenarios you want to use.
 
-Resist the temptation to add the AMS service account to groups such as domain admins. It doesn't need those rights, no service ever does. If you are having access issues, raise an issue on github and we'll be happy to troubleshoot and help you resolve the problem.
+Resist the temptation to add the AMS service account to groups such as domain admins. It doesn't need those rights, no service ever does. If you are having access issues, raise an issue on GitHub, and we'll be happy to troubleshoot and help you resolve the problem.
 
 ## User interface warnings
 We do take these recommendations seriously, and as such, the UI will alert you in the event of a change of configuration

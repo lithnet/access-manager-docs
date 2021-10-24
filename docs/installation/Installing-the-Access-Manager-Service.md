@@ -36,7 +36,7 @@ Validate that the ports are correct, and click `File`, then `Save`.
 [[More information on configuring the web host|Web Hosting Page]]
 
 ## Step 5: Configure your authentication provider
-AMS supports several different authentication providers. Read the guide on [[configuring authentication|Authentication Page]] and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multi-factor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
+AMS supports several different authentication providers. Read the guide on [[configuring authentication|Authentication Page]] and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
 
 The following pages will guide you through the process of configuring the relevant authentication provider for use with Access Manager.
 
@@ -92,7 +92,7 @@ AMS has a powerful auditing engine that allows you to receive notifications when
 
 [[More information on Auditing|Auditing Page]]
 
-## Step 12: Configure support for local admin password, just in time access, and Bitlocker
+## Step 12: Configure support for local admin password, just in time access, and BitLocker
 
 Now that you have the core application set up, you can configure the Access Manager features you are interested in;
 

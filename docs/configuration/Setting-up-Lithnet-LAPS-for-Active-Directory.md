@@ -33,7 +33,7 @@ Copy this script, and run it with an account that has either domain admin rights
 This script will grant permission for computer objects to update their own `lithnetAdminPassword` attributes, as well as grant the service account permission to read these attributes.
 
 ## Step 3: Configure encryption
-On the `Local admin passwords` page, select a forest from the drop down list in the `encryption` section, and select `Generate new...` to create a new encryption certificate. This will generate a certificate for this forest, storing the private key in the 'personal' certificate store of the service. Click `Publish...` to generate a deployment script that will publish this certificate in the directory. Run the script as a domain admin of the root domain in the forest.
+On the `Local admin passwords` page, select a forest from the dropdown list in the `encryption` section, and select `Generate new...` to create a new encryption certificate. This will generate a certificate for this forest, storing the private key in the 'personal' certificate store of the service. Click `Publish...` to generate a deployment script that will publish this certificate in the directory. Run the script as a domain admin of the root domain in the forest.
 
 Click on `View Certificate` and export a backup of the certificate and store it somewhere very safe. This certificate can decrypt all passwords in this forest, so it is important that you keep it secure and have a backup. There is no way to decrypt the local admin passwords if you lose this certificate.  
 

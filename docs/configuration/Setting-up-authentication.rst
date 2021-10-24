@@ -10,6 +10,3 @@ Setting up Authentication
    Setting-up-authentication-with-Okta
    Setting-up-smart-card-authentication
    Setting-up-integrated-windows-authentication
-
-
-

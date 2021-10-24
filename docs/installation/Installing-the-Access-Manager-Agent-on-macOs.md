@@ -8,7 +8,7 @@ The agent itself runs using launchd, and as it requires access to reset the root
 ### OS requirements
 The agent requires OSX 10.14 or later.
 
-If running on Apple silicon (M1 chip), Rosetta 2 must be installed.
+If running on Apple Silicon (M1 chip), Rosetta 2 must be installed.
 
 ## Installing the agent
 You can open the package from finder, or use the `installer` command line tool to install the package
@@ -39,7 +39,7 @@ launchctl kickstart -k system/io.lithnet.accessmanager.agent
 ```
 
 ## Uninstalling the agent
-You can use the uninstall script provided to remove the agent from the computer.
+You can use the uninstallation script provided to remove the agent from the computer.
 
 ```shell
 /Applications/LithnetAccessManagerAgent/uninstall.sh

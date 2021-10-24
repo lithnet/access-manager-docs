@@ -16,7 +16,7 @@ For larger installations of Access Manager, you should consider using SQL server
 If you are using the high-availability feature of Access Manager to run in a failover cluster, you cannot use SQL Express.
 
 ## Using SQL Standard or Enterprise Edition
-If you are running Access Manager in a large environment, or SQL express is otherwise  not suitable, you can set up the AMS database on an SQL instance of your choosing. You must manually setup your instance, and create the database, before running the installer. During installation, you will be prompted for the server and instance name.
+If you are running Access Manager in a large environment, or SQL express is otherwise not suitable, you can set up the AMS database on an SQL instance of your choosing. You must manually set up your instance, and create the database, before running the installer. During installation, you will be prompted for the server and instance name.
 
 ### Security considerations
 It is important to secure access to your database. It contains information used by computers to authenticate to the AMS directory, as well as their group membership. Encrypted passwords are also stored in the database, however, the encryption key needed to decrypt them is stored only on the AMS server.

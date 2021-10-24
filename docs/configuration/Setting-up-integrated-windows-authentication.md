@@ -2,7 +2,7 @@
 
 The following guide will assist you in configuring your application to use Integrated Windows Authentication (IWA).
 
-Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multi-factor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [[Azure AD|Setting up authentication with Azure AD]] and [[Okta|Setting up authentication with Okta]]. 
+Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multifactor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [[Azure AD|Setting up authentication with Azure AD]] and [[Okta|Setting up authentication with Okta]]. 
 
 ## Part 1: Configure the SPN
 Lithnet Access Manager uses kernel-mode authentication, which means the computer account, rather than the service account is used to authenticate the client. This means that the Kerberos service principal name must be applied to the computer account, rather than the service account.
