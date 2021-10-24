@@ -29,8 +29,8 @@ The Access Manager web interface is the main feature of the product that your su
 | Phonetic display of passwords | ✔ | ✔ |
 | Access to local admin password history <sup>1</sup> |  | ✔ |
 | Show the local admin username <sup>1</sup> |  | ✔ |
-
 </div>
+
 ### Common password management features
 These features are support for customers using the Microsoft LAPS agent, as well as the Lithnet Access Manager Agent.
 | Feature | Community Edition | Enterprise Edition |
@@ -57,10 +57,12 @@ Enterprise edition customer benefit from the following capabilities when they de
 | --- | :---: | :---: |
 | Just-in-time administrative access to Windows computers | ✔ | ✔ |
 
+<div align="left">
 ### BitLocker features
 | Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Read BitLocker recovery passwords from AD | ✔ | ✔ |
+</div>
 
 ### Authentication features
 Access Manager supports many different authentication mechanisms. Use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
