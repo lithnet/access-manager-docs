@@ -11,23 +11,31 @@
    Home <self>
 
 .. toctree::
-   :maxdepth: 3
-   :caption: About AMS
+   :maxdepth: 2
+   :caption: About Lithnet Access Manager
 
-   about-ams/index
-
+   about-ams/How-does-Access-Manager-help-prevent-lateral-movement
+   about-ams/Access-Manager-Editions
+   about-ams/Licensing
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Installation
 
-   installation/index
+   installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents
+   installation/System-requirements
 
+   installation/Installing-the-Access-Manager-Service
+   installation/Installing-Access-Manager-in-a-Failover-Cluster
+   installation/SQL-installation-options
+
+   installation/Installing-the-Access-Manager-Agent
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Configuration
 
-   configuration/index
-   installation/downloads   
+   configuration/Setting-up-authentication
+   configuration/deploying-features
+   installation/Downloads   
 
