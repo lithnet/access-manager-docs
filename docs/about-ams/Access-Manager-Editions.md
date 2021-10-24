@@ -10,13 +10,10 @@ Community edition is completely free for any organization of any size to use.
 This text is **standard** _Markdown_
 :::
 
-:::{table} This is a **standard** _Markdown_ title
-:align: left
-:widths: grid
+:::{admonition} This *is* also **Markdown**
+:class: warning
 
-abc | mnp | xyz
---- | --- | ---
-123 | 456 | 789
+This text is **standard** _Markdown_
 :::
 
 ## Enterprise Edition
@@ -32,6 +29,10 @@ See the [[licensing]] page for information on how to trial or purchase an Enterp
 ### Web Interface features
 The Access Manager web interface is the main feature of the product that your support staff and end users will be interacting with.
 
+
+:::{table}
+:align: left
+
 | Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Access to local admin passwords set by the Microsoft LAPS agent | ✔ | ✔ |
@@ -42,6 +43,7 @@ The Access Manager web interface is the main feature of the product that your su
 | Phonetic display of passwords | ✔ | ✔ |
 | Access to local admin password history <sup>1</sup> |  | ✔ |
 | Show the local admin username <sup>1</sup> |  | ✔ |
+:::
 
 ### Common password management features
 These features are support for customers using the Microsoft LAPS agent, as well as the Lithnet Access Manager Agent.
@@ -70,9 +72,12 @@ Enterprise edition customer benefit from the following capabilities when they de
 | Just-in-time administrative access to Windows computers | ✔ | ✔ |
 
 ### BitLocker features
+:::{table}
+:align: left
 | Feature | Community Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Read BitLocker recovery passwords from AD | ✔ | ✔ |
+:::
 
 ### Authentication features
 Access Manager supports many different authentication mechanisms. Use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
