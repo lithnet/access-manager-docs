@@ -24,11 +24,7 @@
 
    installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents
    installation/System-requirements
-
-   installation/Installing-the-Access-Manager-Service
-   installation/Installing-Access-Manager-in-a-Failover-Cluster
-   installation/SQL-installation-options
-
+   installation/Installing-the-Access-Manager-Server
    installation/Installing-the-Access-Manager-Agent
 
 .. toctree::

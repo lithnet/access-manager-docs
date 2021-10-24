@@ -1,4 +1,4 @@
-# SQL installation
+# SQL installation options
 Access Manager requires a Microsoft SQL Server 2017 or higher database. The setup program can install a pre-configured instance of SQL express, or you can use an SQL server your have set up previously. 
 
 ## Using the pre-configured SQL Express instance

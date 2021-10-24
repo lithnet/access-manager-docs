@@ -9,9 +9,5 @@ Installation
 
    Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents
    System-requirements
-
-   Installing-the-Access-Manager-Service
-   Installing-Access-Manager-in-a-Failover-Cluster
-   SQL-installation-options
-
+   Installing-the-Access-Manager-Server
    Installing-the-Access-Manager-Agent
