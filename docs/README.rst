@@ -1,6 +1,6 @@
 |
 
-.. image:: ../images/access-manager-logo.png
+.. image:: images/access-manager-logo.png
    :align: center
    :alt: Access Manager Logo
 
