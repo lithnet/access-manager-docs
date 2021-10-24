@@ -1,5 +1,7 @@
 |
 
+##############################################
+
 .. image:: images/access-manager-logo.png
    :align: center
    :alt: Access Manager Logo
@@ -79,8 +81,8 @@ The webhook functionality makes it really easy to get alerts via Slack or Micros
 Modern authentication options
 =================================================
 
-The web app supports traditional integrated windows authentication, as well as external authentication providers such as :doc:`ADFS </configuration/Setting-up-authentication-with-ADFS>` or 3rd party OpenID Connect providers such as 
-:doc:`Azure AD </configuration/Setting-up-authentication-with-Azure-AD>` and :doc:`Okta </configuration/Setting-up-authentication-with-Okta>`. Using an external authentication provider allows you the option of providing additional protections for the application such as multifactor authentication.
+The web app supports traditional integrated windows authentication, as well as external authentication providers such as :doc:`ADFS <configuration/Setting-up-authentication-with-ADFS.md>` or 3rd party OpenID Connect providers such as 
+:doc:`Azure AD <configuration/Setting-up-authentication-with-Azure-AD.md>` and :doc:`Okta <configuration/Setting-up-authentication-with-Okta.md>`. Using an external authentication provider allows you the option of providing additional protections for the application such as multifactor authentication.
 
 ******************************
 Download the app
