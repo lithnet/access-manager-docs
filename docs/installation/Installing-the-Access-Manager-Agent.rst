@@ -5,6 +5,6 @@ Installing the Access Manager Agent
    :maxdepth: 2
 
    Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents
-   Installing-the-Access-Manager-Agent-on-Windows
-   Installing-the-Access-Manager-Agent-on-Linux
-   Installing-the-Access-Manager-Agent-on-macOS
+   Installing-the-Access-Manager-Agent-Windows
+   Installing-the-Access-Manager-Agent-Linux
+   Installing-the-Access-Manager-Agent-macOS

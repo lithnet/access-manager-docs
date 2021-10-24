@@ -1,6 +1,4 @@
 # Access Manager Editions
-Access Manager comes in two editions - Community and Enterprise.
-
 ## Community Edition
 Access Manager Community edition is our core offering, that contains all the features that an organization need to help defend themselves from lateral movement-based attacks. You can provide your users full access to Microsoft LAPS passwords and request just-in-time admin access to computers all from the convenience of their browser.
 
