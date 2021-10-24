@@ -12,45 +12,45 @@ The Microsoft LAPS agent works only on Windows AD domain-joined devices. Lithnet
 
 | Feature | Microsoft LAPS Agent | Lithnet Access Manager Agent |
 | --- | --- | --- |
-| Write local admin password to Active Directory | ✔ | ✔ |
-| Write local admin password to the AMS database | ❌ | ✔ |
-| Support for Windows 8.1 or higher domain-joined devices | ✔ | ✔ |
-| Support for Windows 8.1 or higher non-domain-joined devices | ❌ | ✔ |
-| Support for Windows 10 or higher Azure AD-joined devices | ❌ | ✔ |
-| Support for Windows 10 or higher Azure AD-registered devices | ❌ | ✔ |
-| Support for Linux | ❌ | ✔ |
-| Support for macOS | ❌ | ✔ |
-| Encrypt stored local admin passwords | ❌ | ✔ |
-| Store a history of previous local admin passwords | ❌ | ✔ |
+| Write local admin password to Active Directory | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Write local admin password to the AMS database | <img src="../images/dash.png" width=15 /> | <img src="../images/check2.png" width=15 />|
+| Support for Windows 8.1 or higher domain-joined devices | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Support for Windows 8.1 or higher non-domain-joined devices | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Support for Windows 10 or higher Azure AD-joined devices | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Support for Windows 10 or higher Azure AD-registered devices | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Support for Linux | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Support for macOS | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Encrypt stored local admin passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Store a history of previous local admin passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
 
 ## Accessing local admin passwords
 Lithnet Access Manager provides an alternative to the LAPS client by offering web-based access to Microsoft LAPS passwords in a more accessible and secure way. It offers an array of features not present in the native Microsoft offering, and significantly improves the usability and security of accessing LAPS passwords in your environment.
 
 ### Feature comparison between the Microsoft LAPS client and the Lithnet Access Manager Service
 
-| Feature | Microsoft LAPS Client | Lithnet Access Manager Service  |
+| Feature | Microsoft LAPS Client | Lithnet Access Manager Service |
 | -- | -- | -- |
-| Allows access to Microsoft LAPS plain-text passwords | ✔ | ✔ |
-| Allows access to Lithnet Access Manager Agent encrypted passwords | ❌ | ✔ |
-| Supports accessing passwords over cross-forest trusts | ✔ | ✔ |
-| Static permissions via ACLs | ✔ | ✔ |
-| Dynamic permissions via PowerShell scripts | ❌ | ✔ |
-| Allows basic audit information to be captured | ✔ <sup>1</sup> | ✔ |
-| Allows detailed audit information to be captured | ❌ | ✔ |
-| Log audit events to Windows event log | ✔ <sup>2</sup> | ✔ |
-| Log audit events to a file | ❌ | ✔ |
-| Send audit events via email | ❌ | ✔ |
-| Send audit events via a webhook | ❌ | ✔ |
-| Send audit events via PowerShell | ❌ | ✔ |
-| Web-based access | ❌ | ✔ |
-| Mobile-device friendly | ❌ | ✔ |
-| Access from non-Windows devices | ❌ | ✔ |
-| Allows modern authentication and multi-factor authentication | ❌ | ✔ |
-| Per-user and per-IP rate-limiting to prevent password harvesting | ❌ | ✔ |
-| Restrict directory access to the passwords to a single service account | ❌ | ✔ |
-| Access passwords for non-domain-joined Windows devices | ❌ | ✔ |
-| Access passwords for non-Windows devices (macOS, Linux) | ❌ | ✔ |
-| Access passwords for Azure AD devices | ❌ | ✔ |
+| Allows access to Microsoft LAPS plain-text passwords | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Allows access to Lithnet Access Manager Agent encrypted passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Supports accessing passwords over cross-forest trusts | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Static permissions via ACLs | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Dynamic permissions via PowerShell scripts | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Allows basic audit information to be captured | <img src="../images/check2.png" width=15 /><sup>1</sup> | <img src="../images/check2.png" width=15 />|
+| Allows detailed audit information to be captured | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Log audit events to Windows event log | <img src="../images/check2.png" width=15 /><sup>2</sup> | <img src="../images/check2.png" width=15 />|
+| Log audit events to a file | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Send audit events via email | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Send audit events via a webhook | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Send audit events via PowerShell | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Web-based access | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Mobile-device friendly | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Access from non-Windows devices | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Allows modern authentication and multifactor authentication | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Per-user and per-IP rate-limiting to prevent password harvesting | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Restrict directory access to the passwords to a single service account | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Access passwords for non-domain-joined Windows devices | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Access passwords for non-Windows devices (macOS, Linux) | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Access passwords for Azure AD devices | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
 
 _1. Enabling auditing of access to Microsoft LAPS passwords requires enabling directory object auditing_
 
@@ -69,11 +69,11 @@ For devices that are domain-joined, the Access Manager Agent stores them in the 
 
 | Feature | Microsoft LAPS Agent | Lithnet Access Manager Agent |
 | -- | -- | -- |
-| Regularly rotates the local admin password | ✔ | ✔ |
-| Requires a custom AD schema | ✔ | ✔ <sup>1<sup> |
-| Stores a history of previous local admin passwords | ❌ | ✔ |
-| Stores passwords in plain-text | ✔ | ❌ <sup>2</sup> |
-| Encrypts passwords | ❌ | ✔ |
+| Regularly rotates the local admin password | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Requires a custom AD schema | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 /><sup>1<sup> |
+| Stores a history of previous local admin passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
+| Stores passwords in plain-text | <img src="../images/check2.png" width=15 />| <img src="../images/dash.png" width=15 /><sup>2</sup> |
+| Encrypts passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
 
 _1. Custom schema is only required if using the agent on domain-joined devices. Schema is not required when using the agent on non-windows or non-domain-joined devices_
 
@@ -84,5 +84,5 @@ You can use the Access Manager Service with the Microsoft LAPS agent without hav
 
 | | Microsoft LAPS Agent Passwords | Access Manager Agent Passwords |
 | -- | -- | -- |
-| Microsoft LAPS Client | ✔ | ❌ | 
-| Access Manager Service | ✔ | ✔ | 
+| Microsoft LAPS Client | <img src="../images/check2.png" width=15 />| <img src="../images/dash.png" width=15 />| 
+| Access Manager Service | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />| 

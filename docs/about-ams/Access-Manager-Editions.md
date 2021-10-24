@@ -140,4 +140,4 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 :::
 
 1. Requires the use of the Lithnet Access Manager Agent
-2. See the page on [supported Linux operating systems](installation/System-Requirements#Linux requirements) for more details
+2. See the page on [supported Linux operating systems](/installation/System-Requirements#Linux requirements) for more details
