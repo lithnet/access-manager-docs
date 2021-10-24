@@ -1,4 +1,4 @@
-# Choosing between the Microsoft and Lithnet LAPS agents
+# Choosing between the Microsoft and Lithnet agents for LAPS support
 Managing local admin passwords safely and securely relies on having a mechanism to generate and store the local admin passwords, and a way for trusted users to access them.
 
 Microsoft provides the Microsoft LAPS agent for generating and storing passwords in the directory, and the Microsoft LAPS client for accessing them. 
@@ -11,7 +11,7 @@ This guide will outline the feature differences between these products, and help
 The Microsoft LAPS agent works only on Windows AD domain-joined devices. Lithnet Access Manager agent supports a much wider range of operating systems and scenarios.
 
 | Feature | Microsoft LAPS Agent | Lithnet Access Manager Agent |
-| --- | --- | --- |
+| --- | :---: | :---: |
 | Write local admin password to Active Directory | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
 | Write local admin password to the AMS database | <img src="../images/dash.png" width=15 /> | <img src="../images/check2.png" width=15 />|
 | Support for Windows 8.1 or higher domain-joined devices | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
@@ -29,7 +29,7 @@ Lithnet Access Manager provides an alternative to the LAPS client by offering we
 ### Feature comparison between the Microsoft LAPS client and the Lithnet Access Manager Service
 
 | Feature | Microsoft LAPS Client | Lithnet Access Manager Service |
-| -- | -- | -- |
+| -- | :--: | :--: |
 | Allows access to Microsoft LAPS plain-text passwords | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
 | Allows access to Lithnet Access Manager Agent encrypted passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
 | Supports accessing passwords over cross-forest trusts | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
@@ -68,11 +68,11 @@ For devices that are domain-joined, the Access Manager Agent stores them in the 
 ### Feature comparison between the Microsoft LAPS agent and the Lithnet Access Manager Agent
 
 | Feature | Microsoft LAPS Agent | Lithnet Access Manager Agent |
-| -- | -- | -- |
+| -- | :--: | :--: |
 | Regularly rotates the local admin password | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />|
 | Requires a custom AD schema | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 /><sup>1<sup> |
 | Stores a history of previous local admin passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
-| Stores passwords in plain-text | <img src="../images/check2.png" width=15 />| <img src="../images/dash.png" width=15 /><sup>2</sup> |
+| Stores passwords in plain-text | <img src="../images/check2.png" width=15 />| <img src="../images/dash.png" width=15 /> <sup>2</sup> |
 | Encrypts passwords | <img src="../images/dash.png" width=15 />| <img src="../images/check2.png" width=15 />|
 
 _1. Custom schema is only required if using the agent on domain-joined devices. Schema is not required when using the agent on non-windows or non-domain-joined devices_
@@ -83,6 +83,6 @@ _2. Access Manager agent can store unencrypted passwords in the Microsoft LAPS a
 You can use the Access Manager Service with the Microsoft LAPS agent without having to deploy the Access Manager Agent. However, if you deploy the Access Manager Agent, you'll need to use the Access Manager Service.
 
 | | Microsoft LAPS Agent Passwords | Access Manager Agent Passwords |
-| -- | -- | -- |
+| -- | :--: | :--: |
 | Microsoft LAPS Client | <img src="../images/check2.png" width=15 />| <img src="../images/dash.png" width=15 />| 
 | Access Manager Service | <img src="../images/check2.png" width=15 />| <img src="../images/check2.png" width=15 />| 
