@@ -1,0 +1,18 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+      {
+        "label": "build",
+        "command": "${command:python.interpreterPath} -m sphinx ${workspaceFolder}\\docs ${workspaceFolder}\\docs\\_build\\html",
+        "type": "shell",
+        "presentation": {
+          "reveal": "always"
+        },
+        "group": {
+          "kind": "build",
+          "isDefault": true
+        }
+      }
+     
+    ]
+  }

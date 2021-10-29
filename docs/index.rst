@@ -82,8 +82,8 @@ The webhook functionality makes it really easy to get alerts via Slack or Micros
 Modern authentication options
 =================================================
 
-The web app supports traditional integrated windows authentication, as well as external authentication providers such as :doc:`ADFS <configuration/Setting-up-authentication-with-ADFS.md>` or 3rd party OpenID Connect providers such as 
-:doc:`Azure AD <configuration/Setting-up-authentication-with-Azure-AD.md>` and :doc:`Okta <configuration/Setting-up-authentication-with-Okta.md>`. Using an external authentication provider allows you the option of providing additional protections for the application such as multifactor authentication.
+The web app supports traditional integrated windows authentication, as well as external authentication providers such as :doc:`ADFS </configuration/Setting-up-authentication-with-ADFS>` or 3rd party OpenID Connect providers such as 
+:doc:`Azure AD </configuration/Setting-up-authentication-with-Azure-AD>` and :doc:`Okta </configuration/Setting-up-authentication-with-Okta>`. Using an external authentication provider allows you the option of providing additional protections for the application such as multifactor authentication.
 
 ******************************
 Download the app
@@ -108,6 +108,7 @@ Download the app
    :maxdepth: 2
    :caption: Installation
 
+   installation/Getting-started
    installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents
    installation/System-requirements
    installation/Installing-the-Access-Manager-Server
@@ -121,3 +122,15 @@ Download the app
    configuration/Setting-up-authentication
    configuration/deploying-features
    installation/Downloads
+   configuration/importing/Importing-authorization-rules
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
+   :caption: Help and support
+
+   help/Frequently-Asked-Questions
+   help/Troubleshooting
+   help/advanced
+   help/app-pages/index.rst
+   help/Getting-support

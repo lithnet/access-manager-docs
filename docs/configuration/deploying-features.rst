@@ -2,7 +2,7 @@ Deploying Features
 ==================
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: Deploying Features:
 
    Setting-up-Microsoft-LAPS
