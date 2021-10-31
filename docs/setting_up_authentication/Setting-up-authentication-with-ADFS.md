@@ -17,7 +17,7 @@ The following guide will assist you in configuring your application to use Activ
 10. Set 'Issue UPN' as the claim rule name. Select `Active Directory` as the attribute store, `User-Principal-Name` as the `LDAP Attribute` and `UPN` as the outgoing claim type
 
 ## Part 2: Configure Lithnet Access Manager
-![](../images/ui-page-authentication-wsfed.png)
+<img src="../images/ui-page-authentication-wsfed.png" alt=! width="1000px">
 
 1. In the `metadata` field, provide the metadata URL for your ADFS server (usually something like `https://adfs.lithnet.local/FederationMetadata/2007-06/FederationMetadata.xml`)
 2. Enter the base URL of your application in the `Realm` field.

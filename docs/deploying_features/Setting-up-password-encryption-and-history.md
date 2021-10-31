@@ -84,7 +84,7 @@ Optionally, you can specify to store the password in plain-text in the Microsoft
 If you want to enable keeping a record of previous local admin passwords, then enable the `Enable password history` policy item, and specify the number of days that you want to keep previous passwords for.
 
 
-<img src="../images/group-policy-adminpassword-history.png" alt="localadminpasswords" width="1000px">
+<img src="../images/group-policy-adminpassword-history.png" alt="!" width="1000px">
 
 ## Step 6: Assign access
 Once the agent is deployed, and the policy configured, you can now configure access to individual users and groups using the AMS configuration tool.
@@ -92,12 +92,12 @@ Once the agent is deployed, and the policy configured, you can now configure acc
 From the `Authorization` page, select `Add...` to create a new target. Select the OU you delegated permissions to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access. 
 
 
-<img src="../images/ui-page-authz-lapstarget.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-authz-lapstarget.png" alt="!" width="1000px">
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to read the local admin password, and optionally, the local admin password history.
 
 
-<img src="../images/ui-page-authz-editsecurity-laps.png" alt="localadminpasswords" width="500px">
+<img src="../images/ui-page-authz-editsecurity-laps.png" alt="!" width="500px">
 
 You can optionally choose to expire the local admin password a period of time after it has been accessed. This will cause the Access Manager Agent to generate a new password _after_ its next check-in time. The frequency of the check in is determined by the group policy 
 

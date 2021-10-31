@@ -6,7 +6,7 @@ This guide assumes that you have the Microsoft LAPS agent deployed and configure
 
 ## Step 1: Delegate Microsoft LAPS password permissions
 
-<img src="../images/ui-page-localadminpasswords.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-localadminpasswords.png" alt="!" width="1000px">
 
 
 
@@ -23,11 +23,11 @@ The final step is to create an authorization target, granting permission for you
 
 From the `Authorization` page, select `Add...` to create a new target. Select the OU you delegated permissions to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access. 
 
-<img src="../images/ui-page-authz-lapstarget.png" alt="localadminpasswords" width="1000px">
+<img src="../images/ui-page-authz-lapstarget.png" alt="!" width="1000px">
 
  Select `Edit Permissions...` to open the ACL editor.
 
-<img src="../images/ui-page-authz-editsecurity-laps.png" alt="localadminpasswords" width="500px">
+<img src="../images/ui-page-authz-editsecurity-laps.png" alt="!" width="500px">
 
 Note that Microsoft LAPS does not support storing of LAPS history, so granting that permission will not have any effect.
 
