@@ -57,7 +57,17 @@ html_show_sourcelink = False
 html_show_copyright = False
 html_show_sphinx = False
 
-# Add any paths that contain custom static files (such as style sheets) here,
+# Add any paths that contain custom static files (such as style sheets) here, n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n n nnb h
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+
+
+
+
+	confluenceUrl = BASE_URL+"/rest/api/content/search"
+	confluenceResponse = requests.request("GET", confluenceUrl, headers=confluenceHeaders, auth=(API_USER, API_TOKEN), params={"cql":"label="+label,"start":start,"limit":limit,"expand":expand})
+	assert confluenceResponse.status_code == 200
+	confluenceData = json.loads(confluenceResponse.text)
+	return confluenceData
