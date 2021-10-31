@@ -62,12 +62,3 @@ html_show_sphinx = False
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
-
-
-
-
-	confluenceUrl = BASE_URL+"/rest/api/content/search"
-	confluenceResponse = requests.request("GET", confluenceUrl, headers=confluenceHeaders, auth=(API_USER, API_TOKEN), params={"cql":"label="+label,"start":start,"limit":limit,"expand":expand})
-	assert confluenceResponse.status_code == 200
-	confluenceData = json.loads(confluenceResponse.text)
-	return confluenceData
