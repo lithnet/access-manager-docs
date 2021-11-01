@@ -38,19 +38,19 @@ Download the `Get-LocalAdmins.ps1` and `run.bat` files from the [script library]
 | Run mode | Run whether user is logged on or not |
 | Run with the highest privileges | Checked |
 
-<img src="images/group-policy-local-admins-script-scheduledtask-general.png" alt="scheduled_task" width="1000px">
+<img src="../images/group-policy-local-admins-script-scheduledtask-general.png" alt="scheduled_task" width="1000px">
 
 5.	On the `Trigger` tab:
     * Click new, and set the `Being the task` drop down to `At task creation/modification`
  
-<img src="images/group-policy-local-admins-script-scheduledtask-trigger-new.png" alt="trigger_new" width="1000px">
+<img src="../images/group-policy-local-admins-script-scheduledtask-trigger-new.png" alt="trigger_new" width="1000px">
 
 6.	On the `Actions` tab:
     * Click new
     * Set the `action` type to `Start a program`
     * In the `Program/Script` field, enter the path to the run.bat file (eg `\\your-server\local-admin-reports\scripts\run.bat`)
 
-<img src="images/group-policy-local-admins-script-scheduledtask-action-new.png" alt="action_new" width="1000px">
+<img src="../images/group-policy-local-admins-script-scheduledtask-action-new.png" alt="action_new" width="1000px">
 
 
 7. Save the scheduled task
@@ -85,4 +85,4 @@ If you have not used the provided script to create the file share, then these ch
 ## Import into Access Manager
 Once you've validated and merged your data, you can now import the merged CSV file into Access Manager.
 
-Follow the steps in the [[Importing mappings from a CSV file]] guide.
+Follow the steps in the [Importing mappings from a CSV file](/importing/Importing-mappings-from-a-CSV-file) guide.

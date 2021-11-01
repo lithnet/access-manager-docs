@@ -19,9 +19,9 @@ Access Manager can remotely connect to computers and obtain the list of members 
 ## Import user-to-computer mapping from a CSV file
 You can prepare a CSV file of mappings between users and computer and Access Manager can consolidate that list into a set of authorization rules.
 
-[[Importing mappings from a CSV file]]
+[Importing mappings from a CSV file](Importing-mappings-from-a-CSV-file)
 
 ## Import authorization targets from the Lithnet LAPS web app
 If you had the Lithnet LAPS Web App installed (the predecessor to Lithnet Access Manager), you can import your `target` rules and notifications from the `web.config` file.
 
-[[Importing rules from Lithnet Laps web app]]
+[Importing rules from Lithnet Laps web app](Importing-rules-from-Lithnet-Laps-web-app)

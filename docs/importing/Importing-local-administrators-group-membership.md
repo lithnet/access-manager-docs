@@ -1,25 +1,25 @@
 Access Manager can remotely connect to computers and obtain the list of members of the local administrators group of each computer, and consolidate that into a set of authorization rules.
 
-You may wish to consider [[performing an offline discovery of local admins]], and importing that data into Access Manager using the CSV import function. Check the prerequisite section below to determine if an online or offline import is suitable for your environment.
+You may wish to consider [performing an offline discovery of local admins](/planning/Performing-an-offline-discovery-of-local-admins), and importing that data into Access Manager using the CSV import function. Check the prerequisite section below to determine if an online or offline import is suitable for your environment.
 
 ## Prerequisites
 In order to discover members of the local administrators group on remote computers, the following conditions must be met.
 1. The user performing the import process must be a local administrator on the remote computers
 2. The computer must be reachable via SMB (TCP port 445) from the Access Manager server.
 
-If these conditions cannot be met, it is recommended that you perform an [[offline discovery|performing an offline discovery of local admins]], and use the CSV import function instead.
+If these conditions cannot be met, it is recommended that you perform an [offline discovery](/planning/Performing-an-offline-discovery-of-local-admins), and use the CSV import function instead.
 
 ## Open the import wizard
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-<img src="images/ui-page-authz.png" alt="authz" width="1000px">
+<img src="../images/ui-page-authz.png" alt="authz" width="1000px">
 
 ## Select the import type
 Select the local administrators import type, and click `Next`
-<img src="images/ui-page-import-type-localadminrpc.png" alt="local_admin" width="1000px">
+<img src="../images/ui-page-import-type-localadminrpc.png" alt="local_admin" width="1000px">
 
 ## Specify discovery settings
-<img src="images/ui-page-import-container-localadminrpc.png" alt="localadmin_rpc" width="1000px">
+<img src="../images/ui-page-import-container-localadminrpc.png" alt="localadmin_rpc" width="1000px">
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will attempt to connect to each computer object found in this section of the directory tree, and obtain the membership of it's local admin group.
 
@@ -34,12 +34,12 @@ You can also choose to ignore certain computers from the import process. For the
 ## Specify rule settings
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply. 
 
-<img src="images/ui-page-import-rulesettings.png)" alt="rulesettings" width="1000px">
+<img src="../images/ui-page-import-rulesettings.png" alt="rulesettings" width="1000px">
 
 ## Review discovery results
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store. 
 
-<img src="images/ui-page-import-results.png)" alt="import_results" width="1000px">
+<img src="../images/ui-page-import-results.png" alt="import_results" width="1000px">
 
 ### Merge settings
 When a new rule is discovered for a target (computer, group or container) that matches the target of an existing rule, Access Manager will just add the new permissions to the existing rule, rather than create a new rule. You can control this behavior with by unselecting the corresponding check box. 

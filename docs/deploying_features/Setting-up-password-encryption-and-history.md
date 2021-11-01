@@ -27,7 +27,6 @@ Once the schema is deployed, click the `refresh schema` button to check and vali
 
 <img src="../images/ui-page-localadminpasswords.png" alt="localadminpasswords" width="1000px">
 
-
 From the `Local admin passwords` page, click on `Delegate Lithnet AMA Permissions` to see a pre-built script for delegating the appropriate permissions. Simply change the `ou` variable to the full DN of the container than contains the computers you want to be able to access with AMS.
 
 Copy this script, and run it with an account that has either domain admin rights, or delegated control of the specified container.

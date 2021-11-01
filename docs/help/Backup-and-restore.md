@@ -32,4 +32,4 @@ Run `mmc.exe` and select the `File` menu and `Add/Remove snap in...`. Add the `c
 # Recovering from a lost encryption certificate private key
 If you loose access to the encryption certificate's private key, any current and historical passwords encrypted with that key are not recoverable. This is why backups are so important. 
 
-However, you can publish a new key, and force the agents to generate a new password and encrypt it with that key. See the guide on [[Recovering from a lost encryption certificate]] for more details.
+However, you can publish a new key, and force the agents to generate a new password and encrypt it with that key. See the guide on [Recovering from a lost encryption certificate](/help/Recovering-from-a-lost-encryption-certificate) for more details.

@@ -8,5 +8,3 @@ From the [BitLocker Page](/BitLocker-Page.md), click the `Delegate BitLocker Per
 
 Once directory permissions are granted to the service account, you can assign access to users using [authorization rules](/Authorization-Page.md).
 
-
-

@@ -1,5 +1,5 @@
 
-<img src="images/ui-page-userinterface.png" alt="ui" width="1000px">
+<img src="../images/ui-page-userinterface.png" alt="ui" width="1000px">
 
 # User interface customization
 #### Web site title

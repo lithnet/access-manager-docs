@@ -1,9 +1,9 @@
-ßßAccess Manager always logs events to the Windows event log, but you can also have it deliver notifications via email, web hooks, or even PowerShell.
+# Auditing
+
+Access Manager always logs events to the Windows event log, but you can also have it deliver notifications via email, web hooks, or even PowerShell.
 
 # Notification Channels
 Access Manager uses the concept of a notification channel to define what event information should be sent to where, and how it should be delivered. Notification channels are attached to authorization targets and are sent when access to a computer is granted or denied.
-
-ç
 
 **SMTP channels** allow for the delivery of audit events via a HTML formatted email. 
 

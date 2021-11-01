@@ -44,7 +44,7 @@ Best practice for JIT is that each computer that you want to enable JIT for, has
 
 <img src="../images/ui-page-jitaccess-groupcreation.png" alt="!" width="1000px">
 
-From the [[Jit Access|Jit-Access-Page]] page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
+From the [Jit Access](/app_pages/Jit-Access-Page) page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
 
 <img src="../images/ui-page-jitaccess-groupmapping.png" alt="!" width="1000px">
 

@@ -6,7 +6,7 @@ The Lithnet Access Manager Agent is only required if you have one of the followi
 
 If you want to use the Access Manager web app to access Microsoft LAPS passwords you do not need to use the Access Manager Agent.
 
-Read our guide on [[Choosing a local admin password strategy]] to learn more about the differences between using the Microsoft LAPS agent and the Lithnet Access Manager Agent.
+Read our guide on [Choosing a local admin password strategy](/planning/Choosing-a-local-admin-password-strategy) to learn more about the differences between using the Microsoft LAPS agent and the Lithnet Access Manager Agent.
 
 ## How are directory passwords encrypted?
 Lithnet Access Manager uses public-key cryptography to protect directory passwords. The Access Manager Service (AMS) creates a public and private key pair (RSA-PSS 4096-bit) and publishes the public key to the directory, and stores the private key in the service certificate store.

@@ -38,9 +38,9 @@ AMS supports several different authentication providers. Read the guide on [[con
 
 The following pages will guide you through the process of configuring the relevant authentication provider for use with Access Manager.
 
-* [Setting up authentication with Azure AD](../setting_up_authentication/Setting-up-authentication-with-Azure-AD)
-* [[Setting up authentication with Okta]]
-* [[Setting up authentication with ADFS]]
+* [Setting up authentication with Azure AD](/setting_up_authentication/Setting-up-authentication-with-Azure-AD)
+* [Setting up authentication with Okta](/setting_up_authentication/Setting-up-authentication-with-Okta)
+* [Setting up authentication with ADFS](/setting_up_authentication/Setting-up-authentication-with-ADFS)
 
 ## Step 6: Configure the Web User Interface
 
@@ -48,28 +48,27 @@ The following pages will guide you through the process of configuring the releva
 
 Configure the user interface as per your organization's requirements. You can customize the name of the application, provide your own logo and even provide some custom policy text for the access request page.
 
-[[More information on user interface settings|User Interface Page]]
+[More information on user interface settings](/app_pages/User-Interface-Page)
 
 ## Step 7: Configure Email server
 <img src="../images/ui-page-email.png" alt="!" width="1000px">
 
 You'll need to configure an outbound mail server in order to receive audit alerts via email.
 
-[[More information on email settings|Email Page]]
+[More information on email settings](/app_pages/Email-Page)
 
 ## Step 8: Configure Rate Limits
 
-<img src="../images/ui-page-ratelimits.png" alt="!" width="1000px">
+<img src="../images/ui-page-ratelimits.png" alt="!" width="1000px"><br>
 In order to ensure that your service is not used inappropriately, you can place limits of the number of requests a user can make in a given time. You should set these high enough that your users are not going to encounter rate limit issues under normal usage, but low enough to limit the impact of inappropriate or malicious usage of the service.
 
-[[More information on rate limiting|Rate Limits Page]]
+[More information on rate limiting](/app_pages/Rate-Limits-Page)
 
 ## Step 9: Configure IP Detection
-
-<img src="../images/ui-page-ip-detection.png" alt="!" width="1000px">
+<img src="../images/ui-page-ipaddressdetection.png" alt="!" width="1000px"><br>
 If you put AMS behind a reverse proxy or load balancer, you'll need to configure IP address detection. This is to ensure that AMS logs the correct IP address in audit logs, and applies rate limiting correctly. 
 
-[[More information on IP address detection|IP Address Detection Page]]
+[More information on IP address detection](/app_pages/IP-Address-Detection-Page)
 
 ## Step 10: Configure Active Directory permissions
 
@@ -81,14 +80,14 @@ You will need to restart the service to pick up the new group membership in the 
 
 Don't worry about the schema section at this stage, if you need to deploy any schema changes the appropriate feature guide will direct you to do so.
 
-[[More information on configuring Active Directory|Active Directory Page]]
+[More information on configuring Active Directory](/app_pages/Active-Directory-Page)
 
 ## Step 11: Configure Auditing
 
-<img src="../images/ui-page-auditing-smtp.png" alt="!" width="1000px">
+<img src="../images/ui-page-auditing-smtp.png" alt="!" width="1000px"><br>
 AMS has a powerful auditing engine that allows you to receive notifications when access is granted or denied to a user. AMS logs audit events to the Windows event log all the time, but you can also send audit events via email, through a custom PowerShell script, or even to Slack or Microsoft Teams using a web hook.
 
-[[More information on Auditing|Auditing Page]]
+[More information on Auditing](/app_pages/Auditing-Page)
 
 ## Step 12: Configure support for local admin password, just in time access, and Bitlocker
 

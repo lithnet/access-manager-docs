@@ -1,10 +1,10 @@
 
-<img src="images/ui-page-localadminpasswords.png" alt="local_passwords" width="1000px">
+<img src="../images/ui-page-localadminpasswords.png" alt="local_passwords" width="1000px">
 
 # Microsoft LAPS agent
 If you plan on using Lithnet Access Manager to read Microsoft LAPS passwords, you'll need to delegate permission for the AMS service account to read those passwords. You can use the built-in cmdlets from the AdmPwd PowerShell module, or click the `Delegate Microsoft LAPS Permissions` button to generate a script to do this automatically. 
 
-<img src="images/ui-page-script-delegate-mslaps.png" alt="delegate" width="1000px">
+<img src="../images/ui-page-script-delegate-mslaps.png" alt="delegate" width="1000px">
 
 Copy or save the script, modify the `$OU` variable as appropriate, and run it in with domain admin rights.
 
@@ -13,7 +13,7 @@ If you want to use the Lithnet Access Manager agent instead of the Microsoft LAP
 
 Click the `Delegate Lithnet AMA Permissions` button to generate a script to do this automatically.
 
-<img src="images/ui-page-script-delegate-ama.png" alt="delegate_ama" width="1000px">
+<img src="../images/ui-page-script-delegate-ama.png" alt="delegate_ama" width="1000px">
 
 
 Copy or save the script, modify the `$OU` variable as appropriate, and run it in with domain admin rights.
