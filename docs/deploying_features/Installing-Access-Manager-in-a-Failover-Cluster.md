@@ -24,10 +24,9 @@ If you are setting up a cluster containing an even number of nodes, you must con
 
 - Select `Add Disk` from the right-hand actions menu, and add the appropriate disk to the cluster. 
 
-<img src="../images/Cluster-2-AddDisk.png" alt="localadminpasswords" width="500">
-<img src="../images/Cluster-3-DiskAdded.png" alt="localadminpasswords" width="1000px">
-<img src="../images/Cluster-4-InstallerPaths.png" alt="installerpaths" width="100px">
-
+<img src="images/Cluster-2-AddDisk.png" alt="localadminpasswords" width="500">
+<img src="images/Cluster-3-DiskAdded.png" alt="localadminpasswords" width="1000px">
+<img src="images/Cluster-4-InstallerPaths.png" alt="installerpaths" width="100px">
 ### 4. Install Access Manager
 
 - On the first node, run the Access Manager Service installer.
