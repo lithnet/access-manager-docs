@@ -46,7 +46,7 @@ If there are previously used certificates shown here, don't remove them. If clie
 ## Backing up the private key
 It is imperative that you have a safe and secure backup of your encryption keys. Select a certificate to back up and click `View Certificate`. From the `Details` tab, click `Copy to file...`. This will launch the export certificate wizard, which will allow you to export the certificate and private key to a PFX file. Choose a strong password for the PFX, and store the file somewhere safe. It's best to have multiple copies of the file, including an 'offline' copy.
 
-See the guide on [restoring an encryption certificate from backup](configuration/backup-and-restore) for details on how to restore an existing key from a backup.
+See the guide on [restoring an encryption certificate from backup](configuration/Backup-and-restore) for details on how to restore an existing key from a backup.
 
 If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the [recovering from a lost encryption certificate](help/Recovering-from-a-lost-encryption-certificate) guide. Unfortunately, there is no way to recover the encrypted password history.
 

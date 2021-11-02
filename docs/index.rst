@@ -109,7 +109,6 @@ Download the app
    :caption: Installation
 
    installation/Getting-started
-   installation/Choosing-between-the-Microsoft-and-Lithnet-LAPS-agents
    installation/System-requirements
    installation/Installing-the-Access-Manager-Server
    installation/Installing-the-Access-Manager-Agent

@@ -1,5 +1,3 @@
-.. _adfs:
-
 # Setting up authentication with ADFS
 
 The following guide will assist you in configuring your application to use Active Directory Federation Services (ADFS) for authentication. 

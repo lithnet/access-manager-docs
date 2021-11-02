@@ -8,7 +8,7 @@ In order to install the Access Manager Agent, the following prerequisites must b
 We recommend using a configuration management tool such as SCCM to deploy the agent to your fleet. 
 
 ## Determine your password storage mode
-The Access Manager Agent can store passwords in Active Directory, or in the AMS directory. Password storage in the Active Directory is only available for domain-joined clients, and requires [schema extensions to the Active Directory](Deploy-the-Active-Directory-Schema-Extensions.md). 
+The Access Manager Agent can store passwords in Active Directory, or in the AMS directory. Password storage in the Active Directory is only available for domain-joined clients, and requires [schema extensions to the Active Directory](/configuration/Setting-up-Lithnet-LAPS-for-Active-Directory). 
 
 Azure AD devices, and standalone non-domain-joined devices always use the AMS directory to store passwords.
 
@@ -35,7 +35,7 @@ Other devices must use a registration key, obtained from the AMS server to authe
 
 If your device is not Azure AD joined or registered, you'll need to use a registration key to authentication. 
 
-4. If you are using the agent in Active Directory mode, you'll need to configure the agent via a group policy. Follow the [password encryption and history setup guide](/deploying_features/Setting-up-password-encryption-and-history) for the correct process of setting up the relevant group policy settings. Agents using AMS directory mode get their password policy from the AMS server, and do not use group policy at all.
+4. If you are using the agent in Active Directory mode, you'll need to configure the agent via a group policy. Follow the [setup guide for Lithnet LAPS for Active Directory](/configuration/Setting-up-Lithnet-LAPS-for-Active-Directory) for the correct process of setting up the relevant group policy settings. Agents using AMS directory mode get their password policy from the AMS server, and do not use group policy at all.
 
 ## Deploying the agent silently
 You can install the MSI packages silently using the following command lines
