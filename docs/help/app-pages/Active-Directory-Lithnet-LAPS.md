@@ -1,4 +1,5 @@
 # Lithnet LAPS configuration page (Active Directory)
+![](../../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
 
 ![](../../images/ui-page-active-directory-lithnet-laps.png)
 

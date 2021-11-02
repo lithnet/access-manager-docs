@@ -1,4 +1,6 @@
 # Setting up the AMS directory
+![](../images/badge-enterprise-edition-rocket.svg) The Access Manager directory is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
+
 When using the Lithnet Access Manager Agent (AMA) on devices that are not joined to an Active Directory (non-windows devices, Azure AD devices, and standalone Windows devices), the AMA stores passwords in the Access Manager Directory.
 
 The agent will contact the AMS server at regular intervals, and ask if its password needs to be changed, if it does, it rotates its local password, encrypts it, and submits it to the AMS server, which then stores the password in its internal database.

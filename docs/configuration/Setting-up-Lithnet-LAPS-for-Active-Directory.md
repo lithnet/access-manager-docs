@@ -1,4 +1,6 @@
 # Setting up Lithnet LAPS for domain-joined devices
+![](../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
+
 Managing passwords with the Lithnet Access Manager Agent (AMA) provides several features that are not available with the Microsoft LAPS agent.
 
 Firstly, local admin passwords are always encrypted in the directory using a public/private key pair. Encryption using the AMA is not optional. Passwords are encrypted using AES-CBC-256, and the unique encryption key is encrypted using a 4096-bit RSA public key. The RSA private key is kept locally on the AMS server only.

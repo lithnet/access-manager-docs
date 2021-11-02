@@ -1,5 +1,5 @@
 # Installing Access Manager in a Failover Cluster
-<img src="../images/badge-enterprise-edition-rocket.svg" alt="Enterprise edition logo"> High availability is an [Enterprise edition feature](Access-Manager-Editions)
+![](../images/badge-enterprise-edition-rocket.svg) High availability is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
 
 ## Prerequisites
 Installing Access Manager in a failover cluster requires the following;

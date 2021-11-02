@@ -1,4 +1,6 @@
 # Setting up Lithnet LAPS for standalone Windows devices
+![](../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
+
 Using the Lithnet Access Manager Agent to manage local admin passwords on devices requires some setup
 
 If you are deploying the Access Manager Agent to domain-joined Windows devices, then you'll need to follow the steps in the [Lithnet LAPS for Active Directory setup guide](Setting-up-Lithnet-LAPS-for-Active-Directory).

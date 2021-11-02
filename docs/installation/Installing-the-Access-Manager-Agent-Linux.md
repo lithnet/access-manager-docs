@@ -1,4 +1,5 @@
 # Installing the Access Manager Agent on Linux
+![](../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
 
 ## Prerequisites
 The Access Manager Agent makes use of the `chpasswd` tool, built into most linux distributions. Ensure this tool is available before installing the agent.

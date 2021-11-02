@@ -1,4 +1,5 @@
 # Installing the Access Manager Agent on macOS
+![](../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
 
 ## Prerequisites
 The agent must be able to validate the AMS server certificate. If you are using a self-signed certificate, you'll need to [add this certificate](https://support.apple.com/en-au/guide/keychain-access/kyca2431/mac) to the system keychain, and [configure it to be trusted](https://support.apple.com/en-au/guide/keychain-access/kyca11871/mac).
