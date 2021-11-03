@@ -3,8 +3,8 @@
 ## Prerequisites
 In order to install the Access Manager Service, the following prerequisites must be met;
 1. Windows Server 2012 R2 or later 
-2. [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
-3. [ASP.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
+2. [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime) 3.1.4 or later installed
+3. [.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime) 3.1.4 or later installed
 4. Microsoft SQL Express, if hosting the database locally, or a separate SQL Standard or Enterprise edition server. (SQL express is installed by default)
 5. An SSL certificate for the AMS website
 
@@ -19,20 +19,18 @@ Determine the host name you will use to access AMS and request an SSL certificat
 ## Step 3: Download and install the AMS service
 1. Download the latest version from the [releases](https://github.com/lithnet/access-manager/releases/latest) page.
 
-2. Download and install the [.NET Core Desktop runtime and the ASP.NET Core hosting bundle](https://dotnet.microsoft.com/download/dotnet-core/current/runtime), or if your server has internet access you can let the installer download and install these for you
+2. Download and install the [.NET Core Desktop runtime and the .NET Core hosting bundle](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime), or if your server has internet access you can let the installer download and install these for you
 
 3. Run the AMS installation package. Follow the prompts to install the application and provide the service account created in step 1 when prompted.
 
 ## Step 4: Configure the web host
 Run the Access Manager Service configuration tool. You'll be prompted to set up the web host.
 
-<img src="../images/ui-page-webhosting-notconfigured.png" alt=! width="1000px">
-
-Click the `Select from store...` button and select the certificate you installed in step 2.
+From the `Server configuration/Service host` page, click the `Select from store...` button and select the certificate you installed in step 2.
 
 Validate that the ports are correct, and click `File`, then `Save`.
 
-[[More information on configuring the web host|Web Hosting Page]]
+[More information on configuring the web host](/help/app-pages/Service-Host-Page)
 
 ## Step 5: Configure your authentication provider
 AMS supports several different authentication providers. Read the guide on [configuring authentication](/configuration/Setting-up-authentication) and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
@@ -83,7 +81,7 @@ AMS has a powerful auditing engine that allows you to receive notifications when
 
 [More information on Auditing](/help/app-pages/Auditing-Page)
 
-## Step 12: Configure support for local admin password, just in time access, and BitLocker
+## Step 12: Configure access to local admin passwords, just in time access, and BitLocker
 
 Now that you have the core application set up, you can configure the Access Manager features you are interested in;
 

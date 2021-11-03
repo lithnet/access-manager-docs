@@ -23,7 +23,7 @@ SID
 ```
 
 Example CSV file
-```csv
+```
 Computer,Principal
 PC1$,LITHNET\Domain Admins
 PC1$,LITHNET\ServerAdmins

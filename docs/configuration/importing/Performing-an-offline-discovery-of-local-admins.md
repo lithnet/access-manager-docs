@@ -84,4 +84,4 @@ If you have not used the provided script to create the file share, then these ch
 ## Import into Access Manager
 Once you've validated and merged your data, you can now import the merged CSV file into Access Manager.
 
-Follow the steps in the [[Importing mappings from a CSV file]] guide.
+Follow the steps in the [importing mappings from a CSV file](Importing-mappings-from-a-CSV-file) guide.

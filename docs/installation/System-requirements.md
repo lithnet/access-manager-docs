@@ -5,8 +5,8 @@
 The Lithnet Access Manager Service requires Windows Server 2012 R2 or higher.
 
 #### Dependencies
-* [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
-* [ASP.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/current/runtime) 3.1.4 or later installed
+* [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime) 3.1.4 or later installed
+* [.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime) 3.1.4 or later installed
 * Microsoft SQL Express 2017, if hosting the database locally, or a separate SQL Server 2017 or later, Standard or Enterprise edition server. (SQL express is installed by default). See the [SQL installation options](SQL-installation-options.md) page for more details
 
 ## Access Manager Agent (AMA) Operating System Support
@@ -41,7 +41,7 @@ The Access Manager Agent requires the use of the `chpasswd` tool that is built i
 #### Supported versions
 The agent runs on dotnet core 3.1 and should work on any linux distribution supported by Microsoft for these platforms. 
 
-Lithnet provide packages for RPM and debian-based distributions, as well as tar.gz file for use with others.
+Lithnet provides packages for RPM and debian-based distributions, as well as tar.gz file for use with others.
 
 See the [Microsoft guide for supported operating systems for dotnet core 3.1](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md)
 

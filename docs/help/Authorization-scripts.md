@@ -12,7 +12,7 @@ Access Manager uses the response you provide to create a dynamic ACL for the use
 
 ## Example script
 
-```ps
+```PowerShell
 function Get-AuthorizationResponse{
 	param(
 	$user,

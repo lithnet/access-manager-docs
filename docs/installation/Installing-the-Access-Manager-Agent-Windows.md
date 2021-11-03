@@ -34,23 +34,26 @@ Other devices must use a registration key, obtained from the AMS server to authe
 
 3. If you are using the AMS directory, you'll be prompted to select the authentication type you'd like to use. You can use Azure AD authentication, if the agent is running on a Windows 10 Azure AD joined or registered device. If the installer can detect the Azure tenant ID from the workstation's join information, it will be pre-populated here. Otherwise, you'll need to provide the tenant ID yourself.
 
-If your device is not Azure AD joined or registered, you'll need to use a registration key to authentication. 
+```{note}
+If your device is not Azure AD joined or registered, you'll need to use a registration key to authenticate the agent to the AMS server. 
+```
 
 4. If you are using the agent in Active Directory mode, you'll need to configure the agent via a group policy. Follow the [setup guide for Lithnet LAPS for Active Directory](/configuration/Setting-up-Lithnet-LAPS-for-Active-Directory) for the correct process of setting up the relevant group policy settings. Agents using AMS directory mode get their password policy from the AMS server, and do not use group policy at all.
 
 ## Deploying the agent silently
 You can install the MSI packages silently using the following command lines
 
+### Silent installation in Active Directory password storage mode
 Use the following command line to install the agent in Active Directory mode
 ```
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=0 AUTHMODE=0
 ```
-
+### Silent installation for Azure AD-joined and registered devices
 Use the following command line to install the agent in AzureAD mode, replacing the `SERVER` and `AZUREADTENANTID` values are appropriate
 ```
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=1 AUTHMODE=2 SERVER=ams.lithnet.local AZUREADTENANTID=YYYY
 ```
-
+### Silent installation for standalone Windows devices 
 Use the following command line to install the agent in AMS directory mode, replacing the `SERVER` and `REGISTRATIONKEY` values are appropriate
 ```
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=1 AUTHMODE=4 SERVER=ams.lithnet.local REGISTRATIONKEY=XXXX

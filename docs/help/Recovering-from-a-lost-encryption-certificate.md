@@ -6,7 +6,7 @@ In order to restore local admin password access to your environment, you need to
 ## Recovery steps
 
 ### Step 1: Generate a new certificate
-From the Access Manager Service configuration tool, visit the [[local admin passwords page]], select the forest you need to recover from the drop-down list, and click `Generate new...`. 
+From the Access Manager Service configuration tool, visit the `Directories/Active Directory/Lithnet LAPS page`, select the forest you need to recover from the drop-down list, and click `Generate new...`. 
 
 ### Step 2: Backup the new certificate
 Once the certificate has been generated, click `View certificate...` and on the `Details` tab, select `Copy to file...` to backup this key. Make sure you select the option to export the private key. Choose a strong password, and keep this file safe, preferably in an offline location.
@@ -19,7 +19,7 @@ In order to force clients to immediately generate a new password, we must set th
 
 You can use the following script to do this. Set the `$ou` variable to the DN of the container where the computers are located, or leave it as-is to expire the password of all computers in the domain.
 
-```ps
+```PowerShell
 # Set the OU variable to the DN of the container containing the computers that need their passwords reset, or leave it blank to reset all computers in the domain
 $ou = ""
 
@@ -40,7 +40,7 @@ When the agent next runs (by default this is every 60 minutes) it will detect th
 
 If you are using the password history feature, those previously used passwords can no longer be decrypted. You should delete them from the directory using the following script to avoid users being presented with `Password could not be decrypted` warnings in the web UI. 
 
-```ps
+```PowerShell
 # Set the OU variable to the DN of the container containing the computers that need their password history cleared, or leave it blank to clear the history from all computers in the domain
 $ou = ""
 

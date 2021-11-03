@@ -1,4 +1,4 @@
-# Setting up Lithnet LAPS for the AMS directory
+# Setting the AMS directory for Lithnet LAPS clients
 When using the Lithnet Access Manager Agent (AMA) on devices that are not joined to an Active Directory (non-windows devices, Azure AD devices, and standalone Windows devices), the AMA stores passwords in the Access Manager Directory.
 
 ## Step 1: Enable the AMS directory
@@ -7,7 +7,9 @@ In order to support LAPS on these devices, ensure you have followed the steps in
 ## Step 2: Create a password encryption certificate
 From the `Directory configuration/Access Manager Directory/Lithnet LAPS` page, press the `Create new...` button, to create a new encryption certificate. 
 
-> Warning: Backup this certificate when prompted and store it in a safe place. If you loose this certificate, you will not be able to decrypt any passwords stored in the directory. There are no other recovery options.
+```{warning}
+Backup this certificate when prompted and store it in a safe place. If you loose this certificate, you will not be able to decrypt any passwords stored in the directory. There are no other recovery options.
+```
 
 <img src="../images/ui-page-lithnet-laps-for-ams.png" >
 

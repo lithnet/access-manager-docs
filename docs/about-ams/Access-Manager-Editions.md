@@ -9,7 +9,7 @@ Enterprise edition customers can deploy the Lithnet Access Manager Agent, which 
 
 Enterprise edition also enables additional functionality, such as support for Microsoft Failover Clusters for high availability, and advanced custom authorization rules.
 
-See the [licensing](about-ams/Licensing) page for information on how to trial or purchase an Enterprise Edition license.
+See the [licensing](/about-ams/Licensing) page for information on how to trial or purchase an Enterprise Edition license.
 
 ## Feature comparison
 
@@ -138,4 +138,4 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 :::
 
 1. Requires the use of the Lithnet Access Manager Agent
-2. See the page on [supported Linux operating systems](/installation/System-Requirements#Linux requirements) for more details
+2. See the page on [supported Linux operating systems](/installation/System-requirements) for more details

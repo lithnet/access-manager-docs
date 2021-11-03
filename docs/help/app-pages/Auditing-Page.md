@@ -33,7 +33,7 @@ A HTML file used as a template for a successful access request
 #### Audit failure content/ template
 A HTML file used as a template for a failed access request
 
-AMS comes with a sample success and failure HTML template that you can customize to suit your requirements. See the page on [[audit variables]] for a list of the fields that are valid to use inside the email template.
+AMS comes with a sample success and failure HTML template that you can customize to suit your requirements. See the page on [audit variables](/help/Audit-variables) for a list of the fields that are valid to use inside the email template.
 
 #### Recipients
 A list of email recipients that the audit notification should be sent to

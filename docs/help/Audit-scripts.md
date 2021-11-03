@@ -8,7 +8,7 @@ Access Manager's auditing framework allows you to extend the product's auditing 
 
 The following script is a very simple example that extracts some audit information from the supplied hashtable, and writes to the PowerShell information stream.
 
-```ps
+```PowerShell
 function Write-AuditLog{
     param(
     [hashtable]$tokens,

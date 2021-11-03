@@ -8,9 +8,9 @@ Access to computers is provided through authorization rules. An authorization ru
 You can add, edit and delete individual rules using the authorization rule editor.
 
 There are several other helpful tools on this page. 
-To determine the effective access a user has to a particular computer, use the [[Effective access|Effective access page]] tool.
+To determine the effective access a user has to a particular computer, use the [Effective access](/help/app-pages/Effective-Access-Page) tool.
 
-You can build your authorization rule set by [[importing authorization rules|Importing authorization rules]] from other sources where users already have permissions.
+You can build your authorization rule set by [importing authorization rules](/configuration/importing/Importing-authorization-rules) from other sources where users already have permissions.
 
 The `Save permission report` tool allows you to export a list of all the principals that are granted access via the selected rules to a CSV file. Note, that any PowerShell based rules are not included in this report. 
 
@@ -84,7 +84,7 @@ Select the group that grants the user administrative access to the target. You c
 
 For example, using a templated name of `{computerDomain}\JIT-{computerName}` will expand to `IDMDEV1\JIT-PC1` for a computer named `PC1` in the domain `IDMDEV1`.
 
-This functionality makes it very easy to ensure that each computer has an individual JIT group that provides access to only that computer. Use the same template in combination with the AMS feature to automatically create JIT groups, and use group policy preferences to add that group to the local admin group on each computer. See the [[setting up JIT|Setting up JIT Access]] guide for more details.
+This functionality makes it very easy to ensure that each computer has an individual JIT group that provides access to only that computer. Use the same template in combination with the AMS feature to automatically create JIT groups, and use group policy preferences to add that group to the local admin group on each computer. See the [setting up JIT](/configuration/Setting-up-JIT-access) guide for more details.
 
 #### Expiry
 Set the duration of time after which the user will be removed from the JIT access group.

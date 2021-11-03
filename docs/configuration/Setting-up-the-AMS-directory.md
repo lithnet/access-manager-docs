@@ -1,4 +1,4 @@
-# Setting up the AMS directory
+# Preparing the AMS directory
 ![](../images/badge-enterprise-edition-rocket.svg) The Access Manager directory is an [Enterprise edition feature](/about-ams/Access-Manager-Editions)
 
 When using the Lithnet Access Manager Agent (AMA) on devices that are not joined to an Active Directory (non-windows devices, Azure AD devices, and standalone Windows devices), the AMA stores passwords in the Access Manager Directory.
@@ -8,11 +8,11 @@ The agent will contact the AMS server at regular intervals, and ask if its passw
 The following guide outlines the steps required to enable the AMS directory service.
 
 ## Step 1: Enable API support
-From the `Server configuration/service host` page, tick `Enable the Access manager API`, and specify the host name clients will use to connect to the server. This must match the DNS name in the certificate, or clients will be unable to connect.
+From the `Server configuration/service host` page, tick `Enable the Access manager API`, and specify the host name clients will use to connect to the server. This must match the DNS name in the active TLS/SSL certificate, or clients will be unable to connect.
 
 <img src="../images/ui-page-service-host.png" >
 
-## Step 2: Select device registration mode
+## Step 2: Enable device registration modes
 From the `Directory configuration/Access Manager Directory` page, select mechanisms by which devices will register with the AMS server. You can use registration keys deployed at installation time to the devices, and Windows 10 and higher devices joined or registered with Azure AD, can use Azure AD authentication to register.
 
 <img src="../images/ui-page-access-manager-directory.png" >
@@ -22,7 +22,7 @@ If you do not plan on using AAD device registration, then the setup process is c
 ## Step 3: Configure Azure Active Directory tenant details
 If you enable Azure Active Directory device registration, you must register your Azure Active Directory tenant details, and grant permission for the service to read information from your AAD.
 
-If you are using Azure AD authentication for AMS, you can reuse the app registration created for authentication. Skip to the section labelled `Granting directory permissions`.
+If you are using Azure AD authentication for AMS, you can reuse the app registration created for authentication. Skip to the `Granting directory permissions` section below.
 
 If you are not using Azure AD for authentication, or you'd like to create a separate application for the directory access, then follow these steps to create a new application in Azure AD. 
 
