@@ -15,12 +15,12 @@ The second process is managed by group policy preferences. GPP is configured to 
 
 Finally, the AMS service through its access request and authorization process, can add members to a group for a limited period of time.
 
-# JIT access group creation
+## JIT access group creation
 You can use AMS to automatically create a JIT group for every computer in a given OU. Note this doesn't have to be done by AMS if you have another tool you wish to use to create groups.
 
 Select `Enable automatic JIT group creation` and press the `Add...` button to create a new mapping. Once the mapping has been created, use the `Delegate permission...` button to generate a script that grants AMS the rights it needs to manage the JIT groups.
 
-## JIT group mapping
+### JIT group mapping
 ![](../../images/ui-page-jitaccess-groupmapping.png)
 
 #### Computer OU
@@ -37,7 +37,7 @@ Select the type of group to create. There is rarely a reason to change this from
 
 The AMS service checks every 60 seconds for new computers in the domain, and will create a group for any new computers it finds. Once an hour, the service will do a full synchronization of groups and computers. Only at this time, will missing computers be detected, and groups deleted if the mapping is configured to do so.
 
-# JIT mode
+## JIT mode
 Based on the capabilities of your Active Directory domain, Access Manager can enable JIT support through two different mechanisms. _Time-based membership_ and _dynamic groups_.
 
 ### Time-based membership

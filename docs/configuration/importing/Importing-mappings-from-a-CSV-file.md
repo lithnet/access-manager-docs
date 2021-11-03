@@ -4,7 +4,7 @@ You can prepare a CSV file of mappings between users and computer and Access Man
 
 The CSV file import is a simple, but flexible method of creating rules in Access Manager
 
-# CSV file format
+## CSV file format
 The CSV file format is very simple. There are two columns. The first contains the name of the computer, the second is the name of the principal, either a user or a group, to import. Additional columns can be included, but are ignored by the import process.
 
 Computer names may be in any of the following formats
