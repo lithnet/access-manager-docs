@@ -9,11 +9,11 @@
 Home
 ##############################################
 
-Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your Active Directory environment in a modern and user-friendly way.
+Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way.
 
-It provides a web-based interface that allows users to request local admin passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts. 
+It provides a web-based interface that allows users to request local admin/root passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts. 
 
-It is fully compatible and works out-of-the-box with Microsoft LAPS, or you can replace the Microsoft LAPS agent with the Lithnet Access Manager Agent, which encrypts local admin passwords in the directory, and can optionally save a history of local admin passwords. 
+It is fully compatible and works out-of-the-box with Microsoft LAPS, but also comes with its own agent, which expands LAPS coverage to Azure AD joined and registered devices, as well as macOS and Linux devices.
 
 Access Manager provides a granular permission model, coupled with a detailed auditing system, both of which are extensible using PowerShell.
 
@@ -33,7 +33,7 @@ Features
 
 Web-based access to local admin passwords
 =================================================
-Access Manager provides a simple web-based and mobile-friendly interface for accessing local admin passwords. There's no need for admins to install custom software, or have access to AD administrative tools to access LAPS passwords. 
+Access Manager provides a simple web-based and mobile-friendly interface for accessing local admin passwords for Windows, macOS and Linux devices. There's no need for admins to install custom software, or have access to AD administrative tools to access LAPS passwords. 
 
 .. image:: images/web-request-laps.gif
    :width: 400 
@@ -41,7 +41,7 @@ Access Manager provides a simple web-based and mobile-friendly interface for acc
 
 Administrators also have the option of forcing an expiry time when a password is accessed. This ensures that the password is rotated after use.
 
-We use LAPS passwords ourselves, so we know they can be painful at times. We try to take away as much of that pain as possible. From using fonts where you can actually see the difference between a lower-case L and a capital I, to showing a breakdown of the password using the NATO phonetic alphabet to make it easy to read it out to someone. Ever find yourself needing to type a LAPS password into a Windows logon screen? Have access manager read the password to you while you type!
+We use LAPS passwords ourselves, so we know they can be painful at times. We try to take away as much of that pain as possible. From using fonts where you can actually see the difference between a lower-case L and a capital I, to showing a breakdown of the password using the NATO phonetic alphabet to make it easy to read it out to someone. Have you ever found yourself needing to type a LAPS password into a Windows logon screen? Have Access Manager read the password to you while you type with its text-to-speech capability!
  
 Whether you use Microsoft LAPS, or the Lithnet Access Manager agent, the user experience is the same.
 
@@ -89,7 +89,7 @@ The web app supports traditional integrated windows authentication, as well as e
 Download the app
 ******************************
 
-`Download the current release <https://github.com/lithnet/access-manager/releases/latest>`_
+`Download the app </installation/Downloads>`_
 
 
 
@@ -110,6 +110,7 @@ Download the app
 
    installation/Getting-started
    installation/System-requirements
+   installation/Downloads
    installation/Installing-the-Access-Manager-Server
    installation/Installing-the-Access-Manager-Agent
 
@@ -120,7 +121,6 @@ Download the app
 
    configuration/Setting-up-authentication
    configuration/deploying-features
-   installation/Downloads
    configuration/importing/Importing-authorization-rules
 
 .. toctree::
