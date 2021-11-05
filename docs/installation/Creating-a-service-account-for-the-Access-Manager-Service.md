@@ -3,7 +3,9 @@
 ## Account type
 We strongly recommend using a [group-managed service account (GMSA)](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/group-managed-service-accounts-overview) for the service process to run under.
 
-Group-managed service accounts, introduced in Windows Server 2012, provide a fantastic way to secure your service account by letting the Active Directory itself take care of generating, and rotating, the password. Just like a computer account, the password is a strong, random sequence of 128 bits. You'll find a script at the end of this page for creating a GMSA.
+Group-managed service accounts, introduced in Windows Server 2012, provide a fantastic way to secure your service account by letting the Active Directory itself take care of generating, and rotating, the password. Just like a computer account, the password is a strong, random sequence of 128 bits. 
+
+You'll find a script at the end of this page for creating a GMSA.
 
 You can use a standard user account if you prefer, but make sure you keep the service account password safe and secure. Access to this service account means access to large numbers of machines in your Active Directory. Treat the Access Manager server and service account with the same level of security as you would a domain controller or domain admin account.
 
@@ -23,6 +25,10 @@ We do take these recommendations seriously, and as such, the UI will alert you i
 <img src="../images/delegation-warning.png" alt="delegation_warning">
 
 ## Create a group-managed service account
+Use the following script to create a group managed service account. This script requires membership in the Domain Admins group to execute correctly.
+
+Please change the `$accountName` and `$amsServerName` variables as needed for your environment.
+
 ```powershell
 # Create-GroupManagedServiceAccount
 #
