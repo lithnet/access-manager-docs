@@ -5,7 +5,7 @@ The following guide will assist you in configuring your application to use Azure
 1. Log into [portal.azure.com](https://portal.azure.com) with administrative credentials, select `All services` and select `Azure Active Directory`
 2. Select `App registrations` and click `New application registration`
 3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (Lithnet only - Single tenant)` as the supported account type
-4. In the `redirect URI` field, enter the base URL where your Access Manager web app is hosted followed by `/auth/` (eg `https://accessmanager.lithnet.local/auth/`)
+4. In the `redirect URI` field, enter the base URL where your Access Manager web app is hosted followed by `/auth` (eg `https://accessmanager.lithnet.local/auth`)
 5. Click `Register`
 6. Take note of the `Application ID` value, this is our OpenID Connect client ID
 7. From the left-hand menu, click `Authentication`. Set the Logout URL to be the same as your base URL, with `/auth/logout` appended to it. (e.g. `https://accessmanager.lithnet.local/auth/logout`)

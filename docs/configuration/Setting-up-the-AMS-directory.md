@@ -30,7 +30,6 @@ If you are not using Azure AD for authentication, or you'd like to create a sepa
 1. Log into portal.azure.com with administrative credentials, select `All services` and select `Azure Active Directory`
 2. Select `App registrations` and click `New application registration`
 3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (Lithnet only - Single tenant)` as the supported account type
-4. Select `Web` as the application type
 5. Leave the `redirect URI` field blank
 6. Click `Register`
 7. Take note of the `Application ID` value, this is our client ID
@@ -54,5 +53,9 @@ If you are not using Azure AD for authentication, or you'd like to create a sepa
 3. Press the `Add...` button to add a new tenant configuration
 4. Add the client ID, secret, and directory/tenant ID in the fields provided
 5. Save the tenant configuration
+
+```{note}
+You may need to wait a minute or two for the secret and delegation to become active
+```
 
 Access Manager is now configured to support Azure AD joined and registered devices.
