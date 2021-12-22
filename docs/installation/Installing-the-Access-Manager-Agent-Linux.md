@@ -36,7 +36,7 @@ Extract the archive to the root file system, allowing the files to be placed in 
 Run the following command to register the service with systemd
 
 ```shell
-/opt/LithnetAccessManagerAgent/LithnetAccessManagerAgent --install
+/opt/LithnetAccessManagerAgent/Lithnet.AccessManager.Agent --install
 ```
 
 Continue to the `Configuring the agent` section below.
@@ -45,13 +45,13 @@ Continue to the `Configuring the agent` section below.
 Once the package is installed, it must be configured to talk to your AMS server. You can run the following command to perform an interactive installation
 
 ```shell
-/opt/LithnetAccessManagerAgent/LithnetAccessManagerAgent --setup
+/opt/LithnetAccessManagerAgent/Lithnet.AccessManager.Agent --setup
 ```
 
 To perform a non-interactive installation, use the following command, replacing the server name, and registration key as appropriate. You can generate new registration keys using the AMS configuration tool.
 
 ```shell
-/opt/LithnetAccessManagerAgent/LithnetAccessManagerAgent --server ams.lithnet.local --registration-key XXXX
+/opt/LithnetAccessManagerAgent/Lithnet.AccessManager.Agent --server ams.lithnet.local --registration-key XXXX
 ```
 
 Check the log using the instructions in the `Viewing the log files` section below to ensure the agent registered correctly.
