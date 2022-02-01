@@ -11,7 +11,7 @@ From the `Directory configuration/Access Manager Directory/Lithnet LAPS` page, p
 Backup this certificate when prompted and store it in a safe place. If you loose this certificate, you will not be able to decrypt any passwords stored in the directory. There are no other recovery options.
 ```
 
-<img src="../images/ui-page-lithnet-laps-for-ams.png" >
+<img src="../images/ui-page-lithnet-laps-for-ams.png">
 
 ## Step 3: Adjust the default password policy
 AMS uses password policy to instruct clients how to generate their LAPS passwords. You can create custom policies and assign them to groups of computers, and you can specify a default policy that applies when no matching group-based policies are found.
@@ -20,5 +20,5 @@ Set the default policy as the baseline for your environment, and create specific
 
 You can create policies and assign them to either Azure AD or AMS groups containing computers.
 
-<img src="../images/ui-page-lithnet-laps-default-password-policy.png" >
+<img src="../images/ui-page-lithnet-laps-default-password-policy.png">
 
