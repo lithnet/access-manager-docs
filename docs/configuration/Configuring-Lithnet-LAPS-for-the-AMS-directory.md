@@ -20,5 +20,5 @@ Set the default policy as the baseline for your environment, and create specific
 
 You can create policies and assign them to either Azure AD or AMS groups containing computers.
 
-<img src="../images/ui-page-lithnet-laps-default-password-policy.png">
+<img src="../images/ui-page-lithnet-laps-default-password-policy.png" >
 
