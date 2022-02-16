@@ -9,3 +9,9 @@ Installation
 
    Installing-the-Access-Manager-Agent
    Installing-the-Access-Manager-Service
+
+
+
+
+`Download the app </installation/Downloads>`_
+

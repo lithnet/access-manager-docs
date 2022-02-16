@@ -9,6 +9,6 @@ Search through these help pages, and read the [Frequently asked questions](Frequ
 
 If you're unable to find an answer to your problem, then we ask that you raise a new issue here on Github. This helps us keep track of requests and to triage problems appropriately.
 
-Please describe the problem in as much detail as possible. If you can, provide screen shots of the issue. Ensure you have captured the [log files](Troubleshooting)) from the time of the event. These logs may contain sensitive information about your environment, so don't upload them to the issue unless you are confident of their contents. If we need to see the log files, we will provide you an email address to send them to once your issue has been triaged.
+Please describe the problem in as much detail as possible. If you can, provide screen shots of the issue. Ensure you have captured the [log files](Troubleshooting) from the time of the event. These logs may contain sensitive information about your environment, so don't upload them to the issue unless you are confident of their contents. If we need to see the log files, we will provide you an email address to send them to once your issue has been triaged.
 
 [Create a new issue](https://github.com/lithnet/access-manager/issues/new)

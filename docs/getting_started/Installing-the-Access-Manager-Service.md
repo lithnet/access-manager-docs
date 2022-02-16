@@ -31,10 +31,10 @@ Click the `Select from store...` button and select the certificate you installed
 
 Validate that the ports are correct, and click `File`, then `Save`.
 
-[[More information on configuring the web host|Web Hosting Page]]
+[More information on configuring the web host](/app_pages/Web-Hosting-Page)
 
 ## Step 5: Configure your authentication provider
-AMS supports several different authentication providers. Read the guide on [[configuring authentication|Authentication Page]] and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multi-factor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
+AMS supports several different authentication providers. Read the guide on [configuring authentication](/app_pages/Authentication-Page) and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multi-factor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
 
 The following pages will guide you through the process of configuring the relevant authentication provider for use with Access Manager.
 
@@ -66,6 +66,7 @@ In order to ensure that your service is not used inappropriately, you can place 
 
 ## Step 9: Configure IP Detection
 <img src="../images/ui-page-ipaddressdetection.png" alt="!" width="1000px"><br>
+
 If you put AMS behind a reverse proxy or load balancer, you'll need to configure IP address detection. This is to ensure that AMS logs the correct IP address in audit logs, and applies rate limiting correctly. 
 
 [More information on IP address detection](/app_pages/IP-Address-Detection-Page)

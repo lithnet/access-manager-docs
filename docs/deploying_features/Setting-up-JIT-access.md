@@ -21,7 +21,7 @@ When a user is granted JIT access to a computer, Access Manager creates a new te
 
 `User (member of) -> Temporary dynamic group (member of) -> JIT group`
 
-If you are operating at this forest functional level, you must create an OU in your directory where AMS can create the dynamic group objects. From the [[JIT Access Page|Jit-Access-Page]], select your forest, click `Set Dynamic Group OU` button. Choose an OU in your directory. Once you have done that, use the `Delegate dynamic group permission` script to grant the AMS service account rights to create groups in this OU.
+If you are operating at this forest functional level, you must create an OU in your directory where AMS can create the dynamic group objects. From the [JIT Access Page](/app_pages/Jit-Access-Page), select your forest, click `Set Dynamic Group OU` button. Choose an OU in your directory. Once you have done that, use the `Delegate dynamic group permission` script to grant the AMS service account rights to create groups in this OU.
 
 
 <img src="../images/ui-page-jitaccess-jitmode.png" alt="!" width="1000px">
@@ -44,9 +44,9 @@ Best practice for JIT is that each computer that you want to enable JIT for, has
 
 <img src="../images/ui-page-jitaccess-groupcreation.png" alt="!" width="1000px">
 
-From the [Jit Access](/app_pages/Jit-Access-Page) page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
+From the [JIT Access](/app_pages/Jit-Access-Page) page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
 
-<img src="../images/ui-page-jitaccess-groupmapping.png" alt="!" width="1000px">
+<img src="../images/ui-page-jitaccess-groupmapping.png" alt="!" width="500px">
 
 Select the OU that contains the computers you want to create JIT groups for and select a different OU where the JIT groups should be created. 
 
@@ -65,19 +65,19 @@ Note, using AMS specifically to create JIT groups is not required for JIT to wor
 Using the group policy editor, create a new group policy object and link it to the OU containing your computer objects. Open the policy and navigate to `Computer Configuration`, `Preferences`, `Control Panel Settings`, `Local Users and Groups`.
 
 
-<img src="../images/group-policy-local-users-and-groups.png" alt="!" width="1000px">
+<img src="../images/group-policy-local-users-and-groups.png" alt="!" width="500px">
 
 Right click the `Local users and groups` node, and select `New`, `Local group`. Click the drop down arrow on the `Group name` field, and select `Administrators (built-in)`. 
 
-<img src="../images/group-policy-local-users-and-groups-new-group.png" alt="!" width="1000px">
+<img src="../images/group-policy-local-users-and-groups-new-group.png" alt="!" width="500px">
 
 Click the `Add` button, and the group, using the `%computername%` variable, specify the templated name of the group set in step 2.
 
-<img src="../images/group-policy-local-users-and-groups-add-member.png" alt="!" width="1000px">
+<img src="../images/group-policy-local-users-and-groups-add-member.png" alt="!" width="500px">
 
 Add the built-in admin account, by creating a new member entry for `Administrator`.
 
-<img src="../images/group-policy-local-users-and-groups-complete.png" alt="!" width="1000px">
+<img src="../images/group-policy-local-users-and-groups-complete.png" alt="!" width="500px">
 
 If you are ready to enforce JIT access, select the `Delete all member users` tick box, as well as the `Delete all member groups`. This will ensure that only the built-in administrator, the JIT group and any members specified in this policy are in the local administrators group.
 
@@ -96,7 +96,7 @@ From the `Authorization` page, select `Add...` to create a new target. Select th
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to allow JIT access.
 
-<img src="../images/ui-page-authz-editsecurity-jit.png" alt="!" width="1000px">
+<img src="../images/ui-page-authz-editsecurity-jit.png" alt="!" width="500px">
 
 You must provide the group name or template in the `Just-in-time access settings` area, as well as the length of time until the access is expired.  
 
