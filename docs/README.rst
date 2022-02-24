@@ -15,7 +15,7 @@ Access Manager provides a granular permission model, coupled with a detailed aud
 
 Modern authentication is a key feature of Access Manager, with support for OpenID Connect, allowing strong authentication and MFA with cloud-based identity providers such as Azure AD and Okta. On-premises providers have not been forgotten, with full support for WS-Federation (ADFS), smart cards, and if you need it, integrated windows authentication.
 
-**Defend against ransomware and other lateral movement-based attacks**
+Defend against ransomware and other lateral movement-based attacks
 ##################################################################
 ----
 
@@ -26,12 +26,12 @@ We're a big believer in not having to pay for security 'minimums'. These days, a
 We recommend you have a look at our other product `Lithnet Password Protection for Active Directory <https://github.com/lithnet/ad-password-protection>`_, for a tool to help strengthen your environment against commodity password-based attacks. 
 
 ########
-**Features**
+Features
 ########
 ----
 
 
-**Web-based access to local admin passwords**
+Web-based access to local admin passwords
 ########################################################
 Access Manager provides a simple web-based and mobile-friendly interface for accessing local admin passwords. There's no need for admins to install custom software, or have access to AD administrative tools to access LAPS passwords. 
 
@@ -45,7 +45,7 @@ We use LAPS passwords ourselves, so we know they can be painful at times. We try
  
 Whether you use Microsoft LAPS, or the Lithnet Access Manager agent, the user experience is the same.
 
-**Access historical local admin passwords**
+Access historical local admin passwords
 ###########################################
 
 Deploying the Lithnet Access Manager Agent to your fleet allows you to upgrade to encrypted local admin passwords and gain the benefit of having previous local admin passwords stored in the directory as well. This means no more issues getting locked out of computers when they are restored from backup or reverted from a snapshot.
@@ -54,7 +54,7 @@ Deploying the Lithnet Access Manager Agent to your fleet allows you to upgrade t
    :width: 400 
    :align: center 
 
-**Just-in-time administrative access to computers**
+Just-in-time administrative access to computers
 ###################################################
 Using the same web interface, users can request that their account be added to a group that is a member of the local administrators group of the computer. This access is temporary and automatically removed after the allowed time period. Access Manager makes use of the Active Directory time-based membership feature in Windows Server 2016 and later domain functional levels, or time-based (dynamic) objects in earlier versions of AD.
 
@@ -62,7 +62,7 @@ Using the same web interface, users can request that their account be added to a
    :width: 400 
    :align: center
 
-**Easy access to BitLocker recovery passwords**
+Easy access to BitLocker recovery passwords
 ###############################################
 Authorized users can also request access to the BitLocker recovery passwords for a computer through the same easy-to-use web interface.
 
@@ -70,7 +70,7 @@ Authorized users can also request access to the BitLocker recovery passwords for
    :width: 400 
    :align: center
 
-**Audit success and failure event logs**
+Audit success and failure event logs
 ####################################
 All success and failure events are logged to the Windows event log and a file. Optionally, you can send audit events via email, webhooks, and even PowerShell.
 
@@ -79,7 +79,7 @@ The webhook functionality makes it really easy to get alerts via Slack or Micros
 .. image:: images/auditing-example-slack.png
    :align: center
 
-**Modern authentication options**
+Modern authentication options
 ###############################
 
 The web app supports traditional integrated windows authentication, as well as external authentication providers such as :doc:`ADFS </setting_up_authentication/Setting-up-authentication-with-ADFS>` or 3rd party OpenID Connect providers such as 
@@ -89,7 +89,9 @@ The web app supports traditional integrated windows authentication, as well as e
 |
 
 ####################
-**Download the app**
+Download the app
 ####################
 `Download the current release <https://github.com/lithnet/access-manager/releases/latest>`_
 
+
+Testing documentation
