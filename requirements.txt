@@ -1,2 +1,2 @@
-furo
+furo==2021.7.31b41
 myst-parser
