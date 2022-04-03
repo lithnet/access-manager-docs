@@ -6,3 +6,4 @@ make.bat
 makefile
 .DS_store
 _build/
+thumbs.db
