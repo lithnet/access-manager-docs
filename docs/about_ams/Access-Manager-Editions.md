@@ -8,9 +8,9 @@ Access Manager Standard edition is our core offering, that contains all the feat
 Standard edition is completely free for any organization of any size to use.
 
 ## Enterprise Edition
- Enterprise edition adds additional functionality, such as support for Microsoft Failover Clusters for high availability, as well as additional features like just-in-time access to any service you can manage with AD, or with a PowerShell script.
+Enterprise Edition is a must for organizations who want to take full advantage of the capabilities of Access Manager, and know they have the full backing of the Lithnet support team to help them keep their environment running smoothly.
 
-See the [[licensing]] page for information on how to trial or purchase an Enterprise Edition license.
+See the [licensing](/docs/app_pages/Licensing-Page.md) page for information on how to trial or purchase an Enterprise Edition license.
 
 ## **Feature comparison**
 ---
