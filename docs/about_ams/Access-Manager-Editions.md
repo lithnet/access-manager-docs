@@ -10,7 +10,7 @@ Standard edition is completely free for any organization of any size to use.
 ## Enterprise Edition
 Enterprise Edition is a must for organizations who want to take full advantage of the capabilities of Access Manager, and know they have the full backing of the Lithnet support team to help them keep their environment running smoothly.
 
-See the [licensing](/docs/app_pages/Licensing-Page.md) page for information on how to trial or purchase an Enterprise Edition license.
+See the [licensing](/app_pages/Licensing-Page) page for information on how to trial or purchase an Enterprise Edition license.
 
 ## **Feature comparison**
 ---
