@@ -50,8 +50,23 @@ DECLARE @ServiceAccountQuoted nvarchar(256) = QUOTENAME(@ServiceAccount);
 
 IF DB_ID('AccessManager') IS NULL 
 BEGIN
-    CREATE DATABASE [AccessManager]
-    ALTER DATABASE [Access Manager] SET RECOVERY SIMPLE 
+    -- Get the SQL Server data path.
+        DECLARE @data_path nvarchar(256);       
+        SET @data_path = (SELECT SUBSTRING(physical_name, 1, CHARINDEX(N'master.mdf', LOWER(physical_name)) - 1)
+                FROM master.sys.master_files
+                WHERE database_id = 1 AND file_id = 1);
+
+	  EXECUTE ('
+CREATE DATABASE [AccessManager]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N''AccessManager'', FILENAME = "' + @data_path + 'AccessManager.mdf", SIZE = 1048576KB , FILEGROWTH = 131072KB )
+ LOG ON 
+( NAME = N''AccessManager_log'', FILENAME = "' + @data_path + 'AccessManager.ldf", SIZE = 524288KB , FILEGROWTH = 65536KB )
+
+')
+    
+    ALTER DATABASE [AccessManager] SET RECOVERY SIMPLE 
     PRINT 'Created database'
 END
 
