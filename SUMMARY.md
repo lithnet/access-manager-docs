@@ -10,10 +10,10 @@
 
 ## Installation
 
+* [Creating a service account for the Access Manager service](installation/creating-a-service-account-for-the-access-manager-service.md)
+* [Choosing between the Microsoft and Lithnet agents for LAPS support](installation/choosing-a-local-admin-password-strategy.md)
 * [Installing Access Manager](installation/installing-access-manager/README.md)
-  * [Creating a service account for the Access Manager service](installation/installing-access-manager/creating-a-service-account-for-the-access-manager-service.md)
   * [Access Manager Agent](installation/installing-access-manager/installing-the-access-manager-agent.md)
-  * [Choosing between the Microsoft and Lithnet agents for LAPS support](installation/installing-access-manager/choosing-a-local-admin-password-strategy.md)
   * [Access Manager Service](installation/installing-access-manager/installing-the-access-manager-service.md)
 
 ## Configuration
