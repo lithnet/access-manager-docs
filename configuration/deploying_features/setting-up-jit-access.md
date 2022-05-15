@@ -23,7 +23,7 @@ When a user is granted JIT access to a computer, Access Manager creates a new te
 
 `User (member of) -> Temporary dynamic group (member of) -> JIT group`
 
-If you are operating at this forest functional level, you must create an OU in your directory where AMS can create the dynamic group objects. From the [JIT Access Page](../../app\_pages/Jit-Access-Page/), select your forest, click `Set Dynamic Group OU` button. Choose an OU in your directory. Once you have done that, use the `Delegate dynamic group permission` script to grant the AMS service account rights to create groups in this OU.
+If you are operating at this forest functional level, you must create an OU in your directory where AMS can create the dynamic group objects. From the [JIT Access Page,](../../advanced-help/app\_pages/jit-access-page.md) select your forest, click `Set Dynamic Group OU` button. Choose an OU in your directory. Once you have done that, use the `Delegate dynamic group permission` script to grant the AMS service account rights to create groups in this OU.
 
 ![!](../../.gitbook/assets/ui-page-jitaccess-jitmode.png)
 

@@ -1,6 +1,6 @@
 # Installing in a Failover Cluster
 
-![localadminpasswords](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) High availability is an [Enterprise edition feature](../../docs/deploying\_features/Access-Manager-Editions/)
+![localadminpasswords](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) High availability is an [Enterprise edition feature](../../about-lithnet-access-manager/access-manager-editions.md)
 
 ## Installing Access Manager in a Failover Cluster
 
@@ -33,7 +33,11 @@ If you are setting up a cluster containing an even number of nodes, you must con
 
 * Select `Add Disk` from the right-hand actions menu, and add the appropriate disk to the cluster.
 
-![localadminpasswords](../../docs/deploying\_features/images/Cluster-2-AddDisk.png) ![localadminpasswords](../../docs/deploying\_features/images/Cluster-3-DiskAdded.png) ![installerpaths](../../docs/deploying\_features/images/Cluster-4-InstallerPaths.png) ### 4. Install Access Manager
+![](../../.gitbook/assets/Cluster-2-AddDisk.png)
+
+![](../../.gitbook/assets/Cluster-3-DiskAdded.png)
+
+#### 4. Install Access Manager
 
 * On the first node, run the Access Manager Service installer.
 * When prompted to provide the installation paths, set the log and config folders to be on the `S:` drive. Eg `S:\AMS\logs` and `S:\AMS\config`\
@@ -55,18 +59,15 @@ If you are setting up a cluster containing an even number of nodes, you must con
 * Click `Configure rule...` from the actions pane
 * Select `Generic service` as the role type
 
-![generic\_service](../../.gitbook/assets/Cluster-6-GenericService.png)\
-
+![generic\_service](../../.gitbook/assets/Cluster-6-GenericService.png)
 
 * Select `Lithnet Access Manager Service` from the services list
 
-![select\_service](../../.gitbook/assets/Cluster-7-SelectService.png)\
-
+![select\_service](../../.gitbook/assets/Cluster-7-SelectService.png)
 
 * Provide an IP address and name for your client access point. This will be the name of the clustered service, and by default, forms the AD hostname of the cluster.
 
-![select\_cap](../../.gitbook/assets/Cluster-8-SelectCap.png)\
-
+![select\_cap](../../.gitbook/assets/Cluster-8-SelectCap.png)
 
 * Select the storage volume that contains the AMS configuration
 
@@ -95,4 +96,4 @@ If you are setting up a cluster containing an even number of nodes, you must con
 * Save the configuration and restart the service when prompted
 * Repeat the certificate selection process on the remaining nodes in the cluster.
 
-At this point, the cluster-specific configure is complete. You can now follow the steps in the [installing guide](../../getting\_started/Installing-the-Access-Manager-Service/) for configuring the AMS features as appropriate for your environment.
+At this point, the cluster-specific configure is complete. You can now follow the steps in the [installing guide](../../installation/installing-access-manager/installing-the-access-manager-service.md) for configuring the AMS features as appropriate for your environment.

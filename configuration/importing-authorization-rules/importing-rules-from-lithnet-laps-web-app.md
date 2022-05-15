@@ -1,6 +1,6 @@
 # Importing rules from Lithnet LAPS web app
 
-If you had the [Lithnet LAPS Web App](https://github.com/lithet/laps-web) installed (the predecessor to Lithnet Access Manager), you can import your `target` rules and notifications from the `web.config` file.
+If you had the[ Lithnet LAPS Web App](https://github.com/lithnet/laps-web) installed (the predecessor to Lithnet Access Manager), you can import your `target` rules and notifications from the `web.config` file.
 
 ### Open the import wizard
 
@@ -16,7 +16,9 @@ Select the Lithnet LAPS web app import type, and click `Next`
 
 ### Select the web.config file
 
-Specify the path to the web.config file, and check the box if you'd like to also import your email notification settings. ![laps\_web](../../.gitbook/assets/ui-page-import-lapsweb.png)
+Specify the path to the web.config file, and check the box if you'd like to also import your email notification settings.
+
+&#x20;![laps\_web](../../.gitbook/assets/ui-page-import-lapsweb.png)
 
 ### Specify rule settings
 

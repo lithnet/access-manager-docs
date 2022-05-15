@@ -2,7 +2,7 @@
 
 Access Manager can remotely connect to computers and obtain the list of members of the local administrators group of each computer, and consolidate that into a set of authorization rules.
 
-You may wish to consider [performing an offline discovery of local admins](../../planning/Performing-an-offline-discovery-of-local-admins/), and importing that data into Access Manager using the CSV import function. Check the prerequisite section below to determine if an online or offline import is suitable for your environment.
+You may wish to consider[ performing an offline discovery of local admins](../../advanced-help/advanced-help-topics/performing-an-offline-discovery-of-local-admins.md), and importing that data into Access Manager using the CSV import function. Check the prerequisite section below to determine if an online or offline import is suitable for your environment.
 
 ### Prerequisites
 
@@ -11,13 +11,13 @@ In order to discover members of the local administrators group on remote compute
 1. The user performing the import process must be a local administrator on the remote computers
 2. The computer must be reachable via SMB (TCP port 445) from the Access Manager server.
 
-If these conditions cannot be met, it is recommended that you perform an [offline discovery](../../planning/Performing-an-offline-discovery-of-local-admins/), and use the CSV import function instead.
+If these conditions cannot be met, it is recommended that you perform an [offline discovery,](../../advanced-help/advanced-help-topics/performing-an-offline-discovery-of-local-admins.md) and use the CSV import function instead.
 
 ### Open the import wizard
 
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-![authz](../../.gitbook/assets/ui-page-authz.png)
+![](../../.gitbook/assets/ui-page-authz.png)
 
 ### Select the import type
 
@@ -41,13 +41,13 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![rulesettings](../../.gitbook/assets/ui-page-import-rulesettings.png)
+![](../../.gitbook/assets/ui-page-import-rulesettings.png)
 
 ### Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![import\_results](../../.gitbook/assets/ui-page-import-results.png)
+![](../../.gitbook/assets/ui-page-import-results.png)
 
 #### Merge settings
 

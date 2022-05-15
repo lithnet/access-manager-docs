@@ -16,7 +16,7 @@ Access Manager has one simple goal. To reduce the likelihood and impact of a wid
 
 We’re a big believer in not having to pay for security ‘minimums’. These days, attackers have a treasure-trove of commodity credential-stealing tools at their disposal. They don’t have to pay for them, and we believe you shouldn’t have to pay to defend against them. Therefore, this software is completely free and as always our code is open source and open to scrutiny.
 
-We recommend you have a look at our other product [Lithnet Password Protection for Active Directory](https://github.com/lithnet/ad-password-protection), for a tool to help strengthen your environment against commodity password-based attacks.
+We recommend you have a look at our other product [Lithnet Password Protection for Active Directory](https://lithnet.io/products/password-protection), for a tool to help strengthen your environment against commodity password-based attacks.
 
 ### Features
 

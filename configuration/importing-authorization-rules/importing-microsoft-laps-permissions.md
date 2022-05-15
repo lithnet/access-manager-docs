@@ -10,7 +10,9 @@ Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorizat
 
 ### Select the import type
 
-Select the LAPS import type, and click `Next` ![import\_laps](../../.gitbook/assets/ui-page-import-type-laps.png)
+Select the LAPS import type, and click `Next`&#x20;
+
+![](../../.gitbook/assets/ui-page-import-type-laps.png)
 
 ### Specify discovery settings
 
@@ -28,15 +30,13 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![rule\_setting](../../.gitbook/assets/ui-page-import-rulesettings.png)\
-
+![rule\_setting](../../.gitbook/assets/ui-page-import-rulesettings.png)\\
 
 ### Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![import\_results](../../.gitbook/assets/ui-page-import-results.png)\
-
+![import\_results](../../.gitbook/assets/ui-page-import-results.png)\\
 
 #### Merge settings
 

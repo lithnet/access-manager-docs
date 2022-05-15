@@ -2,7 +2,7 @@
 
 The following guide will assist you in configuring your application to use Integrated Windows Authentication (IWA).
 
-Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multi-factor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [Azure AD](../../setting\_up\_authentication/Setting-up-authentication-with-Azure-AD/) and [Okta](../../setting\_up\_authentication/Setting-up-authentication-with-Okta/).
+Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multi-factor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [Azure AD ](../setting\_up\_authentication/setting-up-authentication-with-azure-ad.md)and[ Okta](../setting\_up\_authentication/setting-up-authentication-with-okta.md).
 
 ## Part 1: Configure the SPN
 

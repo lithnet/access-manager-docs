@@ -6,8 +6,7 @@ If you have delegated permissions to read BitLocker recovery passwords in your e
 
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-![authz](../../.gitbook/assets/ui-page-authz.png)\
-
+![authz](../../.gitbook/assets/ui-page-authz.png)
 
 ### Select the import type
 

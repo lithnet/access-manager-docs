@@ -45,7 +45,9 @@ Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorizat
 
 ### Select the import type
 
-Select the CSV import type, and click `Next` ![csv](../../.gitbook/assets/ui-page-import-type-csv.png)
+Select the CSV import type, and click `Next`&#x20;
+
+![](../../.gitbook/assets/ui-page-import-type-csv.png)
 
 ### Select the CSV file
 

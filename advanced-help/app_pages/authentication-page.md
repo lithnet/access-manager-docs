@@ -6,7 +6,7 @@ Access Manager supports modern identity providers such as Azure AD and Okta out 
 
 ## OpenID Connect
 
-OpenID Connect is the preferred authentication provider. Coupled with a modern IDP like Azure AD or Okta, you can provide strong authentication to your application, backed up by multi-factor authentication. See the guides for setting up Access Manager to work with [Azure AD](../../setting\_up\_authentication/Setting-up-authentication-with-Azure-AD/) or [Okta](../../setting\_up\_authentication/Setting-up-authentication-with-Okta/).
+OpenID Connect is the preferred authentication provider. Coupled with a modern IDP like Azure AD or Okta, you can provide strong authentication to your application, backed up by multi-factor authentication. See the guides for setting up Access Manager to work with[ Azure AD](../../configuration/setting\_up\_authentication/setting-up-authentication-with-azure-ad.md) or [Okta.](../../configuration/setting\_up\_authentication/setting-up-authentication-with-okta.md)
 
 Using OpenID Connect requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
@@ -14,7 +14,7 @@ Using OpenID Connect requires that your identity provider pass a `upn` claim con
 
 ## WS-Federation
 
-WS-Federation can be used to delegate the authentication process to an on-prem ADFS or similar product. Read the [setup guide](../../setting\_up\_authentication/Setting-up-authentication-with-ADFS/) for configuring Access Manager to work with ADFS.
+WS-Federation can be used to delegate the authentication process to an on-prem ADFS or similar product. Read the[ setup guide](../../configuration/setting\_up\_authentication/setting-up-authentication-with-adfs.md) for configuring Access Manager to work with ADFS.
 
 Using WS-Federation requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
@@ -24,7 +24,7 @@ Certificate-based authentication is provided by Access Manager, with the optiona
 
 Certificates must contain a `principal name` attribute in their `Subject Alternative Names` which specifies the user's UPN as found in Active Directory.
 
-Limited support is available for use of [altSecurityIdentities](../../getting\_started/Enabling-AltSecurityIdentities/) in cases where certificates are used without a UPN, however these are not supported outside the forest where AMS is located.
+Limited support is available for use of [altSecurityIdentities ](../../configuration/setting\_up\_authentication/enabling-altsecurityidentities.md)in cases where certificates are used without a UPN, however these are not supported outside the forest where AMS is located.
 
 ![authentication\_smartcard](../../.gitbook/assets/ui-page-authentication-smartcard.png)
 

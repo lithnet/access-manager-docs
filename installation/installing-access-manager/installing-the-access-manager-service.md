@@ -11,7 +11,7 @@ In order to install the Access Manager Service, the following prerequisites must
 
 ## Step 1: Create a service account
 
-The Access Manger Service needs to run under the context of a domain user account. We strongly recommend using a group-managed service account for this purpose. [We've created a guide for setting up a GMSA](../../docs/getting\_started/Creating-a-service-account-for-the-Access-Manager-Service/) which includes a script to get you up and running quickly.
+The Access Manger Service needs to run under the context of a domain user account. We strongly recommend using a group-managed service account for this purpose. [We've created a guide for setting up a GMSA](../creating-a-service-account-for-the-access-manager-service.md) which includes a script to get you up and running quickly.
 
 Do not grant any specific permissions to this account and most certainly don't add it to super-privileged groups like Domain Administrators. As you go through the setup process, you'll be given scripts to delegate permissions specific to the functionality you want to enable.
 
@@ -35,17 +35,17 @@ Click the `Select from store...` button and select the certificate you installed
 
 Validate that the ports are correct, and click `File`, then `Save`.
 
-[More information on configuring the web host](../../app\_pages/Web-Hosting-Page/)
+[More information on configuring the web host](../../advanced-help/app\_pages/web-hosting-page.md)
 
 ## Step 5: Configure your authentication provider
 
-AMS supports several different authentication providers. Read the guide on [configuring authentication](../../app\_pages/Authentication-Page/) and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multi-factor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
+AMS supports several different authentication providers. Read the guide on configuring authentication and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multi-factor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
 
 The following pages will guide you through the process of configuring the relevant authentication provider for use with Access Manager.
 
-* [Setting up authentication with Azure AD](../../setting\_up\_authentication/Setting-up-authentication-with-Azure-AD/)
-* [Setting up authentication with Okta](../../setting\_up\_authentication/Setting-up-authentication-with-Okta/)
-* [Setting up authentication with ADFS](../../setting\_up\_authentication/Setting-up-authentication-with-ADFS/)
+* [Setting up authentication with Azure AD](../../configuration/setting\_up\_authentication/setting-up-authentication-with-azure-ad.md)
+* [Setting up authentication with Okta](../../configuration/setting\_up\_authentication/setting-up-authentication-with-okta.md)
+* [Setting up authentication with ADFS](../../configuration/setting\_up\_authentication/setting-up-authentication-with-adfs.md)
 
 ## Step 6: Configure the Web User Interface
 
@@ -53,7 +53,7 @@ The following pages will guide you through the process of configuring the releva
 
 Configure the user interface as per your organization's requirements. You can customize the name of the application, provide your own logo and even provide some custom policy text for the access request page.
 
-[More information on user interface settings](../../app\_pages/User-Interface-Page/)
+[More information on user interface settings](../../advanced-help/app\_pages/user-interface-page.md)
 
 ## Step 7: Configure Email server
 
@@ -61,23 +61,22 @@ Configure the user interface as per your organization's requirements. You can cu
 
 You'll need to configure an outbound mail server in order to receive audit alerts via email.
 
-[More information on email settings](../../app\_pages/Email-Page/)
+[More information on email settings](../../advanced-help/app\_pages/email-page.md)
 
 ## Step 8: Configure Rate Limits
 
 ![!](../../.gitbook/assets/ui-page-ratelimits.png)\
 In order to ensure that your service is not used inappropriately, you can place limits of the number of requests a user can make in a given time. You should set these high enough that your users are not going to encounter rate limit issues under normal usage, but low enough to limit the impact of inappropriate or malicious usage of the service.
 
-[More information on rate limiting](../../app\_pages/Rate-Limits-Page/)
+[More information on rate limiting](../../advanced-help/app\_pages/rate-limits-page.md)
 
 ## Step 9: Configure IP Detection
 
-![!](../../.gitbook/assets/ui-page-ipaddressdetection.png)\
-
+![!](../../.gitbook/assets/ui-page-ipaddressdetection.png)\\
 
 If you put AMS behind a reverse proxy or load balancer, you'll need to configure IP address detection. This is to ensure that AMS logs the correct IP address in audit logs, and applies rate limiting correctly.
 
-[More information on IP address detection](../../app\_pages/IP-Address-Detection-Page/)
+[More information on IP address detection](../../advanced-help/app\_pages/ip-address-detection-page.md)
 
 ## Step 10: Configure Active Directory permissions
 
@@ -89,20 +88,20 @@ You will need to restart the service to pick up the new group membership in the 
 
 Don't worry about the schema section at this stage, if you need to deploy any schema changes the appropriate feature guide will direct you to do so.
 
-[More information on configuring Active Directory](../../app\_pages/Active-Directory-Page/)
+[More information on configuring Active Directory](../../advanced-help/app\_pages/active-directory-page.md)
 
 ## Step 11: Configure Auditing
 
 ![!](../../.gitbook/assets/ui-page-auditing-smtp.png)\
 AMS has a powerful auditing engine that allows you to receive notifications when access is granted or denied to a user. AMS logs audit events to the Windows event log all the time, but you can also send audit events via email, through a custom PowerShell script, or even to Slack or Microsoft Teams using a web hook.
 
-[More information on Auditing](../../app\_pages/Auditing-Page/)
+[More information on Auditing](../../advanced-help/app\_pages/auditing-page.md)
 
 ## Step 12: Configure support for local admin password, just in time access, and Bitlocker
 
 Now that you have the core application set up, you can configure the Access Manager features you are interested in;
 
-* [Setting up Microsoft LAPS](../../deploying\_features/Setting-up-Microsoft-LAPS/)
-* [Setting up password encryption and history](../../deploying\_features/Setting-up-password-encryption-and-history/)
-* [Setting up JIT access](../../deploying\_features/Setting-up-JIT-access/)
-* [Setting up BitLocker access](../../deploying\_features/Setting-up-BitLocker-access/)
+* [Setting up Microsoft LAPS](../../configuration/deploying\_features/setting-up-microsoft-laps.md)
+* [Setting up password encryption and history](../../configuration/deploying\_features/setting-up-password-encryption-and-history.md)
+* [Setting up JIT access](../../configuration/deploying\_features/setting-up-jit-access.md)
+* [Setting up BitLocker access](../../configuration/deploying\_features/setting-up-bitlocker-access.md)

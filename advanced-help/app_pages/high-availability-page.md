@@ -4,7 +4,7 @@
 
 ## High Availability
 
-![localadminpasswords](../../images/ui-page-highavailability.png)
+![](../../.gitbook/assets/ui-page-highavailability.png)
 
 ### Database configuration
 

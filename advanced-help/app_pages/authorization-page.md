@@ -8,9 +8,9 @@ Access to computers is provided through authorization rules. An authorization ru
 
 You can add, edit and delete individual rules using the authorization rule editor.
 
-There are several other helpful tools on this page. To determine the effective access a user has to a particular computer, use the [Effective access](../../app\_pages/Effective-Access-Page/) tool.
+There are several other helpful tools on this page. To determine the effective access a user has to a particular computer, use the[ Effective access](effective-access-page.md) tool.
 
-You can build your authorization rule set by [importing authorization rules](../../importing/Importing-authorization-rules/) from other sources where users already have permissions.
+You can build your authorization rule set by [importing authorization rules ](../../configuration/importing-authorization-rules/)from other sources where users already have permissions.
 
 The `Save permission report` tool allows you to export a list of all the principals that are granted access via the selected rules to a CSV file. Note, that any PowerShell based rules are not included in this report.
 
@@ -47,15 +47,15 @@ The first is the built-in permission editor. This is where you define an ACL tha
 
 Add users and groups to this list and select the type of access they should be allowed or denied.
 
-![enterprise\_edition](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) Web-based access to local admin password history is an [Enterprise edition feature](../../docs/app\_pages/Access-Manager-Editions/)
+![enterprise\_edition](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) Web-based access to local admin password history is an [Enterprise edition feature](../../about-lithnet-access-manager/access-manager-editions.md)
 
 **Use a PowerShell script**
 
-![enterprise\_edition](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) PowerShell-based authorization scripts are an [Enterprise edition feature](../../docs/app\_pages/Access-Manager-Editions/)
+![enterprise\_edition](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) PowerShell-based authorization scripts are an [Enterprise edition feature](../../about-lithnet-access-manager/access-manager-editions.md)
 
 You can also use a PowerShell script to determine if a user should be allowed to access a computer. This allows you to call into an external system to make an authorization decision.
 
-See the page on [Authorization scripts](../../getting\_started/Authorization-scripts/) for more information on the script format.
+See the page on[ Authorization scripts](../advanced-help-topics/authorization-scripts.md) for more information on the script format.
 
 #### Local admin password settings
 
@@ -78,7 +78,7 @@ Select the group that grants the user administrative access to the target. You c
 
 For example, using a templated name of `{computerDomain}\JIT-{computerName}` will expand to `IDMDEV1\JIT-PC1` for a computer named `PC1` in the domain `IDMDEV1`.
 
-This functionality makes it very easy to ensure that each computer has an individual JIT group that provides access to only that computer. Use the same template in combination with the AMS feature to automatically create JIT groups, and use group policy preferences to add that group to the local admin group on each computer. See the [setting up JIT](../../deploying\_features/Setting-up-JIT-access/) guide for more details.
+This functionality makes it very easy to ensure that each computer has an individual JIT group that provides access to only that computer. Use the same template in combination with the AMS feature to automatically create JIT groups, and use group policy preferences to add that group to the local admin group on each computer. See the [setting up JIT ](../../configuration/deploying\_features/setting-up-jit-access.md)guide for more details.
 
 **Expiry**
 
@@ -86,4 +86,4 @@ Set the duration of time after which the user will be removed from the JIT acces
 
 **Notifications**
 
-Set the audit notification channels you want to be notified on success or failure events for this target. See the [auditing](../../app\_pages/Auditing-Page/) help topic for information about creating notification channels.
+Set the audit notification channels you want to be notified on success or failure events for this target. See the[ auditing](auditing-page.md) help topic for information about creating notification channels.
