@@ -122,7 +122,49 @@ EXEC sp_addrolemember 'db_owner', 'svc-lithnetams';
 8. Modify the username and password in the connection string to contain the username and password you created earlier. Your connection string should look similar to below
 
 ```
-Server=tcp:ams.database.windows.net,1433;Initial Catalog=AccessManager;Persist Security Info=False;User ID=svc-lithnetams;Password={your-password-here};MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+Server=tcp:ams.database.windows.net,1433;Initial Catalog=AccessManager;Persist Security Info=False;User ID=svc-lithnetams;Password=your-password-here;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+```
+9. Once these steps are complete, you can run the AMS installer, and provide the connection string when prompted.
+
+## Using Amazon RDS
+Using a AWS RDS Microsoft SQL database is fully supported by Access Manager. You'll need to create an empty database before running the installer, and create a login for the AMS service to use.
+
+### Installation steps 
+1. From the AWS Console, create a new `Microsoft SQL Server` RDS resource
+2. Select the appropriate options and instance configuration for your environment
+3. Once the server has been provisioned, ensure you allow the AMS server access to the RDS instance via the appropriate security groups
+4. Using Microsoft SQL Management Studio, connect to the RDS instance using the admin credentials created during the setup process
+5. In the query editor window, paste the following code after modifying the password field to contain your own strong password
+
+```sql
+
+CREATE LOGIN [svc-lithnetams] WITH password='your-password-here';
+GO
+
+-- Get the SQL Server data path.
+DECLARE @data_path nvarchar(256);       
+SET @data_path = (SELECT SUBSTRING(physical_name, 1, CHARINDEX(N'master.mdf', LOWER(physical_name)) - 1)
+        FROM master.sys.master_files
+        WHERE database_id = 1 AND file_id = 1);
+
+EXECUTE ('
+CREATE DATABASE [AccessManager]
+ CONTAINMENT = NONE
+ ON  PRIMARY 
+( NAME = N''AccessManager'', FILENAME = "' + @data_path + 'AccessManager.mdf", SIZE = 1048576KB , FILEGROWTH = 131072KB )
+ LOG ON 
+( NAME = N''AccessManager_log'', FILENAME = "' + @data_path + 'AccessManager.ldf", SIZE = 524288KB , FILEGROWTH = 65536KB )
+')
+
+USE [AccessManager]
+
+CREATE USER [svc-lithnetams] FOR LOGIN [svc-lithnetams]
+EXEC sp_addrolemember 'db_owner', 'svc-lithnetams';
+```
+6. Modify the username and password in the connection string below to contain the username and password you created in the step above. Your connection string should look similar to below
+
+```
+Server=tcp:ams.database.windows.net,1433;Initial Catalog=AccessManager;Persist Security Info=False;User ID=svc-lithnetams;Password=your-password-here;MultipleActiveResultSets=False;Connection Timeout=30;
 ```
 9. Once these steps are complete, you can run the AMS installer, and provide the connection string when prompted.
 
