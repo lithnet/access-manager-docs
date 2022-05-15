@@ -156,6 +156,7 @@ CREATE DATABASE [AccessManager]
 ( NAME = N''AccessManager_log'', FILENAME = "' + @data_path + 'AccessManager.ldf", SIZE = 524288KB , FILEGROWTH = 65536KB )
 ')
 
+GO
 USE [AccessManager]
 
 CREATE USER [svc-lithnetams] FOR LOGIN [svc-lithnetams]
