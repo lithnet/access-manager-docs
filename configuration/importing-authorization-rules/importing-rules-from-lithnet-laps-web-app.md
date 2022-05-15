@@ -6,31 +6,33 @@ If you had the[ Lithnet LAPS Web App](https://github.com/lithnet/laps-web) insta
 
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-![authz](../../.gitbook/assets/ui-page-authz.png)
+![](../../.gitbook/assets/ui-page-authz.png)
 
 ### Select the import type
 
 Select the Lithnet LAPS web app import type, and click `Next`
 
-![laps\_web](../../.gitbook/assets/ui-page-import-type-lapsweb.png)
+![](../../.gitbook/assets/ui-page-import-type-lapsweb.png)
 
 ### Select the web.config file
 
 Specify the path to the web.config file, and check the box if you'd like to also import your email notification settings.
 
-&#x20;![laps\_web](../../.gitbook/assets/ui-page-import-lapsweb.png)
+&#x20;
+
+![](../../.gitbook/assets/ui-page-import-lapsweb.png)
 
 ### Specify rule settings
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![rule\_setting](../../.gitbook/assets/ui-page-import-rulesettings.png)
+![](../../.gitbook/assets/ui-page-import-rulesettings.png)
 
 ### Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![import\_results](../../.gitbook/assets/ui-page-import-results.png)
+![](../../.gitbook/assets/ui-page-import-results.png)
 
 #### Merge settings
 

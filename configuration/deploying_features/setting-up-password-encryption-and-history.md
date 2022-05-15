@@ -18,13 +18,13 @@ It will also add a new object class called `lithnetAccessManagerConfig` for stor
 
 From the `Active Directory` tab in the configuration tool, select a forest, and click `Deploy schema` to open a schema deployment script, pre-configured for that forest. Copy this script and run it as a member of the `Schema Admins` group. Repeat the process for any additional forests where you need to deploy the Access Manager Agent.
 
-![localadminpasswords](../../.gitbook/assets/ui-page-activedirectory.png)
+![](../../.gitbook/assets/ui-page-activedirectory.png)
 
 Once the schema is deployed, click the `refresh schema` button to check and validate that the schema has been deployed.
 
 ## Step 2: Delegate Access Manager Agent permissions
 
-![localadminpasswords](../../.gitbook/assets/ui-page-localadminpasswords.png)
+![](../../.gitbook/assets/ui-page-localadminpasswords.png)
 
 From the `Local admin passwords` page, click on `Delegate Lithnet AMA Permissions` to see a pre-built script for delegating the appropriate permissions. Simply change the `ou` variable to the full DN of the container than contains the computers you want to be able to access with AMS.
 
@@ -63,15 +63,17 @@ The central policy store is located at `\\<domain>\sysvol\<domain>\Policies\Poli
 
 Using the group policy editor, create a new group policy object, and link it to the OU containing your computer objects. Open the policy and navigate to `Administrative Templates`, `Lithnet`, `Access Manager Agent`.
 
-![localadminpasswords](../../.gitbook/assets/group-policy-agent.png)
+![](../../.gitbook/assets/group-policy-agent.png)
 
 Edit the `Enable the Lithnet Access Manager Agent` policy, and specify how frequently the agent should run.
 
-![localadminpasswords](../../.gitbook/assets/group-policy-agent-enable.png)
+![](../../.gitbook/assets/group-policy-agent-enable.png)
 
 Open the `Administrator Password` folder, and enable the policy `Manage the local administrator password`
 
-![localadminpasswords](../../.gitbook/assets/group-policy-adminpassword.png) ![localadminpasswords](../../.gitbook/assets/group-policy-adminpassword-manage.png)
+![](../../.gitbook/assets/group-policy-adminpassword.png) ![](../../.gitbook/assets/group-policy-adminpassword-manage.png)
+
+
 
 Set the maximum age of the password, the password length, and the character types to use in the password.
 
@@ -79,7 +81,7 @@ Optionally, you can specify to store the password in plain-text in the Microsoft
 
 If you want to enable keeping a record of previous local admin passwords, then enable the `Enable password history` policy item, and specify the number of days that you want to keep previous passwords for.
 
-![!](../../.gitbook/assets/group-policy-adminpassword-history.png)
+![](../../.gitbook/assets/group-policy-adminpassword-history.png)
 
 ## Step 6: Assign access
 
@@ -87,11 +89,11 @@ Once the agent is deployed, and the policy configured, you can now configure acc
 
 From the `Authorization` page, select `Add...` to create a new target. Select the OU you delegated permissions to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access.
 
-![!](../../.gitbook/assets/ui-page-authz-lapstarget.png)
+![](../../.gitbook/assets/ui-page-authz-lapstarget.png)
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to read the local admin password, and optionally, the local admin password history.
 
-![!](../../.gitbook/assets/ui-page-authz-editsecurity-laps.png)
+![](../../.gitbook/assets/ui-page-authz-editsecurity-laps.png)
 
 You can optionally choose to expire the local admin password a period of time after it has been accessed. This will cause the Access Manager Agent to generate a new password _after_ its next check-in time. The frequency of the check in is determined by the group policy
 

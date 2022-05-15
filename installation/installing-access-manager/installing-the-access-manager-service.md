@@ -29,7 +29,7 @@ Determine the host name you will use to access AMS and request an SSL certificat
 
 Run the Access Manager Service configuration tool. You'll be prompted to set up the web host.
 
-![!](../../.gitbook/assets/ui-page-webhosting-notconfigured.png)
+![](../../.gitbook/assets/ui-page-webhosting-notconfigured.png)
 
 Click the `Select from store...` button and select the certificate you installed in step 2.
 
@@ -49,7 +49,7 @@ The following pages will guide you through the process of configuring the releva
 
 ## Step 6: Configure the Web User Interface
 
-![!](../../.gitbook/assets/ui-page-userinterface.png)
+![](../../.gitbook/assets/ui-page-userinterface.png)
 
 Configure the user interface as per your organization's requirements. You can customize the name of the application, provide your own logo and even provide some custom policy text for the access request page.
 
@@ -57,7 +57,7 @@ Configure the user interface as per your organization's requirements. You can cu
 
 ## Step 7: Configure Email server
 
-![!](../../.gitbook/assets/ui-page-email.png)
+![](../../.gitbook/assets/ui-page-email.png)
 
 You'll need to configure an outbound mail server in order to receive audit alerts via email.
 
@@ -65,14 +65,16 @@ You'll need to configure an outbound mail server in order to receive audit alert
 
 ## Step 8: Configure Rate Limits
 
-![!](../../.gitbook/assets/ui-page-ratelimits.png)\
+\
 In order to ensure that your service is not used inappropriately, you can place limits of the number of requests a user can make in a given time. You should set these high enough that your users are not going to encounter rate limit issues under normal usage, but low enough to limit the impact of inappropriate or malicious usage of the service.
+
+![](../../.gitbook/assets/ui-page-ratelimits.png)
 
 [More information on rate limiting](../../advanced-help/app\_pages/rate-limits-page.md)
 
 ## Step 9: Configure IP Detection
 
-![!](../../.gitbook/assets/ui-page-ipaddressdetection.png)\\
+![](../../.gitbook/assets/ui-page-ipaddressdetection.png)
 
 If you put AMS behind a reverse proxy or load balancer, you'll need to configure IP address detection. This is to ensure that AMS logs the correct IP address in audit logs, and applies rate limiting correctly.
 
@@ -92,8 +94,10 @@ Don't worry about the schema section at this stage, if you need to deploy any sc
 
 ## Step 11: Configure Auditing
 
-![!](../../.gitbook/assets/ui-page-auditing-smtp.png)\
+\
 AMS has a powerful auditing engine that allows you to receive notifications when access is granted or denied to a user. AMS logs audit events to the Windows event log all the time, but you can also send audit events via email, through a custom PowerShell script, or even to Slack or Microsoft Teams using a web hook.
+
+![](../../.gitbook/assets/ui-page-auditing-smtp.png)
 
 [More information on Auditing](../../advanced-help/app\_pages/auditing-page.md)
 

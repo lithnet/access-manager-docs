@@ -41,7 +41,7 @@ There should be one computer and one principal per line. For each principal that
 
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-![authz](../../.gitbook/assets/ui-page-authz.png)
+![](../../.gitbook/assets/ui-page-authz.png)
 
 ### Select the import type
 
@@ -51,11 +51,13 @@ Select the CSV import type, and click `Next`&#x20;
 
 ### Select the CSV file
 
-Specify the path to the CSV file, and check the box if your CSV file has a header row. ![csv\_settings](../../.gitbook/assets/ui-page-import-csvsettings.png)
+Specify the path to the CSV file, and check the box if your CSV file has a header row.&#x20;
+
+![](../../.gitbook/assets/ui-page-import-csvsettings.png)
 
 ### Specify discovery settings
 
-![container\_csv](../../.gitbook/assets/ui-page-import-container-csv.png)
+![](../../.gitbook/assets/ui-page-import-container-csv.png)
 
 Select the container where Access Manager will find the computers specified in the CSV file.
 
@@ -71,13 +73,13 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![rule\_settings](../../.gitbook/assets/ui-page-import-rulesettings.png)
+![](../../.gitbook/assets/ui-page-import-rulesettings.png)
 
 ### Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![import\_results](../../.gitbook/assets/ui-page-import-results.png)
+![](../../.gitbook/assets/ui-page-import-results.png)
 
 #### Merge settings
 

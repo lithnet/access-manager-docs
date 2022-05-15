@@ -2,7 +2,7 @@
 
 ### Customized auditing with PowerShell notification channels
 
-![auditing\_powershell\_channel](../../.gitbook/assets/ui-page-auditing-powershell-channel.png)
+![](../../.gitbook/assets/ui-page-auditing-powershell-channel.png)
 
 Access Manager's auditing framework allows you to extend the product's auditing capabilities through the use of PowerShell scripts. Using a PowerShell notification channel, you can send audit events to any system you can connect to with PowerShell.
 
@@ -56,4 +56,4 @@ If you do not use this option, the user is granted their access request, and the
 
 ### Available variables
 
-The \[\[audit variables]] page contains a full list of all valid variables that you can use throughout your scripts.
+The [audit variables](audit-variables.md) page contains a full list of all valid variables that you can use throughout your scripts.

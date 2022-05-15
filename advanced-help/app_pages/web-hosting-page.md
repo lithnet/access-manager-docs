@@ -1,6 +1,8 @@
 # Web Hosting Page
 
-![web\_hosting](../../.gitbook/assets/ui-page-webhosting.png)
+
+
+![](../../.gitbook/assets/ui-page-webhosting.png)
 
 ### Service
 

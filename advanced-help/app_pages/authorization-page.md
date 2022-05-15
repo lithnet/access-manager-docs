@@ -1,6 +1,6 @@
 # Authorization Page
 
-![page\_authz](../../.gitbook/assets/ui-page-authz.png)
+![](../../.gitbook/assets/ui-page-authz.png)
 
 ## Computer authorization rules
 
@@ -18,7 +18,7 @@ The `Save permission report` tool allows you to export a list of all the princip
 
 #### Rule settings
 
-![authz\_target](../../.gitbook/assets/ui-page-authz-target-ou.png)
+![](../../.gitbook/assets/ui-page-authz-target-ou.png)
 
 A target is a computer, group, or container that you want to grant access to. A target can be in any domain visible to AMS, including domains from forests that trust the forest where AMS resides.
 
@@ -36,14 +36,16 @@ You can disable an authorization rule by selecting the `disable rule` checkbox. 
 
 #### Access control
 
-![accesscontrol](../../.gitbook/assets/ui-page-authz-accesscontrol-acl.png)\
+\
 AMS allows you to determine who is authorized to access a target, and what they can access. You can do this through the built-in permission editor or if you have complex authorization rules, you can use a PowerShell script to determine access.
+
+![](../../.gitbook/assets/ui-page-authz-accesscontrol-acl.png)
 
 **Use in-built permissions**
 
 The first is the built-in permission editor. This is where you define an ACL that determines who can access a computer and what type of access they can get.
 
-![editsecurity\_laps](../../.gitbook/assets/ui-page-authz-editsecurity-laps.png)
+![](../../.gitbook/assets/ui-page-authz-editsecurity-laps.png)
 
 Add users and groups to this list and select the type of access they should be allowed or denied.
 
@@ -59,15 +61,19 @@ See the page on[ Authorization scripts](../advanced-help-topics/authorization-sc
 
 #### Local admin password settings
 
-![authz\_laps](../../.gitbook/assets/ui-page-authz-laps-settings.png)\
+\
 If at least one of your ACLs allows access to the local admin passwords of the specified targets, then you'll have an option that allows you to choose to expire the local admin password after it has been accessed.
+
+![](../../.gitbook/assets/ui-page-authz-laps-settings.png)
 
 This has the effect of setting the expiry date for the password in the directory to a new date based on the interval you specify. The password be rotated the next time the Microsoft LAPS or Lithnet Access Manager agents check in _after_ this new time. Note, that the Microsoft LAPS client checks the password at group policy refresh time (every \~90 minutes) and the Lithnet Access Manager agent by default, checks every 60 minutes so rotations may be delayed by these intervals.
 
 #### Just-in-time access settings
 
-![authz\_jit](../../.gitbook/assets/ui-page-authz-jit-settings.png)\
+\
 If at least one of your ACLs allows JIT access to computers matching in the target, then you'll need to specify the JIT group and expiry settings.
+
+![](../../.gitbook/assets/ui-page-authz-jit-settings.png)
 
 **JIT group**
 

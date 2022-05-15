@@ -20,11 +20,11 @@ The final step is to create an authorization target, granting permission for you
 
 From the `Authorization` page, select `Add...` to create a new target. Select the OU you delegated permissions to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access.
 
-![!](../../.gitbook/assets/ui-page-authz-lapstarget.png)
+![](../../.gitbook/assets/ui-page-authz-lapstarget.png)
 
 Select `Edit Permissions...` to open the ACL editor.
 
-![!](../../.gitbook/assets/ui-page-authz-editsecurity-laps.png)
+![](../../.gitbook/assets/ui-page-authz-editsecurity-laps.png)
 
 Note that Microsoft LAPS does not support storing of LAPS history, so granting that permission will not have any effect.
 

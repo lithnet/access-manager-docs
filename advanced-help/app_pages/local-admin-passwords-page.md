@@ -1,12 +1,12 @@
 # Local Admin Passwords Page
 
-![local\_passwords](../../.gitbook/assets/ui-page-localadminpasswords.png)
+![](../../.gitbook/assets/ui-page-localadminpasswords.png)
 
 ## Microsoft LAPS agent
 
 If you plan on using Lithnet Access Manager to read Microsoft LAPS passwords, you'll need to delegate permission for the AMS service account to read those passwords. You can use the built-in cmdlets from the AdmPwd PowerShell module, or click the `Delegate Microsoft LAPS Permissions` button to generate a script to do this automatically.
 
-![delegate](../../.gitbook/assets/ui-page-script-delegate-mslaps.png)
+![](../../.gitbook/assets/ui-page-script-delegate-mslaps.png)
 
 Copy or save the script, modify the `$OU` variable as appropriate, and run it in with domain admin rights.
 
@@ -16,7 +16,7 @@ If you want to use the Lithnet Access Manager agent instead of the Microsoft LAP
 
 Click the `Delegate Lithnet AMA Permissions` button to generate a script to do this automatically.
 
-![delegate\_ama](../../.gitbook/assets/ui-page-script-delegate-ama.png)
+![](../../.gitbook/assets/ui-page-script-delegate-ama.png)
 
 Copy or save the script, modify the `$OU` variable as appropriate, and run it in with domain admin rights.
 
@@ -66,6 +66,6 @@ It is imperative that you have a safe and secure backup of your encryption keys.
 
 ![](../../.gitbook/assets/ui-page-localadminpasswords-certificate-details.png)
 
-See the guide on \[restoring an encryption certificate from backup|Backup-and-restore] for details on how to restore an existing key from a backup.
+See the guide on [restoring an encryption certificate from backup](../advanced-help-topics/backup-and-restore.md) for details on how to restore an existing key from a backup.
 
 If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the [recovering from a lost encryption certificate ](../advanced-help-topics/recovering-from-a-lost-encryption-certificate.md)guide. Unfortunately, there is no way to recover the encrypted password history.

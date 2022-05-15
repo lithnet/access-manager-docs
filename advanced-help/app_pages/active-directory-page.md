@@ -1,6 +1,6 @@
 # Active Directory
 
-![!](../../.gitbook/assets/ui-page-activedirectory.png)
+![](../../.gitbook/assets/ui-page-activedirectory.png)
 
 ## Schema
 

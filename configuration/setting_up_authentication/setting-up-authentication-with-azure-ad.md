@@ -25,7 +25,7 @@ The following guide will assist you in configuring your application to use Azure
 5. Specify the `client secret` obtained from the Azure AD setup process.
 6. Set the authority as appropriate for your tenant eg for `lithnet.io` it would be `https://login.microsoftonline.com/lithnet.io`
 
-![!](../../.gitbook/assets/ui-page-authentication-oidc-azuread.png)
+![](../../.gitbook/assets/ui-page-authentication-oidc-azuread.png)
 
 ## Part 3: Enable multi-factor authentication
 

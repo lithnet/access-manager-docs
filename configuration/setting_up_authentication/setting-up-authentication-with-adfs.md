@@ -17,7 +17,7 @@ The following guide will assist you in configuring your application to use Activ
 
 ## Part 2: Configure Lithnet Access Manager
 
-![!](../../.gitbook/assets/ui-page-authentication-wsfed.png)
+![](../../.gitbook/assets/ui-page-authentication-wsfed.png)
 
 1. In the `metadata` field, provide the metadata URL for your ADFS server (usually something like `https://adfs.lithnet.local/FederationMetadata/2007-06/FederationMetadata.xml`)
 2. Enter the base URL of your application in the `Realm` field.

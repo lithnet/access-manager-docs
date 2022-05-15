@@ -41,19 +41,19 @@ Download the `Get-LocalAdmins.ps1` and `run.bat` files from the [script library]
 | Run mode                        | Run whether user is logged on or not |
 | Run with the highest privileges | Checked                              |
 
-![scheduled\_task](../../.gitbook/assets/group-policy-local-admins-script-scheduledtask-general.png)
+![](../../.gitbook/assets/group-policy-local-admins-script-scheduledtask-general.png)
 
 1. On the `Trigger` tab:
    * Click new, and set the `Being the task` drop down to `At task creation/modification`
 
-![trigger\_new](../../.gitbook/assets/group-policy-local-admins-script-scheduledtask-trigger-new.png)
+![](../../.gitbook/assets/group-policy-local-admins-script-scheduledtask-trigger-new.png)
 
 1. On the `Actions` tab:
    * Click new
    * Set the `action` type to `Start a program`
    * In the `Program/Script` field, enter the path to the run.bat file (eg `\\your-server\local-admin-reports\scripts\run.bat`)
 
-![action\_new](../../.gitbook/assets/group-policy-local-admins-script-scheduledtask-action-new.png)
+![](../../.gitbook/assets/group-policy-local-admins-script-scheduledtask-action-new.png)
 
 1. Save the scheduled task
 

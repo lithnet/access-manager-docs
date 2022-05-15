@@ -1,6 +1,6 @@
 # SMTP Server Settings
 
-![email](../../.gitbook/assets/ui-page-email.png)
+![](../../.gitbook/assets/ui-page-email.png)
 
 #### SMTP Server
 

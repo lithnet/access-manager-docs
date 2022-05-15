@@ -21,11 +21,13 @@ Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorizat
 
 ### Select the import type
 
-Select the local administrators import type, and click `Next` ![local\_admin](../../.gitbook/assets/ui-page-import-type-localadminrpc.png)
+Select the local administrators import type, and click `Next`&#x20;
+
+![](../../.gitbook/assets/ui-page-import-type-localadminrpc.png)
 
 ### Specify discovery settings
 
-![localadmin\_rpc](../../.gitbook/assets/ui-page-import-container-localadminrpc.png)
+![](../../.gitbook/assets/ui-page-import-container-localadminrpc.png)
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will attempt to connect to each computer object found in this section of the directory tree, and obtain the membership of it's local admin group.
 

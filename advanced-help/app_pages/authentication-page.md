@@ -10,7 +10,7 @@ OpenID Connect is the preferred authentication provider. Coupled with a modern I
 
 Using OpenID Connect requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
-![authentication\_oidc](../../.gitbook/assets/ui-page-authentication-oidc.png)
+![](../../.gitbook/assets/ui-page-authentication-oidc.png)
 
 ## WS-Federation
 
@@ -26,7 +26,7 @@ Certificates must contain a `principal name` attribute in their `Subject Alterna
 
 Limited support is available for use of [altSecurityIdentities ](../../configuration/setting\_up\_authentication/enabling-altsecurityidentities.md)in cases where certificates are used without a UPN, however these are not supported outside the forest where AMS is located.
 
-![authentication\_smartcard](../../.gitbook/assets/ui-page-authentication-smartcard.png)
+![](../../.gitbook/assets/ui-page-authentication-smartcard.png)
 
 ### Additional mandatory EKUs
 
@@ -52,7 +52,7 @@ This option allows you to import a specific certificate authority's certificate 
 
 The Integrated Windows Authentication (IWA) provider allows users to login with NTLM or Kerberos authentication. In order to use kerberos, the web site host name must be registered on the SPN of the computer object (not the service account). Eg if using a hostname of `accessmanager.lithnet.io`, you'll need to register the SPN `http/accessmanager.lithnet.io` or `host/accessmanager.lithnet.io`. If the host name matches the AD computer name, then no additional SPNs are required.
 
-![authentication\_iwa](../../.gitbook/assets/ui-page-authentication-iwa.png)
+![](../../.gitbook/assets/ui-page-authentication-iwa.png)
 
 ### Authentication Scheme
 

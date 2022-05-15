@@ -1,6 +1,6 @@
 # Proxy Settings
 
-![ip\_address\_detection](../../.gitbook/assets/ui-page-ipaddressdetection.png)
+![](../../.gitbook/assets/ui-page-ipaddressdetection.png)
 
 If you place AMS behind a reverse proxy or load balancer, you'll need to configure AMS to correctly find the real client IP address from the X-Forwarded-For header. This will ensure that rate limiting and audit logging are working against the correct IP.
 

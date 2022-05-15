@@ -32,7 +32,7 @@ A friendly name that is used through the configuration tool to refer to this not
 
 ### SMTP Channels
 
-![ui-page-auditing](../../.gitbook/assets/ui-page-auditing-smtp-channel.png)
+![](../../.gitbook/assets/ui-page-auditing-smtp-channel.png)
 
 **Audit success content template**
 
@@ -50,7 +50,7 @@ A list of email recipients that the audit notification should be sent to
 
 ### Webhook Channels
 
-![webhook\_slack](../../.gitbook/assets/ui-page-auditing-webhook-channel-slack.png)
+![](../../.gitbook/assets/ui-page-auditing-webhook-channel-slack.png)
 
 **URL**
 
@@ -74,7 +74,7 @@ A file containing the payload to send to the webhook for a failed access request
 
 ### PowerShell Channels
 
-![powershell\_channel](../../.gitbook/assets/ui-page-auditing-powershell-channel.png)
+![](../../.gitbook/assets/ui-page-auditing-powershell-channel.png)
 
 **Script**
 
@@ -88,4 +88,4 @@ If you want to make sure a channel is notified on every success or failure, then
 
 ## Template variables
 
-All notification channel types populate notification templates by replacing placeholder variables with data from the event. The \[\[audit variables]] page contains a full list of all valid variables that you can use throughout your templates and scripts.
+All notification channel types populate notification templates by replacing placeholder variables with data from the event. The [audit variables](audit-variables.md) page contains a full list of all valid variables that you can use throughout your templates and scripts.

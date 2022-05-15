@@ -6,7 +6,7 @@ If you have an existing Microsoft LAPS deployment, you can search your directory
 
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
 
-![authz](../../.gitbook/assets/ui-page-authz.png)
+![](../../.gitbook/assets/ui-page-authz.png)
 
 ### Select the import type
 
@@ -16,7 +16,7 @@ Select the LAPS import type, and click `Next`&#x20;
 
 ### Specify discovery settings
 
-![import\_container](../../.gitbook/assets/ui-page-import-container.png)
+![](../../.gitbook/assets/ui-page-import-container.png)
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will evaluate the ACLs on each computer object found in this section of the directory tree, looking for users and groups that have `read` and `control access` permissions on the `ms-mcs-admpwd` attribute
 
@@ -30,13 +30,15 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![rule\_setting](../../.gitbook/assets/ui-page-import-rulesettings.png)\\
+\\
+
+![](../../.gitbook/assets/ui-page-import-rulesettings.png)
 
 ### Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![import\_results](../../.gitbook/assets/ui-page-import-results.png)\\
+![](../../.gitbook/assets/ui-page-import-results.png)
 
 #### Merge settings
 

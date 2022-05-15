@@ -1,6 +1,6 @@
 # User Interface Page
 
-![ui](../../.gitbook/assets/ui-page-userinterface.png)
+![](../../.gitbook/assets/ui-page-userinterface.png)
 
 ## User interface customization
 

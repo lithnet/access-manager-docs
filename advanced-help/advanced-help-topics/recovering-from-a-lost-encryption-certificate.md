@@ -10,7 +10,7 @@ In order to restore local admin password access to your environment, you need to
 
 From the Access Manager Service configuration tool, visit the \[\[local admin passwords page]], select the forest you need to recover from the drop-down list, and click `Generate new...`.
 
-![local\_admin](../../.gitbook/assets/ui-page-localadminpasswords.png)
+![](../../.gitbook/assets/ui-page-localadminpasswords.png)
 
 #### Step 2: Backup the new certificate
 

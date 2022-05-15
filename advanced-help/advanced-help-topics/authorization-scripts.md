@@ -2,7 +2,7 @@
 
 ### Script-based authorization
 
-![acl\_script](../../.gitbook/assets/ui-page-authz-accesscontrol-script.png)
+![](../../.gitbook/assets/ui-page-authz-accesscontrol-script.png)
 
 If you'd like to make authorization decisions outside of a static ACL model, you can utilize a PowerShell script to do this.
 

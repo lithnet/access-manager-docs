@@ -24,7 +24,7 @@ setspn -s HTTP/accessmanager.lithnet.local AMSWEB01
 
 ## Part 2: Configure Lithnet Access Manager
 
-![!](../../.gitbook/assets/ui-page-authentication-iwa.png)
+![](../../.gitbook/assets/ui-page-authentication-iwa.png)
 
 1. Select `Integrated windows authentication` as the authentication provider
 2. Select `Negotiate` for the authentication scheme.

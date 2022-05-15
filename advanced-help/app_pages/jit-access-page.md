@@ -2,7 +2,7 @@
 
 ## JIT ACCESS
 
-![jitaccess](../../.gitbook/assets/ui-page-jitaccess.png)
+![](../../.gitbook/assets/ui-page-jitaccess.png)
 
 Lithnet Access Manager supports granting access to computers using a just-in-time access model.
 
@@ -26,7 +26,7 @@ Select `Enable automatic JIT group creation` and press the `Add...` button to cr
 
 ### JIT group mapping
 
-![groupmap](../../.gitbook/assets/ui-page-jitaccess-groupmapping.png)
+![](../../.gitbook/assets/ui-page-jitaccess-groupmapping.png)
 
 **Computer OU**
 

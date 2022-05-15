@@ -19,7 +19,7 @@
 ## Configuration
 
 * [Setting up Authentication](configuration/setting\_up\_authentication/README.md)
-  * [Setting up smart card authentication¶](configuration/setting\_up\_authentication/enabling-altsecurityidentities.md)
+  * [Setting up smart card authentication](configuration/setting\_up\_authentication/enabling-altsecurityidentities.md)
   * [Setting up authentication with ADFS](configuration/setting\_up\_authentication/setting-up-authentication-with-adfs.md)
   * [Setting up authentication with Azure AD](configuration/setting\_up\_authentication/setting-up-authentication-with-azure-ad.md)
   * [Setting up authentication with Okta](configuration/setting\_up\_authentication/setting-up-authentication-with-okta.md)

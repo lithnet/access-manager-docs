@@ -2,7 +2,7 @@
 
 Access Manager allows you to limit the number of requests per minute, hour and per day for a given user.
 
-![rate\_limits](../../.gitbook/assets/ui-page-ratelimits.png)
+![](../../.gitbook/assets/ui-page-ratelimits.png)
 
 ## Per-user and Per-IP rate limits
 

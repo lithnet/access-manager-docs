@@ -29,7 +29,7 @@ If you are setting up a cluster containing an even number of nodes, you must con
 * Open the `Disk Management` tool, and bring the AMS storage volume online. Initialize the disk, format it, and assign it a drive letter (for the purposes of this guide, we will refer to the AMS storage volume as `S:`)
 * Open the `Failover Cluster Manager` tool, expand the cluster in the left hand side tree view, and select `Storage` followed by `Disks`
 
-![cluster\_storage](../../.gitbook/assets/Cluster-1-Storage.png)
+![](../../.gitbook/assets/Cluster-1-Storage.png)
 
 * Select `Add Disk` from the right-hand actions menu, and add the appropriate disk to the cluster.
 
@@ -42,10 +42,10 @@ If you are setting up a cluster containing an even number of nodes, you must con
 * On the first node, run the Access Manager Service installer.
 * When prompted to provide the installation paths, set the log and config folders to be on the `S:` drive. Eg `S:\AMS\logs` and `S:\AMS\config`\
   \
-  ![installerpaths](../../.gitbook/assets/Cluster-4-InstallerPaths.png)
+
 * We also recommend using a group-managed service account for AMS. You must use the same account on all cluster nodes.\
   \
-  ![localadminpasswords](../../.gitbook/assets/Cluster-5-InstallerServiceAccount.png)
+
 * When the installer finishes, do not run the configuration utility when prompted.
 * Exit the installer and return to the `Failover Cluster Manager`
 * From the actions pane, select `Move Available Storage` and select the next node in the cluster. Confirm that the `owner node` for the storage has changed to the correct node.
@@ -53,30 +53,34 @@ If you are setting up a cluster containing an even number of nodes, you must con
 * Run the AMS installer again, providing the exact same paths and service account as you did on the primary node.
 * Repeat this process for all remaining cluster nodes
 
+![](../../.gitbook/assets/Cluster-5-InstallerServiceAccount.png)
+
+![](../../.gitbook/assets/Cluster-4-InstallerPaths.png)
+
 #### 5. Install the cluster role
 
 * Once AMS has been installed on all nodes, open the `Failover Cluster Manager` and go to the `Roles` node of the cluster
 * Click `Configure rule...` from the actions pane
 * Select `Generic service` as the role type
 
-![generic\_service](../../.gitbook/assets/Cluster-6-GenericService.png)
+![](../../.gitbook/assets/Cluster-6-GenericService.png)
 
 * Select `Lithnet Access Manager Service` from the services list
 
-![select\_service](../../.gitbook/assets/Cluster-7-SelectService.png)
+![](../../.gitbook/assets/Cluster-7-SelectService.png)
 
 * Provide an IP address and name for your client access point. This will be the name of the clustered service, and by default, forms the AD hostname of the cluster.
 
-![select\_cap](../../.gitbook/assets/Cluster-8-SelectCap.png)
+![](../../.gitbook/assets/Cluster-8-SelectCap.png)
 
 * Select the storage volume that contains the AMS configuration
 
-![select\_storage](../../.gitbook/assets/Cluster-9-SelectStorage.png)
+![](../../.gitbook/assets/Cluster-9-SelectStorage.png)
 
 * Click `Add` on the `replicate registry settings` screen, and specify the following value `SOFTWARE\Lithnet\Access Manager Service\Parameters`
 * Complete the remaining steps of the wizard, and ensure the new role transitions to an 'online' state
 
-![ckuster\_online](../../.gitbook/assets/Cluster-10-Online.png)
+![](../../.gitbook/assets/Cluster-10-Online.png)
 
 #### 6. Configure AMS for high availability
 
