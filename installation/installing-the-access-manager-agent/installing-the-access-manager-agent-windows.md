@@ -1,6 +1,6 @@
 # Installing the Access Manager Agent on Windows
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../about-ams/Access-Manager-Editions/)
+![](../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
 
 ## Prerequisites
 

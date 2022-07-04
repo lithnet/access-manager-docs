@@ -17,7 +17,7 @@ The Microsoft LAPS agent works only on Windows AD domain-joined devices. Lithnet
 | Write local admin password to Active Directory               | <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
 | Write local admin password to the AMS database               |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
 | Support for Windows 8.1 or higher domain-joined devices      | <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Support for Windows 8.1 or higher non-domain-joined devices  |                  ![](../../docs/images/dash.png)                 |                 ![](../../docs/images/check2.png)                |
+| Support for Windows 8.1 or higher non-domain-joined devices  |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
 | Support for Windows 10 or higher Azure AD-joined devices     |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
 | Support for Windows 10 or higher Azure AD-registered devices |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
 | Support for Linux                                            |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
