@@ -24,9 +24,9 @@ We recommend you have a look at our other product [Lithnet Password Protection f
 
 #### Web-based access to local admin passwords
 
-Access Manager provides a simple web-based and mobile-friendly interface for accessing local admin passwords for Windows, macOS and Linux devices. There’s no need for admins to install custom software, or have access to AD administrative tools to access LAPS passwords.
+![](.gitbook/assets/web-request-laps.gif)
 
-![](https://docs.lithnet.io/projects/access-manager/en/v2/\_images/web-request-laps.gif)
+Access Manager provides a simple web-based and mobile-friendly interface for accessing local admin passwords for Windows, macOS and Linux devices. There’s no need for admins to install custom software, or have access to AD administrative tools to access LAPS passwords.
 
 Administrators also have the option of forcing an expiry time when a password is accessed. This ensures that the password is rotated after use.
 
