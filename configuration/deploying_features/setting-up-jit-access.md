@@ -47,7 +47,7 @@ Best practice for JIT is that each computer that you want to enable JIT for, has
 
 ![](../../.gitbook/assets/ui-page-jitaccess-groupcreation.png)
 
-From the [JIT Access](../../app\_pages/Jit-Access-Page/) page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
+From the [JIT Access](../../advanced-help/app\_pages/jit-access-page.md) page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
 
 ![](../../.gitbook/assets/ui-page-jitaccess-groupmapping.png)
 
