@@ -3,7 +3,7 @@
 The licensing page allows you to manage and view your license information.
 
 \
-Standard edition users will have the option to enter a license key to upgrade to enterprise edition. See the [licensing](../../about\_ams/Licensing/) page for more information.
+Standard edition users will have the option to enter a license key to upgrade to enterprise edition. See the [licensing](../../about-lithnet-access-manager/licensing.md) page for more information.
 
 ![](../../.gitbook/assets/ui-page-licensing-standard.png)
 

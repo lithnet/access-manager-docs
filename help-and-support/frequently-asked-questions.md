@@ -23,7 +23,7 @@ The Access Manager agent (AMA) obtains the encryption certificate from this loca
 
 Yes you can, but it requires a bit of manual work.
 
-Using the [certificate publishing template](https://github.com/lithnet/access-manager/blob/master/src/Lithnet.AccessManager/Lithnet.AccessManager.Server.UI/ScriptTemplates/Publish-LithnetAccessManagerCertificate.ps1) provided by access manager, manually replace the `$forest` variable to the dns name of the forest, and replace the `{certificateData}` placeholder with the base-64 encoded .cer file content.
+Using the [certificate publishing template](https://github.com/lithnet/access-manager/blob/master/src/Lithnet.AccessManager/Lithnet.AccessManager.Server.UI/ScriptTemplates/PublishLithnetAccessManagerCertificate.ps1) provided by access manager, manually replace the `$forest` variable to the dns name of the forest, and replace the `{certificateData}` placeholder with the base-64 encoded .cer file content.
 
 Publish the certificate to the directory.
 

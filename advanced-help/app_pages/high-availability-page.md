@@ -1,6 +1,6 @@
 # High Availability Page
 
-![localadminpasswords](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) High availability is an [Enterprise edition feature](../../about\_ams/Access-Manager-Editions/)
+![localadminpasswords](../../.gitbook/assets/badge-enterprise-edition-rocket.svg) High availability is an [Enterprise edition feature](../../about-lithnet-access-manager/access-manager-editions.md)
 
 ## High Availability
 
