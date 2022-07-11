@@ -1,4 +1,0 @@
-Lithnet
-Okta
-Lithnet
-kerberos
