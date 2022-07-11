@@ -7,3 +7,4 @@ makefile
 .DS_store
 _build/
 thumbs.db
+.vscode/
