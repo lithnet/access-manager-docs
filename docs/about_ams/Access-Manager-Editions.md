@@ -24,7 +24,6 @@ See the [licensing](/app_pages/Licensing-Page) page for information on how to tr
 | 'Read aloud' function for passwords (where supported by the browser) | x | x |
 | Phonetic display of passwords | x | x |
 | Access to local admin password history |  | x |
-| Just-in-time access requests to admin-defined roles^ |  | x |
 
 ### Local admin password features 
 | Feature | Standard Edition | Enterprise Edition |
@@ -41,14 +40,11 @@ See the [licensing](/app_pages/Licensing-Page) page for information on how to tr
 | Feature | Standard Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Just-in-time access to Windows computers | x | x |
-| Just-in-time access to Active Directory groups^ |  | x |
-| Just-in-time access to 3rd party services using custom PowerShell scripts^ |  | x |
 
 ### BitLocker features
 | Feature | Standard Edition | Enterprise Edition |
 | --- | :---: | :---: |
 | Read BitLocker recovery passwords from AD | x | x |
-
 
 ## Authentication features
 Access Manager supports many different authentication mechanisms. Use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
@@ -66,8 +62,6 @@ Access Manager supports many different authentication mechanisms. Use a modern a
 | Send audit notifications via webhooks | x | x |
 | Send audit notifications via email | x | x | 
 | Send audit notifications via custom PowerShell scripts | x | x | 
-| Query access history from within the app^ |  | x |
-| Email summary reports^ | | x |
 
 ## Infrastructure 
 | Feature | Standard Edition | Enterprise Edition |
@@ -84,7 +78,6 @@ Access Manager supports many different authentication mechanisms. Use a modern a
 | ACL-based authorization | x | x |
 | Custom PowerShell script-based authorization | | x |
 | Global rate-limiting on requests | x | x |
-| Granular rate-limiting policies for users and groups^ |  | x |
 | Import Microsoft LAPS permissions from Active Directory | x | x |
 | Import BitLocker recovery password permissions from Active Directory | x | x |
 | Import local admin permissions from computers | x | x | 
@@ -96,7 +89,3 @@ Access Manager supports many different authentication mechanisms. Use a modern a
 | --- | :---: | :---: |
 | Community support via GitHub | x | x |
 | Priority support via email |  | x |
-
-
-
-***^ Denotes features that are planned and coming soon***
