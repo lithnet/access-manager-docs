@@ -1,8 +1,5 @@
-# How does Access Manager help prevent lateral movement
+# How does Access Manager help prevent lateral movement?
 
-{% hint style="info" %}
-Adding as a test items
-{% endhint %}
 
 Lateral movement is a technique used by attackers, where after gaining initial access to one system, they obtain credentials that allow them to move into other hosts on the networ
 
