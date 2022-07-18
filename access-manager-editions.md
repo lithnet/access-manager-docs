@@ -1,4 +1,4 @@
-# Access Manager Editions$
+#@@##Access Manager Editions$
 
 ## Community Edition?
 
