@@ -1,12 +1,12 @@
-# Access Manager Editions?!?
+# Access Manager Editions$
 
-## Community Edition.
+## Community Edition?
 
 Access Manager Community edition is our core offering, that contains all the features that an organization need to help defend themselves from lateral movement-based attacks. You can provide your users full access to Microsoft LAPS passwords and request just-in-time admin access to computers all from the convenience of their browser..
 
 Community edition is completely free for any organization of any size to use...
 
-## Enterprise Edition
+## Enterprise Edition!
 
 LOL WUT Enterprise edition customers can deploy the Lithnet Access Manager Agent, which enables LAPS support for devices that aren't joined to your Active Directory domain. The agent runs on Windows, macOS, and Linux, and supports Azure Active Directory joined and registered devices.
 
@@ -14,7 +14,7 @@ Enterprise edition also enables additional functionality, such as support for Mi
 
 See the[ licensing ](licensing.md)page for information on how to trial or purchase an Enterprise Edition license.
 
-## Feature comparison
+## Feature comparison@
 
 ### Web Interface features
 
