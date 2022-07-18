@@ -4,7 +4,7 @@
 
 ![](.gitbook/assets/access-manager-logo.png)
 
-Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way..
+Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way.
 
 It provides a web-based interface that allows users to request local admin/root passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts.
 
