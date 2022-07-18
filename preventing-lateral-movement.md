@@ -8,7 +8,7 @@ Ransomware in particular loves this type of environment.
 
 In most cases, large-scale ransomware attacks are successful because they manage to steal credentials of accounts that are admins on large numbers of computers.
 
-So, how do we defend against these types of attacks?
+So, how do we defend against these types of attacks??
 
 ## 1. Secure the built-in administrator account
 
