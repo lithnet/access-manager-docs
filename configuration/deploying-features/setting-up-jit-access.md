@@ -17,7 +17,7 @@ Access Manger's JIT functionality works with any version of Active Directory fro
 
 ### Windows Server 2016 forest functional level and above where PAM feature is enabled
 
-In Active Directory forests with a Windows 2016 or higher forest functional levels can take advantage of a new feature called time-based membership. This has several advantages over the dynamic group model. In this model when a user is granted JIT access to a computer, Access Manager adds the user directly to the JIT group, but it can tell Active Directory that the group membership itself is time-limited. The user is added to the group with a time-to-live value and after that time, the user is automatically removed from the group by Active Directory.
+Active Directory forests, with Windows 2016 or higher forest functional levels, can take advantage of a new feature called time-based membership. This has several advantages over the dynamic group model. In this model when a user is granted JIT access to a role, Access Manager adds the user directly to the JIT group, but it can tell Active Directory that the group membership itself is time-limited. The user is added to the group with a time-to-live value and after that time, the user is automatically removed from the group by Active Directory.
 
 Time-based membership is part of the [Privileged Access Management optional forest feature](https://docs.microsoft.com/en-us/openspecs/windows\_protocols/ms-adts/d079eee8-1bac-4b03-86e4-506a21450905) and must be explicitly enabled.
 
