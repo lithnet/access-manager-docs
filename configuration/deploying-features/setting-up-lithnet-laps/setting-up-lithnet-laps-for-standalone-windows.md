@@ -4,11 +4,11 @@ This guide will walk you through the steps to configure the Access Manager servi
 
 ## Step 1: Set up the AMS directory
 
-The Lithnet Access Manager agent uses the Access Manager directory to store passwords for standalone Windows devices. Follow the steps in the[ AMS directory setup guide](setting-up-the-ams-directory.md), making sure to enable `key-based device registration`.
+The Lithnet Access Manager agent uses the Access Manager directory to store passwords for standalone Windows devices. Follow the steps in the [AMS directory setup guide](setting-up-the-ams-directory.md), making sure to enable `key-based device registration`.
 
 ## Step 2: Configure Lithnet LAPS for the Access Manager directory
 
-Next, configure[ Lithnet LAPS for the AMS directory](configuring-lithnet-laps-for-the-ams-directory.md). This process will configure the encryption certificate for the service, and set up the password policies required.
+Next, configure [Lithnet LAPS for the AMS directory](configuring-lithnet-laps-for-the-ams-directory.md). This process will configure the encryption certificate for the service, and set up the password policies required.
 
 ## Step 3: Create a registration key
 
@@ -16,7 +16,7 @@ From the `Directory configuration/Access Manager Directory/Registration keys` pa
 
 ## Step 4: Install the Access Manager Agent
 
-Following[ agent installation guide](../../../installation/installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md), selecting the Access Manager password storage mode, and AMS authentication when prompted. You'll also need the AMS server name, and the registration key created in step 3.
+Following [agent installation guide](../../../installation/installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md), selecting the Access Manager password storage mode, and AMS authentication when prompted. You'll also need the AMS server name, and the registration key created in step 3.
 
 The installation guides provide command lines for silently installing the package, which can be used with automated deployment tools such as SCCM. Configuring these deployment tools is out of scope for this guide.
 

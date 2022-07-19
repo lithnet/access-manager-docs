@@ -12,7 +12,7 @@ Enterprise edition customers can deploy the Lithnet Access Manager Agent, which 
 
 Enterprise edition also enables additional functionality, such as support for Microsoft Failover Clusters for high availability, and advanced custom authorization rules.
 
-See the[ licensing ](licensing.md)page for information on how to trial or purchase an Enterprise Edition license.
+See the [licensing](licensing.md) page for information on how to trial or purchase an Enterprise Edition license.
 
 ## Feature comparison
 
@@ -57,12 +57,12 @@ Enterprise edition customers benefit from the following capabilities when they d
 | Manage local admin passwords and store them in AMS                                                   | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Encrypted storage of passwords                                                                       | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Retain historical local admin password history                                                       | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
-| Support for domain-joined windows devices                                                            | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
+| Support for domain-joined Windows devices                                                            | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Support for non-domain joined Windows above clients                                                  | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Support for macOS devices (Intel and M1)                                                             | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Support for Azure AD joined Windows 10 and higher devices                                            | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Support for Azure AD registered Windows 10 and higher devices                                        | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
-| Support for linux distributions (x64 and arm64) 2                                                    | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
+| Support for Linux distributions (x64 and arm64) 2                                                    | ![](docs/images/dash.png) | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | :::                                                                                                  |                           |                                                            |
 
 ### Just-in-time access features
@@ -119,8 +119,7 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 | Cross-forest trust support           | <img src="docs/images/check2.png" alt="" data-size="line"> | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Single-server deployments            | <img src="docs/images/check2.png" alt="" data-size="line"> | <img src="docs/images/check2.png" alt="" data-size="line"> |
 | Windows Failover Cluster deployments |                  ![](docs/images/dash.png)                 | <img src="docs/images/check2.png" alt="" data-size="line"> |
-| Database support                     |                         SQL Express                        |   <p>SQL Express<br>SQL Server Standard or Enterprise</p>  |
-| :::                                  |                                                            |                                                            |
+                                                 |
 
 ### Authorization features
 

@@ -34,7 +34,7 @@ This group of attributes represents the result of the access evaluation
 | `Response.MatchedRule` | string | The ID of the authorization rule that was used to make the access decision |
 | `Response.MatchedRuleDescription` | string | The 'description' field from the authorization rule that was used to make the access decision |
 | `Response.ExpireAfter` | TimeSpan | The duration of time that access was granted for | 
-| `Response.Code` | `Success`, `NoMatchingRuleForTarget`, `NoMatchingRuleForUser`, `ExplicitlyDenied`, `UserRateLimitExceeded`, `IpRateLimitExceeded` | The result of the authorization decision. Codes other than `Success` represent an access denied response. | 
+| `Response.Code` | `Success`, `NoMatchingRuleForTarget`, `NoMatchingRuleForUser`, `ExplicitlyDenied`, `UserRateLimitExceeded`, `IpRateLimitExceeded` | The result of the authorization decision. Codes other than `Success` represent an 'access denied' response. | 
 | `Response.AccessType` | `None`, `LocalAdminPassword`, `LocalAdminPasswordHistory`, `Jit`, `Bitlocker` | The type of access that was granted |
 | `Response.AccessTypeDescription` | string | The friendly name of the type of access that was granted |
 | `Response.AccessExpiryDate` | DateTime | The date and time when the user's access will expire, expressed in local server time |

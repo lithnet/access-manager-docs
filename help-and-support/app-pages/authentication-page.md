@@ -1,23 +1,23 @@
 # Authentication configuration page
 
-The Access Manager web service allows you to choose one of several different types of authentication providers. It is recommended to use modern authentication using a mechanism such as OpenID Connect, where an identity provider can provider high assurance authentication utilizing passwordless or multifactor authentication.
+The Access Manager web service allows you to choose one of several types of authentication providers. It is recommended to use modern authentication using a mechanism such as OpenID Connect, where an identity provider can provider high assurance authentication utilizing passwordless or multifactor authentication.
 
 Access Manager supports modern identity providers such as Azure AD and Okta out of the box.
 
 ## OpenID Connect
 
-OpenID Connect is the preferred authentication provider. Coupled with a modern IDP like Azure AD or Okta, you can provide strong authentication to your application, backed up by multifactor authentication. See the guides for setting up Access Manager to work with[ Azure AD](../../configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md) or [Okta](../../configuration/setting-up-authentication/setting-up-authentication-with-okta.md).
+OpenID Connect is the preferred authentication provider. Coupled with a modern IDP like Azure AD or Okta, you can provide strong authentication to your application, backed up by multifactor authentication. See the guides for setting up Access Manager to work with [Azure AD](../../configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md) or [Okta](../../configuration/setting-up-authentication/setting-up-authentication-with-okta.md).
 
 Using OpenID Connect requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
 ### Sign out mode
-When the users clicks the logout button, you can choose for them to be logged out of the application, or have Access Manager request that the user be signed out of the IDP (where supported by the IDP).
+When users click the logout button, you can choose for them to be logged out of the application, or have Access Manager request that the user be signed out of the IDP (where supported by the IDP).
 
 ![](../../images/ui-page-authentication-oidc-azure.png)
 
 ## WS-Federation
 
-WS-Federation can be used to delegate the authentication process to an on-prem ADFS or similar product. Read the [setup guide](../../configuration/setting-up-authentication/setting-up-authentication-with-adfs.md) for configuring Access Manager to work with ADFS.
+WS-Federation can be used to delegate the authentication process to an on-premises ADFS or similar product. Read the [setup guide](../../configuration/setting-up-authentication/setting-up-authentication-with-adfs.md) for configuring Access Manager to work with ADFS.
 
 Using WS-Federation requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
@@ -54,7 +54,7 @@ This option allows you to import a specific certificate authority's certificate 
 
 ## Integrated Windows Authentication
 
-The Integrated Windows Authentication (IWA) provider allows users to log in with NTLM or Kerberos authentication. In order to use kerberos, the website host name must be registered on the SPN of the computer object (not the service account). Eg if using a hostname of `accessmanager.lithnet.io`, you'll need to register the SPN `http/accessmanager.lithnet.io` or `host/accessmanager.lithnet.io`. If the host name matches the AD computer name, then no additional SPNs are required.
+The Integrated Windows Authentication (IWA) provider allows users to log in with NTLM or Kerberos authentication. In order to use Kerberos, the website host name must be registered on the SPN of the computer object (not the service account). For example, when using a hostname of `accessmanager.lithnet.io`, you'll need to register the SPN `http/accessmanager.lithnet.io` or `host/accessmanager.lithnet.io`. If the host name matches the AD computer name, then no additional SPNs are required.
 
 ![](../../images/ui-page-authentication-iwa.png)
 
@@ -64,11 +64,11 @@ Select one of the following authentication options
 
 * Basic: Uses basic authentication (username/password) - Not recommended
 * NTLM: Use NTLM authentication only
-* Negotiate: Use kerberos if possible, otherwise fall back to NTLM
+* Negotiate: Use Kerberos if possible, otherwise fall back to NTLM
 
 ## Sign-in restrictions
 ### Authorized users and groups
 Specify the users and groups that should be allowed to log into this service, or leave the field blank to allow anyone who successfully authenticates to log in
 
 ### Denied users and groups
-Add any users and groups that should be denied login to this service. Users in this group will not be able to login even if they are in the `Authorization users and groups` list.
+Add any users and groups that should be denied login to this service. Users in this group will not be able to log in even if they are in the `Authorization users and groups` list.

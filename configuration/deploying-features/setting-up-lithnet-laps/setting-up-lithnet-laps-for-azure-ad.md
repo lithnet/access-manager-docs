@@ -8,11 +8,11 @@ The Lithnet Access Manager agent uses the Access Manager directory to store pass
 
 ## Step 2: Configure Lithnet LAPS for the Access Manager directory
 
-Next, configure[ Lithnet LAPS for the AMS directory](configuring-lithnet-laps-for-the-ams-directory.md). This process will configure the encryption certificate for the service, and set up the password policies required.
+Next, configure [Lithnet LAPS for the AMS directory](configuring-lithnet-laps-for-the-ams-directory.md). This process will configure the encryption certificate for the service, and set up the password policies required.
 
 ## Step 3: Install the Access Manager Agent
 
-Follow the guide to[ install the agent](../../../installation/installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md), making sure you select 'Azure Active Directory authentication' when prompted by the installer, and enter your AAD tenant ID when prompted.
+Follow the guide to [install the agent](../../../installation/installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md), making sure you select 'Azure Active Directory authentication' when prompted by the installer, and enter your AAD tenant ID when prompted.
 
 The installation guide provides command lines for silently installing the MSI, which can be used with automated deployment tools such as Microsoft Intune. Configuring these deployment tools is out of scope for this guide.
 

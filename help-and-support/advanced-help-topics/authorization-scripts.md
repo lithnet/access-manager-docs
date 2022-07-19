@@ -2,7 +2,7 @@
 
 ![](../../images/badge-enterprise-edition-rocket.svg) Script-based authorization is an [Enterprise edition feature](../../access-manager-editions.md)
 
-If you'd like to make authorization decisions outside of the static ACL model, you can utilize a PowerShell script to do this.
+If you'd like to make dynamic authorization decisions, outside the static ACL model, you can utilize a PowerShell script to do this.
 
 Access Manager can call a script that contains a function called `Get-AuthorizationResponse` that takes a user, computer, and logger as input parameters. From there you can make a decision on what the user should be allowed or denied access to, or choose to not make an authorization decision at all.
 

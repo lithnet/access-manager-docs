@@ -20,7 +20,7 @@ Copy or save the script, modify the `$OU` variable as appropriate, and run it in
 
 ## Encryption
 
-Each forest in the domain must have an encryption certificate published in order to deploy the Lithnet Access Manager Agent. Select a forest from the drop down list, to see the encryption certificates available for that forest. Only one certificate can be published at any one time.
+Each forest in the domain must have an encryption certificate published in order to deploy the Lithnet Access Manager Agent. Select a forest from the drop-down list, to see the encryption certificates available for that forest. Only one certificate can be published at any one time.
 
 You can rotate these certificates as often as you like, but you need to ensure that the certificate used to encrypt a given password is available for as long as it is stored in the directory. Agents cannot decrypt their own passwords, so once they have encrypted it with a given certificate, it can only be decrypted with the same certificate.
 

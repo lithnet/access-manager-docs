@@ -29,8 +29,8 @@ Download the `Get-LocalAdmins.ps1` and `run.bat` files from the [script library]
 ## Create a group policy
 
 1. Create a new group policy, and link it to the OU containing the computers you want to audit
-2. Navigate to `Computer Configuration` => `Preferences` => `Control Panel Settings` => `Scheduled Tasks`
-3. Right click and select `New` => `Scheduled Task (At least Windows 7)`
+2. Navigate to `Computer Configuration` ⇾ `Preferences` ⇾ `Control Panel Settings` ⇾ `Scheduled Tasks`
+3. Right click and select `New` ⇾ `Scheduled Task (At least Windows 7)`
 4. Configure the following settings on the `General` tab:
 
 | Setting                         | Value                                |
@@ -51,13 +51,13 @@ Download the `Get-LocalAdmins.ps1` and `run.bat` files from the [script library]
 1. On the `Actions` tab:
    * Click new
    * Set the `action` type to `Start a program`
-   * In the `Program/Script` field, enter the path to the run.bat file (eg `\\your-server\local-admin-reports\scripts\run.bat`)
+   * In the `Program/Script` field, enter the path to the run.bat file (e.g. `\\your-server\local-admin-reports\scripts\run.bat`)
 
 ![](../../images/group-policy-local-admins-script-scheduledtask-action-new.png)
 
 1. Save the scheduled task
 
-When the machines check in for their group policy update, the task will be created and will run, and you will see your report share start filling up with csv files.
+When the machines check in for their group policy update, the task will be created and will run, and you will see your report share start filling up with CSV files.
 
 If any `.error` files appear, investigate the details of the error and remediate appropriately.
 

@@ -55,7 +55,7 @@ Using the group policy editor, create a new group policy object and link it to t
 
 ![!](../../images/group-policy-local-users-and-groups.png)
 
-Right click the `Local users and groups` node, and select `New`, `Local group`. Click the drop down arrow on the `Group name` field, and select `Administrators (built-in)`.
+Right-click the `Local users and groups` node, and select `New`, `Local group`. Click the drop-down arrow on the `Group name` field, and select `Administrators (built-in)`.
 
 ![!](../../images/group-policy-local-users-and-groups-new-group.png)
 
@@ -73,7 +73,7 @@ It is recommended that you only turn this on after appropriate testing, and once
 
 If you have additional users or groups that should also be in the local administrators group, then you can add those to the list. Remember, in order to prevent lateral movement with administrator rights, no accounts should have permanent administrative rights. Use this feature temporarily, to assist in an orderly transition to removing permanent admin rights, or in very limited circumstances.
 
-> Note, if you are currently using the older Windows `Restricted groups` policies, you'll need to convert that membership to use the new group-policy preferences style. The restricted groups policy does not allow use of the `%computername%` variable. The functionality provided by restricted groups is available in group policy preferences.
+> Note, if you are currently using the older Windows `Restricted groups` policies, you'll need to convert that membership to use the new group-policy preferences style. The `restricted groups` policy does not allow use of the `%computername%` variable. The functionality provided by restricted groups is available in group policy preferences.
 
 ## Step 4: Assign access
 

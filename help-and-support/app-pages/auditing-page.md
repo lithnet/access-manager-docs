@@ -74,7 +74,7 @@ Specifies the `Content-Type` header used in the HTTP request. This will almost a
 
 Edits the JSON file used as a template for an audit event.
 
-AMS comes with sample JSON templates for Microsft Teams and Slack that you can customize to suit your requirements. See the page on [audit variables](../advanced-help-topics/audit-variables.md) for a list of the fields that are valid to use inside the json template.
+AMS comes with sample JSON templates for Microsoft Teams and Slack that you can customize to suit your requirements. See the page on [audit variables](../advanced-help-topics/audit-variables.md) for a list of the fields that are valid to use inside the JSON template.
 
 ## PowerShell Channels
 

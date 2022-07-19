@@ -10,7 +10,7 @@ A list of forests is shown along with an indication of the deployment status of 
 
 The legacy, or classic, Microsoft LAPS schema uses an attribute called `ms-mcs-admpwd` to store the local admin password in plain text.
 
-The new Microsoft LAPS agent in Windows 11 users a attributes called `msLAPS-Password` and `msLAPS-EncryptedPassword`.
+The new Microsoft LAPS agent in Windows 11 uses attributes called `msLAPS-Password` and `msLAPS-EncryptedPassword`.
 
 If you need to deploy the Microsoft LAPS schema, refer to the [Microsoft guides](https://aka.ms/laps) on how to complete this process.
 

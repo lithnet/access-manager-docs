@@ -28,7 +28,7 @@ New-SelfSignedCertificate -DnsName "ams.domain.local" -CertStoreLocation "cert:\
 
 ## Step 3: Download and install the AMS service
 
-1. Download the latest version from the [downloads ](../downloads.md)page.
+1. Download the latest version from the [downloads](../downloads.md) page.
 2. Download and install the [.NET Desktop runtime and the .NET hosting bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime), or if your server has internet access, you can let the installer download and install these for you
 3. Run the AMS installation package. Follow the prompts to install the application and provide the service account created in step 1 when prompted.
 
@@ -47,7 +47,7 @@ Click `File`, then `Save`.
 
 ## Step 5: Configure your authentication provider
 
-AMS supports several different authentication providers. Read the guide on [configuring authentication ](../../configuration/setting-up-authentication/)and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
+AMS supports several authentication providers. Read the guide on [configuring authentication](../../configuration/setting-up-authentication/) and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
 
 ## Step 6: Configure outbound email settings
 

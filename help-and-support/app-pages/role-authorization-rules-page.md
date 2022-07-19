@@ -20,7 +20,7 @@ Each role must be given a name that will be shown to users in the web app. Users
 
 You must select an Active Directory group as the target for the role.
 
-You can disable an authorization rule by selecting the `disable rule` checkbox. You can also choose to expire the rule at a certain point, by checking the `expire rule` checkbox and selecting the date and time the rule should expire.
+The rule can be disabled at any time by selecting the `disable rule` checkbox. You can also choose to expire the rule at a certain point, by checking the `expire rule` checkbox and selecting the date and time the rule should expire.
 
 ### Access control
 

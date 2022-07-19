@@ -40,7 +40,7 @@ When evaluating access, rules are evaluated in the following order;
 
 If a user matches more than one authorization rule, the first matched target according to the order above will be used.
 
-If a deny ACL is encountered for a user, they will be denied access regardless of target order or type.
+If a 'deny' ACL is encountered for a user, they will be denied access regardless of target order or type.
 
 You can disable an authorization rule by selecting the `disable rule` checkbox. You can also choose to expire the rule at a certain point, by checking the `expire rule` checkbox and selecting the date and time the rule should expire.
 
@@ -77,7 +77,7 @@ When a user accesses a role, you can prompt them to provide a reason for accessi
 
 If at least one of your ACLs allows access to the local admin passwords of the specified targets, then you'll have an option that allows you to choose to expire the local admin password after it has been accessed.
 
-This has the effect of setting the expiry date for the password in the directory to a new date based on the interval you specify. The password be rotated the next time the Microsoft LAPS or Lithnet Access Manager agents check in _after_ this new time. Note, that the Microsoft LAPS client checks the password at group policy refresh time (every \~90 minutes) and the Lithnet Access Manager agent by default, checks every 60 minutes so rotations may be delayed by these intervals.
+This has the effect of setting the expiry date for the password in the directory to a new date based on the interval you specify. The password be rotated the next time the Microsoft LAPS or Lithnet Access Manager agents check in _after_ this new time. Note, that the Microsoft LAPS client checks the password at group policy refresh time (every \~90 minutes) and the Lithnet Access Manager agent by default, checks every 60 minutes, so rotations may be delayed by these intervals.
 
 #### Just-in-time access settings
 

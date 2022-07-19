@@ -80,9 +80,9 @@ Shows the current functional level of the domain
 
 Shows the availability of the AD PAM feature in this domain
 
-* Not supported: The forest functional level does not support PAM
-* Supported, but not enabled: The forest function level supports PAM, but it has not been enabled
-* Enabled: The PAM feature is enabled and available in the domain
+* Not supported: The forest functional level does not support PAM.
+* Supported, but not enabled: The forest functional level supports PAM, but it has not been enabled.
+* Enabled: The PAM feature is enabled and available in the domain.
 
 #### JIT Type
 

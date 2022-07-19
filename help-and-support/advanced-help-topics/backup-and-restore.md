@@ -1,7 +1,7 @@
 # Backup and Restore
 
 ## Backing up the AMS server
-All the data for your AMS instance is stored in the AMS database. It is important that you regularly backup this database, and ensure that the backups are stored safely.
+All the data for your AMS instance is stored in the AMS database. It is important that you regularly back up this database, and ensure that the backups are stored safely.
 
 If you chose to install AMS using the pre-configuration SQL express instance, then you can configure backups through the `App configuration/Database` screen.
 
@@ -11,7 +11,7 @@ If you are using Azure SQL, Amazon RDS, or an external SQL server instance, you 
 
 ## Backing up the AMS master key
 
-The AMS master key is protects all sensitive information inside the database. It is uniquely protected so that the AMS service account can decrypt it automatically. If that process fails, you will need a master key recovery password to restore access to the service.
+The AMS master key protects all sensitive information inside the database. It is uniquely protected so that the AMS service account can decrypt it automatically. If that process fails, you will need a master key recovery password to restore access to the service.
 
 From the `App config/Security` page, ensure that you have created a recovery password, and store this password in an offline, secure location.
 

@@ -29,9 +29,9 @@ Select the local administrators import type, and click `Next` ![](../../images/u
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will attempt to connect to each computer object found in this section of the directory tree, and obtain the membership of its local admin group.
 
-When Access Manager finds that a user or group has permission on all computers with an OU, it will create a single access rule at the OU-level for that user or group. You can disable this behaviour by checking the `Do not consolidate permissions at the OU level` check box. Access Manager will then make an individual authorization rule for every computer that is found.
+When Access Manager finds that a user or group has permission on all computers with an OU, it will create a single access rule at the OU level for that user or group. You can disable this behavior by checking the `Do not consolidate permissions at the OU level` check box. Access Manager will then make an individual authorization rule for every computer that is found.
 
-If any of the computers are uncontactable, Access Manager, by default, will ignore the missing computer for the purposes of consolidating access permissions. This assumes that the missing computers have the same administrators as the other computers in the OU. If this is not the case, select the option to disable consolidate when computers are uncontactable. This approach favours caution, but results in an individual access rule being created for every other computer in that OU.
+If any of the computers are uncontactable, Access Manager, by default, will ignore the missing computer for the purposes of consolidating access permissions. This assumes that the missing computers have the same administrators as the other computers in the OU. If this is not the case, select the option to disable consolidate when computers are uncontactable. This approach favors caution, but results in an individual access rule being created for every other computer in that OU.
 
 If there are users and groups that you do want to import permissions for, add them to the list. The Access Manager service account is automatically pre-added to this list. Machine-local accounts are automatically ignored.
 

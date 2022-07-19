@@ -1,7 +1,7 @@
 # Troubleshooting 
 
 ## Logs
-The first step of any troubleshooting endeavour is check in the Access Manager log files. These contain information about errors and other important events. 
+The first step of any troubleshooting endeavor is check in the Access Manager log files. These contain information about errors and other important events. 
 
 ### Access Manager Service
 The Access Manager Service has several log files. 

@@ -38,7 +38,7 @@ function Write-AuditEvent{
 
 ### `$eventData`
 
-The `$eventData` variable is na object that contains information about the access request. See the `Available variables` section below for the list of available variables you can use.
+The `$eventData` variable is an object that contains information about the access request. See the `Available variables` section below for the list of available variables you can use.
 
 ## Logging information
 

@@ -8,8 +8,8 @@ The Lithnet Access Manager Service requires Windows Server 2012 R2 or higher.
 
 #### Dependencies
 
-* [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
-* [.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
+* [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
+* [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
 * Microsoft SQL Express 2017 or later (if hosting the database locally), SQL Server 2017 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
 
 ## Access Manager Agent (AMA) Operating System Support
@@ -20,7 +20,7 @@ The Lithnet Access Manager agent is supported on Windows, macOS, and Linux. Each
 
 #### Dependencies
 
-The agent requires the installation of .NET Framework 4.7.2 or later if it is not already installed as part of the OS for x86 and x64 installations. For arm64 installations, dotnet 6.0 is required.
+The agent requires the installation of .NET Framework 4.7.2 or later if it is not already installed as part of the OS for x86 and x64 installations. For arm64 installations, .NET 6.0 is required.
 
 #### Supported versions
 
@@ -50,15 +50,15 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 
 #### Dependencies
 
-The Access Manager Agent requires the use of the `chpasswd` tool that is built into most modern linux systems.
+The Access Manager Agent requires the use of the `chpasswd` tool that is built into most modern Linux systems.
 
 #### Supported versions
 
-The agent runs on dotnet 6.0 and should work on any linux distribution supported by Microsoft for these platforms.
+The agent runs on .NET 6.0 and should work on any Linux distribution supported by Microsoft for these platforms.
 
-Lithnet provides packages for RPM and debian-based distributions, as well as tar.gz file for use with others.
+Lithnet provides packages for RPM and Debian-based distributions, as well as tar.gz file for use with others.
 
-See the [Microsoft guide for supported operating systems for dotnet 6.0](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md)
+See the [Microsoft guide for supported operating systems for .NET 6.0](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md)
 
 The following operating system versions have been tested and are fully supported by Lithnet.
 

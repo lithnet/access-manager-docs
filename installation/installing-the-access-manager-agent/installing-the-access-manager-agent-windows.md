@@ -56,7 +56,7 @@ msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=0 AUTHMODE=0
 
 ### Silent installation for Azure AD-joined and registered devices
 
-Use the following command line to install the agent in AzureAD mode, replacing the `SERVER` and `AZUREADTENANTID` values are appropriate
+Use the following command line to install the agent in Azure AD mode, replacing the `SERVER` and `AZUREADTENANTID` values are appropriate
 
 ```
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=1 AUTHMODE=2 SERVER=ams.lithnet.local AZUREADTENANTID=YYYY

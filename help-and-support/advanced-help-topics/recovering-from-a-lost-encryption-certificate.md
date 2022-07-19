@@ -8,10 +8,10 @@ In order to restore local admin password access to your environment, you need to
 From the Access Manager Service configuration tool, visit the `Directory Configuration/Access Manager Directory/Lithnet LAPS page` click `Generate new...` to create a new certificate. 
 
 ### Step 2: Backup the new certificate
-Once the certificate has been generated, click `Export...` to backup the certificate. Choose a strong password, and keep this file safe, preferably in an offline location.
+Once the certificate has been generated, click `Export...` to back up the certificate. Choose a strong password, and keep this file safe, preferably in an offline location.
 
 ### Step 3: Publish the new certificate
-Once you've secured you backup key, click `Set Active` to activate the new certificate.
+Once you've secured your backup key, click `Set Active` to activate the new certificate.
 
 ### Step 4: Expire all computer passwords
 On the `Directory configuration/Access Manager Directory/Devices` page, select all the appropriate devices and click `Expire password`. Within 60 minutes, the agents that are online will generate new passwords and store them in the directory.
@@ -24,10 +24,10 @@ Unfortunately, password history is not recoverable.
 From the Access Manager Service configuration tool, visit the `Directory Configuration/Active Directory/Lithnet LAPS page`, select the forest you need to recover from the drop-down list, and click `Generate new...`. 
 
 ### Step 2: Backup the new certificate
-Once the certificate has been generated, click `Export...` to backup the certificate. Choose a strong password, and keep this file safe, preferably in an offline location.
+Once the certificate has been generated, click `Export...` to back up the certificate. Choose a strong password, and keep this file safe, preferably in an offline location.
 
 ### Step 3: Publish the new certificate
-Once you've secured you backup key, click `Publish` to generate a new script to publish this certificate to AD. Run the script as a domain admin of the root forest.
+Once you've secured your backup key, click `Publish` to generate a new script to publish this certificate to AD. Run the script as a domain admin of the root forest.
 
 ### Step 4: Force expire all computer passwords
 In order to force clients to immediately generate a new password, we must set the `lithnetPasswordExpiry` attribute on each computer to `0`. 
@@ -53,7 +53,7 @@ Get-ADComputer -SearchBase $ou -SearchScope Subtree -Properties DistinguishedNam
 
 When the agent next runs (by default this is every 60 minutes) it will detect that it's password has been expired, and generate a new password, and encrypt it using the newly published certificate in the directory.
 
-If you are using the password history feature, those previously used passwords can no longer be decrypted. You should delete them from the directory using the following script to avoid users being presented with `Password could not be decrypted` warnings in the web UI. 
+If you are using the password history feature, those previously used passwords can no longer be decrypted. You should delete them from the directory using the following script to avoid users being presented with `Password could not be decrypted` warnings in the web app. 
 
 ```PowerShell
 # Set the OU variable to the DN of the container containing the computers that need their password history cleared, or leave it blank to clear the history from all computers in the domain

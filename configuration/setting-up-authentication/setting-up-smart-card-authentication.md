@@ -15,7 +15,7 @@ To use smart card authentication, where the smart cards are issued by an Active 
 3. Select `Require smart card login extended key usage`
 4. Select `Trust only Enterprise CAs registered in this domains NTAuth store`
 
-![authentication\_smartcard](../../images/ui-page-authentication-smartcard.png)
+![authentication\_smart card](../../images/ui-page-authentication-smartcard.png)
 
 More advanced scenarios are supported through the use of being able to provide your own additional mandatory EKUs, or restricting authentication to specific issuers. Seek advice from your internal team that manages smart card issuance to if you are not sure if any of these settings are required.
 

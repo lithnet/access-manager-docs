@@ -14,7 +14,7 @@ You can use a standard user account if you prefer, but make sure you keep the se
 
 One of the most important protections you should implement, is ensuring that the AMS service account cannot be delegated. That is, other services in your domain that are allowed to impersonate other users in the domain, should be explicitly prevented from being able to impersonate the AMS service account. This is achieved through the use of the `Account is sensitive and cannot be delegated` userAccountControl flag. This is accessible in the properties window of an AD account for a standard user, but must be set with PowerShell for a GMSA. The GMSA script provided below already takes care of this.
 
-![account\_sensitive](../../images/aduc-account-is-sensitive.png)
+![](../../images/aduc-account-is-sensitive.png)
 
 ## Domain permissions
 
@@ -26,7 +26,7 @@ Resist the temptation to add the AMS service account to groups such as domain ad
 
 We do take these recommendations seriously, and as such, the UI will alert you in the event of a change of configuration
 
-![delegation\_warning](../../images/delegation-warning.png)
+![](../../images/delegation-warning.png)
 
 ## Create a group-managed service account
 

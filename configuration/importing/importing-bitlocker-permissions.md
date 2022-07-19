@@ -20,7 +20,7 @@ Select the BitLocker import type, and click `Next`
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will evaluate the ACLs on each computer object found in this section of the directory tree, looking for users and groups that have `read` and `control access` permissions on the `msFVE-RecoveryPassword` attribute
 
-When Access Manager finds that a user or group has permission on all computers with an OU, it will create a single access rule at the OU-level for that user or group. You can disable this behavior by checking the `Do not consolidate permissions at the OU level` check box. Access Manager will then make an individual authorization rule for every computer that is found.
+When Access Manager finds that a user or group has permission on all computers with an OU, it will create a single access rule at the OU level for that user or group. You can disable this behavior by checking the `Do not consolidate permissions at the OU level` check box. Access Manager will then make an individual authorization rule for every computer that is found.
 
 If there are users and groups that you do not want to import permissions for, add them to the list. The Access Manager service account is automatically pre-added to this list.
 
