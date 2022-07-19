@@ -1,8 +1,6 @@
 # Home
 
-
-
-![](.gitbook/assets/access-manager-logo.png)
+![](<.gitbook/assets/access-manager-logo (1).png>)
 
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way..
 
@@ -24,7 +22,7 @@ We recommend you have a look at our other product [Lithnet Password Protection f
 
 #### Web-based access to local admin passwords
 
-![](.gitbook/assets/web-request-laps.gif)
+![](<.gitbook/assets/web-request-laps (1).gif>)
 
 Access Manager provides a simple web-based and mobile-friendly interface for accessing local admin passwords for Windows, macOS and Linux devices. There’s no need for admins to install custom software, or have access to AD administrative tools to access LAPS passwords.
 
@@ -38,19 +36,19 @@ Whether you use Microsoft LAPS, or the Lithnet Access Manager agent, the user ex
 
 Deploying the Lithnet Access Manager Agent to your fleet allows you to upgrade to encrypted local admin passwords and gain the benefit of having previous local admin passwords stored in the directory as well. This means no more issues getting locked out of computers when they are restored from backup or reverted from a snapshot.
 
-![](.gitbook/assets/web-request-laps-history.gif)
+![](<.gitbook/assets/web-request-laps-history (1).gif>)
 
 #### Just-in-time administrative access to computers
 
 Using the same web interface, users can request that their account be added to a group that is a member of the local administrators group of the computer. This access is temporary and automatically removed after the allowed time period. Access Manager makes use of the Active Directory time-based membership feature in Windows Server 2016 and later domain functional levels, or time-based (dynamic) objects in earlier versions of AD.
 
-![](.gitbook/assets/web-request-jit.gif)
+![](<.gitbook/assets/web-request-jit (1).gif>)
 
 #### Easy access to BitLocker recovery passwords
 
 Authorized users can also request access to the BitLocker recovery passwords for a computer through the same easy-to-use web interface.
 
-![](.gitbook/assets/web-request-bitlocker.gif)
+![](<.gitbook/assets/web-request-bitlocker (1).gif>)
 
 #### Audit success and failure event logs
 
@@ -58,7 +56,7 @@ All success and failure events are logged to the Windows event log and a file. O
 
 The webhook functionality makes it really easy to get alerts via Slack or Microsoft Teams, and there are even built-in templates for these systems.
 
-![](.gitbook/assets/auditing-example-slack.png)
+![](<.gitbook/assets/auditing-example-slack (1).png>)
 
 #### Modern authentication options
 
