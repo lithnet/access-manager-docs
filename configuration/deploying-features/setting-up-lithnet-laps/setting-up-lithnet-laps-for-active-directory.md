@@ -1,7 +1,5 @@
 # Setting up Lithnet LAPS for domain-joined devices
 
-![](../../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../../access-manager-editions.md)
-
 Managing passwords with the Lithnet Access Manager Agent (AMA) provides several features that are not available with the Microsoft LAPS agent.
 
 Firstly, local admin passwords are always encrypted in the directory using a public/private key pair. Encryption using the AMA is not optional. Passwords are encrypted using AES-CBC-256, and the unique encryption key is encrypted using a 4096-bit RSA public key. The RSA private key is kept locally on the AMS server only.
@@ -20,7 +18,7 @@ It will also add a new object class called `lithnetAccessManagerConfig` for stor
 
 From the `Directory configuration/Active Directory/Lithnet LAPS` tab in the configuration tool, select a forest, and click `Deploy schema` to open a schema deployment script, pre-configured for that forest. Copy this script and run it as a member of the `Schema Admins` group. Repeat the process for any additional forests where you need to deploy the Access Manager Agent.
 
-![](../../../docs/images/ui-page-active-directory-lithnet-laps.png)
+![](../../../images/ui-page-directory-configuration-active-directory-lithnet-laps.png)
 
 Once the schema is deployed, click the `refresh schema` button to check and validate that the schema has been deployed.
 
@@ -63,17 +61,17 @@ The central policy store is located at `\\<domain>\sysvol\<domain>\Policies\Poli
 
 Using the group policy editor, create a new group policy object, and link it to the OU containing your computer objects. Open the policy and navigate to `Administrative Templates`, `Lithnet`, `Access Manager Agent`.
 
-![](../../../docs/images/group-policy-agent.png)
+![](../../../images/group-policy-agent.png)
 
 Edit the `Enable the Lithnet Access Manager Agent` policy, and specify how frequently the agent should run.
 
-![](../../../docs/images/group-policy-agent-enable.png)
+![](../../../images/group-policy-agent-enable.png)
 
 Open the `Administrator Password` folder, and enable the policy `Manage the local administrator password`
 
-![](../../../docs/images/group-policy-adminpassword.png)
+![](../../../images/group-policy-adminpassword.png)
 
-![](../../../docs/images/group-policy-adminpassword-manage.png)
+![](../../../images/group-policy-adminpassword-manage.png)
 
 Set the maximum age of the password, the password length, and the character types to use in the password.
 
@@ -85,13 +83,13 @@ If you want to enable keeping a record of previous local admin passwords, then s
 
 Once the agent is deployed, and the policy configured, you can now configure access to individual users and groups using the AMS configuration tool.
 
-From the `Authorization` page, select `Add...` to create a new target. Select the OU you delegated permissions to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access.
+From the `Authorization Rules/Computers` page, select `Add...` to create a new rule. Select the OU you delegated permissions to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access.
 
-![](../../../docs/images/ui-page-authz-lapstarget.png)
+![](../../../images/ui-page-authorization-rules-computers-edit-rule-rule-settings-laps.png)
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to read the local admin password, and optionally, the local admin password history.
 
-![](../../../docs/images/ui-page-authz-editsecurity-laps.png)
+![](../../../images/ui-page-authz-editsecurity-laps.png)
 
 You can optionally choose to expire the local admin password a period of time after it has been accessed. This will cause the Access Manager Agent to generate a new password _after_ its next check-in time. The frequency of the check in is determined by the group policy
 

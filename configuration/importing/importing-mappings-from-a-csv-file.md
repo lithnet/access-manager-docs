@@ -39,23 +39,23 @@ There should be one computer and one principal per line. For each principal that
 
 ## Open the import wizard
 
-Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
+Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization rules/Computers` page, and click `Import authorization rules...`
 
-![](../../docs/images/ui-page-authz.png)
+![](../../images/ui-page-authorization-rules-computers.png)
 
 ## Select the import type
 
 Select the CSV import type, and click `Next`
 
-&#x20;![](../../docs/images/ui-page-import-type-csv.png)
+&#x20;![](../../images/ui-page-import-type-csv.png)
 
 ## Select the CSV file
 
-Specify the path to the CSV file, and check the box if your CSV file has a header row. ![](../../docs/images/ui-page-import-csvsettings.png)
+Specify the path to the CSV file, and check the box if your CSV file has a header row. ![](../../images/ui-page-import-csvsettings.png)
 
 ## Specify discovery settings
 
-![](../../docs/images/ui-page-import-container-csv.png)
+![](../../images/ui-page-import-container-csv.png)
 
 Select the container where Access Manager will find the computers specified in the CSV file.
 
@@ -71,13 +71,13 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![](../../docs/images/ui-page-import-rulesettings.png)
+![](../../images/ui-page-import-rulesettings.png)
 
 ## Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![](../../docs/images/ui-page-import-results.png)
+![](../../images/ui-page-import-results.png)
 
 ### Merge settings
 

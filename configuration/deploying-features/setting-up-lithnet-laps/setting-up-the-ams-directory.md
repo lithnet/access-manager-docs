@@ -1,6 +1,6 @@
 # Preparing the AMS directory
 
-![](../../../docs/images/badge-enterprise-edition-rocket.svg) The Access Manager directory is an [Enterprise edition feature](../../../access-manager-editions.md)
+![](../../../images/badge-enterprise-edition-rocket.svg) Managing more than 100 devices in the Access Manager directory is an [Enterprise edition feature](../../../access-manager-editions.md)
 
 When using the Lithnet Access Manager Agent (AMA) on devices that are not joined to an Active Directory (non-windows devices, Azure AD devices, and standalone Windows devices), the AMA stores passwords in the Access Manager Directory.
 
@@ -10,15 +10,15 @@ The following guide outlines the steps required to enable the AMS directory serv
 
 ## Step 1: Enable API support
 
-From the `Server configuration/service host` page, tick `Enable the Access manager API`, and specify the host name clients will use to connect to the server. This must match the DNS name in the active TLS/SSL certificate, or clients will be unable to connect.
+From the `Host configuration` page, tick `Enable the Access manager API`, and specify the host name clients will use to connect to the server. This must match the DNS name in the active TLS/SSL certificate, or clients will be unable to connect.
 
-![](../../../docs/images/ui-page-service-host.png)
+![](../../../images/ui-page-host-configuration.png)
 
 ## Step 2: Enable device registration modes
 
 From the `Directory configuration/Access Manager Directory` page, select mechanisms by which devices will register with the AMS server. You can use registration keys deployed at installation time to the devices, and Windows 10 and higher devices joined or registered with Azure AD, can use Azure AD authentication to register.
 
-![](../../../docs/images/ui-page-access-manager-directory.png)
+![](../../../images/ui-page-directory-configuration-access-manager-directory.png)
 
 If you do not plan on using AAD device registration, then the setup process is complete.
 
@@ -56,7 +56,7 @@ If you are not using Azure AD for authentication, or you'd like to create a sepa
 ### Configure the service account details in Access Manager
 
 1. Open the Lithnet Access Manager Service Configuration Tool
-2. Select the `Directory Configuration/Azure Active Directory` page
+2. Select the `Directory configuration/Azure Active Directory` page
 3. Press the `Add...` button to add a new tenant configuration
 4. Add the client ID, secret, and directory/tenant ID in the fields provided
 5. Save the tenant configuration

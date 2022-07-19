@@ -1,10 +1,8 @@
 # Access Manager Directory Groups page
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) The Access Manager directory is an [Enterprise edition feature](../../access-manager-editions.md)
-
 The `groups` page provides the ability to create and manage AMS groups. AMS groups are stored in the Access Manager directory, and can contain devices that are registered with AMS. Groups can then be used in authorization rules, and for the application of password policies.
 
-![](../../docs/images/ui-page-access-manager-directory-groups.png)
+![](../../images/ui-page-directory-configuration-access-manager-directory-groups.png)
 
 The following groups are built-in, and their membership is automatically manged by the system;
 

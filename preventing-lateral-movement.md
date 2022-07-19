@@ -30,7 +30,7 @@ For added protection, it is highly recommended that you [deny local accounts acc
 
 So if we have secured the local admin password, what other lateral movement risks remain? If you think back to the attack scenario, where an attacker is looking for credentials on a machine they have compromised, what happens if an admin is logged on to the machine at the time? If that user has admin rights on other machines, then the attacker may be able to steal hashes, kerberos tickets, and in some cases the plain-text password. They can then move into other systems with those stolen credentials.
 
-There are lots of things you can do to help mitigate these attacks, not all of them easy or 100% foolproof. We do encourage you to research and implement as many defences as you can to prevent lateral movement attacks. You need to choose the ones that make sense for your environment.
+There are lots of things you can do to help mitigate these attacks, not all of them easy or 100% foolproof. We do encourage you to research and implement as many defenses as you can to prevent lateral movement attacks. You need to choose the ones that make sense for your environment.
 
 One of the simplest to achieve technically, that has a high degree of effectiveness, is to simply not have any permanent members of the local administrators group.
 

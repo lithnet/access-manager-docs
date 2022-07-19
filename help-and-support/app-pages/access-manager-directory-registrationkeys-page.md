@@ -1,16 +1,14 @@
 # Access Manager Directory Registration Keys page
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) The Access Manager directory is an [Enterprise edition feature](../../access-manager-editions.md)
-
 The `Registration Keys` page provides the ability to create and manage device registration keys. A key is required for a device to register with the AMS service, when an alternative form of authentication, such as Azure Active Directory authentication is not available.
 
 A registration key is used by a device only once, to allow it to register its own unique set of credentials with the AMS server, which is used from that point on.
 
-![](../../docs/images/ui-page-access-manager-directory-registrationkeys.png)
+![](../../images/ui-page-directory-configuration-access-manager-directory-registration-keys.png)
 
 ## Registration key settings
 
-![](../../docs/images/ui-page-access-manager-directory-registrationkeys-registrationkey.png)
+![](../../images/ui-page-directory-configuration-access-manager-directory-registration-keys-edit-key.png)
 
 When you create a new registration key, a unique string value is automatically generated. You must assign a friendly name to this key, and optionally set parameters around reuse and approval.
 

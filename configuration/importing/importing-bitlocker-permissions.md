@@ -4,19 +4,19 @@ If you have delegated permissions to read BitLocker recovery passwords in your e
 
 ## Open the import wizard
 
-Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
+Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization rules/Computers` page, and click `Import authorization rules...`
 
-![](../../docs/images/ui-page-authz.png)
+![](../../images/ui-page-authorization-rules-computers.png)
 
 ## Select the import type
 
 Select the BitLocker import type, and click `Next`
 
-![](../../docs/images/ui-page-import-type-bitlocker.png)
+![](../../images/ui-page-import-type-bitlocker.png)
 
 ## Specify discovery settings
 
-![](../../docs/images/ui-page-import-container.png)
+![](../../images/ui-page-import-container.png)
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will evaluate the ACLs on each computer object found in this section of the directory tree, looking for users and groups that have `read` and `control access` permissions on the `msFVE-RecoveryPassword` attribute
 
@@ -30,13 +30,13 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![](../../docs/images/ui-page-import-rulesettings.png)
+![](../../images/ui-page-import-rulesettings.png)
 
 ## Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![](../../docs/images/ui-page-import-results.png)
+![](../../images/ui-page-import-results.png)
 
 ### Merge settings
 

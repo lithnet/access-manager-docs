@@ -20,12 +20,12 @@ The following guide will assist you in configuring your application to use Okta 
 ## Configure Lithnet Access Manager
 
 1. Open the Lithnet Access Manager Service Configuration Tool
-2. Select the `Server configuration\User Authentication` page
+2. Select the `App configuration\User Authentication` page
 3. Select `Open ID Connect` as the authentication provider
 4. Enter the URL of your okta tenant in the `Issuer/Authority` field
 5. Enter the client ID and secret obtained from the Okta setup process
 
-![](../../docs/images/ui-page-authentication-oidc-okta.png)
+![](../../images/ui-page-authentication-oidc-okta.png)
 
 ## Enable multifactor authentication
 

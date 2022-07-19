@@ -1,6 +1,6 @@
 # Setting up BitLocker access
 
-![!](../../docs/images/ui-page-bitlocker.png)
+![!](../../images/ui-page-directory-configuration-active-directory-bitlocker.png)
 
 You can access BitLocker recovery passwords using Lithnet Access Manager. No specific configuration is needed, other than delegating permission for the AMS service account to read those passwords from the directory.
 

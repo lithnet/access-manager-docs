@@ -1,7 +1,5 @@
 # Installing the Access Manager Agent on macOS
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
-
 ## Prerequisites
 
 The agent must be able to validate the AMS server certificate. If you are using a self-signed certificate, you'll need to [add this certificate](https://support.apple.com/en-au/guide/keychain-access/kyca2431/mac) to the system keychain, and [configure it to be trusted](https://support.apple.com/en-au/guide/keychain-access/kyca11871/mac).
@@ -10,9 +8,7 @@ The agent itself runs using launchd, and as it requires access to reset the root
 
 ### OS requirements
 
-The agent requires OSX 10.14 or later.
-
-If running on Apple Silicon (M1 chip), Rosetta 2 must be installed.
+The agent requires OSX 10.14 or later. Packages are available for both Intel and Arm64 Macs.
 
 ## Installing the agent
 

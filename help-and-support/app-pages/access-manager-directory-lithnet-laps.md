@@ -1,8 +1,6 @@
 # Lithnet LAPS configuration page (Access Manager Directory)
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
-
-![](../../docs/images/ui-page-access-manager-directory-lithnet-laps.png)
+![](../../images/ui-page-directory-configuration-access-manager-directory-lithnet-laps.png)
 
 ## Password Encryption
 
@@ -30,16 +28,6 @@ Shows the date that the certificate will expire
 
 Indicates whether the certificate is active. Only the active certificate is used by clients to encrypt their passwords
 
-#### Has private key
-
-Indicates whether the private key for the certificate is available on the server. If the certificate's private key is not available, then passwords that were encrypted by the key cannot be recovered.
-
-Ensure you have backups of your private keys and keep them safe and secure.
-
-#### Private key permissions
-
-Indicates whether the AMS service account has permission to read the private key. You can use the `Reset permission` button to try and fix the permissions on the key. This may happen if you restore a key from a backup by manually importing it.
-
 ### Generating a new encryption certificate
 
 At any time you can generate a new encryption certificate by clicking the `Generate new` button. Clients will not use this new certificate until you mark it as active.
@@ -52,7 +40,7 @@ It is imperative that you have a safe and secure backup of your encryption keys.
 
 See the guide on [restoring an encryption certificate from backup](../advanced-help-topics/backup-and-restore.md) for details on how to restore an existing key from a backup.
 
-If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the[ recovering from a lost encryption certificate](../advanced-help-topics/recovering-from-a-lost-encryption-certificate.md) guide. Unfortunately, there is no way to recover the encrypted password history.
+If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the [recovering from a lost encryption certificate](../advanced-help-topics/recovering-from-a-lost-encryption-certificate.md) guide. Unfortunately, there is no way to recover the encrypted password history.
 
 ## Default password policy
 
@@ -60,7 +48,9 @@ AMS registered devices get their password policy from the AMS server itself. The
 
 ## Custom password policies
 
-![](../../docs/images/ui-page-access-manager-directory-lithnet-laps-policy.png) Custom password policies allow you to target specific policies to specific device groups. Policies can be assigned to AMS groups, or Azure AD groups of computers. Policies are processed in the order they appear on the screen, with the first matching policy taking precedence.
+![](../../images/badge-enterprise-edition-rocket.svg) Custom password policies is an [Enterprise edition feature](../../access-manager-editions.md)
+
+![](../../images/ui-page-directory-configuration-access-manager-directory-lithnet-laps-edit-policy.png) Custom password policies allow you to target specific policies to specific device groups. Policies can be assigned to AMS groups, or Azure AD groups of computers. Policies are processed in the order they appear on the screen, with the first matching policy taking precedence.
 
 ### Fields
 
@@ -85,6 +75,7 @@ Specify the character types that must be present in the generated password
 The maximum number of days before the password must be rotated. For example, if this is set to 7, then the password would be rotated after 7 days.
 
 #### Number of previous passwords to keep
+![](../../images/badge-enterprise-edition-rocket.svg) Password history is an [Enterprise edition feature](../../access-manager-editions.md)
 
 The minimum number of old passwords to retain in the database.
 
@@ -92,7 +83,6 @@ The minimum number of old passwords to retain in the database.
 
 The minimum number of days to keep previous passwords. If your devices are backed up, you set this value to the maximum retention period for your backups, so that you can always go back and get the local admin password from a previous snapshot.
 
-```
 If both the `Number of previous passwords to keep` and `Minimum number of previous passwords to keep` setting is in use, then old passwords will not be removed until both thresholds have passed. For example, if you had a policy to generate a new password every day, to keep a minimum of 5 passwords, and to keep passwords for 365 days, you would have 365 passwords in your history. More examples are in the table provided below.
 
 |Maximum age|Passwords to keep|Days to keep|Effective number of passwords|
@@ -102,4 +92,3 @@ If both the `Number of previous passwords to keep` and `Minimum number of previo
 |1|5|365|365|
 |1|7|1|7|
 |1|7|7|7|
-```

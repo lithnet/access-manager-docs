@@ -1,6 +1,6 @@
 # User interface configuration page
 
-![](../../docs/images/ui-page-user-interface.png)
+![](../../images/ui-page-user-interface.png)
 
 ## Branding
 
@@ -27,6 +27,14 @@ Used to optionally shows a custom heading on the access request page
 #### Policy message content
 
 Used to optionally show a custom message on the access request page
+
+#### Request type display order
+You can reorder this list to change the display order of the request type options shown when a user requests access to a computer.
+
+#### Enable users to supply computer names in access request URLs
+When this option is enabled, Access Manager will accept computer access requests with the computer name in the URL. For example, to access a computer named `PC`, a user could use the following URL.
+
+`https://accessmanager.lithnet.local/Computer/AccessRequest?ComputerName=PC1`
 
 ## Password phonetics
 

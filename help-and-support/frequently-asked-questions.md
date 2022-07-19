@@ -29,7 +29,7 @@ When using the Access Manager agent in AMS directory mode, the encryption certif
 
 Yes, you can create and publish a new encryption certificate at any time. Agents will encrypt their passwords using this new certificate at the next scheduled password rotation. Do note that the agents will not re-encrypt their previous passwords using the new certificates. Agents do not have access to the private key needed to decrypt the passwords.
 
-As such, you need to ensure that the private key remains on the server, as long as there are passwords in the directory that were encrypted with the old certificate.
+As such, you need to ensure that the old certificate remains on the server, for as long as there are passwords in the directory that were encrypted with the old certificate.
 
 ## Can computers decrypt their own admin passwords?
 

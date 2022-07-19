@@ -1,6 +1,6 @@
 # Just-in-time access configuration page
 
-![](../../.gitbook/assets/ui-page-jitaccess.png)
+![](../../images/ui-page-directory-configuration-active-directory-jit.png)
 
 Lithnet Access Manager supports granting access to computers using a just-in-time access model.
 
@@ -24,7 +24,7 @@ Select `Enable automatic JIT group creation` and press the `Add...` button to cr
 
 ### JIT group mapping
 
-![](../../docs/images/ui-page-jitaccess-groupmapping.png)
+![](../../images/ui-page-directory-configuration-active-directory-jit-group-mapping.png)
 
 #### Computer OU
 
@@ -36,7 +36,7 @@ Select the container that access manager should create the group objects within.
 
 #### Group name template
 
-Specify the name of the group that should be created. You must use the `{computerName}` placeholder somewhere in the name. If you use the template `JIT-{computerName}` then for a computer named `PC1` AMS will create a group called `JIT-PC1`
+Specify the name of the group that should be created. You must use the `%computerName%` placeholder somewhere in the name. If you use the template `JIT-%computerName%` then for a computer named `PC1` AMS will create a group called `JIT-PC1`
 
 #### Group type
 
@@ -46,17 +46,17 @@ The AMS service checks every 60 seconds for new computers in the domain, and wil
 
 ## JIT mode
 
-Based on the capabilities of your Active Directory domain, Access Manager can enable JIT support through two different mechanisms. _Time-based membership_ and _dynamic groups_.
+Based on the capabilities of your Active Directory domain, Access Manager can enable JIT support through two different mechanisms. _Active Directory time-based membership_ and the _AMS scheduler-managed membership_.
 
-### Time-based membership
+### Active Directory time-based membership
 
 _Time-based membership_ is the superior option, as it leverages the _Privileged Access Management (PAM)_ feature in Active Directory. This allows AMS to add the user to the JIT group, with a time limit on that membership. Once that limit expires, the membership is automatically removed by AD itself.
 
 The key feature of this mode, is that the Kerberos ticket the user obtains will only last as long as the group membership. Combined with membership in the `Protected Users` group, you can be assured that the user's access will expire precisely when then group membership expires. However, time-based membership requires enabling the AD _Privileged Access Management_ feature, which is only supported on Windows Server 2016 and later forest functional levels.
 
-### Dynamic groups
+### AMS scheduler-managed membership
 
-_Dynamic groups_ are supported in all Windows Server 2003 and later domains, and leverage an AD feature called _dynamic objects_. A temporary group is created in AD and this group has a set, limited lifetime. The user is added to this dynamic group, and the dynamic group is added to the 'real' JIT group. When the dynamic group expires, it is deleted from AD and therefore, is removed from the JIT group. Unlike the _time-based membership_ option, the group expiry is not linked to the lifetime of the Kerberos ticket, so users may not lose access immediately.
+_AMS scheduler-managed membership_ is supported in all Windows Server 2003 and later domains. AMS will add the user to the group, and created a scheduled job internally to remove the user at the time the membership expires. Unlike the _time-based membership_ option, the group expiry is not linked to the lifetime of the Kerberos ticket, so users may not lose access immediately.
 
 This list shows each domain and forest known to the AMS server, and the type of JIT it supports based on the forest functional level.
 
@@ -86,10 +86,4 @@ Shows the availability of the AD PAM feature in this domain
 
 #### JIT Type
 
-The JIT type is always based on the availability of the PAM feature in the domain. If it is enabled, the JIT type will always be the preferred _time-based membership_ mode. If it is not enabled, or not available at all, the JIT type will fall back to _dynamic groups_
-
-#### Dynamic group container
-
-If _time-based membership_ is not available in the domain, you must specify a container in which to create the temporary dynamic groups to facilitate JIT access. Click the `Set dynamic group OU...` button to choose an OU to create the dynamic groups in, and then `Delegate dynamic group permission...` to generate a script to ensure AMS can create groups in this OU.
-
-In _time-based membership_ mode, no dynamic groups are created, and no additional access is required.
+The JIT type is always based on the availability of the PAM feature in the domain. If it is enabled, the JIT type will always be the preferred _time-based membership_ mode. If it is not enabled, or not available at all, the JIT type will fall back to _AMS scheduler_

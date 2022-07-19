@@ -6,7 +6,7 @@ If you are having a problem with your setup, or think you may have found a bug, 
 
 Firstly, have a look at your [log files](troubleshooting.md). AMS has a very robust logging system and the reason for the problem may be clearly articulated in the log files.
 
-Search through these help pages, and read the [Frequently asked questions](frequently-asked-questions.md) to see if your issue has already been addressed. Toy can also search through the [existing issues list](https://github.com/lithnet/access-manager/issues) to see if someone has had a similar problem to yours.
+Search through these help pages, and read the [Frequently asked questions](frequently-asked-questions.md) to see if your issue has already been addressed. You can also search through the [existing issues list](https://github.com/lithnet/access-manager/issues) to see if someone has had a similar problem to yours.
 
 ## Community edition users
 

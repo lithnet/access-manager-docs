@@ -13,7 +13,7 @@ Do note that SQL express has several limitations that you will need to consider;
 
 For larger installations of Access Manager, you should consider using SQL server Standard or Enterprise edition.
 
-If you are using the high-availability feature of Access Manager to run in a failover cluster, you cannot use SQL Express. We recommend installing a clustered instance of SQL server side-by-side in the same cluster as Access Manager. Alternatively, use a Azure SQL database configured for high availability.
+If you are using the high-availability feature of Access Manager, you cannot use SQL Express. The SQL instance will need to be installed on a separate computer. Alternatively, use an Azure SQL or Amazon RDS database configured for high availability.
 
 ## Using SQL Standard or Enterprise Edition
 If you are running Access Manager in a large environment, or SQL express is otherwise not suitable, you can set up the AMS database on an SQL instance of your choosing. You must manually set up your instance, and create the database, before running the installer. During installation, you will be prompted for the server and instance name. 

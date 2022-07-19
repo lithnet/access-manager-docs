@@ -10,7 +10,10 @@ OpenID Connect is the preferred authentication provider. Coupled with a modern I
 
 Using OpenID Connect requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
-![](../../docs/images/ui-page-authentication-oidc-azuread.png)
+### Sign out mode
+When the users clicks the logout button, you can choose for them to be logged out of the application, or have Access Manager request that the user be signed out of the IDP (where supported by the IDP).
+
+![](../../images/ui-page-authentication-oidc-azure.png)
 
 ## WS-Federation
 
@@ -22,11 +25,16 @@ Using WS-Federation requires that your identity provider pass a `upn` claim cont
 
 Certificate-based authentication is provided by Access Manager, with the optional support for requiring smart-card authentication.
 
-Certificates must contain a `principal name` attribute in their `Subject Alternative Names` which specifies the user's UPN as found in Active Directory.
+In line with the certificate-based authentication changes announced by Microsoft in [KB5014754](https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16), Access Manager by default now only accepts certificates containing the user's SID in OID `1.3.6.1.4.1.311.25.2`.
+
+If you are using older-style certificates, you need to enable `weak identity bindings` and enable UPN mapping.
 
 Limited support is available for use of altSecurityIdentities in cases where certificates are used without a UPN, however these are not supported outside the forest where AMS is located. Read the [guide for setting up smart card authentication](../../configuration/setting-up-authentication/setting-up-smart-card-authentication.md) to learn more.
 
-![](../../docs/images/ui-page-authentication-smartcard.png)
+![](../../images/ui-page-authentication-smartcard.png)
+
+### Require 'Smart Card Logon' enhanced key usage
+Enabling this setting requires that user's certificate must contain the `Smart Card Logon` EKU.
 
 ### Additional mandatory EKUs
 
@@ -36,11 +44,7 @@ Specify any custom EKUs that must be present in the certificate for the authenti
 
 You must select how you want to validate the certificate issuer. Note that no matter which validation option is selected, at a minimum all certificates must be validated up to a trusted CA on the machine that runs AMS.
 
-#### Trust any certificate issuer trusted by this machine
-
-Use this option to only require that the certificate was issued by an issuer trusted by this machine. This option isn't recommended, as any CA could potentially issue a certificate that you may trust.
-
-#### Trust only Enterprise CAs registered in this domain's `NTAuth` store
+#### Trust only Enterprise CAs registered in this domain's 'NTAuth' store
 
 Active Directory Enterprise CAs are automatically registered in the directory itself as trusted issuers. CAs in the Enterprise `NTAuth` store are trusted to issue logon certificates within the domain. If you select this option, then only certificates issued by one of these CAs are trusted. (Recommended options for smart card certificates)
 
@@ -52,7 +56,7 @@ This option allows you to import a specific certificate authority's certificate 
 
 The Integrated Windows Authentication (IWA) provider allows users to log in with NTLM or Kerberos authentication. In order to use kerberos, the website host name must be registered on the SPN of the computer object (not the service account). Eg if using a hostname of `accessmanager.lithnet.io`, you'll need to register the SPN `http/accessmanager.lithnet.io` or `host/accessmanager.lithnet.io`. If the host name matches the AD computer name, then no additional SPNs are required.
 
-![](../../docs/images/ui-page-authentication-iwa.png)
+![](../../images/ui-page-authentication-iwa.png)
 
 ### Authentication Scheme
 
@@ -63,5 +67,8 @@ Select one of the following authentication options
 * Negotiate: Use kerberos if possible, otherwise fall back to NTLM
 
 ## Sign-in restrictions
-
+### Authorized users and groups
 Specify the users and groups that should be allowed to log into this service, or leave the field blank to allow anyone who successfully authenticates to log in
+
+### Denied users and groups
+Add any users and groups that should be denied login to this service. Users in this group will not be able to login even if they are in the `Authorization users and groups` list.

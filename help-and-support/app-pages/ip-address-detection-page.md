@@ -1,6 +1,6 @@
 # IP Address detection configuration page
 
-![](../../docs/images/ui-page-ip-address-detection.png)
+![](../../images/ui-page-ip-detection.png)
 
 ## Proxy settings
 

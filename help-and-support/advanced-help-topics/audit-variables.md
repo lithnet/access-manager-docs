@@ -1,135 +1,77 @@
 # Variables available in audit notification channels
-The following variables are available for use in events processed by audit notification channels. Where information is not available or not applicable to an audit event, the placeholder value will be replaced with an empty string.
+Access Manager provides a comprehensive set of variables you can use in your audit notifications.
 
-### {user.SamAccountName}
-The user's samAccountName
+See the guides on [PowerShell auditing scripts](audit-scripts.md) and [HTML and JSON audit templates](audit-templates.md) to learn how to use these variables in your audit scripts and templates.
 
-### {user.MsDsPrincipalName}
-The user's NT4-style domain name (eg `domain\user`)
+## Global properties
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `DateTime` | string | The current date and time, in local server time |
+| `DateTimeUtc` | string | The current date and time, in UTC time |
 
-### {user.DisplayName}
-The user's displayName
+## Request element
+This group of attributes represents the incoming request
 
-### {user.UserPrincipalName}
-The user's UPN
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `Request.Target` | string | The name of the target that the user requested access to |
+| `Request.TargetType` | `Computer` or `Role` | The type of resource the user requested access to |
+| `Request.Reason` | string | The reason that the user provided when requesting access |
+| `Request.IPAddress` | IPv4 or IPv6 address string | The IP address of requestor |
+| `Request.HostName` | string | The host name of the requestor, if available via reverse DNS lookup |
+| `Request.RequestedDuration` | TimeSpan | The requested duration of access |
 
-### {user.Sid}
-The user's SID
+## Response element
+This group of attributes represents the result of the access evaluation
 
-### {user.DistinguishedName}
-The user's distinguished name
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `Response.Target` | string | The name of the target that the access request was evaluated against |
+| `Response.TargetType` | `Computer` or `Role` | The type of resource that was evaluated |
+| `Response.IsSuccess` | `true` or `false` | Indicates if access was granted to the resource |
+| `Response.IsFailure` | `true` or `false` | Indicates if access was denied to the resource |
+| `Response.NotificationChannels` | string | A comma-separated list of audit channels IDs that apply to this access response |
+| `Response.MatchedRule` | string | The ID of the authorization rule that was used to make the access decision |
+| `Response.MatchedRuleDescription` | string | The 'description' field from the authorization rule that was used to make the access decision |
+| `Response.ExpireAfter` | TimeSpan | The duration of time that access was granted for | 
+| `Response.Code` | `Success`, `NoMatchingRuleForTarget`, `NoMatchingRuleForUser`, `ExplicitlyDenied`, `UserRateLimitExceeded`, `IpRateLimitExceeded` | The result of the authorization decision. Codes other than `Success` represent an access denied response. | 
+| `Response.AccessType` | `None`, `LocalAdminPassword`, `LocalAdminPasswordHistory`, `Jit`, `Bitlocker` | The type of access that was granted |
+| `Response.AccessTypeDescription` | string | The friendly name of the type of access that was granted |
+| `Response.AccessExpiryDate` | DateTime | The date and time when the user's access will expire, expressed in local server time |
+| `Response.Message` | string | A user-friendly message describing the outcome of the access decision |
 
-### {user.Description}
-The description attribute of the user in Active Directory
+## User element
+This group of attributes represents the user who performed the access request
 
-### {user.EmailAddress}
-The user's email address
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `User.Username` | string | The `samAccountName` of the user requesting access |
+| `User.FullyQualifiedName` | string | The user's username in `domain\username` format |
+| `User.DisplayName` | string | The display name of the user |
+| `User.Sid` | string | The user's security identifier |
+| `User.EmailAddress` | string | The user's email address |
 
-### {user.Guid}
-The objectGUID of the user in Active Directory
+## Role element
+If the authorization request was for a role, then this property will be populated with information about the role authorization rule 
 
-### {user.GivenName}
-The user's given name
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `Role.Name` | string | The name of the role |
+| `Role.Description` | string | The description of the role |
+| `Role.MaximumAllowedDuration` | TimeSpan | The maximum amount of time that the user can request for the role according to the authorization rule |
 
-### {user.Surname}
-The user's surname
+## Computer element
+If the authorization request for a computer, then this property will be populated with information about the computer 
 
-### {computer.SamAccountName}
-The samAccountName of the computer (Active directory-joined devices only)
-
-### {computer.MsDsPrincipalName}
-The NT4-style name of the computer (eg `domain\pc1$`) (Active directory-joined devices only)
-
-### {computer.DistinguishedName}
-The distinguishedName of the computer (Active directory-joined devices only)
-
-### {computer.Description}
-The description attribute of the computer in Active Directory
-
-### {computer.DisplayName}
-The display name of the computer
-
-### {computer.Guid}
-The unqiue ID of the computer 
-
-### {computer.Sid}
-The SID of the computer 
-
-### {computer.DnsHostName}
-The DNS host name of the computer
-
-### {computer.FullyQualifiedName}
-The fully qualified name of the computer object (eg `Domain\computer`, `AzureAD\Computer`, `AccessManager\computer`)
-
-### {computer.Name}
-The simple name of the computer
-
-### {computer.AuthorityType}
-The type of authority that the computer belongs to. Value values are;
-- `ActiveDirectory`
-- `AzureActiveDirectory`
-- `Ams`
-
-### {computer.AuthorityId}
-The unique identifier of the authority
-
-### {computer.AuthorityDeviceId}
-The unique identifier of the device, as it is known to the authority
-
-### {request.ComputerName}
-The exact string provided by the user in the computer name field of the access request
-
-### {request.Reason}
-The user-supplied reason for the access request
-
-### {AuthzResult.MatchedRuleDescription}
-The friendly description of the rule that granted access to the user
-
-### {AuthzResult.MatchedRule}
-The ID of the rule that granted access to the user
-
-### {AuthzResult.ExpireAfter}
-The duration of time that access was allowed for. For JIT, this is the duration of allowed time specified in the matching access rule. For LAPS, this is the amount of time until the LAPS password expires, if configured to do so in the access rule.
-
-### {AuthzResult.AccessExpiryDate}
-The specific date and time that the JIT access expires, or the date and time that the LAPS password is set to rotate.
-
-### {AuthzResult.ResponseCode}
-A response code that represents the result of the authorization decision. 
-Valid values are;
-- `Success`: The user was granted access to the specified computer
-- `Undefined`: No authorization state is provided. The user's access was denied.
-- `NoMatchingRuleForComputer` : There were no authorization rules that applied to the specific computer. The user's access was denied.
-- `NoMatchingRuleForUser`: There were no rules that specifically granted access to a user. The user's access was denied.
-- `ExplicitlyDenied`: Reserved for future use. The user's access was denied.
-     
-### {AuthzResult.AccessType}
-The type of access that was evaluated. 
-Valid values are;
-- `LocalAdminPassword`
-- `LocalAdminPasswordHistory`
-- `Jit`
-- `BitLocker`
-
-### {AuthzResult.AccessTypeDescription}
-A friendly name for type of access that was evaluated. 
-Valid values are;
-- `Local admin password`
-- `Local admin password history`
-- `Just-in-time access`
-- `BitLocker recovery passwords`
-
-### {message}
-Additional auditing information generated by the system
-
-### {request.IPAddress}
-The IP address of the users request
-
-### {request.Hostname}
-The hostname (if available) obtained from doing a reverse lookup of the IP address
-
-### {datetime}
-The date and time of the access request, in the local time zone of the server
-
-### {datetimeutc}
-The date and time of the access request, in UTC time
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `Computer.Name` | string | The short name of the computer |
+| `Computer.Description` | string | The description of the computer |
+| `Computer.FullyQualifiedName` | string | The name of the computer in `domain\computer` format |
+| `Computer.DnsHostName` | string | The computer's DNS host name, if known |
+| `Computer.DisplayName` | string | The computer's display name |
+| `Computer.ObjectId` | string | A unique identifier for the computer |
+| `Computer.Sid` | string | The computer's security identifier |
+| `Computer.AuthorityType` | `ActiveDirectory`, `AzureActiveDirectory`, `Ams` | The authoritative directory where this computer is located |
+| `Computer.AuthorityId` | string | The ID of the authority where the computer is located |
+| `Computer.AuthorityDeviceId` | string | The unique ID for the device, specific to the device's authority |

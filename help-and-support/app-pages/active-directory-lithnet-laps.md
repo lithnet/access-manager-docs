@@ -1,8 +1,8 @@
 # Lithnet LAPS configuration page (Active Directory)
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
+![](../../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
 
-![](../../docs/images/ui-page-active-directory-lithnet-laps.png)
+![](../../images/ui-page-directory-configuration-active-directory-lithnet-laps.png)
 
 ## Schema
 
@@ -15,8 +15,6 @@ You can use the `Deploy Schema...` button to access a script that will deploy th
 If you want to use the Lithnet Access Manager agent instead of the Microsoft LAPS agent, to take advantage of the password history and encryption capabilities, then you'll need to delegate appropriate permission for the AMS service account to read those passwords.
 
 Click the `Delegate permissions` button to generate a script to do this automatically.
-
-![](../../docs/images/ui-page-script-delegate-ama.png)
 
 Copy or save the script, modify the `$OU` variable as appropriate, and run it in with domain admin rights.
 
@@ -43,16 +41,6 @@ Shows the date that the certificate will expire
 #### Published
 
 Indicates whether the certificate is correctly published in the directory. Clients in this forest will currently use this certificate to encrypt their passwords.
-
-#### Has private key
-
-Indicates whether the private key for the certificate is available on the server. If the certificate's private key is not available, then passwords that were encrypted by the key cannot be recovered.
-
-Ensure you have backups of your private keys and keep them safe and secure.
-
-#### Private key permissions
-
-Indicates whether the AMS service account has permission to read the private key. You can use the `Reset permission` button to try and fix the permissions on the key. This may happen if you restore a key from a backup by manually importing it.
 
 ## Generating a new encryption certificate
 

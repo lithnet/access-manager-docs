@@ -1,8 +1,6 @@
 # Script-based authorization
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Script-based authorization is an [Enterprise edition feature](../../access-manager-editions.md)
-
-![](../../docs/images/ui-page-authz-accesscontrol-script.png)
+![](../../images/badge-enterprise-edition-rocket.svg) Script-based authorization is an [Enterprise edition feature](../../access-manager-editions.md)
 
 If you'd like to make authorization decisions outside of the static ACL model, you can utilize a PowerShell script to do this.
 
@@ -12,7 +10,7 @@ Access Manager uses the response you provide to create a dynamic ACL for the use
 
 ## Example script
 
-```
+```PowerShell
 function Get-AuthorizationResponse{
 	param(
 	$user,
