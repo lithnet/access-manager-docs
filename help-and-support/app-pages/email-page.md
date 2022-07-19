@@ -1,6 +1,6 @@
 # Email configuration page
 
-![](../../docs/images/ui-page-email.png)
+![](../../images/ui-page-email.png)
 
 ### SMTP server settings
 

@@ -14,16 +14,16 @@ The Microsoft LAPS agent works only on Windows AD domain-joined devices. Lithnet
 
 | Feature                                                      |                       Microsoft LAPS Agent                       |                   Lithnet Access Manager Agent                   |
 | ------------------------------------------------------------ | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
-| Write local admin password to Active Directory               | <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Write local admin password to the AMS database               |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Support for Windows 8.1 or higher domain-joined devices      | <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Support for Windows 8.1 or higher non-domain-joined devices  |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Support for Windows 10 or higher Azure AD-joined devices     |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Support for Windows 10 or higher Azure AD-registered devices |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Support for Linux                                            |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Support for macOS                                            |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Encrypt stored local admin passwords                         |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Store a history of previous local admin passwords            |                  ![](../../docs/images/dash.png)                 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
+| Write local admin password to Active Directory               | <img src="../../images/check2.png" alt="" data-size="line"> | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Write local admin password to the AMS database               |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Support for Windows 8.1 or higher domain-joined devices      | <img src="../../images/check2.png" alt="" data-size="line"> | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Support for Windows 8.1 or higher non-domain-joined devices  |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Support for Windows 10 or higher Azure AD-joined devices     |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Support for Windows 10 or higher Azure AD-registered devices |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Support for Linux                                            |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Support for macOS                                            |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Encrypt stored local admin passwords                         |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Store a history of previous local admin passwords            |                  ![](../../images/dash.png)                 | <img src="../../images/check2.png" alt="" data-size="line"> |
 
 ## Accessing local admin passwords
 
@@ -33,27 +33,27 @@ Lithnet Access Manager provides an alternative to the LAPS client by offering we
 
 | Feature                                                                |                       Microsoft LAPS Client                       |                  Lithnet Access Manager Service                  |
 | ---------------------------------------------------------------------- | :---------------------------------------------------------------: | :--------------------------------------------------------------: |
-| Allows access to Microsoft LAPS plain-text passwords                   |  <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Allows access to Lithnet Access Manager Agent encrypted passwords      |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Supports accessing passwords over cross-forest trusts                  |  <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Static permissions via ACLs                                            |  <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Dynamic permissions via PowerShell scripts                             |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Allows basic audit information to be captured                          | <img src="../../docs/images/check2.png" alt="" data-size="line">1 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Allows detailed audit information to be captured                       |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Log audit events to Windows event log                                  | <img src="../../docs/images/check2.png" alt="" data-size="line">2 | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Log audit events to a file                                             |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Send audit events via email                                            |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Send audit events via a webhook                                        |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Send audit events via PowerShell                                       |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Web-based access                                                       |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Mobile-device friendly                                                 |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Access from non-Windows devices                                        |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Allows modern authentication and multifactor authentication            |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Per-user and per-IP rate-limiting to prevent password harvesting       |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Restrict directory access to the passwords to a single service account |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Access passwords for non-domain-joined Windows devices                 |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Access passwords for non-Windows devices (macOS, Linux)                |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Access passwords for Azure AD devices                                  |                  ![](../../docs/images/dash.png)                  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
+| Allows access to Microsoft LAPS plain-text passwords                   |  <img src="../../images/check2.png" alt="" data-size="line"> | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Allows access to Lithnet Access Manager Agent encrypted passwords      |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Supports accessing passwords over cross-forest trusts                  |  <img src="../../images/check2.png" alt="" data-size="line"> | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Static permissions via ACLs                                            |  <img src="../../images/check2.png" alt="" data-size="line"> | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Dynamic permissions via PowerShell scripts                             |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Allows basic audit information to be captured                          | <img src="../../images/check2.png" alt="" data-size="line">1 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Allows detailed audit information to be captured                       |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Log audit events to Windows event log                                  | <img src="../../images/check2.png" alt="" data-size="line">2 | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Log audit events to a file                                             |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Send audit events via email                                            |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Send audit events via a webhook                                        |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Send audit events via PowerShell                                       |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Web-based access                                                       |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Mobile-device friendly                                                 |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Access from non-Windows devices                                        |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Allows modern authentication and multifactor authentication            |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Per-user and per-IP rate-limiting to prevent password harvesting       |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Restrict directory access to the passwords to a single service account |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Access passwords for non-domain-joined Windows devices                 |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Access passwords for non-Windows devices (macOS, Linux)                |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
+| Access passwords for Azure AD devices                                  |                  ![](../../images/dash.png)                  | <img src="../../images/check2.png" alt="" data-size="line"> |
 
 _1. Enabling auditing of access to Microsoft LAPS passwords requires enabling directory object auditing_
 
@@ -73,11 +73,11 @@ For devices that are domain-joined, the Access Manager Agent stores them in the 
 
 | Feature                                            |                       Microsoft LAPS Agent                       |                    Lithnet Access Manager Agent                   |
 | -------------------------------------------------- | :--------------------------------------------------------------: | :---------------------------------------------------------------: |
-| Regularly rotates the local admin password         | <img src="../../docs/images/check2.png" alt="" data-size="line"> |  <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Requires a custom AD schema                        | <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line">1 |
-| Stores a history of previous local admin passwords |                  ![](../../docs/images/dash.png)                 |  <img src="../../docs/images/check2.png" alt="" data-size="line"> |
-| Stores passwords in plain-text                     | <img src="../../docs/images/check2.png" alt="" data-size="line"> |                 ![](../../docs/images/dash.png) 2                 |
-| Encrypts passwords                                 |                  ![](../../docs/images/dash.png)                 |  <img src="../../docs/images/check2.png" alt="" data-size="line"> |
+| Regularly rotates the local admin password         | <img src="../../images/check2.png" alt="" data-size="line"> |  <img src="../../images/check2.png" alt="" data-size="line"> |
+| Requires a custom AD schema                        | <img src="../../images/check2.png" alt="" data-size="line"> | <img src="../../images/check2.png" alt="" data-size="line">1 |
+| Stores a history of previous local admin passwords |                  ![](../../images/dash.png)                 |  <img src="../../images/check2.png" alt="" data-size="line"> |
+| Stores passwords in plain-text                     | <img src="../../images/check2.png" alt="" data-size="line"> |                 ![](../../images/dash.png) 2                 |
+| Encrypts passwords                                 |                  ![](../../images/dash.png)                 |  <img src="../../images/check2.png" alt="" data-size="line"> |
 
 _1. Custom schema is only required if using the agent on domain-joined devices. Schema is not required when using the agent on non-windows or non-domain-joined devices_
 
@@ -89,5 +89,5 @@ You can use the Access Manager Service with the Microsoft LAPS agent without hav
 
 |                        |                  Microsoft LAPS Agent Passwords                  |                  Access Manager Agent Passwords                  |
 | ---------------------- | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
-| Microsoft LAPS Client  | <img src="../../docs/images/check2.png" alt="" data-size="line"> |                  ![](../../docs/images/dash.png)                 |
-| Access Manager Service | <img src="../../docs/images/check2.png" alt="" data-size="line"> | <img src="../../docs/images/check2.png" alt="" data-size="line"> |
+| Microsoft LAPS Client  | <img src="../../images/check2.png" alt="" data-size="line"> |                  ![](../../images/dash.png)                 |
+| Access Manager Service | <img src="../../images/check2.png" alt="" data-size="line"> | <img src="../../images/check2.png" alt="" data-size="line"> |

@@ -1,6 +1,6 @@
 # Active Directory configuration page
 
-![](../../docs/images/ui-page-active-directory.png)
+![](../../images/ui-page-directory-configuration-active-directory.png)
 
 ## Domain Permissions
 

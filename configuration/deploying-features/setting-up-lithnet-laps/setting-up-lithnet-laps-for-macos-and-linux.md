@@ -1,7 +1,5 @@
 # Setting up Lithnet LAPS for macOS and Linux
 
-![](../../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../../access-manager-editions.md)
-
 This guide will walk you through the steps to configure the Access Manager service, and the Access Manager agent to support managing the root password for supported macOS and Linux devices.
 
 ## Step 1: Set up the AMS directory
@@ -33,7 +31,7 @@ From the `Directory configuration/Access Manger Directory/Devices` page, ensure 
 
 Once the agent is deployed, and the policy configured, you can now configure access to individual users and groups using the AMS configuration tool.
 
-From the `Authorization` page, select `Add...` to create a new target. Select either the group or computer you want to grant access to. Access Manager provides some built-in groups, but you can create your own from the[ groups page](../../../help-and-support/app-pages/access-manager-directory-groups-page.md).
+From the `Authorization rules/Computers` page, select `Add...` to create a new rule. Select either the group or computer you want to grant access to. Access Manager provides some built-in groups, but you can create your own from the [groups page](../../../help-and-support/app-pages/access-manager-directory-groups-page.md).
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to read the local admin password.
 
@@ -41,7 +39,7 @@ Select `Edit Permissions...` to open the ACL editor. Assign the appropriate user
 For macOS and Linux devices, only the `Local admin password` and `Local admin password history` permissions are valid.
 ```
 
-![](../../../docs/images/ui-page-authz-editsecurity-laps-only.png)
+![](../../../images/ui-page-authz-editsecurity-laps-only.png)
 
 You can optionally choose to expire the local admin password a period of time after it has been accessed. This will cause the Access Manager Agent to generate a new password _after_ its next check-in time.
 

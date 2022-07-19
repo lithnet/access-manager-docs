@@ -1,7 +1,5 @@
 # Installing the Access Manager Agent on Windows
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
-
 ## Prerequisites
 
 In order to install the Access Manager Agent, the following prerequisites must be met
@@ -58,7 +56,7 @@ msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=0 AUTHMODE=0
 
 ### Silent installation for Azure AD-joined and registered devices
 
-Use the following command line to install the agent in AzureAD mode, replacing the `SERVER` and `AZUREADTENANTID` values are appropriate
+Use the following command line to install the agent in Azure AD mode, replacing the `SERVER` and `AZUREADTENANTID` values are appropriate
 
 ```
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=1 AUTHMODE=2 SERVER=ams.lithnet.local AZUREADTENANTID=YYYY
@@ -71,3 +69,16 @@ Use the following command line to install the agent in AMS directory mode, repla
 ```
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=1 AUTHMODE=4 SERVER=ams.lithnet.local REGISTRATIONKEY=XXXX
 ```
+
+## Viewing log files
+
+Basic logs entries can be viewed using the Windows Event Viewer, but more detailed log information can be found in `%ProgramFiles%\Lithnet\Access Manager Agent\logs`
+
+## Reconfiguring the agent
+
+If you need to change the agent configuration, you can do so at any time by running 
+
+```batch
+%ProgramFiles%\Lithnet\Access Manager Agent\Lithnet.AccessManager.Agent.exe --setup
+```
+

@@ -1,20 +1,18 @@
 # Installing the Access Manager Agent on Linux
 
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
-
 ## Prerequisites
 
-The Access Manager Agent makes use of the `chpasswd` tool, built into most linux distributions. Ensure this tool is available before installing the agent.
+The Access Manager Agent makes use of the `chpasswd` tool, built into most Linux distributions. Ensure this tool is available before installing the agent.
 
-The agent must be able to validate the AMS server certificate. If you are using a self-signed certificate, consult the guide relevant to your OS for how to add the certificate to the OS trust store. You can use openssl to validate the trust state of the certificate using the `openssl verify cert.crt` command.
+The agent must be able to validate the AMS server certificate. If you are using a self-signed certificate, consult the guide relevant to your OS for how to add the certificate to the OS trust store. You can use OpenSSL to validate the trust state of the certificate using the `openssl verify cert.crt` command.
 
 The agent itself runs using systemd, and as it requires access to reset the root password, must be run as the root user.
 
-### Dotnet Core requirements
+### .NET requirements
 
-The agent is build using dotnet core 3.1. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for dotnet core 3.1](https://github.com/dotnet/core/blob/main/release-notes/3.1/3.1-supported-os.md) for more information.
+The agent is build using Microsoft .NET 6.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 6.0](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) for more information.
 
-While you do not need to install the dotnet package itself, as the agent contains all the dotnet components it needs to run, there are certain dependencies required by dotnet, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the dotnet 3.1 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that dotnet requires, and install these yourself.
+While you do not need to install the .NET package itself, as the agent contains all the .NET components it needs to run, there are certain dependencies required by .NET, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the .NET 6.0 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that .NET requires, and install these yourself.
 
 ## Agent installation
 

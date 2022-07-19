@@ -15,23 +15,23 @@ If these conditions cannot be met, it is recommended that you perform an [offlin
 
 ## Open the import wizard
 
-Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization` page, and click `Import authorization rules...`
+Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization rules/computers` page, and click `Import authorization rules...`
 
-![](../../docs/images/ui-page-authz.png)
+![](../../images/ui-page-authorization-rules-computers.png)
 
 ## Select the import type
 
-Select the local administrators import type, and click `Next` ![](../../docs/images/ui-page-import-type-localadminrpc.png)
+Select the local administrators import type, and click `Next` ![](../../images/ui-page-import-type-localadminrpc.png)
 
 ## Specify discovery settings
 
-![](../../docs/images/ui-page-import-container-localadminrpc.png)
+![](../../images/ui-page-import-container-localadminrpc.png)
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will attempt to connect to each computer object found in this section of the directory tree, and obtain the membership of its local admin group.
 
-When Access Manager finds that a user or group has permission on all computers with an OU, it will create a single access rule at the OU-level for that user or group. You can disable this behaviour by checking the `Do not consolidate permissions at the OU level` check box. Access Manager will then make an individual authorization rule for every computer that is found.
+When Access Manager finds that a user or group has permission on all computers with an OU, it will create a single access rule at the OU level for that user or group. You can disable this behavior by checking the `Do not consolidate permissions at the OU level` check box. Access Manager will then make an individual authorization rule for every computer that is found.
 
-If any of the computers are uncontactable, Access Manager, by default, will ignore the missing computer for the purposes of consolidating access permissions. This assumes that the missing computers have the same administrators as the other computers in the OU. If this is not the case, select the option to disable consolidate when computers are uncontactable. This approach favours caution, but results in an individual access rule being created for every other computer in that OU.
+If any of the computers are uncontactable, Access Manager, by default, will ignore the missing computer for the purposes of consolidating access permissions. This assumes that the missing computers have the same administrators as the other computers in the OU. If this is not the case, select the option to disable consolidate when computers are uncontactable. This approach favors caution, but results in an individual access rule being created for every other computer in that OU.
 
 If there are users and groups that you do want to import permissions for, add them to the list. The Access Manager service account is automatically pre-added to this list. Machine-local accounts are automatically ignored.
 
@@ -41,13 +41,13 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![](../../docs/images/ui-page-import-rulesettings.png)
+![](../../images/ui-page-import-rulesettings.png)
 
 ## Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![](../../docs/images/ui-page-import-results.png)
+![](../../images/ui-page-import-results.png)
 
 ### Merge settings
 

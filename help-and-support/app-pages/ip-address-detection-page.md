@@ -1,6 +1,6 @@
 # IP Address detection configuration page
 
-![](../../docs/images/ui-page-ip-address-detection.png)
+![](../../images/ui-page-ip-detection.png)
 
 ## Proxy settings
 
@@ -10,7 +10,7 @@ If you place AMS behind a reverse proxy or load balancer, you'll need to configu
 
 Indicates that the client IP address should be extracted from the X-Forwarded-For headers. If this setting is off, the client IP address is determined from the IP address of the machine that connects to the AMS service.
 
-#### Maximum allowed entires in the header
+#### Maximum allowed entries in the header
 
 The X-Forward-For header can be set by the client, and therefore can be spoofed. If you have a single load balancer or proxy in front of the AMS service, then set this to `1`. This indicates that only the first entry in the X-Forwarded-For header should be used, and the others ignored.
 

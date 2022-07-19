@@ -1,12 +1,16 @@
 # Troubleshooting 
 
 ## Logs
-The first step of any troubleshooting endeavour is check in the Access Manager log files. These contain information about errors and other important events. 
+The first step of any troubleshooting endeavor is check in the Access Manager log files. These contain information about errors and other important events. 
 
 ### Access Manager Service
-The Access Manager Service has two log files. 
+The Access Manager Service has several log files. 
 
-`access-manager-service.log` Contains events from the core access manager service, including diagnostic information on access requests and authorization results.
+`access-manager-webapp.log` Contains events from the Access Manager web app, including information on access requests and authorization results.
+
+`access-manager-api.log` Contains events from the Access Manager API, including things like device authentication, registration and password updates.
+
+`access-manager-service.log` Contains events from the core access manager service, the scheduler, RPC interface, and worker services.
 
 `access-manager-jitworker.log` Contains events from the JIT worker service, which is responsible for creating and deleting JIT groups for computer objects when this feature is enabled.
 

@@ -1,8 +1,5 @@
 # Azure Active Directory configuration page
-
-![](../../docs/images/badge-enterprise-edition-rocket.svg) Azure AD support is an [Enterprise edition feature](../../access-manager-editions.md)
-
-![](../../docs/images/ui-page-azure-active-directory.png)
+![](../../images/ui-page-directory-configuration-azure-active-directory.png)
 
 ## Tenant configuration
 

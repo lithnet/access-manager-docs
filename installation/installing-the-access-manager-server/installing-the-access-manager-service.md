@@ -5,16 +5,16 @@
 In order to install the Access Manager Service, the following prerequisites must be met;
 
 1. Windows Server 2012 R2 or later
-2. [.NET Core Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime) 3.1.4 or later installed
-3. [.NET Core Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime) 3.1.4 or later installed
-4. Microsoft SQL Express, if hosting the database locally, or a separate SQL Standard or Enterprise edition server. (SQL express is installed by default)
-5. An SSL certificate for the AMS website
+2. [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
+3. [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
+4. Microsoft SQL Express 2019, if hosting the database locally, or a separate SQL Standard or Enterprise edition server. (SQL express is installed by default)
+5. A TLS certificate for the AMS website
 
 ## Step 1: Create a service account
 
 The Access Manger Service needs to run under the context of a domain user account. We strongly recommend using a group-managed service account for this purpose. [We've created a guide for setting up a GMSA](creating-a-service-account-for-the-access-manager-service.md) which includes a script to get you up and running quickly.
 
-Do not grant any specific permissions to this account and most certainly don't add it to super-privileged groups like Domain Administrators. As you go through the setup process, you'll be given scripts to delegate permissions specific to the functionality you want to enable.
+Do not grant any specific permissions to this account and most certainly don't add it to super-privileged groups like Domain Admins. As you go through the setup process, you'll be given scripts to delegate permissions specific to the functionality you want to enable.
 
 ## Step 2: Prepare an SSL certificate
 
@@ -28,27 +28,30 @@ New-SelfSignedCertificate -DnsName "ams.domain.local" -CertStoreLocation "cert:\
 
 ## Step 3: Download and install the AMS service
 
-1. Download the latest version from the [downloads ](../downloads.md)page.
-2. Download and install the [.NET Core Desktop runtime and the .NET Core hosting bundle](https://dotnet.microsoft.com/download/dotnet-core/3.1/runtime), or if your server has internet access you can let the installer download and install these for you
+1. Download the latest version from the [downloads](../downloads.md) page.
+2. Download and install the [.NET Desktop runtime and the .NET hosting bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime), or if your server has internet access, you can let the installer download and install these for you
 3. Run the AMS installation package. Follow the prompts to install the application and provide the service account created in step 1 when prompted.
 
-## Step 4: Configure the web host
+## Step 4: Configure the host
+Launch the `Access Manager Service configuration tool` from the start menu. 
 
-Run the Access Manager Service configuration tool. You'll be prompted to set up the web host.
+![](../../images/ui-page-host-configuration.png)
 
-From the `Server configuration/Service host` page, click the `Select from store...` button and select the certificate you installed in step 2.
+From the `Host configuration` page, click the `Select from store...` button and select the certificate you installed in step 2.
 
-Validate that the ports are correct, and click `File`, then `Save`.
+Select the option to enable the web app, to allow users to request access to computers and roles. If you plan on using the Lithnet Access Manager Agent, then select the option to enable the Access Manager API.
 
-[More information on configuring the web host](../../help-and-support/app-pages/service-host-page.md)
+Click `File`, then `Save`.
+
+[More information on configuring the host](../../help-and-support/app-pages/host-configuration-page.md)
 
 ## Step 5: Configure your authentication provider
 
-AMS supports several different authentication providers. Read the guide on [configuring authentication ](../../configuration/setting-up-authentication/)and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
+AMS supports several authentication providers. Read the guide on [configuring authentication](../../configuration/setting-up-authentication/) and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
 
 ## Step 6: Configure outbound email settings
 
-![](../../docs/images/ui-page-email.png)
+![](../../images/ui-page-email.png)
 
 You'll need to configure an outbound mail server in order to receive audit alerts via email.
 
@@ -56,7 +59,7 @@ You'll need to configure an outbound mail server in order to receive audit alert
 
 ## Step 7: Set up rate limits
 
-![](../../docs/images/ui-page-rate-limits.png)
+![](../../images/ui-page-rate-limits.png)
 
 In order to ensure that your service is not used inappropriately, you can place limits of the number of requests a user can make in a given time. You should set these high enough that your users are not going to encounter rate limit issues under normal usage, but low enough to limit the impact of inappropriate or malicious usage of the service.
 
@@ -64,7 +67,7 @@ In order to ensure that your service is not used inappropriately, you can place 
 
 ## Step 8: Configure IP Detection
 
-![](../../docs/images/ui-page-ip-address-detection.png)
+![](../../images/ui-page-ip-detection.png)
 
 If you put AMS behind a reverse proxy or load balancer, you'll need to configure IP address detection. This is to ensure that AMS logs the correct IP address in audit logs, and applies rate limiting correctly.
 
@@ -72,7 +75,7 @@ If you put AMS behind a reverse proxy or load balancer, you'll need to configure
 
 ## Step 9: Customize the Web user interface
 
-![](../../docs/images/ui-page-user-interface.png)
+![](../../images/ui-page-user-interface.png)
 
 Configure the user interface as per your organization's requirements. You can customize the name of the application, provide your own logo and even provide some custom policy text for the access request page.
 
@@ -80,7 +83,7 @@ Configure the user interface as per your organization's requirements. You can cu
 
 ## Step 10: Configure Auditing
 
-![](../../docs/images/ui-page-auditing-smtp.png)
+![](../../images/ui-page-auditing.png)
 
 AMS has a powerful auditing engine that allows you to receive notifications when access is granted or denied to a user. AMS logs audit events to the Windows event log all the time, but you can also send audit events via email, through a custom PowerShell script, or even to Slack or Microsoft Teams using a web hook.
 
@@ -88,7 +91,7 @@ AMS has a powerful auditing engine that allows you to receive notifications when
 
 ## Step 11: Configure Active Directory permissions
 
-![](../../docs/images/ui-page-active-directory.png)
+![](../../images/ui-page-directory-configuration-active-directory.png)
 
 From the `Active Directory` tab, check that the AMS service account is a member of the `Windows Authorization Access Group` and `Access Control Assistance Operators` built-in groups within each domain. This is required for the AMS service account to be able to calculate access permissions for users and computers within these domains. If any permissions are missing, use the `Grant permission` button to generate a script to grant them.
 
@@ -100,5 +103,6 @@ Now that you have the core application set up, you can configure the Access Mana
 
 * [Setting up Microsoft LAPS](../../configuration/deploying-features/setting-up-microsoft-laps.md)
 * [Setting up Lithnet LAPS for Active Directory, Azure AD, macOS and Linux](../../configuration/deploying-features/setting-up-lithnet-laps/)
-* S[etting up JIT access](../../configuration/deploying-features/setting-up-jit-access.md)
-* Se[tting up BitLocker access](../../configuration/deploying-features/setting-up-bitlocker-access.md)
+* [Setting up JIT access for computers](../../configuration/deploying-features/setting-up-jit-access.md)
+* [Setting up BitLocker access](../../configuration/deploying-features/setting-up-bitlocker-access.md)
+* [Setting up JIT access for roles](../../configuration/deploying-features/setting-up-jit-for-roles.md)

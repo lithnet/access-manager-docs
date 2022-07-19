@@ -4,16 +4,16 @@ Access Manager requires a Microsoft SQL Server 2017 or higher database. The setu
 ## Using the pre-configured SQL Express instance
 During installation, you can choose to have a pre-configured instance of SQL Express installed. The installer will create and configure a new SQL express instance (named `AMS`) on the local machine. Access to the database will be restricted to local administrators and the AMS service account.
 
-This is suitable for small to medium sized installations of Access Manager, and has a number of benefits such as being completely configured and managed by the AMS service itself.
+This is suitable for small to medium-sized installations of Access Manager, and has a number of benefits such as being completely configured and managed by the AMS service itself.
 Do note that SQL express has several limitations that you will need to consider;
-- 1GB maximum memory used by the database engine
-- 10GB maximum database size
-- 1MB maximum buffer cache
+- 1 GB maximum memory used by the database engine
+- 10 GB maximum database size
+- 1 MB maximum buffer cache
 - Limited to the lesser of one (1) CPU socket or four (4) cores 
 
 For larger installations of Access Manager, you should consider using SQL server Standard or Enterprise edition.
 
-If you are using the high-availability feature of Access Manager to run in a failover cluster, you cannot use SQL Express. We recommend installing a clustered instance of SQL server side-by-side in the same cluster as Access Manager. Alternatively, use a Azure SQL database configured for high availability.
+If you are using the high-availability feature of Access Manager, you cannot use SQL Express. The SQL instance will need to be installed on a separate computer. Alternatively, use an Azure SQL or Amazon RDS database configured for high availability.
 
 ## Using SQL Standard or Enterprise Edition
 If you are running Access Manager in a large environment, or SQL express is otherwise not suitable, you can set up the AMS database on an SQL instance of your choosing. You must manually set up your instance, and create the database, before running the installer. During installation, you will be prompted for the server and instance name. 
@@ -127,7 +127,7 @@ Server=tcp:ams.database.windows.net,1433;Initial Catalog=AccessManager;Persist S
 9. Once these steps are complete, you can run the AMS installer, and provide the connection string when prompted.
 
 ## Using Amazon RDS
-Using a AWS RDS Microsoft SQL database is fully supported by Access Manager. You'll need to create an empty database before running the installer, and create a login for the AMS service to use.
+Using an AWS RDS Microsoft SQL database is fully supported by Access Manager. You'll need to create an empty database before running the installer, and create a login for the AMS service to use.
 
 ### Installation steps 
 1. From the AWS Console, create a new `Microsoft SQL Server` RDS resource

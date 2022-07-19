@@ -1,6 +1,6 @@
 # Database configuration page
 
-![](../../docs/images/ui-page-database.png)
+![](../../images/ui-page-database.png)
 
 ## Connection details
 
@@ -14,7 +14,10 @@ This option configures AMS to automatically perform required maintenance to inde
 
 It is recommended to leave this setting enabled.
 
-## Backup
+## Backup (only available for SQL Express installations)
+If you are using the pre-configured SQL Express engine, configured at installation time, then you will see additional options related to backing up the database. 
+
+If you are using Azure SQL, Amazon RDS, or an external SQL server, then you must configure backups in those systems. The in-built backup options will not be shown.
 
 ### Enable nightly database backup
 
