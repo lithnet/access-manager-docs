@@ -2,7 +2,7 @@
 
 ![](<.gitbook/assets/access-manager-logo.png>)
 
-Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way..
+Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way.
 
 It provides a web-based interface that allows users to request local admin/root passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts.
 
@@ -40,9 +40,17 @@ Deploying the Lithnet Access Manager Agent to your fleet allows you to upgrade t
 
 #### Just-in-time administrative access to computers
 
-Using the same web interface, users can request that their account be added to a group that is a member of the local administrators group of the computer. This access is temporary and automatically removed after the allowed time period. Access Manager makes use of the Active Directory time-based membership feature in Windows Server 2016 and later domain functional levels, or time-based (dynamic) objects in earlier versions of AD.
+Using the same web interface, users can request that their account be added to a group that is a member of the local administrators group of the computer. This access is temporary and automatically removed after the allowed time period. 
 
 ![](<.gitbook/assets/web-request-jit.gif>)
+
+
+#### Just-in-time access to custom roles
+
+Access Manager allows you to provide your users with just-in-time access to custom roles that you define. When a user is granted access to a role, Access Manager will add them to the corresponding Active Directory group, and automatically remove them when the allowed time period has elapsed. 
+
+![](<.gitbook/assets/web-request-jit-roles.gif>)
+
 
 #### Easy access to BitLocker recovery passwords
 
