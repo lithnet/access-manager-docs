@@ -1,5 +1,3 @@
-# Home
-
 ![](<.gitbook/assets/access-manager-logo.png>)
 
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way.
