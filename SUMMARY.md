@@ -1,6 +1,7 @@
 # Table of contents
 
 * [Home](README.md)
+* [What's new](whats-new.md)
 * [How does Lithnet Access Manager help prevent lateral movement?](preventing-lateral-movement.md)
 * [Access Manager Editions](access-manager-editions.md)
 * [Licensing](licensing.md)
