@@ -11,6 +11,7 @@
 * [Getting started](installation/getting-started.md)
 * [System Requirements](installation/system-requirements.md)
 * [Downloads](installation/downloads.md)
+* [Upgrading from Access Manager v1](installation/upgrading-from-v1.md)
 * [Installing the Access Manager Server](installation/installing-the-access-manager-server/README.md)
   * [Creating a service account for the Access Manager Service](installation/installing-the-access-manager-server/creating-a-service-account-for-the-access-manager-service.md)
   * [SQL installation options](installation/installing-the-access-manager-server/sql-installation-options.md)
