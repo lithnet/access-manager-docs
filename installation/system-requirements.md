@@ -37,7 +37,6 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 
 #### Supported versions
 
-* OSX 10.14 (Mojave)
 * OSX 10.15 (Catalina)
 * macOS 11 (Big Sur) (Intel or M1)
 * macOS 12 (Monterey) (Intel or M1)

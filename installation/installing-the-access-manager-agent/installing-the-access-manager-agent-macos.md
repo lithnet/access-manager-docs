@@ -8,7 +8,7 @@ The agent itself runs using launchd, and as it requires access to reset the root
 
 ### OS requirements
 
-The agent requires OSX 10.14 or later. Packages are available for both Intel and Arm64 Macs.
+The agent requires OSX 10.15 or later. Packages are available for both Intel and Arm64 Macs.
 
 ## Installing the agent
 
