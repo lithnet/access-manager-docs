@@ -68,7 +68,7 @@
   * [Variables available in audit notification channels](help-and-support/advanced-help-topics/audit-variables.md)
   * [Setting up audit templates](help-and-support/advanced-help-topics/audit-templates.md)
   * [Backup and Restore](help-and-support/advanced-help-topics/backup-and-restore.md)
-* [PowerShell reference](help-and-support/powershell-help/LithnetAccessManager.md)
+* [PowerShell reference](help-and-support/powershell-help/PowerShellModule.md)
   * [Add-AmsDeviceRegistrationKeyGroup](help-and-support/powershell-help/Add-AmsDeviceRegistrationKeyGroup.md)
 * [Application help pages](help-and-support/app-pages/README.md)
   * [Access Manager Directory configuration page](help-and-support/app-pages/access-manager-directory.md)
