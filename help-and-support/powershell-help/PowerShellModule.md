@@ -93,7 +93,7 @@ Modifies configuration related to Access Manager's Active Directory JIT access e
 Modifies a computer authorization rule
 
 ### [Set-AmsDevice](Set-AmsDevice.md)
-Modifies an AMS service
+Modifies an AMS device
 
 ### [Set-AmsDeviceRegistrationKey](Set-AmsDeviceRegistrationKey.md)
 Modifies a device registration key
