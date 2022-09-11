@@ -59,7 +59,7 @@ Enterprise edition customers benefit from the following capabilities when they d
 | Feature |   Community Edition   |   Enterprise Edition  |
 | ------------------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | Just-in-time administrative access to Windows computers | <img src="/images/green_circle_tick.png" data-size="line"> |<img src="/images/green_circle_tick.png" data-size="line"> |
-| Just-in-time access to Active Directory role-based groups   | ![](/images/dash.png) | <img src="/images/green_circle_tick.png" data-size="line"> |
+| Just-in-time access to Active Directory role-based groups   | Limited to 3 roles | <img src="/images/green_circle_tick.png" data-size="line"> |
 
 ### BitLocker features
 
@@ -109,7 +109,6 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 | Import local admin permissions from computers   | <img src="/images/green_circle_tick.png" data-size="line"> | <img src="/images/green_circle_tick.png" data-size="line"> |
 | Import permissions from CSV file | <img src="/images/green_circle_tick.png" data-size="line"> | <img src="/images/green_circle_tick.png" data-size="line"> |
 | Import LAPS permissions from the Lithnet LAPS Web App | <img src="/images/green_circle_tick.png" data-size="line"> | <img src="/images/green_circle_tick.png" data-size="line"> |
-| Create and modify authorization rules using PowerShell | | ![](/images/dash.png) | <img src="/images/green_circle_tick.png" data-size="line"> |
 
 ### Configuration management features
 
@@ -121,6 +120,8 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 | Manage AMS devices from PowerShell | ![](/images/dash.png) | <img src="/images/green_circle_tick.png" data-size="line"> |
 | Manage AMS registration keys from the UI | <img src="/images/green_circle_tick.png" data-size="line"> | <img src="/images/green_circle_tick.png" data-size="line"> |
 | Manage AMS registration keys from PowerShell | ![](/images/dash.png) | <img src="/images/green_circle_tick.png" data-size="line"> |
+| Create and modify authorization rules using the UI | <img src="/images/green_circle_tick.png" data-size="line"> | <img src="/images/green_circle_tick.png" data-size="line"> |
+| Create and modify authorization rules using PowerShell | ![](/images/dash.png) | <img src="/images/green_circle_tick.png" data-size="line"> |
 
 ### Support
 
