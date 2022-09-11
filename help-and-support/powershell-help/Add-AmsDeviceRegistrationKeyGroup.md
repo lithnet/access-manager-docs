@@ -70,5 +70,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### System.Void
 
 ## NOTES
+Use of this cmdlet requires an Enterprise Edition license.
 
 ## RELATED LINKS

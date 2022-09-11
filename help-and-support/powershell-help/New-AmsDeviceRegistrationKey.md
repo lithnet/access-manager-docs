@@ -117,5 +117,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### Lithnet.AccessManager.PowerShell.RegistrationKeyPSObject
 
 ## NOTES
+Use of this cmdlet requires an Enterprise Edition license.
 
 ## RELATED LINKS
