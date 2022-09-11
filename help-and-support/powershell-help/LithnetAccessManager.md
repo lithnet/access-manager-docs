@@ -11,7 +11,7 @@ Locale: en-US
 The Lithnet Access Manager PowerShell module contains the following cmdlets to help you manage your AMS system.
 
 ## LithnetAccessManager Cmdlets
-### [Add-AmsDeviceRegistrationKeyGroup](Add-AmsDeviceRegistrationKeyGroup.md)
+### [Add-AmsDeviceRegistrationKeyGroup](./Add-AmsDeviceRegistrationKeyGroup.md)
 Adds an existing AMS group to a registration key
 
 ### [Add-AmsGroupMember](Add-AmsGroupMember.md)
