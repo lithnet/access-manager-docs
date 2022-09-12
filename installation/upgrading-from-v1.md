@@ -43,3 +43,8 @@ Changes were also made to the PowerShell audit scripts feature. All your existin
 In order to process JIT for roles events, you'll need to update them to the [new v2 script format](../help-and-support/advanced-help-topics/audit-scripts.md).
 
 Note that support for v1 audit scripts will be removed in a future version of Access Manager.
+
+### Certificate authentication
+In line with the certificate-based authentication changes announced by Microsoft in [KB5014754](https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16), Access Manager v2, by default, now only accepts certificates containing the user's SID in an extension with OID `1.3.6.1.4.1.311.25.2`.
+
+If your certificates were issued before this patch was installed, they will not contain this new extension, and AMS will fail to authenticate the user. In order to resolve this issue, you can enable the old behavior from the [Authentication](../configuration/setting-up-authentication/setting-up-smart-card-authentication.md) page, by selecting `Enable weak identity bindings` and select `enable UPN mapping`.
