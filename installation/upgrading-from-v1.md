@@ -2,18 +2,59 @@
 
 ## Summary
 
-The upgrade process from Access Manager v1 to v2 is very straight forward. You simply install the new version of AMS over the top, and the application will take care of importing the configuration from v1 automatically. 
+There are several methods you can use to upgrade AMS to version 2, and a few things you will need to plan for.
+
+- Access Manager v2 requires an SQL server. You can either use the built-in Microsoft SQL Express instance, or an external SQL server. [You'll need to plan for where you will set your database up](installing-the-access-manager-server/sql-installation-options.md), and ensure you have an appropriate database backup strategy in place.
+- If you had deployed AMS in a failover cluster, the shared storage is no longer a requirement, but can remain if you'd like to have a central copy of the log files.
+
+## Upgrading the Access Manager Agent
+
+If you've deployed the Access Manger *Agent* in your environment, you can simply deploy the new version. There are no changes in functionality or behavior from v1.0 for domain-joined hosts. 
+
+## Upgrade the Access Manager Server 
+### Method 1: In-place upgrade
+The in-place upgrade process from Access Manager v1 to v2 is very straight forward. You simply install the new version of AMS over the top, and the application will take care of importing the configuration from v1 automatically. 
 
 We recommend taking a backup of the server, or at least the `config` folder, before you begin the upgrade process.
 
-There are a few things to note about v2 that you will need to plan for;
-
-- Access Manager v2 requires an SQL server, [you'll need to plan for where you will set your database up](installing-the-access-manager-server/sql-installation-options.md), and ensure you have an appropriate database backup strategy in place.
+A few notes about this method
 - Access Manager v2 no longer uses the `appsettings.json` file to store its configuration. Upon installation, the configuration will be imported into the database, and the file renamed `appsettings.json.<date>.backup`
 - All authorization rules, audit templates, scripts, certificates and user interface configuration will be imported into the database. Scripts and template files remain on the disk in the `config` folder, but are no longer used.
-- If you had deployed AMS in a failover cluster, the shared storage is no longer a requirement, but can remain if you'd like to have a central copy of the log files.
 
-If you've deployed the Access Manger Agent in your environment, you can simply deploy the new version. There are no changes in functionality or behavior from v1.0
+### Upgrade method 2: Deploying to a new server and importing existing configuration
+If you do not wish to upgrade your existing server, and want to deploy v2 on a new server, while keeping all your configuration then follow these steps.
+
+#### From the AMS v1 server
+1. From the AMS v1 server, navigate to the `config` folder that was specified during installation. This is usually `C:\Program Files\Lithnet\Access Manager Service\config`, unless modified at installation time.
+2. From the config folder, copy all files and folders _except_ for the `db` folder. The database does not contain stateful information, and does not need to be migrated to v2.
+3. Open the configuration tool, navigate to the `Local admin passwords` tab, and export any encryption certificates that are present.
+
+#### On the new server
+> Migration of config to a new server must be done before the new server is configured. If configuration has taken place on the new server, then an import of settings is not possible. You will still be able to import authorization rules, as per the section on Upgrade method 3.
+
+1. Install the Access Manager v2 service onto the new host. Do not open the configuration tool when prompted by the installer. If you configure the new instance, a configuration import is not possible.
+2. Stop the `Lithnet Access Manager Service` Windows service
+3. Copy the contents of the `config` folder obtained for the v1 installation, and place it in the v2 server's `config` folder.
+4. The config folder should now contain the `appsettings.json` file, the `scripts` folder, and the `templates` folder.
+5. Start the `Lithnet Access Manager Service` Windows service
+6. Open the `access-manager-v1-migration.log` file located by default in the `logs` folder at `C:\Program Files\Lithnet\Access Manager Service\logs` and check for any migration errors
+>  Note that encrypted values such as the OpenID Connect application secret, and SMTP password cannot be migrated from one server to another, and will be set to blank values. You will need to reset these from the configuration tool to the correct value.
+7. Open the configuration tool, and navigate to the `Directory Configuration`, `Active Directory`, `Lithnet LAPS` page. If you exported encryption certificates from the v1 instance, re-import those certificates here.
+8. Enter any OpenID Connect or SMTP passwords that were not migrated from the import process.
+9. Validate the configuration is as you expect, and then save the settings.
+
+### Upgrade method 3: Importing authorization rules
+The final upgrade method is to deploy a new server, install Access Manager, and configure it from scratch, but then importing only the authorization rules and associated notification channels from the v1 server.
+
+1. On the AMS v1 host, navigate to the applications `config` folder using Windows Explorer. (By default this is at `C:\Program Files\Lithnet\Access Manager Server\config`). From there, copy the `appsettings.json`, as well as the `audit-templates` and `scripts` folders.
+2. Copy these files to the new host, and place them in a new folder, keeping the original structure intact (e.g. `appsettings.json` file is in the same folder as the `audit-templates` and `scripts` folders).
+3. Install Access Manager v2 onto the new host.
+4. Open the configuration tool and configure the app according to the [setup guide](installing-the-access-manager-server/installing-the-access-manager-service.md)
+5. Navigate to `Authorization Rules`, `Computer`, and click the `Import authorization rules` button.
+6. When prompted, select the option to `Import authorization rules from an Access Manager v1.0 config folder`
+7. Select the path to folder you created that contains the `appsettings.json` file and associated sub folders. Optionally select if the import wizard should also import your notification channels and subscriptions for each rule.
+8. Validate the rule settings, and make any modifications that are appropriate, and import them into your v2 system when you are ready.
+9. Save your configuration to commit the new rules to the server.
 
 ## Changed functionality
 
