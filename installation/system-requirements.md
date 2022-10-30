@@ -4,7 +4,7 @@
 
 ### Operating system requirements
 
-The Lithnet Access Manager Service requires Windows Server 2012 R2 or higher.
+The Lithnet Access Manager Service requires Windows Server 2016 or higher.
 
 #### Dependencies
 

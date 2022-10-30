@@ -4,7 +4,7 @@
 
 In order to install the Access Manager Service, the following prerequisites must be met;
 
-1. Windows Server 2012 R2 or later
+1. Windows Server 2016 or later
 2. [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
 3. [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
 4. Microsoft SQL Express 2019, if hosting the database locally, or a separate SQL Standard or Enterprise edition server. (SQL express is installed by default)

@@ -3,7 +3,7 @@
 ## Access Manager Service Downloads
 | Item | Operating system | Architecture |
 | --- | --- | --- |
-| Lithnet Access Manager Service | Windows Server 2012 R2 or higher | [x64](https://github.com/lithnet/access-manager/releases/download/v2.0.8904-preview2/Lithnet.AccessManager.Service.Setup.exe)  |
+| Lithnet Access Manager Service | Windows Server 2016 or higher | [x64](https://github.com/lithnet/access-manager/releases/download/v2.0.8904-preview2/Lithnet.AccessManager.Service.Setup.exe)  |
 
 ## Access Manager Agent Downloads
 
