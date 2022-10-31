@@ -12,8 +12,15 @@ Gets the local admin password history of the specified device
 
 ## SYNTAX
 
+### Get password by computer name
 ```
 Get-AmsLocalAdminPasswordHistory [-ComputerName] <String> [<CommonParameters>]
+```
+
+### Get password by device authority information
+```
+Get-AmsLocalAdminPasswordHistory -AuthorityDeviceId <String> -AuthorityId <String>
+ -AuthorityType <AuthorityType> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +37,20 @@ PS C:\> Get-AmsLocalAdminPasswordHistory -ComputerName 'PC1'
 
 Returns the local admin password history for the computer named `PC1`
 
+### Example 2
+```powershell
+PS C:\> Get-AmsLocalAdminPasswordHistory -ComputerName "DEV\SERVER1"
+```
+
+Returns the local admin password history for the Active Dircetory computer named `SERVER1` int he `DEV` domain
+
+### Example 3
+```powershell
+PS C:\> Get-AmsDevice -Name "macos12" |  Get-AmsLocalAdminPasswordHistory
+```
+
+Returns the local admin password history for the AMS-managed computer named `macos12`
+
 ## PARAMETERS
 
 ### -ComputerName
@@ -37,13 +58,58 @@ The name of the computer object. This can be a simple name like `PC1` or a fully
 
 ```yaml
 Type: String
-Parameter Sets: (All)
+Parameter Sets: Get password by computer name
 Aliases:
 
 Required: True
 Position: 1
 Default value: None
 Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AuthorityDeviceId
+The ID of the device
+
+```yaml
+Type: String
+Parameter Sets: Get password by device authority information
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthorityId
+The device's Authority
+
+```yaml
+Type: String
+Parameter Sets: Get password by device authority information
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AuthorityType
+The authority type
+
+```yaml
+Type: AuthorityType
+Parameter Sets: Get password by device authority information
+Aliases:
+
+Required: True
+Position: Named
+Default value: None
+Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 

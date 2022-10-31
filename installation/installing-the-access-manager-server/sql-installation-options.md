@@ -15,6 +15,8 @@ For larger installations of Access Manager, you should consider using SQL server
 
 If you are using the high-availability feature of Access Manager, you cannot use SQL Express. The SQL instance will need to be installed on a separate computer. Alternatively, use an Azure SQL or Amazon RDS database configured for high availability.
 
+If you plan to use SQL Express, but the server you are installing on does not have an internet connection, then [download the SQL Express installer](https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLEXPR_x64_ENU.exe) and copy it to the server. You'll be prompted to provide this file during setup.
+
 ## Using SQL Standard or Enterprise Edition
 If you are running Access Manager in a large environment, or SQL express is otherwise not suitable, you can set up the AMS database on an SQL instance of your choosing. You must manually set up your instance, and create the database, before running the installer. During installation, you will be prompted for the server and instance name. 
 

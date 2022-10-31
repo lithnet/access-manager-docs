@@ -38,6 +38,9 @@ Gets AMS groups
 ### [Get-AmsGroupMembers](Get-AmsGroupMembers.md)
 Gets the members of an AMS group
 
+### [Get-AmsHostConfig](Get-AmsHostConfig.md)
+Gets the configuration settings for the AMS host
+
 ### [Get-AmsJitSchedulerJob](Get-AmsJitSchedulerJob.md)
 Gets jobs pending in the AMS JIT scheduler
 
@@ -100,6 +103,9 @@ Modifies a device registration key
 
 ### [Set-AmsGroup](Set-AmsGroup.md)
 Modifies an AMS group
+
+### [Set-AmsHostConfig](Set-AmsHostConfig.md)
+Sets configuration settings for the AMS host
 
 ### [Set-AmsRoleAuthorizationRule](Set-AmsRoleAuthorizationRule.md)
 Modifies a role authorization rule

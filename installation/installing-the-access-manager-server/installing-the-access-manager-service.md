@@ -5,10 +5,11 @@
 In order to install the Access Manager Service, the following prerequisites must be met;
 
 1. Windows Server 2016 or later
-2. [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
-3. [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
+2. [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
+3. [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
 4. Microsoft SQL Express 2019, if hosting the database locally, or a separate SQL Standard or Enterprise edition server. (SQL express is installed by default)
-5. A TLS certificate for the AMS website
+5. If you plan to use SQL Express, but the server you are installing on does not have an internet connection, then [download the SQL Express installer](https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLEXPR_x64_ENU.exe) and copy it to the server. You'll be asked to specify the installation file during setup.
+6. A TLS certificate for the AMS website
 
 ## Step 1: Create a service account
 
