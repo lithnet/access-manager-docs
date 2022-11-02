@@ -11,6 +11,8 @@ In order to install the Access Manager Service, the following prerequisites must
 5. If you plan to use SQL Express, but the server you are installing on does not have an internet connection, then [download the SQL Express installer](https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLEXPR_x64_ENU.exe) and copy it to the server. You'll be asked to specify the installation file during setup.
 6. A TLS certificate for the AMS website
 
+The installer can download the prerequisites when an internet connection is available. You can read the guide on [what internet access is required](../../help-and-support/advanced-help-topics/internet-access-requirements.md) for automatic prerequisite installation.
+
 ## Step 1: Create a service account
 
 The Access Manger Service needs to run under the context of a domain user account. We strongly recommend using a group-managed service account for this purpose. [We've created a guide for setting up a GMSA](creating-a-service-account-for-the-access-manager-service.md) which includes a script to get you up and running quickly.

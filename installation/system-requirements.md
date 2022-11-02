@@ -8,9 +8,9 @@ The Lithnet Access Manager Service requires Windows Server 2016 or higher.
 
 #### Dependencies
 
-* [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
-* [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.7 or later installed
-* Microsoft SQL Express 2017 or later (if hosting the database locally), SQL Server 2017 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
+* [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
+* [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
+* Microsoft SQL Express 2019 (if hosting the database locally), SQL Server 2017 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
 
 ## Access Manager Agent (AMA) Operating System Support
 
@@ -40,6 +40,7 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 * OSX 10.15 (Catalina)
 * macOS 11 (Big Sur) (Intel or M1)
 * macOS 12 (Monterey) (Intel or M1)
+* macOS 13 (Ventura) (Intel or M1)
 
 #### Password storage
 
@@ -63,14 +64,18 @@ The following operating system versions have been tested and are fully supported
 
 | Distribution | Version | Architecture |
 | ------------ | ------- | ------------ |
-| Ubuntu       | 18      | x64          |
-| Ubuntu       | 20      | x64          |
-| Ubuntu       | 20      | arm64        |
-| CentOS       | 7       | x64          |
-| CentOS       | 8       | x64          |
-| OpenSUSE     | 15      | x64          |
+| Ubuntu       | 18.04   | x64/arm64    |
+| Ubuntu       | 20.04   | x64/arm64    |
+| Ubuntu       | 22.04   | x64/arm64    |
 | RHEL         | 7       | x64          |
-| RHEL         | 8       | x64          |
+| RHEL         | 8       | x64/arm64    |
+| RHEL         | 9       | x64/arm64    |
+| Fedora       | 35      | x64/arm64    |
+| Fedora       | 36      | x64/arm64    |
+| Fedora       | 37      | x64/arm64    |
+| Debian       | 9       | x64          |
+| Debian       | 10      | x64/arm64    |
+| Debian       | 11      | x64/arm64    |
 
 #### Password storage
 

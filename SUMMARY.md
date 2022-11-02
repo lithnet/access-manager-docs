@@ -61,6 +61,8 @@
   * [KB000001: The Access Manager Agent cannot connect to the server and logs a token-validation-failed error](help-and-support/support-articles/kb000001.md)
   * [KB000002: Users retain their admin rights after their JIT period expires](help-and-support/support-articles/kb000002.md)
 * [Advanced help topics](help-and-support/advanced-help-topics/README.md)
+  * [Ports and traffic flows](help-and-support/advanced-help-topics/ports-and-traffic-flows.md)
+  * [Internet access requirements](installation/internet-access-requirements.md)
   * [Access evaluation in Access Manager Service (AMS)](help-and-support/advanced-help-topics/access-evaluation.md)
   * [Recovering from a lost encryption certificate](help-and-support/advanced-help-topics/recovering-from-a-lost-encryption-certificate.md)
   * [Script-based authorization](help-and-support/advanced-help-topics/authorization-scripts.md)
