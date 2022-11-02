@@ -2,7 +2,7 @@
 
 The following diagram details the traffic flows and port requirements for a typical Access Manager environment.
 
-![](../images/ams-port-map.png)
+![](../../images/ams-port-map.png)
 
 
 | Source | Destination | Destination ports | Description | 
