@@ -6,7 +6,7 @@ The following diagram details the traffic flows and port requirements for a typi
 
 
 | Source | Destination | Destination ports | Description | 
-| --- | --- | --- | --- |
+| --- | --- | --- | ------ |
 | AMS server | packages.lithnet.io | TCP 443 | Allows the AMS server to check and notify when updates are available (optional) |
 | AMS server | graph.microsoft.com| TCP 443 | Used to access the graph API when authenticating Azure AD-joined and registered devices |
 | AMS server | login.microsoftonline.com | TCP 443 | Used to authenticate to the graph API when authenticating Azure AD-joined and registered devices |
