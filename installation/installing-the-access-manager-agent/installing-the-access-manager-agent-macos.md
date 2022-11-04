@@ -15,7 +15,41 @@ The agent requires OSX 10.15 or later. Packages are available for both Intel and
 You can open the package from finder, or use the `installer` command line tool to install the package
 
 ```shell
-sudo installer -pkg /path/to/installer.pkg -target /
+# Download installer packages
+if [[ $(uname -m) == 'arm64' ]]; then
+    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.0/arm64/stable -o accessmanageragent.pkg
+else
+    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.0/x64/stable -o accessmanageragent.pkg
+fi
+​
+# Check the installer signature
+pkgutil --check-signature accessmanageragent.pkg
+# Expected output:
+# # Package "accessmanageragent.{arm64|x64}.pkg":
+# #    Status: signed by a developer certificate issued by Apple for distribution
+# #    Notarization: trusted by the Apple notary service
+# #    Signed with a trusted timestamp on: 2022-10-23 10:37:42 +0000
+# #    Certificate Chain:
+# #     1. Developer ID Installer: Lithnet Pty Ltd (5DK86QQXK3)
+# #        Expires: 2026-08-05 23:12:36 +0000
+# #        SHA256 Fingerprint:
+# #            F9 B6 D5 17 02 11 8B 47 19 25 15 6A F7 46 61 41 49 36 55 56 DD 21
+# #            31 47 FB 0A E8 DC 36 8E 50 1F
+# #        ------------------------------------------------------------------------
+# #     2. Developer ID Certification Authority
+# #        Expires: 2027-02-01 22:12:15 +0000
+# #        SHA256 Fingerprint:
+# #            7A FC 9D 01 A6 2F 03 A2 DE 96 37 93 6D 4A FE 68 09 0D 2D E1 8D 03
+# #            F2 9C 88 CF B0 B1 BA 63 58 7F
+# #        ------------------------------------------------------------------------
+# #     3. Apple Root CA
+# #        Expires: 2035-02-09 21:40:36 +0000
+# #        SHA256 Fingerprint:
+# #            B0 B1 73 0E CB C7 FF 45 05 14 2C 49 F1 29 5E 6E DA 6B CA ED 7E 2C
+# #            68 C5 BE 91 B5 A1 10 01 F0 24
+​
+# Install the agent
+sudo installer -pkg accessmanageragent.pkg -target / 
 ```
 
 ## Configuring the agent

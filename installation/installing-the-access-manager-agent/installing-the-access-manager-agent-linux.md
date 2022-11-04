@@ -4,7 +4,7 @@
 
 The Access Manager Agent makes use of the `chpasswd` tool, built into most Linux distributions. Ensure this tool is available before installing the agent.
 
-The agent must be able to validate the AMS server certificate. If you are using a self-signed certificate, consult the guide relevant to your OS for how to add the certificate to the OS trust store. You can use OpenSSL to validate the trust state of the certificate using the `openssl verify cert.crt` command.
+The agent must be able to validate the AMS server certificate. If you are using a private CA, or s self-signed certificate, consult the guide relevant to your OS for how to add the certificate to the OS trust store. You can use OpenSSL to validate the trust state of the certificate using the `openssl verify cert.crt` command.
 
 The agent itself runs using systemd, and as it requires access to reset the root password, must be run as the root user.
 
@@ -12,33 +12,120 @@ The agent itself runs using systemd, and as it requires access to reset the root
 
 The agent is build using Microsoft .NET 6.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 6.0](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) for more information.
 
-While you do not need to install the .NET package itself, as the agent contains all the .NET components it needs to run, there are certain dependencies required by .NET, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the .NET 6.0 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that .NET requires, and install these yourself.
-
 ## Agent installation
 
-### Installing the agent on RPM-based distributions
+### Installing the agent on **Fedora** using the Lithnet repo
+
+```shell
+ #!/usr/bin/env bash
+​
+# Ensure that the right DNF components are available
+sudo dnf -y install dnf-plugins-core
+​
+# Add the Lithnet Fedora repository
+sudo dnf config-manager --add-repo https://packages.lithnet.io/config/rpm/fedora/lithnet.repo 
+​
+# Install the agent
+sudo dnf install LithnetAccessManagerAgent
+```
+
+### Installing the agent on **Red Hat** using the Lithnet repo
+
+```shell
+ #!/usr/bin/env bash
+​
+# Ensure that the right DNF components are available
+sudo dnf -y install dnf-plugins-core
+​
+# Add the Lithnet Fedora repository
+sudo dnf config-manager --add-repo https://packages.lithnet.io/config/rpm/rhel/lithnet.repo 
+​
+# Install the agent
+sudo dnf install LithnetAccessManagerAgent
+```
+
+### Installing the agent manually on RPM-based distributions
 
 Use the appropriate package management tool to install the agent
 
 ```shell
-yum install /path/to/package.rpm
+# Download the x64 Access Manager Agent
+curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.rpm
+dnf install ~/accessmanager.rpm
 ```
 
-Continue to the `Configuring the agent` section below.
+### Installing the agent on **Debian** using the Lithnet repo
 
-### Installing the agent on Debian-based distributions
+```shell
+#!/bin/bash
+​
+# Install prerequisites
+sudo apt install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+​
+# Import the Lithnet GPG signing keys
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://packages.lithnet.io/keys/lithnet.asc | sudo gpg --dearmor -o /etc/apt/keyrings/lithnet.gpg
+sudo chmod a+r /etc/apt/keyrings/lithnet.gpg
+​
+# Add the Lithnet repository, specific to your build and architecture
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/lithnet.gpg] \
+  https://packages.lithnet.io/linux/deb/prod/repos/debian/ \
+  $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/lithnet.list > /dev/null
+​
+# Fetch the new repo and install the agent
+sudo apt update
+sudo apt install lithnetaccessmanageragent
+```
+
+### Installing the agent on **Ubuntu** using the Lithnet repo
+
+```shell
+#!/bin/bash
+​
+# Install prerequisites
+sudo apt install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg \
+    lsb-release
+​
+# Import the Lithnet GPG signing keys
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://packages.lithnet.io/keys/lithnet.asc | sudo gpg --dearmor -o /etc/apt/keyrings/lithnet.gpg
+sudo chmod a+r /etc/apt/keyrings/lithnet.gpg
+​
+# Add the Lithnet repository, specific to your build and architecture
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/lithnet.gpg] \
+  https://packages.lithnet.io/linux/deb/prod/repos/ubuntu/ \
+  $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/lithnet.list > /dev/null
+​
+# Fetch the new repo and install the agent
+sudo apt update
+sudo apt install lithnetaccessmanageragent
+```
+
+### Installing the agent manually on Debian-based distributions
 
 Use the appropriate package management tool to install the agent
 
 ```shell
-apt install /path/to/package.deb
+curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.deb
+apt install ~/accessmanager.deb
 ```
-
-Continue to the `Configuring the agent` section below.
 
 ### Installing the agent from the .tar.gz archive
 
 Extract the archive to the root file system, allowing the files to be placed in their correct location. See the `File location` section below for more information on what files get unpacked and where.
+
+While you do not need to install the .NET package itself, as the agent contains all the .NET components it needs to run, there are certain dependencies required by .NET, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the .NET 6.0 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that .NET requires, and install these yourself.
 
 Run the following command to register the service with systemd
 
