@@ -4,7 +4,7 @@
 
 The Access Manager Agent makes use of the `chpasswd` tool, built into most Linux distributions. Ensure this tool is available before installing the agent.
 
-The agent must be able to validate the AMS server certificate. If you are using a private CA, or s self-signed certificate, consult the guide relevant to your OS for how to add the certificate to the OS trust store. You can use OpenSSL to validate the trust state of the certificate using the `openssl verify cert.crt` command.
+The agent must be able to validate the AMS server certificate. If you are using a private CA, or a self-signed certificate, consult the guide relevant to your OS for how to add the certificate to the OS trust store. You can use OpenSSL to validate the trust state of the certificate using the `openssl verify cert.crt` command.
 
 The agent itself runs using systemd, and as it requires access to reset the root password, must be run as the root user.
 
@@ -51,7 +51,7 @@ Use the appropriate package management tool to install the agent
 ```shell
 # Download the x64 Access Manager Agent
 curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.rpm
-dnf install ~/accessmanager.rpm
+sudo dnf install ~/accessmanager.rpm
 ```
 
 ### Installing the agent on **Debian** using the Lithnet repo
@@ -118,7 +118,7 @@ Use the appropriate package management tool to install the agent
 
 ```shell
 curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.deb
-apt install ~/accessmanager.deb
+sudo apt install ~/accessmanager.deb
 ```
 
 ### Installing the agent from the .tar.gz archive
