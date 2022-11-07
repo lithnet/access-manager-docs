@@ -79,6 +79,6 @@ Basic logs entries can be viewed using the Windows Event Viewer, but more detail
 If you need to change the agent configuration, you can do so at any time by running 
 
 ```batch
-%ProgramFiles%\Lithnet\Access Manager Agent\Lithnet.AccessManager.Agent.exe --setup
+"%ProgramFiles%\Lithnet\Access Manager Agent\Lithnet.AccessManager.Agent.exe" --setup
 ```
 
