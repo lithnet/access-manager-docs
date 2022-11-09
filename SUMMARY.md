@@ -5,6 +5,7 @@
 * [How does Lithnet Access Manager help prevent lateral movement?](preventing-lateral-movement.md)
 * [Access Manager Editions](access-manager-editions.md)
 * [Licensing](licensing.md)
+* [Change log](change-log.md)
 
 ## Installation
 
