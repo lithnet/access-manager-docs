@@ -14,7 +14,7 @@ In this simple example, we can see reference to the `Response.Target` attribute,
 </html>
 ```
 ## JSON example
-In this example, we can see examples of conditional rendering inside the summary and title elements, as well as the conditional addition of the `computer` section.
+In this example, we can see examples of conditional rendering of a Microsoft Teams message card, inside the summary and title elements, as well as the conditional addition of the `computer` section.
 
 ```json
 {
