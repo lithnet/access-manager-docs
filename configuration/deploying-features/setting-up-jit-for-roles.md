@@ -44,5 +44,5 @@ You can optionally allow the user to extend their access before it expires.
 
 If you'd like to be notified when someone requests JIT access, select the notification channels you'd like to send to for success and failure events.
 
-## Step 5: Validate access
+## Step 4: Validate access
 Log in to the Access Manager web app as an authorized user, click on the `Roles` page and request JIT access to a role. 
