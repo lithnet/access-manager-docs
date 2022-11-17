@@ -1,9 +1,11 @@
 # Change log
 
 ## v2.0.9376 18th November 2022
+### Access Manager Service
 - [FIX] Fixes an issue where the service incorrectly goes into recovery mode when the November 2022 Windows updates are applied to a DC and the [known issue](https://support.microsoft.com/en-us/topic/kb5021131-how-to-manage-the-kerberos-protocol-changes-related-to-cve-2022-37966-fd837ac3-cdec-4e76-a6ec-86e67501407d#knownissues5021131) regarding RC4 is in play. Not the service will instead just terminate with a message that domain connectivity is not available.
 
 ## v2.0.9375 15th November 2022
+### Access Manager Service
 - [FIX] Fixes an issue where the service installer may fail on a non-english language Windows system
 - [FIX] Fixes an issue where the New-AmsComputerAuthorizationRule and Set-AmsComputerAuthorizationRule report an error
 
