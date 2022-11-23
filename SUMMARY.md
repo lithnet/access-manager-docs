@@ -63,7 +63,8 @@
   * [KB000002: Users retain their admin rights after their JIT period expires](help-and-support/support-articles/kb000002.md)
   * [KB000003: How to use the Access Manager Agent to manage the password for an account other than the root account on Linux](help-and-support/support-articles/kb000003.md)
   * [KB000004: How to create a log file to troubleshoot installation issues with the Access Manager Service](help-and-support/support-articles/kb000004.md)
-    
+  * [KB000005: Access Manager stops working after applying the November 2022 Windows update](help-and-support/support-articles/kb000005.md)  
+
 * [Advanced help topics](help-and-support/advanced-help-topics/README.md)
   * [Ports and traffic flows](help-and-support/advanced-help-topics/ports-and-traffic-flows.md)
   * [Internet access requirements](help-and-support/advanced-help-topics/internet-access-requirements.md)
