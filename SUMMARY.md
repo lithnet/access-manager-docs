@@ -1,13 +1,10 @@
 # Table of contents
 
 * [Home](README.md)
-
-## About Lithnet Access Manager
-
 * [How does Access Manager help prevent lateral movement](about-lithnet-access-manager/preventing-lateral-movement-with-access-manager.md)
 * [Access Manager Editions](about-lithnet-access-manager/access-manager-editions.md)
 * [Licensing](about-lithnet-access-manager/licensing.md)
-* [Change log](/change-log.md)
+* [Change log](change-log.md)
 
 ## Installation
 
