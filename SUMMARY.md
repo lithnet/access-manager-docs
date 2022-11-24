@@ -7,11 +7,11 @@
 * [How does Access Manager help prevent lateral movement](about-lithnet-access-manager/preventing-lateral-movement-with-access-manager.md)
 * [Access Manager Editions](about-lithnet-access-manager/access-manager-editions.md)
 * [Licensing](about-lithnet-access-manager/licensing.md)
-* [Downloads](https://lithnet.io/products/access-manager/downloads-v1)
-* [Change log](change-log.md)
+* [Change log](/change-log.md)
 
 ## Installation
 
+* [Downloads](https://lithnet.io/products/access-manager/downloads-v1)
 * [Creating a service account for the Access Manager service](installation/creating-a-service-account-for-the-access-manager-service.md)
 * [Choosing between the Microsoft and Lithnet agents for LAPS support](installation/choosing-a-local-admin-password-strategy.md)
 * [Installing Access Manager](installation/installing-access-manager/README.md)
