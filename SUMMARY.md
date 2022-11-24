@@ -7,6 +7,8 @@
 * [How does Access Manager help prevent lateral movement](about-lithnet-access-manager/preventing-lateral-movement-with-access-manager.md)
 * [Access Manager Editions](about-lithnet-access-manager/access-manager-editions.md)
 * [Licensing](about-lithnet-access-manager/licensing.md)
+* [Downloads](https://lithnet.io/products/access-manager/downloads-v1)
+* [Change log](change-log.md)
 
 ## Installation
 
