@@ -59,10 +59,10 @@
 * [Frequently asked Questions](help-and-support/frequently-asked-questions.md)
 * [Troubleshooting](help-and-support/troubleshooting.md)
 * [Support Articles](help-and-support/support-articles/README.md)
-  * [KB000001: The Access Manager Agent cannot connect to the server and logs a token-validation-failed e](help-and-support/support-articles/kb000001.md)
+  * [KB000001: The Access Manager Agent cannot connect and logs a token-validation-failed error](help-and-support/support-articles/kb000001.md)
   * [KB000002: Users retain their admin rights after their JIT period expires](help-and-support/support-articles/kb000002.md)
-  * [KB000003: How to use the Access Manager Agent to manage the password for an account other than the root account on Linux](help-and-support/support-articles/kb000003.md)
-  * [KB000004: How to create a log file to troubleshoot installation issues with the Access Manager Service](help-and-support/support-articles/kb000004.md)
+  * [KB000003: Configuring the Access Manager Agent to manage an account other than 'root' on Linux](help-and-support/support-articles/kb000003.md)
+  * [KB000004: Creating a log file to troubleshoot installation issues with the Access Manager Service](help-and-support/support-articles/kb000004.md)
   * [KB000005: Access Manager stops working after applying the November 2022 Windows update](help-and-support/support-articles/kb000005.md)  
 
 * [Advanced help topics](help-and-support/advanced-help-topics/README.md)
