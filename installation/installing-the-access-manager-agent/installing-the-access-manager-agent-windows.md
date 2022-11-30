@@ -36,9 +36,7 @@ Other devices must use a registration key, obtained from the AMS server to authe
 2. Run the AMA installation package. When prompted, choose the password storage location appropriate for your environment.
 3. If you are using the AMS directory, you'll be prompted to select the authentication type you'd like to use. You can use Azure AD authentication, if the agent is running on a Windows 10 Azure AD joined or registered device. If the installer can detect the Azure tenant ID from the workstation's join information, it will be pre-populated here. Otherwise, you'll need to provide the tenant ID yourself.
 
-```
-If your device is not Azure AD joined or registered, you'll need to use a registration key to authenticate the agent to the AMS server. 
-```
+> If your device is not Azure AD joined or registered, you'll need to use a registration key to authenticate the agent to the AMS server. 
 
 1. If you are using the agent in Active Directory mode, you'll need to configure the agent via a group policy. Follow the [setup guide for Lithnet LAPS for Active Directory](../../configuration/deploying-features/setting-up-lithnet-laps/setting-up-lithnet-laps-for-active-directory.md) for the correct process of setting up the relevant group policy settings. Agents using AMS directory mode get their password policy from the AMS server, and do not use group policy at all.
 
