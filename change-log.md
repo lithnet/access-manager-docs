@@ -12,6 +12,7 @@
 - [FEATURE] Modifies the silent installer for Windows to not require command line parameters to configure it for AD mode, allowing for a simpler deployment via group policy
 - [FEATURE] Updates PowerShell diagnostic cmdlet to include logs as well as config
 - [FEATURE] Adds the ability to generate a diagnostic log package from the 'Help' page in the config app
+- [FEATURE] The roles list is now free-text searchable
 
 ### Access Manager Agent
 - [FIX] Fixes an issue where API authentication fails if the server and client are configured with host names differing by case
