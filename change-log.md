@@ -1,5 +1,9 @@
 # Change log
 
+## v2.0.9399 8th December 2022
+### Access Manager Service
+- [FIX] Fixes an issue where the SQL express installer does not execute when upgrading from v1.x and using the manual download option
+
 ## v2.0.9395 4th December 2022
 ### Access Manager Service
 - [FIX] Fixes an issue where API authentication fails if the server and client are configured with host names differing by case
