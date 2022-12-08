@@ -28,7 +28,7 @@ When using the AMS directory to store passwords, you must determine what authent
 
 Azure AD-joined and registered devices, can use their Azure AD certificate to automatically authenticate to the AMS server. You'll need the Azure AD tenant ID to configure Azure AD auth.
 
-Other devices must use a registration key, obtained from the AMS server to authentication. These devices will create their own authentication certificate, and use the registration key a single time, to register their certificate with the server. Once this is successful, they will no longer need the registration key, and it will be deleted from the system.
+Other devices must use a registration key, obtained from the AMS server to authenticate. These devices will create their own authentication certificate, and use the registration key a single time, to register their certificate with the server. Once this is successful, they will no longer need the registration key, and it will be deleted from the system.
 
 ## Download and install the Access Manager Agent
 
