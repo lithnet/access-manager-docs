@@ -45,3 +45,31 @@ X509:<RFC822>*^       Email address
 
 > (^) These altSecurityIdentity types are considered 'weak bindings' and require the use of the `Enable weak identity bindings` option.
 
+## Certificate Forwarding
+
+In certain scenarios - such as Access Manager running behind a TLS-terminating load balancer - certificate authentication may not work out of the box. Because the TLS connection is re-encrypted before it reaches Access Manager, the client certificate is not passed along to the server itself.
+
+However, some load balancers or reverse proxies include a feature called 'Certificate Forwarding', where the load balancer validates the certificate, and passes the user's public key along as a header to the backend server (in this case, Access Manager).
+
+This option allows you to specifiy a header which Access Manager will use to extract user certificates from for authentication.
+
+It is important to note that, unless properly secured, any user may send this header to the Access Manager server - allowing impersonation. Therefore, Access Manager requires that you specify particular load balancers or proxies you expect to be using this feature. By default, even when enabled, Access Manager will reject all certificate headers unless the allowlists are populated.
+
+### Examples
+
+#### Nginx Reverse Proxy
+
+1. Configure the server to receive client certificates with the [ssl_verify_client directive](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_verify_client).
+2. Configure the `X-Client-Cert` header to be forwarded to Access Manager.
+
+This forwards the [$ssl_client_escaped_cert](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#var_ssl_client_escaped_cert) variable, which is a URL-encoded version of the client certificate:
+
+    ```
+    # To avoid a client falsifying the header, first unset it.
+    proxy_set_header Accept-Encoding "";
+    proxy_set_header X-Client-Cert $ssl_client_escaped_cert;
+    ```
+
+####  Citrix ADC
+
+You can follow [this guide](https://support.citrix.com/article/CTX217167/how-to-pass-client-certificate-to-backend-applications-that-requires-client-certificate-for-user-authentication-sslbridge) to insert to forward the client certificate as a header to Access Manager.
