@@ -49,14 +49,12 @@ PS C:\> Set-AmsDevice -Id '10e051a4-6f08-4ac1-9fa5-2d62297137c8' -Approve
 
 Approves a device by its ID
 
-
 ### Example 2
 ```powershell
 PS C:\> Get-AmsDevice -Name 'PC1' |  Set-AmsDevice -Reject
 ```
 
 Gets a device by its name and rejects it
-
 
 ## PARAMETERS
 

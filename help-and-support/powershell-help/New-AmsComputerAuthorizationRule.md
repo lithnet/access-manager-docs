@@ -186,7 +186,6 @@ PS C:\> New-AmsComputerAuthorizationRule -AmsGroupId $group.Id -PrincipalsAllowe
 
 This example creates a new authorization rule, that allows all members of the `DOMAIN\AuthorizedLapsReaders` group to access the LAPS password for all devices in the AMS group named `My devices`, and expires the LAPS password after one hour.
 
-
 ### Example 2
 ```powershell
 PS C:\> New-AmsComputerAuthorizationRule -AadTenantId '2b693132-7e65-4603-b508-910a2b4487c8' -PrincipalsAllowedLaps 'DOMAIN\AuthorizedLapsReaders' -UserRequestReason Required
@@ -207,7 +206,6 @@ PS C:\> New-AmsComputerAuthorizationRule -AdGroup 'DOMAIN\FinanceServers' -Princ
 ```
 
 This example creates a new authorization rule, that allows all members of the `DOMAIN\FinaanceAdmins` group to JIT into the servers contained within the `FinanceServers` group. The rule is set to expire on 1st March 2025
-
 
 ## PARAMETERS
 

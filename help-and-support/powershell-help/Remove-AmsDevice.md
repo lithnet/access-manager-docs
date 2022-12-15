@@ -35,7 +35,6 @@ PS C:\> Get-AmsDevice -Name "PC1" | Remove-AmsDevice
 
 Get a device named `PC1` and permanently deletes it
 
-
 ## PARAMETERS
 
 ### -Force

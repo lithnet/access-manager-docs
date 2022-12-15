@@ -30,7 +30,7 @@ Removes a device by its ID from a group by its ID
 
 ### Example 2
 ```powershell
-PS C:\> Remove-AmsGroupMember -Id '0c1ecad4-3581-42c5-8501-22f13559e418' 
+PS C:\> Remove-AmsGroupMember -Id '0c1ecad4-3581-42c5-8501-22f13559e418'
 ```
 
 Removes all members of the group
@@ -48,7 +48,6 @@ PS C:\> Get-AmsGroup -Name "My group" | Remove-AmsGroupMember -Devices (Get-AmsD
 ```
 
 Gets a group by name, and removes a specific member by retrieving the object by its name
-
 
 ## PARAMETERS
 

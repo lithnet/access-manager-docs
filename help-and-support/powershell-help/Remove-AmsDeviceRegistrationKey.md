@@ -23,7 +23,7 @@ This cmdlet permanently deletes a registration key from the system. Devices will
 
 ### Example 1
 ```powershell
-PS C:\> Remove-AmsDeviceRegistrationKey -Id 'd2162529-4ff6-4246-8147-0d2dfcbf76bf' 
+PS C:\> Remove-AmsDeviceRegistrationKey -Id 'd2162529-4ff6-4246-8147-0d2dfcbf76bf'
 ```
 
 This example removes the cmdlet from the system by its known ID
@@ -41,7 +41,6 @@ PS C:\> Get-AmsDeviceRegistrationKey -Name "Head office device registration key"
 ```
 
 Searches for a registration key with the specified name and removes it
-
 
 ## PARAMETERS
 
