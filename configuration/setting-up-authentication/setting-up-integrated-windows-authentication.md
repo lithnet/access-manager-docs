@@ -1,8 +1,14 @@
 # Setting up integrated windows authentication
+{% hint style="info" %}
+Integrated Windows Authentication is only supported on standalone Access Manager instances. It can not be used in clustered or load balanced deployments.
+{% endhint %}
 
 The following guide will assist you in configuring your application to use Integrated Windows Authentication (IWA).
 
+{% hint style="warning" %}
 Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multifactor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [Azure AD](setting-up-authentication-with-azure-ad.md) and [Okta](setting-up-authentication-with-okta.md).
+{% endhint %}
+
 
 ## Part 1: Configure the SPN
 
@@ -31,8 +37,8 @@ setspn -s HTTP/accessmanager.lithnet.local AMSWEB01
 3. Select `Integrated windows authentication` as the authentication provider
 4. Select `Negotiate` for the authentication scheme.
 
-```
+{% hint style="danger" %}
 The use of NTLM and basic auth is not recommended and are provided for testing purposes only.
-```
+{% endhint %}
 
 To restrict clients to the use of Kerberos only, disable incoming NTLM authentication for the server using [group policy](https://docs.microsoft.com/en-us/windows/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-incoming-ntlm-traffic).
