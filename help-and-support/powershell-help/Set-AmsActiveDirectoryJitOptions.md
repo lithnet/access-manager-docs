@@ -37,14 +37,12 @@ PS C:\> Set-AmsActiveDirectoryJitOptions -DcLocatorMode SiteLookup,LocalDcLocato
 
 Sets the JIT engine to use the SiteLookup and LocalDcLocator strategies when processing computer-based JIT requests
 
-
 ### Example 3
 ```powershell
 PS C:\> Set-AmsActiveDirectoryJitOptions -DeltaSyncIntervalMinutes 5 -FullSyncIntervalMinutes 60
 ```
 
 Sets the Active Directory JIT group creation scheduler to perform delta checks every 5 minutes, and full synchronization every 60 minutes.
-
 
 ## PARAMETERS
 

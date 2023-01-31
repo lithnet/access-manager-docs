@@ -35,7 +35,6 @@ PS C:\> Get-AmsDeviceRegistrationKey -Name "Head office devices" | Remove-AmsDev
 
 Gets a registration key by name, and removes the group named "My devices" from it
 
-
 ## PARAMETERS
 
 ### -Groups

@@ -13,7 +13,7 @@ This cmdlet is used to export diagnostic information that may be requested by Li
 ## SYNTAX
 
 ```
-Export-AmsServerDiagnostics -File <String> [<CommonParameters>]
+Export-AmsServerDiagnostics -File <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -22,15 +22,15 @@ Export-AmsServerDiagnostics -File <String> [<CommonParameters>]
 
 ### Example 1
 ```powershell
-PS C:\> Export-AmsServerDiagnostics -File c:\diagnostics.txt
+PS C:\> Export-AmsServerDiagnostics -File c:\diagnostics.zip
 ```
 
-This example exports the diagnostics to a file called `c:\diagnostics.txt`
+This example exports the diagnostics to a file called `c:\diagnostics.zip`
 
 ## PARAMETERS
 
 ### -File
-The path to create the export file
+The name and path of the export ZIP file to create
 
 ```yaml
 Type: String
@@ -41,6 +41,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -Force
+Overwrites any existing output file without prompting for confirmation
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 

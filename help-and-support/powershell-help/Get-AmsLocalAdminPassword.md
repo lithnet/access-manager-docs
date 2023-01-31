@@ -12,7 +12,7 @@ Gets the local admin password of the specified device
 
 ## SYNTAX
 
-### Get password by computer name
+### Get password by computer name (Default)
 ```
 Get-AmsLocalAdminPassword [-ComputerName] <String> [<CommonParameters>]
 ```
@@ -46,7 +46,7 @@ Returns the local admin password for the Active Dircetory computer named `SERVER
 
 ### Example 3
 ```powershell
-PS C:\> Get-AmsDevice -Name "macos12" |  Get-AmsLocalAdminPassword 
+PS C:\> Get-AmsDevice -Name "macos12" |  Get-AmsLocalAdminPassword
 ```
 
 Returns the local admin password for the AMS-managed computer named `macos12`

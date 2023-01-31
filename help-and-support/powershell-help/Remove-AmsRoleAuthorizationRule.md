@@ -30,11 +30,10 @@ Removes a role by its known ID
 
 ### Example 2
 ```powershell
-PS C:\> Get-AmsRoleAuthorizationRule -Name "My custom role" | Remove-AmsRoleAuthorizationRule 
+PS C:\> Get-AmsRoleAuthorizationRule -Name "My custom role" | Remove-AmsRoleAuthorizationRule
 ```
 
 Get a role authorization rule by name and removes it
-
 
 ## PARAMETERS
 

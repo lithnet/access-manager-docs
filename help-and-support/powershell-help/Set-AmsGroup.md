@@ -35,7 +35,6 @@ PS C:\> Get-AmsGroup -Name "My group" | Set-AmsGroup -Description 'My group desc
 
 Get an existing AMS group by name and changes its description
 
-
 ## PARAMETERS
 
 ### -Description

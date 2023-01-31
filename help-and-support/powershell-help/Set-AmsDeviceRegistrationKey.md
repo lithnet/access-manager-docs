@@ -54,14 +54,12 @@ PS C:\> Set-AmsDeviceRegistrationKey -Id 'b88313dd-fafb-406f-8909-cac0c17c58e3' 
 
 Changes the name of an activation key and resets its activation count
 
-
 ### Example 2
 ```powershell
 PS C:\> Get-AmsDeviceRegistrationKey -Name "Head office device key" | Set-AmsDeviceRegistrationKey -Disable
 ```
 
 Gets a registration key by its name and disables it.
-
 
 ## PARAMETERS
 
