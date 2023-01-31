@@ -1,5 +1,19 @@
 # Change log
 
+## v2.0.9410 1st Feb 2023
+### Access Manager Service
+- [FIX] Fixes an issue where the effective access calculator would show 'access denied' for LAPS history when an enterprise license was not present
+- [FIX] Fixes an issue where changes to the JIT group creation settings do not trigger a restart required message
+- [FIX] Fixes an issue where upgrading from v1.1 to v2.0 may fail
+- [FIX] Fixes an issue where you cannot JIT into a group that contains a slash character
+- [FIX] Fixes an issue where AMS-managed device password history was not purged according to policy settings
+- [FEATURE] Adds support for using certificate authentication when Access Manager is behind a load balancer
+- [FEATURE] Adds additional UI helpers for common agent and API misconfigurations
+- [FEATURE] Adds the ability to target a JIT role operation against a specific site or a specific DC
+
+### Access Manager Agent
+- [FEATURE] Improves logging for agent-side issues such as server name misconfigurations, registration modes not being enabled, and API not being enabled
+
 ## v2.0.9399 8th December 2022
 ### Access Manager Service
 - [FIX] Fixes an issue where the SQL express installer does not execute when upgrading from v1.x and using the manual download option
