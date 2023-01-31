@@ -52,6 +52,16 @@ Active Directory Enterprise CAs are automatically registered in the directory it
 
 This option allows you to import a specific certificate authority's certificate that must be present in the certificate chain for it to be accepted. This can be a subordinate CA, rather than a root certificate. You can add multiple trusted issuers to this list, but only one of them needs to be present in the client's certificate chain.
 
+### Certificate Fowarding
+
+In certain scenarios - such as Access Manager running behind a TLS-terminating load balancer - certificate authentication may not work out of the box. Because the TLS connection is re-encrypted before it reaches Access Manager, the client certificate is not passed along to the server.
+
+However, some load balancers or reverse proxies include a feature called *Certificate Forwarding*, where the load balancer validates the certificate, and passes the user's public key along as a header to the backend server (in this case, Access Manager).
+
+This option allows you to specifiy a header which Access Manager will use to extract user certificates from for authentication.
+
+It is important to note that, unless properly secured, any user may send this header to the Access Manager server - allowing impersonation. Therefore, Access Manager requires that you specify particular load balancers or proxies you expect to be using this feature. By default, even when enabled, Access Manager will reject all certificate headers unless the allowlists are populated.
+
 ## Integrated Windows Authentication
 
 The Integrated Windows Authentication (IWA) provider allows users to log in with NTLM or Kerberos authentication. In order to use Kerberos, the website host name must be registered on the SPN of the computer object (not the service account). For example, when using a hostname of `accessmanager.lithnet.io`, you'll need to register the SPN `http/accessmanager.lithnet.io` or `host/accessmanager.lithnet.io`. If the host name matches the AD computer name, then no additional SPNs are required.
