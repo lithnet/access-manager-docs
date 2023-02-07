@@ -35,7 +35,6 @@ PS C:\> Get-AmsGroup -Name "My group" | Remove-AmsGroup
 
 Gets a group by its name, and removes it
 
-
 ## PARAMETERS
 
 ### -Force

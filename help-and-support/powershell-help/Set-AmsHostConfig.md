@@ -25,13 +25,12 @@ Note, you must restart the service after making changes with this cmdlet for tho
 
 ## EXAMPLES
 
-### Example 1 - Enable the Access Manager API 
+### Example 1 - Enable the Access Manager API
 ```powershell
 PS C:\> Set-AmsHostConfig -ApiEnabled $true -ApiHostName "ams.lithnet.local"
 ```
 
 This example enables the AMS API, specifying a hostname of "ams.lithnet.local". This is the hostname that agents use to connect to the service, and must match exactly what is configured on the client side.
-
 
 ### Example 2 - Turn off the Web app
 ```powershell
@@ -40,14 +39,12 @@ PS C:\> Set-AmsHostConfig -WebAppEnabled $false
 
 This example disables the web app, preventing user access.
 
-
 ### Example 3 - Modify the log location
 ```powershell
 PS C:\> Set-AmsHostConfig -LogPath "C:\Logs\AMS"
 ```
 
 This example changes the log location to "C:\Logs\AMS"
-
 
 ## PARAMETERS
 

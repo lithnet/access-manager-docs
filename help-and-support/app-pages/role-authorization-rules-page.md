@@ -43,6 +43,19 @@ Use this option to assign users and groups that are permitted to access this rol
 #### Request reason
 When a user accesses a role, you can prompt them to provide a reason for accessing the role. You can choose to make this prompt mandatory, optional, or not shown at all.
 
-**Notifications**
+### Advanced settings
+
+![](../../images/ui-page-authorization-rules-roles-edit-rule-advanced-settings.png)
+
+#### Domain controller targeting mode
+This option allows you to control how Access Manager selects a domain controller to perform the JIT operation against. This is important, as in multi-site Active Directory environments, there can be delays of 15 minutes between being granted JIT access, and the target system seeing the new group membership. You can choose a targeting mode that ensures that the group membership change is available on a domain controller in the same site as the app or service you are applying permission to.
+
+| Option | Description |
+| --- | ---- | 
+| Automatically select a domain controller | The AMS service will use the same domain controller that the server it is running on is connected to. This is typically a DC in the same site as the AMS server. |
+| Find a domain controller in a specific site | AMS will attempt to locate a DC in the site you specify. If one cannot be found, AMS will default back to its own domain controller |
+| Use a specific domain controller | This option instructs AMS to use only the domain controller specified |
+
+### Notifications
 
 Set the audit notification channels you want to be notified on success or failure events for this rule. See [the auditing](auditing-page.md) help topic for information about creating notification channels.

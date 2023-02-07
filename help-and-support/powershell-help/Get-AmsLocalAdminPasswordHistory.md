@@ -12,7 +12,7 @@ Gets the local admin password history of the specified device
 
 ## SYNTAX
 
-### Get password by computer name
+### Get password by computer name (Default)
 ```
 Get-AmsLocalAdminPasswordHistory [-ComputerName] <String> [<CommonParameters>]
 ```

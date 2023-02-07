@@ -140,15 +140,12 @@ PS C:\> Set-AmsComputerAuthorizationRule -Id '8a2ac32c-3fe8-478f-9550-9e6630d8f0
 
 Updates the rule to use the specified authorization script
 
-
 ### Example 3
 ```powershell
 PS C:\> Set-AmsComputerAuthorizationRule -Id '8a2ac32c-3fe8-478f-9550-9e6630d8f07a' -AdGroup "DOMAIN\AccountingServers"
 ```
 
 Targets the rule to the `AccountingServers` AD group
-
-
 
 ## PARAMETERS
 

@@ -19,7 +19,8 @@ Set-AmsRoleAuthorizationRule [-Id] <String> [-Name <String>] [-AddPrincipalsAllo
  [-DefaultAccessDuration <TimeSpan>] [-AllowExtension <Boolean>] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Enabled <Boolean>] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-SiteName <String>] [-DomainControllerName <String>]
+ [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -54,7 +55,6 @@ PS C:\> Get-AmsRoleAuthorizationRule -Name "My role" | Set-AmsRoleAuthorizationR
 ```
 
 Get a rule by its name, and disables it
-
 
 ## PARAMETERS
 
@@ -307,6 +307,36 @@ Type: AuditReasonFieldState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Hidden, Optional, Required
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainControllerName
+The name of a domain controller to use when performing the JIT operation against
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteName
+The name of the site to use when trying to find a domain controller to perform the JIT operation against
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named
