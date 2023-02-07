@@ -64,6 +64,7 @@
   * [KB000003: Configuring the Access Manager Agent to manage an account other than 'root' on Linux](help-and-support/support-articles/kb000003.md)
   * [KB000004: Creating a log file to troubleshoot installation issues with the Access Manager Service](help-and-support/support-articles/kb000004.md)
   * [KB000005: Access Manager stops working after applying the November 2022 Windows update](help-and-support/support-articles/kb000005.md)  
+  * [KB000006: Migrating the Access Manager Database](help-and-support/support-articles/kb000006.md)  
 
 * [Advanced help topics](help-and-support/advanced-help-topics/README.md)
   * [Ports and traffic flows](help-and-support/advanced-help-topics/ports-and-traffic-flows.md)
