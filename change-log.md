@@ -1,5 +1,10 @@
 # Change log
 
+## v2.0.9411 9th Feb 2023
+### Access Manager Service
+- [FIX] Fixes an issue where searching for a computer in a different forest by its DNS name would not work
+- [FIX] Fixes an issue where an error message would be shown in the UI when there was no certificate configuration deployed to Active Directory
+
 ## v2.0.9410 1st Feb 2023
 ### Access Manager Service
 - [FIX] Fixes an issue where the effective access calculator would show 'access denied' for LAPS history when an enterprise license was not present
