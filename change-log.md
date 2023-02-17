@@ -1,5 +1,9 @@
 # Change log
 
+## v2.0.9412 18th Feb 2023
+### Access Manager Service
+- [FIX] Fixes an issue where the JIT group creation service would not create groups where multiple rules were configured pointing to the same source OU
+
 ## v2.0.9411 9th Feb 2023
 ### Access Manager Service
 - [FIX] Fixes an issue where searching for a computer in a different forest by its DNS name would not work
