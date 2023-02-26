@@ -1,4 +1,11 @@
 # Change log
+## v2.0.9417 27th Feb 2023
+### Access Manager Service
+- [FIX] Fixes an issue where agents behind a reverse proxy may not be able to change their local admin passwords. Note both the agent and server must be running at least v2.0.9417
+
+### Access Manager Agent
+- [FIX] Fixes an issue where agents behind a reverse proxy may not be able to change their local admin passwords. Note both the agent and server must be running at least v2.0.9417
+- [FIX] Fixes an issue where Windows agents do not start if the `Server` service is disabled.
 
 ## v2.0.9412 18th Feb 2023
 ### Access Manager Service
