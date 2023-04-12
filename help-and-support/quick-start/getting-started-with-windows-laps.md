@@ -2,15 +2,17 @@
 
 Microsoft [recently announced](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/by-popular-demand-windows-laps-available-now/ba-p/3788747) that the new version of Windows LAPS has been released via Windows Update to Windows 10, 11, Windows Server 2019 and above! This is great news as it brings LAPS capability to all supported operating systems without needing any additional installation.
 
-Windows LAPS replaces the 'legacy' LAPS that required manual installation, and is now built into the operating system itself. It has received some major new features including support for encrypting LAPS passwords, and storing a history of LAPS passwords.
+Windows LAPS replaces the 'legacy' LAPS that required a separate installation, and is now built into the operating system itself. It has received major new features including support for encrypting LAPS passwords, and storing a history of LAPS passwords.
 
-What's even better is that Lithnet Access Manager works with the new Windows LAPS out of the box! You can combine the power of Windows LAPS with our web-based, mobile-friendly app, so your users can access your LAPS passwords with ease. Our app is MFA-ready with support for Azure AD and other OpenID Connect providers, and it has friendly, yet highly customizable auditing capability.
+The great news is that Lithnet Access Manager works with Windows LAPS out of the box! 
 
-Windows LAPS and Lithnet Access Manager make the perfect pair ❤.
+You can combine the power of Windows LAPS with our web-based, mobile-friendly app, so your users can securely access your LAPS passwords with ease. Our app is MFA-ready with support for Azure AD and other OpenID Connect providers, and it has friendly, yet highly customizable auditing capability.
+
+Windows LAPS and Lithnet Access Manager make the perfect pair ❤
 
 ![](/.gitbook/assets/web-request-laps.gif)
 
-In this guide, we'll show you how to get up and running with Access Manager and Windows LAPS. 
+In this guide, we'll show you how to get up and running by configuring Windows LAPS, and then accessing those passwords with Lithnet Access Manager. 
 
 ## Step 1: Prepare the Active Directory for Windows LAPS
 
