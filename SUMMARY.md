@@ -58,6 +58,8 @@
 
 * [Frequently asked Questions](help-and-support/frequently-asked-questions.md)
 * [Troubleshooting](help-and-support/troubleshooting.md)
+* [Quick start guides](help-and-support/quick-start/README.md)
+  * [Getting started with Windows LAPS](help-and-support/quick-start/getting-started-with-windows-laps.md)
 * [Support Articles](help-and-support/support-articles/README.md)
   * [KB000001: The Access Manager Agent cannot connect and logs a token-validation-failed error](help-and-support/support-articles/kb000001.md)
   * [KB000002: Users retain their admin rights after their JIT period expires](help-and-support/support-articles/kb000002.md)

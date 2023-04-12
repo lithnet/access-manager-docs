@@ -1,4 +1,8 @@
 # Change log
+## v2.0.2419 11 Apr 2023
+### Access Manager Service
+- [FEATURE] Allows community edition to access encryted Windows LAPS passwords
+
 ## v2.0.9417 27th Feb 2023
 ### Access Manager Service
 - [FIX] Fixes an issue where agents behind a reverse proxy may not be able to change their local admin passwords. Note both the agent and server must be running at least v2.0.9417
