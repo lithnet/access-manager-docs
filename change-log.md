@@ -1,7 +1,12 @@
 # Change log
-## v2.0.2419 11 Apr 2023
+
+## v2.0.2420 14th April 2023
 ### Access Manager Service
-- [FEATURE] Allows community edition to access encryted Windows LAPS passwords
+- [FIX] Fixes an issue decrypting Windows LAPS passwords
+
+## v2.0.2419 11th Apr 2023
+### Access Manager Service
+- [FEATURE] Allows community edition to access encrypted Windows LAPS passwords
 
 ## v2.0.9417 27th Feb 2023
 ### Access Manager Service
