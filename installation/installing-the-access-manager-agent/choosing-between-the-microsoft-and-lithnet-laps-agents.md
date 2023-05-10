@@ -38,7 +38,7 @@ Cons
 - Your organization has modern Windows operating systems either joined to Azure AD or Active Directory
 
 ## Option 3: Lithnet Access Manager agent 
-Lithnet Access Manager has its own agent that can be used to managing the local admin passwords of your devices. It has full support for encrypted passwords, password history, and is not just supported on Windows, but macOS and Linux as well.
+Lithnet Access Manager has its own agent that can be used to manage the local admin passwords of your devices. It has full support for encrypted passwords, password history, and is not just supported on Windows, but macOS and Linux as well.
 
 Pros
 - Supports Windows, macOS, and Linux
