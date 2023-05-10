@@ -4,7 +4,7 @@ Lateral movement is a technique used by attackers, where after gaining initial a
 
 Windows systems are particularly prone to lateral-movement based attacks. It is not uncommon for desktop support staff to be administrators of all workstations, and server admin staff to be an administrator of every server. In some environments, the local admin password is the same on every machine. These configurations make it trivial to exploit a Windows environment.
 
-Ransomware in particular loves this type of environment.
+Ransomware operators love this type of environment.
 
 In most cases, large-scale ransomware attacks are successful because they manage to steal credentials of accounts that are admins on large numbers of computers.
 

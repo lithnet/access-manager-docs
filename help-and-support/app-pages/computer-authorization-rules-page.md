@@ -79,6 +79,12 @@ If at least one of your ACLs allows access to the local admin passwords of the s
 
 This has the effect of setting the expiry date for the password in the directory to a new date based on the interval you specify. The password be rotated the next time the Microsoft LAPS or Lithnet Access Manager agents check in _after_ this new time. Note, that the Microsoft LAPS client checks the password at group policy refresh time (every \~90 minutes) and the Lithnet Access Manager agent by default, checks every 60 minutes, so rotations may be delayed by these intervals.
 
+{% hint style="info" %}
+When a computer is using Microsoft's Windows LAPS agent, and it is configured to store its password in Azure AD, then password rotation is not possible. Azure AD does not provide an API that AMS can use to indicate to the machine that the password should be rotated. 
+
+You can however use the built-in [PostAuthenticationActions and PostAuthenticationResetDelay policy settings](https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-management-policy-settings#postauthenticationresetdelay) to trigger the password change after logon.
+{% endhint %}
+
 #### Just-in-time access settings
 
 ![](../../images/ui-page-authorization-rules-computers-edit-rule-jit-settings.png)

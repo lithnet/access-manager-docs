@@ -67,7 +67,7 @@ There are no configuration changes required to AMS or AD to transition to the in
 
 Enterprise edition customers can run multiple front-end AMS servers. As long as one of the servers is up, then the scheduled removal will be executed.
 
-The gold standard for JIT access, will always be using the [Privileged Access Management optional forest feature](https://docs.microsoft.com/en-us/openspecs/windows\_protocols/ms-adts/d079eee8-1bac-4b03-86e4-506a21450905) of Active Directory. We do recommend upgrading to Windows Server 2016 functional level, and enabling the PAM optional feature for the best JIT experience possible. Access Manager will always use this mode for JIT if it is available in the domain.
+The gold standard for JIT access, will always be using the [Privileged Access Management optional forest feature](https://docs.microsoft.com/en-us/openspecs/windows_protocols/ms-adts/d079eee8-1bac-4b03-86e4-506a21450905) of Active Directory. We do recommend upgrading to Windows Server 2016 functional level, and enabling the PAM optional feature for the best JIT experience possible. Access Manager will always use this mode for JIT if it is available in the domain.
 
 ### Audit templates
 Access Manager v1 allowed you to provide an individual success and failure file to be used for email and webhook templates.

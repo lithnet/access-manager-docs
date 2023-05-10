@@ -28,9 +28,9 @@ From the `Authorization rules/Computers` page, select `Add...` to create a new r
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to read the local admin password.
 
-```
+{% hint style="info" %}
 For Azure AD devices, only the `Local admin password` and `Local admin password history` permissions are valid.
-```
+{% endhint %}
 
 ![](../../../images/ui-page-authz-editsecurity-laps-only.png)
 

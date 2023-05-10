@@ -2,14 +2,7 @@
 
 ## Do I need to deploy the Lithnet Access Manager Agent?
 
-The Lithnet Access Manager Agent is only required if you have one of the following requirements
-
-1. You want your local admin passwords encrypted in the directory
-2. You want to store previous local admin passwords in the directory
-3. You want to support Azure AD joined, or Azure AD registered devices
-4. You want to manage local admin passwords on non-Windows devices
-
-If you want to use the Access Manager web app to access Microsoft LAPS passwords you do not need to use the Access Manager Agent.
+The Lithnet Access Manager Agent is only required in certain scenarios. The Access Manager Server is capable of reading LAPS passwords set by Microsoft's legacy LAPS agent, the new Windows LAPS agent, as well as the Access Manager Agent.
 
 Read our guide on [Choosing a local admin password strategy](../installation/installing-the-access-manager-agent/choosing-between-the-microsoft-and-lithnet-laps-agents.md) to learn more about the differences between using the Microsoft LAPS agent and the Lithnet Access Manager Agent.
 

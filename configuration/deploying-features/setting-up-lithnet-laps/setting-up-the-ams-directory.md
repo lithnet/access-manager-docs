@@ -61,8 +61,8 @@ If you are not using Azure AD for authentication, or you'd like to create a sepa
 4. Add the client ID, secret, and directory/tenant ID in the fields provided
 5. Save the tenant configuration
 
-```
+{% hint style="info" %}
 You may need to wait a minute or two for the secret and delegation to become active
-```
+{% endhint %}
 
 Access Manager is now configured to support Azure AD joined and registered devices.
