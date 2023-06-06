@@ -1,5 +1,10 @@
 # Change log
 
+## v2.0.9424 6th Jun 2023
+### Access Manager Service
+- \[FIX\] Fixes an issue where the web UI reports that an Azure AD device does not have a LAPS password
+- \[FIX\] Fixes an issue where the installer was unable to validate an Azure SQL connection string
+
 ## v2.0.2422 9th May 2023
 ### Access Manager Service
 - \[FEATURE\] Adds support for reading Windows LAPS passwords from Azure AD
