@@ -1,6 +1,11 @@
 # Change log
 
-## v2.0.9424 6th Jun 2023
+## v2.0.9427 11th June 2023
+### Access Manager Service
+- \[FIX\] Fixes an issue when exporting permissions that would result in target names being exported as SIDs instead of friendly names 
+- \[FIX\] Fixes an issue where a recently re-imaged machine with the Access Manager agent may not change its password until the next scheduled check in time
+
+## v2.0.9424 6th June 2023
 ### Access Manager Service
 - \[FIX\] Fixes an issue where the web UI reports that an Azure AD device does not have a LAPS password
 - \[FIX\] Fixes an issue where the installer was unable to validate an Azure SQL connection string
