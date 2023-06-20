@@ -1,4 +1,13 @@
 # Change log
+## v2.0.9430 20th June 2023
+### Access Manager Service
+- \[FIX\] Fixes an issue where an error message appears after clicking on the help link in the Azure AD tenant information screen
+- \[UPDATE\] Updates installer .NET package prerequisites to 6.0.18
+
+### Access Manager Agent
+- \[UPDATE\] Updates macOS and Linux agents with latest .NET dependencies
+- \[FIX\] Updates logic to prevent the Access Manager Agent from starting when Windows LAPS is in use
+- \[FIX\] Fixes an issue where the agent is unable to change the local admin password when the 'Server' service is disabled
 
 ## v2.0.9427 11th June 2023
 ### Access Manager Service
