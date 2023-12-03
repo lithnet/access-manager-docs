@@ -73,9 +73,12 @@ The following operating system versions have been tested and are fully supported
 | Fedora       | 35      | x64/arm64    |
 | Fedora       | 36      | x64/arm64    |
 | Fedora       | 37      | x64/arm64    |
+| Fedora       | 38      | x64/arm64    |
+| Fedora       | 39      | x64/arm64    |
 | Debian       | 9       | x64          |
 | Debian       | 10      | x64/arm64    |
 | Debian       | 11      | x64/arm64    |
+| Debian       | 12      | x64/arm64    |
 
 #### Password storage
 
