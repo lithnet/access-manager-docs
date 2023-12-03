@@ -1,4 +1,16 @@
 # Change log
+## v2.0.9456 3rd December 2023
+### Access Manager Service
+- \[FIX\] Updates the Graph API endpoint used to retrieve Windows LAPS passwords from Azure AD
+- \[FIX\] Fixes an issue where the app upgrade check may hang, causing the UI to be unable to start
+- \[FIX\] Improves logging when the service is unable to read critical attributes about users from the directory due to missing permissions
+- \[FIX\] Fixes an issue where a JIT removal job does not get removed when a JIT request fails, preventing subsequent JIT access requests for the same user and computer to fail
+
+### Access Manager Agent
+- \[FEATURE\] Adds support for Debian 12 (Bookworm)
+- \[FEATURE\] Adds support for Fedora 38
+- \[FEATURE\] Adds support for Fedora 39
+
 ## v2.0.9430 20th June 2023
 ### Access Manager Service
 - \[FIX\] Fixes an issue where an error message appears after clicking on the help link in the Azure AD tenant information screen
