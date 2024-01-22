@@ -1,5 +1,5 @@
 # Change log
-## v2.0.9514.0 23rd January 2024
+## v2.0.9514 23rd January 2024
 ### Access Manager Service
 - \[SECURITY\] Addressed issue in Microsoft.Data.SqlClient [CVE-2024-0056](https://github.com/dotnet/announcements/issues/292)
 
