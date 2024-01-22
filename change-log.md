@@ -1,4 +1,8 @@
 # Change log
+## v2.0.9514.0 23rd January 2024
+### Access Manager Service
+- \[SECURITY\] Addressed issue in Microsoft.Data.SqlClient [CVE-2024-0056](https://github.com/dotnet/announcements/issues/292)
+
 ## v2.0.9456 3rd December 2023
 ### Access Manager Service
 - \[FIX\] Updates the Graph API endpoint used to retrieve Windows LAPS passwords from Azure AD
