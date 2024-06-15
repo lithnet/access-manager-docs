@@ -8,7 +8,9 @@ __RapidLAPS passwordless login__
 
 Have you ever had to communicate a LAPS password over the phone? Are you tired of having to type in a complicated LAPS password over and over again, just to install some software?
 
-With *RapidLAPS*, using just a QR code, or PIN, you can log into any LAPS-enabled computer, without ever having to type a long and complicated password! *RapidLAPS* integrates into the Windows lock screen and UAC prompts, allowing you to speed up the LAPS process wherever you use local admin accounts!
+With *RapidLAPS*, using just a QR code, or PIN, you can log into any LAPS-enabled computer, without ever having to type a long and complicated password!
+
+*RapidLAPS* integrates into the Windows lock screen and UAC prompts, allowing you to speed up the LAPS process wherever you use local admin accounts!
 
 The great news is that this feature works, whether you are using Windows LAPS, Microsoft Legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
 {% endhint %}
@@ -26,11 +28,11 @@ You can import wordlists for any language, ensuring you can support users in all
 {% hint style="info" %}
 __Unified policy management__
 
-AMS Agent settings are now unified across all supported client operating systems.
+AMS Agent settings are now unified across all supported client operating systems; you can target policies at AMS, Active Directory and Entra ID groups, organsational units and devices.
 
-You can target policies at AMS, Active Directory and Entra ID groups, organsational units and devices.
+Active Directory-joined devices can now be managed by, and backup their local administrator passwords to the AMS server directly.
 
-Active Directory-joined devices can now be managed by, and backup their local administrator passwords to the AMS server directly. Devices can now use Kerberos authentication to register with the AMS server, removing the need to issue registration keys when devices are joined to an Active Directory domain.
+Devices can now use Kerberos authentication to register with the AMS server, removing the need to issue registration keys when devices are joined to an Active Directory domain.
 
 This means that wherever your devices are, or the directory they're tied to - managing LAPS configuration is as seamless as possible!
 {% endhint %}
