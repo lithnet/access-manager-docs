@@ -16,7 +16,11 @@
 
 ### Access Manager Agent (Version 3)
 {% hint style="warning" %}
-**Note**: The Access Manager Agent v3 is only compatible with a v3 Access Manager Service. Ensure that your AMS server is up to date *before* deploying AMS v3 agents to devices in your environment. For more information, see our [Upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
+**Note**: The Access Manager Agent v3 is only compatible with a server running Access Manager Service v3.
+
+Ensure that your AMS server is up to date *before* deploying AMS v3 agents to devices in your environment.
+
+For more information on planning your AMS v3 migration, see our [Upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
 {% endhint %}
 
 | Item | Operating system | Architecture |
@@ -38,7 +42,11 @@
 ### Access Manager Agent (Version 2)
 
 {% hint style="info" %}
-**Note**: Access Manager Agent (Version 2) is supported by both v2 and v3 Access Manager servers. For more information, see our [Upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
+**Note**: Access Manager Agent v2 is supported by servers running either Access Manager v2 or v3.
+
+However, [features introduced in Access Manager v3](../whats-new.md) are not available in these agents.
+
+For more information on planning your AMS v3 migration, see our [Upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
 {% endhint %}
 
 | Item | Operating system | Architecture |
