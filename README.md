@@ -1,12 +1,12 @@
 # Home
 
-![](<.gitbook/assets/access-manager-logo (1).png>)
+![](<.gitbook/assets/access-manager-logo.png>)
 
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way.
 
 It provides a web-based interface that allows users to request local admin/root passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts.
 
-It is fully compatible and works out-of-the-box with Microsoft LAPS, but also comes with its own agent, which expands LAPS coverage to Azure AD joined and registered devices, as well as macOS and Linux devices.
+It is fully compatible and works out-of-the-box with Microsoft LAPS (legacy and Windows LAPS), but also comes with its own agent, which expands LAPS coverage to all Windows, macOS and Linux devices - regardless of how they're managed.
 
 Access Manager provides a granular permission model, coupled with a detailed auditing system, both of which are extensible using PowerShell.
 
@@ -32,11 +32,9 @@ We use LAPS passwords ourselves, so we know they can be painful at times. We try
 
 Whether you use Microsoft LAPS, or the Lithnet Access Manager agent, the user experience is the same.
 
-**Access historical local admin passwords**
+**RapidLAPS - Passwordless LAPS login & elevation**
 
-Deploying the Lithnet Access Manager Agent to your fleet allows you to upgrade to encrypted local admin passwords and gain the benefit of having previous local admin passwords stored in the directory as well. This means no more issues getting locked out of computers when they are restored from backup or reverted from a snapshot.
-
-![](.gitbook/assets/web-request-laps-history.gif)
+TODO
 
 **Just-in-time administrative access to computers**
 
@@ -49,6 +47,12 @@ Using the same web interface, users can request that their account be added to a
 Access Manager allows you to provide your users with just-in-time access to custom roles that you define. When a user is granted access to a role, Access Manager will add them to the corresponding Active Directory group, and automatically remove them when the allowed time period has elapsed.
 
 ![](.gitbook/assets/web-request-jit-roles.gif)
+
+**Access historical local admin passwords**
+
+Deploying the Lithnet Access Manager Agent to your fleet allows you to upgrade to encrypted local admin passwords and gain the benefit of having previous local admin passwords stored in the directory as well. This means no more issues getting locked out of computers when they are restored from backup or reverted from a snapshot.
+
+![](.gitbook/assets/web-request-laps-history.gif)
 
 **Easy access to BitLocker recovery passwords**
 
