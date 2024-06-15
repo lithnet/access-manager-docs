@@ -18,7 +18,7 @@ New features include:
   - Devices can now use Kerberos authentication to register with the AMS server, removing the need to issue registration keys when devices are joined to an Active Directory domain.
   - Active Directory-joined devices can now be managed by, and backup their local administrator passwords to the AMS server directly.
 - __Splunk auditing__
-  - Audit events can now be forwarded directly to Splunk.
+  - Audit events can now be forwarded directly to Splunk in JSON format.
 - *And much more!*
 
 For a complete list of new, changed, deprecated and removed features in Access Manager Version 3, see the [What's new in Access Manager v3](whats-new.md) page!

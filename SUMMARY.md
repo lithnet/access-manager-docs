@@ -5,7 +5,7 @@
 * [How does Lithnet Access Manager help prevent lateral movement?](preventing-lateral-movement.md)
 * [Access Manager Editions](access-manager-editions.md)
 * [Licensing](licensing.md)
-* [Change log](change-log.md)
+* [Changelog](change-log.md)
 
 ## Installation
 
@@ -13,6 +13,7 @@
 * [System Requirements](installation/system-requirements.md)
 * [Downloads](installation/downloads.md)
 * [Upgrading from Access Manager v1](installation/upgrading-from-v1.md)
+* [Upgrading from Access Manager v1](installation/upgrading-from-v2.md)
 * [Installing the Access Manager Server](installation/installing-the-access-manager-server/README.md)
   * [Creating a service account for the Access Manager Service](installation/installing-the-access-manager-server/creating-a-service-account-for-the-access-manager-service.md)
   * [SQL installation options](installation/installing-the-access-manager-server/sql-installation-options.md)

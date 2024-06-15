@@ -12,7 +12,7 @@ With *RapidLAPS*, using just a QR code, or PIN, you can log into any LAPS-enable
 
 *RapidLAPS* integrates into the Windows lock screen and UAC prompts, allowing you to speed up the LAPS process wherever you use local admin accounts!
 
-The great news is that this feature works, whether you are using Windows LAPS, Microsoft Legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
+The great news is that this feature works, hether you are using Windows LAPS, legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
 {% endhint %}
 
 {% hint style="info" %}
@@ -50,7 +50,7 @@ This means that wherever your devices are, or the directory they're tied to - ma
 * Added support for 'automatic JIT access group creation' rules to assign a Unix-style 'gidNumber' attribute to created groups
 
 ### Deprecated features
-* 
+* Retrieval of Lithnet encrypted LAPS passwords from Active Directory. 
 
 ### Removed features
 * Entra-registered clients running the Access Manager agent can no longer use Entra authentication. Devices must be be Entra-joined in order to authenticate with the Access Manager server.
@@ -65,7 +65,7 @@ The agent now supports passphrases, backing up BitLocker reocvery keys for Windo
 ### New features
 * RapidLAPS login and elevation - login with the AMS managed
   * Using just a QR code, or PIN, you can log into any LAPS-enabled computer, without ever having to type a long and complicated LAPS password.
-  * Provides a [credential provider](https://learn.microsoft.com/en-us/windows/win32/secauthn/credential-providers-in-windows) which can be used for workstation unlock, and at UAC prompts.
+  * Provides a [credential provider](https://learn.microsoft.com/en-us/windows/win32/secauthn/credential-providers-in-windows) which can be used for workstation unlock and at any UAC prompt.
   * *Note*: Windows only
 * Password management updates
     * Ability to generate passphrases for local administrator accounts.
