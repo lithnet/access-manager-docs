@@ -57,7 +57,7 @@ Scripts must complete within 10 seconds, or they are cancelled by the Access Man
 The [audit variables](audit-variables.md) page contains a full list of all valid variables that you can use throughout your scripts.
 
 ## Legacy (v1) PowerShell scripts
-Access Manager v1 used a slightly different PowerShell script format. These scripts are still supported by Access Manager v2, but only work for Computer access auditing. You should upgrade any scripts to v2 scripts to ensure full audit information for all types of access requests is available.
+Access Manager v1 used a slightly different PowerShell script format. These scripts are still supported by Access Manager v3, but only work for Computer access auditing. You should upgrade any scripts to v3 scripts to ensure full audit information for all types of access requests is available.
 
 ```powershell
 function Write-AuditLog{
