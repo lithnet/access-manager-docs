@@ -21,7 +21,7 @@ Set-AmsComputerAuthorizationRule -Id <String> [-JitGroupName <String>] [-JitMaxi
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Set the rule target to an Azure AD tenant
+### Set the rule target to a Microsoft Entra tenant
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> [-JitGroupName <String>]
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
@@ -30,7 +30,7 @@ Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> [-JitGroupNa
  [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Set the rule target to an Azure AD group
+### Set the rule target to a Microsoft Entra group
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> -AadGroupId <String>
  [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
@@ -40,7 +40,7 @@ Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> -AadGroupId 
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Set the rule target to an Azure AD computer
+### Set the rule target to a Microsoft Entra computer
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> -AadComputerId <String>
  [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
@@ -150,11 +150,11 @@ Targets the rule to the `AccountingServers` AD group
 ## PARAMETERS
 
 ### -AadComputerId
-The object ID of an Azure AD computer
+The object ID of a Microsoft Entra computer
 
 ```yaml
 Type: String
-Parameter Sets: Set the rule target to an Azure AD computer
+Parameter Sets: Set the rule target to a Microsoft Entra computer
 Aliases:
 
 Required: True
@@ -165,11 +165,11 @@ Accept wildcard characters: False
 ```
 
 ### -AadGroupId
-The object ID of an Azure AD group
+The object ID of a Microsoft Entra group
 
 ```yaml
 Type: String
-Parameter Sets: Set the rule target to an Azure AD group
+Parameter Sets: Set the rule target to a Microsoft Entra group
 Aliases:
 
 Required: True
@@ -180,11 +180,11 @@ Accept wildcard characters: False
 ```
 
 ### -AadTenantId
-The tenant ID of a registered Azure AD tenant
+The tenant ID of a registered Microsoft Entra tenant
 
 ```yaml
 Type: String
-Parameter Sets: Set the rule target to an Azure AD tenant, Set the rule target to an Azure AD group, Set the rule target to an Azure AD computer
+Parameter Sets: Set the rule target to a Microsoft Entra tenant, Set the rule target to a Microsoft Entra group, Set the rule target to a Microsoft Entra computer
 Aliases:
 
 Required: True

@@ -12,7 +12,7 @@ Creates a new computer authorization rule
 
 ## SYNTAX
 
-### Azure AD tenant target authorized by ACL
+### Microsoft Entra tenant target authorized by ACL
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> [-PrincipalsAllowedLaps <Object[]>]
  [-PrincipalsDeniedLaps <Object[]>] [-PrincipalsAllowedLapsHistory <Object[]>]
@@ -22,7 +22,7 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> [-PrincipalsAllowedLaps <
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Azure AD tenant target authorized by script
+### Microsoft Entra tenant target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AuthorizationScriptPath <String>
  [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
@@ -31,7 +31,7 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AuthorizationScriptPath 
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Azure AD group target authorized by ACL
+### Microsoft Entra group target authorized by ACL
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> [-PrincipalsAllowedLaps <Object[]>]
  [-PrincipalsDeniedLaps <Object[]>] [-PrincipalsAllowedLapsHistory <Object[]>]
@@ -41,7 +41,7 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> [-Pr
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Azure AD group target authorized by script
+### Microsoft Entra group target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> -AuthorizationScriptPath <String>
  [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
@@ -50,7 +50,7 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> -Aut
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Azure AD computer target authorized by ACL
+### Microsoft Entra computer target authorized by ACL
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
  [-PrincipalsAllowedLaps <Object[]>] [-PrincipalsDeniedLaps <Object[]>]
@@ -61,7 +61,7 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
 
-### Azure AD computer target authorized by script
+### Microsoft Entra computer target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
  -AuthorizationScriptPath <String> [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
@@ -191,7 +191,7 @@ This example creates a new authorization rule, that allows all members of the `D
 PS C:\> New-AmsComputerAuthorizationRule -AadTenantId '2b693132-7e65-4603-b508-910a2b4487c8' -PrincipalsAllowedLaps 'DOMAIN\AuthorizedLapsReaders' -UserRequestReason Required
 ```
 
-This example creates a new authorization rule, that allows all members of the `DOMAIN\AuthorizedLapsReaders` group to access the LAPS password for all devices in the specified Azure AD tenant, and specifies that the user must provide a reason when requesting access to the LAPS password
+This example creates a new authorization rule, that allows all members of the `DOMAIN\AuthorizedLapsReaders` group to access the LAPS password for all devices in the specified Microsoft Entra tenant, and specifies that the user must provide a reason when requesting access to the LAPS password
 
 ### Example 3
 ```powershell
@@ -210,11 +210,11 @@ This example creates a new authorization rule, that allows all members of the `D
 ## PARAMETERS
 
 ### -AadComputerId
-The object ID of an Azure AD computer
+The object ID of a Microsoft Entra computer
 
 ```yaml
 Type: String
-Parameter Sets: Azure AD computer target authorized by ACL, Azure AD computer target authorized by script
+Parameter Sets: Microsoft Entra computer target authorized by ACL, Microsoft Entra computer target authorized by script
 Aliases:
 
 Required: True
@@ -225,11 +225,11 @@ Accept wildcard characters: False
 ```
 
 ### -AadGroupId
-The object ID of an Azure AD group
+The object ID of a Microsoft Entra group
 
 ```yaml
 Type: String
-Parameter Sets: Azure AD group target authorized by ACL, Azure AD group target authorized by script
+Parameter Sets: Microsoft Entra group target authorized by ACL, Microsoft Entra group target authorized by script
 Aliases:
 
 Required: True
@@ -240,11 +240,11 @@ Accept wildcard characters: False
 ```
 
 ### -AadTenantId
-The tenant ID of a registered Azure AD tenant
+The tenant ID of a registered Microsoft Entra tenant
 
 ```yaml
 Type: String
-Parameter Sets: Azure AD tenant target authorized by ACL, Azure AD tenant target authorized by script, Azure AD group target authorized by ACL, Azure AD group target authorized by script, Azure AD computer target authorized by ACL, Azure AD computer target authorized by script
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra tenant target authorized by script, Microsoft Entra group target authorized by ACL, Microsoft Entra group target authorized by script, Microsoft Entra computer target authorized by ACL, Microsoft Entra computer target authorized by script
 Aliases:
 
 Required: True
@@ -334,7 +334,7 @@ The path to the authorization script to import
 
 ```yaml
 Type: String
-Parameter Sets: Azure AD tenant target authorized by script, Azure AD group target authorized by script, Azure AD computer target authorized by script, AD computer target authorized by script, AD group target authorized by script, AD container target authorized by script, AMS computer target authorized by script, AMS group target authorized by script
+Parameter Sets: Microsoft Entra tenant target authorized by script, Microsoft Entra group target authorized by script, Microsoft Entra computer target authorized by script, AD computer target authorized by script, AD group target authorized by script, AD container target authorized by script, AMS computer target authorized by script, AMS group target authorized by script
 Aliases:
 
 Required: True
@@ -529,7 +529,7 @@ The list of principals who are allowed LAPS access to this computer.
 
 ```yaml
 Type: Object[]
-Parameter Sets: Azure AD tenant target authorized by ACL, Azure AD group target authorized by ACL, Azure AD computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
 Aliases:
 
 Required: False
@@ -544,7 +544,7 @@ The list of principals who are allowed LAPS history access to this computer.
 
 ```yaml
 Type: Object[]
-Parameter Sets: Azure AD tenant target authorized by ACL, Azure AD group target authorized by ACL, Azure AD computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
 Aliases:
 
 Required: False
@@ -589,7 +589,7 @@ The list of principals who are not allowed LAPS access to this computer.
 
 ```yaml
 Type: Object[]
-Parameter Sets: Azure AD tenant target authorized by ACL, Azure AD group target authorized by ACL, Azure AD computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
 Aliases:
 
 Required: False
@@ -604,7 +604,7 @@ The list of principals who are not allowed LAPS history access to this computer.
 
 ```yaml
 Type: Object[]
-Parameter Sets: Azure AD tenant target authorized by ACL, Azure AD group target authorized by ACL, Azure AD computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
 Aliases:
 
 Required: False
