@@ -83,6 +83,7 @@
   * [Variables available in audit notification channels](help-and-support/advanced-help-topics/audit-variables.md)
   * [Setting up audit templates](help-and-support/advanced-help-topics/audit-templates.md)
   * [Backup and Restore](help-and-support/advanced-help-topics/backup-and-restore.md)
+  * [Event ID reference](help-and-support/advanced-help-topics/event-ids.md)
 * [PowerShell reference](help-and-support/powershell-help/PowerShellModule.md)
   * [Add-AmsDeviceRegistrationKeyGroup](help-and-support/powershell-help/Add-AmsDeviceRegistrationKeyGroup.md)
   * [Add-AmsGroupMember](help-and-support/powershell-help/Add-AmsGroupMember.md)
