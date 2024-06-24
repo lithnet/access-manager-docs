@@ -8,3 +8,4 @@ makefile
 _build/
 thumbs.db
 .vscode/
+/.vs
