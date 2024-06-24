@@ -1,4 +1,4 @@
-# Changelog
+# Change log
 
 # Version 3.x
 
@@ -23,8 +23,19 @@ New features include:
 
 For a complete list of new, changed, deprecated and removed features in Access Manager Version 3, see the [What's new in Access Manager v3](whats-new.md) page!
 
-
 # Version 2.x
+
+## v2.0.9519 27rd February 2024
+### Access Manager Service
+- \[FIX\] Fixes an issue where the wrong DC may be used to perform a JIT operations against a computer if the JIT operation is first performed when the computer is off
+
+## v2.0.9514 23rd January 2024
+### Access Manager Service
+- \[SECURITY\] Addressed issue in Microsoft.Data.SqlClient [CVE-2024-0056](https://github.com/dotnet/announcements/issues/292)
+
+## v2.0.9456 3rd December 2023
+### Access Manager Service
+# Changelog
 
 ### v2.0.9456 3rd December 2023
 ##### Access Manager Service

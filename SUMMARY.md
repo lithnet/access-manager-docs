@@ -72,6 +72,7 @@
   * [KB000005: Access Manager stops working after applying the November 2022 Windows update](help-and-support/support-articles/kb000005.md)  
   * [KB000006: Migrating the Access Manager Database](help-and-support/support-articles/kb000006.md)
   * [KB000007: Adding JIT groups via Group Policy doesn't work with NTLM Disabled](help-and-support/support-articles/kb000007.md)
+  * [KB000008: AMS is unable to JIT into privileged groups such as Domain Admins](help-and-support/support-articles/kb000008.md)
 
 * [Advanced help topics](help-and-support/advanced-help-topics/README.md)
   * [Ports and traffic flows](help-and-support/advanced-help-topics/ports-and-traffic-flows.md)
@@ -83,6 +84,7 @@
   * [Variables available in audit notification channels](help-and-support/advanced-help-topics/audit-variables.md)
   * [Setting up audit templates](help-and-support/advanced-help-topics/audit-templates.md)
   * [Backup and Restore](help-and-support/advanced-help-topics/backup-and-restore.md)
+  * [Event ID reference](help-and-support/advanced-help-topics/event-ids.md)
 * [PowerShell reference](help-and-support/powershell-help/PowerShellModule.md)
   * [Add-AmsDeviceRegistrationKeyGroup](help-and-support/powershell-help/Add-AmsDeviceRegistrationKeyGroup.md)
   * [Add-AmsGroupMember](help-and-support/powershell-help/Add-AmsGroupMember.md)

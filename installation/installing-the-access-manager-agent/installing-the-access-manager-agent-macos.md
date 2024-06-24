@@ -63,7 +63,7 @@ sudo launchctl kickstart -k system/io.lithnet.accessmanager.agent
 You can use the uninstallation script provided to remove the agent from the computer.
 
 ```shell
-sudo /Library/Application\ Support/Lithnet/AccessManagerAgent/Core/Lithnet.AccessManager.Agent/uninstall.sh
+sudo /Library/Application\ Support/Lithnet/AccessManagerAgent/Core/uninstall.sh
 ```
 
 ## Viewing log files
