@@ -1,6 +1,6 @@
 # Setting up just-in-time access to roles
 
-![](../../images/badge-enterprise-edition-rocket.svg) JIT for roles is an [Enterprise edition feature](../../access-manager-editions.md)
+![](../../../images/badge-enterprise-edition-rocket.svg) JIT for roles is an [Enterprise edition feature](../../access-manager-editions.md)
 
 Lithnet Access Manager allows you to define a role, based on an Active Directory group, that users are allowed to request access to on a temporary basis. 
 
@@ -32,11 +32,11 @@ You can now configure access to individual users and groups using the AMS config
 
 From the `Authorization rules/Roles` page, select `Add...` to create a new authorization rule. Provide a role name, and select the target group that will be used to grant access to this role. In the description field, provide a friendly description that will be seen be users when they select the role to claim.
 
-![!](../../images/ui-page-authorization-rules-roles-edit-rule-rule-settings.png)
+![!](../../../images/ui-page-authorization-rules-roles-edit-rule-rule-settings.png)
 
 In the `Access Control` section, select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to allow JIT access.
 
-![!](../../images/ui-page-authorization-rules-roles-edit-rule-access-control.png)
+![!](../../../images/ui-page-authorization-rules-roles-edit-rule-access-control.png)
 
 Specify the maximum duration of time the user can hold the role for, and set the default duration that will be pre-filled for them when they make the access request.
 

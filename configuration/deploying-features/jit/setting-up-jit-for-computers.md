@@ -33,11 +33,11 @@ If the Active Directory PAM forest feature is not enabled or not available, Acce
 
 Best practice for JIT is that each computer that you want to enable JIT for, has a dedicated JIT group created for it in AD. The Access Manager Service contains a feature that allows you to automatically create a JIT group for each computer.
 
-![!](../../images/ui-page-directory-configuration-active-directory-jit.png)
+![!](../../../images/ui-page-directory-configuration-active-directory-jit.png)
 
 From the `Directory Configuration/Active Directory/Just-in-time access` page, you can enable automatic JIT group creation. Click `Add` to create a new mapping.
 
-![!](../../images/ui-page-directory-configuration-active-directory-jit-group-mapping.png)
+![!](../../../images/ui-page-directory-configuration-active-directory-jit-group-mapping.png)
 
 Select the OU that contains the computers you want to create JIT groups for and select a different OU where the JIT groups should be created.
 
@@ -55,19 +55,19 @@ Note, using AMS specifically to create JIT groups is not required for JIT to wor
 
 Using the group policy editor, create a new group policy object and link it to the OU containing your computer objects. Open the policy and navigate to `Computer Configuration`, `Preferences`, `Control Panel Settings`, `Local Users and Groups`.
 
-![!](../../images/group-policy-local-users-and-groups.png)
+![!](../../../images/group-policy-local-users-and-groups.png)
 
 Right-click the `Local users and groups` node, and select `New`, `Local group`. Click the drop-down arrow on the `Group name` field, and select `Administrators (built-in)`.
 
-![!](../../images/group-policy-local-users-and-groups-new-group.png)
+![!](../../../images/group-policy-local-users-and-groups-new-group.png)
 
 Click the `Add` button, and the group, using the `%computername%` variable, specify the templated name of the group set in step 2.
 
-![!](../../images/group-policy-local-users-and-groups-add-member.png)
+![!](../../../images/group-policy-local-users-and-groups-add-member.png)
 
 Add the built-in admin account, by creating a new member entry for `Administrator`.
 
-![!](../../images/group-policy-local-users-and-groups-complete.png)
+![!](../../../images/group-policy-local-users-and-groups-complete.png)
 
 If you are ready to enforce JIT access, select the `Delete all member users` tick box, as well as the `Delete all member groups`. This will ensure that only the built-in administrator, the JIT group and any members specified in this policy are in the local administrators group.
 
@@ -85,11 +85,11 @@ From the `Authorization rules/Computers` page, select `Add...` to create a new a
 
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to allow JIT access.
 
-![!](../../images/ui-page-authz-editsecurity-jit.png)
+![!](../../../images/ui-page-authz-editsecurity-jit.png)
 
 You must provide the group name or template in the `Just-in-time access settings` area, as well as the length of time until the access is expired.
 
-![!](../../images/ui-page-authorization-rules-computers-edit-rule-jit-settings.png)
+![!](../../../images/ui-page-authorization-rules-computers-edit-rule-jit-settings.png)
 
 If you'd like to be notified when someone requests JIT access, select the notification channels you'd like to send to for success and failure events.
 
