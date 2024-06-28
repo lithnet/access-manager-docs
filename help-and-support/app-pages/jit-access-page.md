@@ -44,6 +44,24 @@ Select the type of group to create. There is rarely a reason to change this from
 
 The AMS service checks every 60 seconds for new computers in the domain, and will create a group for any new computers it finds. Once an hour, the service will do a full synchronization of groups and computers. Only at this time, will missing computers be detected, and groups deleted if the mapping is configured to do so.
 
+#### Unix Attributes
+
+If you intend to use JIT groups on Linux machines that are bound to Active Directory, you may require a `gid` attribute to be configured for your JIT groups.
+
+In the instance where your Active Directory domain has been configured with the [Identity Management for UNIX](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731178(v=ws.11)?redirectedfrom=MSDN) components, Access Manager can generate `gidNumber` attributes for JIT groups, such that they are visible by Unix machines.
+
+If configured, Access Manager will compute a `gid` for the group like so:
+* The group will be created in Active Directory, and the [security identifier (SID)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers) is retrieved.
+* The domain-unique [relative identifier (RID)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers#security-identifier-architecture) is extracted from the SID.
+* The GID is computed as `gid = rid + <offset>`, where offset is configured to ensure the generated identifiers do not clash with existing identifiers in your environment.
+* The resulting `gid` will be placed in the AD attribute of your choosing on the group object (default: `gidNumber`).
+
+When picking an offset, ensure that it is significantly large enough to prevent clashes with already-allocated `gid`s in your environment.
+
+> Note: This may not be required if your Linux/AD binding makes use of automatic ID mapping. For example, [SSSD](https://sssd.io/docs/ad/ad-provider.html#configuring-active-directory-to-use-posix-attributes) can be configured to automatically map Active Directory security identifiers (SIDs) to POSIX-style [`uid` and `gid` identifiers](https://en.wikipedia.org/wiki/User_identifier).
+
+
+
 ## JIT mode
 
 Based on the capabilities of your Active Directory domain, Access Manager can enable JIT support through two different mechanisms. _Active Directory time-based membership_ and the _AMS scheduler-managed membership_.
