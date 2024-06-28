@@ -1,4 +1,4 @@
-# Getting started with Windows LAPS for Azure Active Directory
+# Getting started with Windows LAPS for Microsoft Entra
 
 This quick-start guide will provide you with all the information you need to get up-and-running with using Lithnet Access Manager to access LAPS passwords created by the new Windows LAPS agent.
 
@@ -22,11 +22,11 @@ Now you can proceed with installing Access Manager itself. Our [detailed setup g
 
 If you just want to set up a quick test environment, you can use a single server deployment, with the built-in SQL Express engine, to simplify the deployment.
 
-### Step 4: Configure Access Manager to read LAPS passwords from Azure AD
+### Step 4: Configure Access Manager to read LAPS passwords from Microsoft Entra
 
-Once Access Manager is installed, you need to grant it the permissions it needs to read passwords from Azure AD, and assign access to your users.
+Once Access Manager is installed, you need to grant it the permissions it needs to read passwords from Microsoft Entra and assign access to your users.
 
-Follow the steps in the [configuration guide for Microsoft LAPS for Azure AD](/configuration/deploying-features/setting-up-microsoft-laps-for-aad.md) to correctly delegate and assign user permissions.
+Follow the steps in the [configuration guide for Microsoft LAPS for Entra](../../configuration/deploying-features/laps/setting-up-microsoft-laps-for-aad.md) to correctly delegate and assign user permissions.
 
 ### Step 6: Test user access
 

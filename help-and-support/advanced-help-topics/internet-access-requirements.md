@@ -2,8 +2,8 @@
 
 ## Access Manager Service installer
 The Access Manager service installer can be operated offline, however, it does require downloading and installing the following dependencies
-- [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
-- [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
+- [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime) 8.0.6 or later installed
+- [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime) 8.0.6 or later installed
 
 If you plan to use an SQL Express database, then you also need to [download the SQL Express installer](https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLEXPR_x64_ENU.exe) - however, do not install it manually. Copy the file to the server, and the installer will prompt you for the location of the installer, so it can perform the installation using the correct parameters. Installing SQL express manually will result in certain features like backup capability being broken.
 

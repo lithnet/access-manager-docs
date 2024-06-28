@@ -68,7 +68,7 @@
 * [Quick start guides](help-and-support/quick-start/README.md)
   * [Getting started with Windows LAPS and Lithnet Access Manager](help-and-support/quick-start/getting-started-with-windows-laps.md)
   * [Getting started with Windows LAPS for Active Directory](help-and-support/quick-start/getting-started-with-windows-laps-for-ad.md)
-  * [Getting started with Windows LAPS for Azure Active Directory](help-and-support/quick-start/getting-started-with-windows-laps-for-azuread.md)
+  * [Getting started with Windows LAPS for Entra](help-and-support/quick-start/getting-started-with-windows-laps-for-azuread.md)
 * [Support Articles](help-and-support/support-articles/README.md)
   * [KB000001: The Access Manager Agent cannot connect and logs a token-validation-failed error](help-and-support/support-articles/kb000001.md)
   * [KB000002: Users retain their admin rights after their JIT period expires](help-and-support/support-articles/kb000002.md)

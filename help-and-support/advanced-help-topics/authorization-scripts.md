@@ -30,6 +30,10 @@ function Get-AuthorizationResponse{
 		IsJitDenied = $false
 		IsBitLockerAllowed = $false
 		IsBitLockerDenied = $false
+        IsRapidLapsLoginAllowed = $false
+        IsRapidLapsLoginDenied = $false
+        IsRapidLapsElevationAllowed = $false
+        IsRapidLapsElevationDenied = $false
 	}
 
 	# Return the authorization response to Access Manager to process

@@ -17,7 +17,6 @@ The following diagram details the traffic flows and port requirements for a typi
 | AMS server | Active Directory DNS servers | DNS UDP 53 | DNS lookups |
 | AMS server | SQL Database | TSQL TCP 1433 | Connectivity to the AMS database (when not using SQL Express) |
 | AMS server | JIT target computers | RPC over SMB 445 | Used to query a computer when performing a JIT request to determine what DC and site it is in. This is optional, and AMS will fall back to using sites and services to try and find the closest DC to the target computer |
-| Windows domain-joined agent | Active Directory Domain Controllers | LDAP TCP 389 | LAPS password management |
-| Non-domain-joined agent | AMS Server | HTTPS TCP 443 | Agent registration, check in, and password management | 
+| Access Manager Agent | AMS Server | HTTPS TCP 443 | Agent registration, check in, and password management | 
 | Access Manager web-app users | AMS Server | HTTP TCP 80, HTTPS TCP 443 | Access to the web app |
 | Access Manager web-app users | OpenID Connect Identity Provider | HTTPS TCP 443 | OpenID Connect authentication |

@@ -47,7 +47,9 @@ Repeat the process for the encryption certificates located on the `Directory con
 
 ### Restoring the encryption certificate
 
-If you have an encryption key back you want to restore, then use the AMS configuration tool to import the PFX file into the database. This can be performing using the `import` button on either the `Directory configuration/Access Manager Directory/Lithnet LAPS` or `Directory configuration/Active Directory/Lithnet LAPS`, depending on which type of encryption certificate it is.
+If you have an encryption key backup you want to restore, then use the AMS configuration tool to import the PFX file into the database.
+
+This can be performing using the `import` button on either the `Access Manager Agent/Password settings` or `Directory configuration/Active Directory/Lithnet LAPS`, depending on which type of encryption certificate it is.
 
 ## Recovering from a lost encryption certificate private key
 

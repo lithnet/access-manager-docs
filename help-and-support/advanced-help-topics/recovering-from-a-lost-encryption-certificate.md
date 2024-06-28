@@ -5,7 +5,7 @@ In order to restore local admin password access to your environment, you need to
 
 ## Recovery steps for Lithnet LAPS for the Access Manager Directory
 ### Step 1: Generate a new certificate
-From the Access Manager Service configuration tool, visit the `Directory Configuration/Access Manager Directory/Lithnet LAPS page` click `Generate new...` to create a new certificate. 
+From the Access Manager Service configuration tool, visit the `Access Manager Agent/Password settings` click `Generate new...` to create a new certificate. 
 
 ### Step 2: Backup the new certificate
 Once the certificate has been generated, click `Export...` to back up the certificate. Choose a strong password, and keep this file safe, preferably in an offline location.
@@ -14,7 +14,7 @@ Once the certificate has been generated, click `Export...` to back up the certif
 Once you've secured your backup key, click `Set Active` to activate the new certificate.
 
 ### Step 4: Expire all computer passwords
-On the `Directory configuration/Access Manager Directory/Devices` page, select all the appropriate devices and click `Expire password`. Within 60 minutes, the agents that are online will generate new passwords and store them in the directory.
+On the `Access Manager Agent/Devices` page, select all the appropriate devices and click `Expire password`. Within 60 minutes, the agents that are online will generate new passwords and store them in the directory.
 
 Unfortunately, password history is not recoverable.
 
