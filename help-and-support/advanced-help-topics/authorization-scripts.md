@@ -11,17 +11,17 @@ Access Manager uses the response you provide to create a dynamic ACL for the use
 ## Example script
 
 ```PowerShell
-function Get-AuthorizationResponse{
+function Get-AuthorizationResponse {
 	param(
-	$user,
-	$computer
-)
+		$User,
+		$Computer
+	)
 	Write-Information  "We're in PowerShell!"
-	Write-Information "Checking if $($user.MsDsPrincipalName) is allowed access to $($computer.MsDsPrincipalName)"
+	Write-Information "Checking if $($User.MsDsPrincipalName) is allowed access to $($Computer.MsDsPrincipalName)"
 
 	# Create an object to hold our authorization decisions
 	# Set IsAllowed to true to allow access, or set IsDenied to explicitly deny access, or leave both as false if no decision was made. This will allow other rules to be evaluated.
-	$response = [PSCustomObject]@{
+	$Response = [PSCustomObject]@{
 		IsLocalAdminPasswordAllowed = $false
 		IsLocalAdminPasswordDenied = $false
 		IsLocalAdminPasswordHistoryAllowed = $false
@@ -30,14 +30,14 @@ function Get-AuthorizationResponse{
 		IsJitDenied = $false
 		IsBitLockerAllowed = $false
 		IsBitLockerDenied = $false
-        IsRapidLapsLoginAllowed = $false
-        IsRapidLapsLoginDenied = $false
-        IsRapidLapsElevationAllowed = $false
-        IsRapidLapsElevationDenied = $false
+		IsRapidLapsLoginAllowed = $false
+		IsRapidLapsLoginDenied = $false
+		IsRapidLapsElevationAllowed = $false
+		IsRapidLapsElevationDenied = $false
 	}
 
 	# Return the authorization response to Access Manager to process
-	Write-Output $response;
+	Write-Output $Response;
 }
 ```
 
