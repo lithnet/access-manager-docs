@@ -2,9 +2,9 @@
 
 Lithnet Access Manager supports granting access to computers and groups using a simple, just-in-time (JIT) access model.
 
-Rather than having administrators having permanent access to computers or groups, they can use Access Manager to grant themselves administrative access on a temporary as-needed basis.
+Rather than administrators having permanent access to computers or groups, they can use Access Manager to grant themselves access on a temporary as-needed basis.
 
-By reducing permanent administrators, you will rapidly increase the difficulty of a successful lateral-movement based attack in your environment.
+By reducing permanent administrators, you can rapidly increase the difficulty of a successful lateral-movement based attack in your environment.
 
 Access Manager supports two forms of JIT:
 
