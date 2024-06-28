@@ -1,4 +1,4 @@
-# Setting up Lithnet LAPS for domain-joined devices
+# Setting up Lithnet LAPS for domain-joined devices (deprecated)
 
 Managing passwords with the Lithnet Access Manager Agent (AMA) provides several features that are not available with the Microsoft LAPS agent.
 

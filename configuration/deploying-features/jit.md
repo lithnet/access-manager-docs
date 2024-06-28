@@ -1,4 +1,4 @@
-# Setting up just-in-time access
+# Configuring Access Manager just-in-time access (JIT) features
 
 Lithnet Access Manager supports granting access to computers and groups using a simple, just-in-time (JIT) access model.
 
