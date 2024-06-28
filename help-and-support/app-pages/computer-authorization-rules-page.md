@@ -100,7 +100,9 @@ Select the group that grants the user administrative access to the target. You c
 
 For example, using a templated name of `%computerDomain%\JIT-%computerName%` will expand to `DEV1\JIT-PC1` for a computer named `PC1` in the domain `DEV1`.
 
-This functionality makes it very easy to ensure that each computer has an individual JIT group that provides access to only that computer. Use the same template in combination with the AMS feature to automatically create JIT groups, and use group policy preferences to add that group to the local admin group on each computer. See the [setting up JIT](../../configuration/deploying-features/setting-up-jit-access.md) guide for more details.
+This functionality makes it very easy to ensure that each computer has an individual JIT group that provides access to only that computer. Use the same template in combination with the AMS feature to automatically create JIT groups, and use group policy preferences to add that group to the local admin group on each computer.
+
+See the [setting up JIT for computers](../../configuration/deploying-features/jit/setting-up-jit-for-computers.md) guide for more details.
 
 **Expiry**
 

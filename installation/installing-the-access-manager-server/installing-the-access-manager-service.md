@@ -106,6 +106,6 @@ Now that you have the core application set up, you can configure the Access Mana
 
 * [Setting up Microsoft LAPS](../../configuration/deploying-features/setting-up-microsoft-laps.md)
 * [Setting up Lithnet LAPS for Active Directory, Azure AD, macOS and Linux](../../configuration/deploying-features/setting-up-lithnet-laps/)
-* [Setting up JIT access for computers](../../configuration/deploying-features/setting-up-jit-access.md)
+* [Setting up JIT access for computers](../../configuration/deploying-features/jit/setting-up-jit-for-computers.md)
+* [Setting up JIT access for roles](../../configuration/deploying-features/jit/setting-up-jit-for-roles.md)
 * [Setting up BitLocker access](../../configuration/deploying-features/setting-up-bitlocker-access.md)
-* [Setting up JIT access for roles](../../configuration/deploying-features/setting-up-jit-for-roles.md)

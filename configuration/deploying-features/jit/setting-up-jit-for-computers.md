@@ -1,6 +1,8 @@
 # Setting up just-in-time administrative access to computers
 
-Lithnet Access Manager supports granting administrative access to computers using a simple just-in-time access model. Rather than having administrators permanently being a member of each computer's local administrator group, they can use Access Manager to grant themselves administrative access on a temporary as-needed basis.
+Lithnet Access Manager supports granting temporary administrative access to computers using a simple just-in-time (JIT) access model.
+
+Rather than having administrators permanently being a member of each computer's local administrator group, they can use Access Manager to grant themselves administrative access on a temporary as-needed basis.
 
 By removing all permanent administrators from your computers, you increase the difficulty of a successful lateral-movement based attack.
 
