@@ -1,8 +1,8 @@
-# Access Manager Directory Groups page
+# Access Manager Agent Groups page
 
 The `groups` page provides the ability to create and manage AMS groups. AMS groups are stored in the Access Manager directory, and can contain devices that are registered with AMS. Groups can then be used in authorization rules, and for the application of password policies.
 
-![](../../images/ui-page-directory-configuration-access-manager-directory-groups.png)
+![](../../images/ui-page-access-manager-agent-groups.png)
 
 The following groups are built-in, and their membership is automatically manged by the system;
 
@@ -10,14 +10,14 @@ The following groups are built-in, and their membership is automatically manged 
 | ------------------------ | --------------------------------------------------------------------------------------------- |
 | All devices              | All devices registered with this AMS server                                                   |
 | AMS devices              | Devices registered using a registration key                                                   |
-| Azure AD devices         | Devices registered using Azure authentication                                                 |
+| Microsoft Entra devices         | Devices registered using Azure authentication                                                 |
 | All Windows devices      | All devices running a Windows operating system                                                |
 | All Linux devices        | All devices running a Linux operating system                                                  |
 | All macOS devices        | All devices running a macOS operating system                                                  |
 | AMS Windows devices      | Devices running a Windows operating system that were registered using a registration key      |
 | AMS Linux devices        | Devices running a Linux operating system that were registered using a registration key        |
 | AMS macOS devices        | Devices running a macOS operating system that were registered using a registration key        |
-| Azure AD Windows devices | Devices running a Windows operating system that were registered using Azure AD authentication |
+| Microsoft Entra Windows devices | Devices running a Windows operating system that were registered using Azure AD authentication |
 
 Note, built in groups cannot be edited or deleted.
 

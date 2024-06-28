@@ -2,6 +2,18 @@
 
 ![](../../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
 
+{% hint style="warning" %}
+**Note**: The "Lithnet LAPS in Active Directory" feature was deprecated in v3.0 of Access Manager.
+
+Access Manager Agent v3.0 no longer stored passwords in the Active Directory Schema; and support for the legacy "v2.0" agent will be removed in a future release of Access Manager.
+
+We recommend migrating any existing v2.0 agents utilizing this feature to AMSv3 agents, which securely store passwords for Active Directory-joined machines in the AMS database directly.
+
+Ensure that your AMS server is up to date *before* deploying the AMS v3 agent to devices in your environment.
+
+For more information on planning your AMS v3 migration, see our [upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
+{% endhint %}
+
 ![](../../images/ui-page-directory-configuration-active-directory-lithnet-laps.png)
 
 ## Schema
