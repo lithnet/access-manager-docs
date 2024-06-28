@@ -4,7 +4,7 @@ Lithnet Access Manager provides a convenient web-based interface for accessing l
 
 This guide assumes that you have the Windows LAPS agent deployed and configured appropriately. Test access to the LAPS passwords using the Azure portal first to make sure it is configured correctly.
 
-This guide focuses on setting up support for Microsoft LAPS passwords stored in Azure Active Directory. See our other guide for passwords stored in [Active Directory](setting-up-microsoft-laps.md).
+This guide focuses on setting up support for Microsoft LAPS passwords stored in Microsoft Entra. See our other guide for passwords stored in [Active Directory](setting-up-microsoft-laps.md).
 
 ## Step 1: Configure a new application in Entra ID
 If you are using Entra ID authentication for AMS, you can reuse the app registration created for authentication. Skip to Step 2.
@@ -50,14 +50,14 @@ You may need to wait a minute or two for the secret and delegation to become act
 
 The final step is to create an authorization rule, granting permission for your selected users and groups to access the LAPS passwords for the specified computers.
 
-From the `Authorization rules/Computers` page, select `Add...` to create a new rule. Select the Azure AD tenant, device group, or computer you want to assign access to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access.
+From the `Authorization rules/Computers` page, select `Add...` to create a new rule. Select the Entra ID tenant, device group, or computer you want to assign access to, and provide a friendly description for this rule. This will appear in audit logs if a user is granted access.
 
 Expand the `Access control` section and select `Edit Permissions...` to open the ACL editor.
 
 ![!](../../../images/ui-page-authz-editsecurity-laps-only.png)
 
 {% hint style="info" %}
-When a computer is using Microsoft's Windows LAPS agent, and it is configured to store its password in Azure AD, then password rotation is not possible. Azure AD does not provide an API that AMS can use to indicate to the machine that the password should be rotated. 
+When a computer is using Microsoft's Windows LAPS agent, and it is configured to store its password in Microsoft Entra, then password rotation is not possible. Entra ID does not provide an API that AMS can use to indicate to the machine that the password should be rotated. 
 
 You can however use the built-in [PostAuthenticationActions and PostAuthenticationResetDelay policy settings](https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-management-policy-settings#postauthenticationresetdelay) to trigger the password change after logon.
 {% endhint %}
