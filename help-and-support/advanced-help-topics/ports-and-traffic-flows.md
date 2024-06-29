@@ -8,8 +8,8 @@ The following diagram details the traffic flows and port requirements for a typi
 | Source | Destination | Destination ports | Description | 
 | --- | --- | --- | ------ |
 | AMS server | packages.lithnet.io | TCP 443 | Allows the AMS server to check and notify when updates are available (optional) |
-| AMS server | graph.microsoft.com| TCP 443 | Used to access the graph API when authenticating Azure AD-joined and registered devices |
-| AMS server | login.microsoftonline.com | TCP 443 | Used to authenticate to the graph API when authenticating Azure AD-joined and registered devices |
+| AMS server | graph.microsoft.com| TCP 443 | Used to access the graph API when authenticating Microsoft Entra joined devices |
+| AMS server | login.microsoftonline.com | TCP 443 | Used to authenticate to the graph API when authenticating Microsoft Entra joined devices |
 | AMS server | The hostname specified in the issuer/authority field of the OIDC setup page | TCP 443 | Required for claims validation when using OpenID Connect |
 | AMS server | Active Directory Domain Controllers | LDAP TCP 389, CLDAP UDP 389 | Directory lookups, site lookups, BitLocker Password lookups, LAPS password lookups, JIT group membership modifications |
 | AMS server | Active Directory Domain Controller Global Catalog Servers | Global Catalog TCP 3268 | Computer name lookups |

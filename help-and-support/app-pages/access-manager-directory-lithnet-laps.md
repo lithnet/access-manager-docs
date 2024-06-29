@@ -2,45 +2,7 @@
 
 ![](../../images/ui-page-directory-configuration-access-manager-directory-lithnet-laps.png)
 
-## Password Encryption
 
-AMS registered devices encrypt their passwords using a certificate provided by the AMS server. When a password change is required, the AMS server will provide the device with the public key of the `active` certificate, and it will use that key to encrypt the password.
-
-When configuring LAPS for the first time, you'll need to create an encryption certificate, making sure to back it up to a location where it will be kept safe and secure.
-
-If the encryption certificate is lost, passwords stored in the AMS directory are unrecoverable.
-
-### List columns
-
-#### Subject
-
-Shows the friendly name of the certificate
-
-#### Issued
-
-Shows the date that the certificate was generated
-
-#### Expiry
-
-Shows the date that the certificate will expire
-
-#### Is Active
-
-Indicates whether the certificate is active. Only the active certificate is used by clients to encrypt their passwords
-
-### Generating a new encryption certificate
-
-At any time you can generate a new encryption certificate by clicking the `Generate new` button. Clients will not use this new certificate until you mark it as active.
-
-If there are previously used certificates shown here, don't remove them. If clients have encrypted their passwords or password history with these old certificates, the AMS service will need them to be able to decrypt them.
-
-### Backing up the private key
-
-It is imperative that you have a safe and secure backup of your encryption keys. Select a certificate to back up and click `View Certificate`. From the `Details` tab, click `Copy to file...`. This will launch the export certificate wizard, which will allow you to export the certificate and private key to a PFX file. Choose a strong password for the PFX, and store the file somewhere safe. It's best to have multiple copies of the file, including an 'offline' copy.
-
-See the guide on [restoring an encryption certificate from backup](../advanced-help-topics/backup-and-restore.md) for details on how to restore an existing key from a backup.
-
-If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the [recovering from a lost encryption certificate](../advanced-help-topics/recovering-from-a-lost-encryption-certificate.md) guide. Unfortunately, there is no way to recover the encrypted password history.
 
 ## Default password policy
 
@@ -50,7 +12,7 @@ AMS registered devices get their password policy from the AMS server itself. The
 
 ![](../../images/badge-enterprise-edition-rocket.svg) Custom password policies is an [Enterprise edition feature](../../access-manager-editions.md)
 
-![](../../images/ui-page-directory-configuration-access-manager-directory-lithnet-laps-edit-policy.png) Custom password policies allow you to target specific policies to specific device groups. Policies can be assigned to AMS groups, or Azure AD groups of computers. Policies are processed in the order they appear on the screen, with the first matching policy taking precedence.
+![](../../images/ui-page-directory-configuration-access-manager-directory-lithnet-laps-edit-policy.png) Custom password policies allow you to target specific policies to specific device groups. Policies can be assigned to AMS groups, or Microsoft Entra groups of computers. Policies are processed in the order they appear on the screen, with the first matching policy taking precedence.
 
 ### Fields
 
@@ -60,7 +22,7 @@ A friendly name for this policy
 
 #### Policy target group
 
-The name of the AMS group or Azure AD group that this policy applies to
+The name of the AMS group or Microsoft Entra group that this policy applies to
 
 #### Password length
 

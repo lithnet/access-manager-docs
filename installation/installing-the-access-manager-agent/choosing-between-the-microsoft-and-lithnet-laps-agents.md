@@ -59,10 +59,10 @@ Cons
 - You need to support legacy Windows operating system versions 
 
 ## Option 3: Windows LAPS client
-In April 2023, Microsoft released LAPS as a built-in Windows feature. This also brought a range of new support for things like password history, encryption, and support for Azure AD joined devices. 
+In April 2023, Microsoft released LAPS as a built-in Windows feature. This also brought a range of new support for things like password history, encryption, and support for Microsoft Entra joined devices. 
 
 Pros
-- Support for both AD and Azure AD joined devices
+- Support for both AD and Microsoft Entra joined devices
 - Has password history support
 - Optionally encrypts passwords stored in Active Directory
 - Built into Windows
@@ -73,11 +73,11 @@ Cons
 - No support for older operating systems that are still in support. Only supported on Windows 11, Windows Server 2019 and higher, and Windows 10 versions supported as of April 2023.
 
 ### When should I use Windows LAPS?
-- Your organization has modern Windows operating systems either joined to Azure AD or Active Directory
+- Your organization has modern Windows operating systems either joined to Microsoft Entra or Active Directory
 
 ## Operating system support
 
-The Microsoft agents works only on Windows AD or Azure AD-joined devices. Lithnet Access Manager agent supports a much wider range of operating systems.
+The Microsoft agents works only on Windows AD or Microsoft Entra-joined devices. Lithnet Access Manager agent supports a much wider range of operating systems.
 
 | Operating system    |   Microsoft Legacy LAPS Agent  |  Microsoft Windows LAPS Agent  |   Lithnet Access Manager Agent   |
 | --- | --- | --- | --- |
@@ -119,7 +119,7 @@ _1. Windows LAPS can store passwords in plain text if configured_
 | --- | --- | --- | --- | --- | --- |
 | Microsoft Legacy LAPS passwords stored in AD | ![](../../images/check3.png)  | ![](../../images/check3.png) | ![](../../images/check3.png)  | ![](../../images/dash.png) | ![](../../images/check3.png) | 
 | Microsoft Windows LAPS passwords stored in AD |![](../../images/dash.png) | ![](../../images/check3.png)| ![](../../images/check3.png)  | ![](../../images/dash.png) |  ![](../../images/check3.png)  |
-| Microsoft Windows LAPS passwords stored in Azure AD |![](../../images/dash.png) | ![](../../images/dash.png)  | ![](../../images/check3.png)  | ![](../../images/check3.png)  |  ![](../../images/check3.png)  |
+| Microsoft Windows LAPS passwords stored in Microsoft Entra |![](../../images/dash.png) | ![](../../images/dash.png)  | ![](../../images/check3.png)  | ![](../../images/check3.png)  |  ![](../../images/check3.png)  |
 | Access Manager Agent passwords |   ![](../../images/dash.png)  |  ![](../../images/dash.png)  |![](../../images/dash.png)  |  ![](../../images/dash.png)  |   ![](../../images/check3.png)  |
 
 

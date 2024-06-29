@@ -25,12 +25,12 @@ A target is a computer, group, or container that you want to grant access to. A 
 * An Active Directory domain, organizational unit, or container
 * An Active Directory group
 * An Active Directory computer object
-* An Azure AD device
-* An Azure AD group
+* An Microsoft Entra device
+* An Microsoft Entra group
 * An AMS-registered device
 * An AMS-registered group
 
-A target can be in any domain visible to AMS, including domains from forests that trust the forest where AMS resides, an Azure AD device or group, or an AMS-managed device or group.
+A target can be in any domain visible to AMS, including domains from forests that trust the forest where AMS resides, an Microsoft Entra device or group, or an AMS-managed device or group.
 
 When evaluating access, rules are evaluated in the following order;
 
@@ -80,7 +80,7 @@ If at least one of your ACLs allows access to the local admin passwords of the s
 This has the effect of setting the expiry date for the password in the directory to a new date based on the interval you specify. The password be rotated the next time the Microsoft LAPS or Lithnet Access Manager agents check in _after_ this new time. Note, that the Microsoft LAPS client checks the password at group policy refresh time (every \~90 minutes) and the Lithnet Access Manager agent by default, checks every 60 minutes, so rotations may be delayed by these intervals.
 
 {% hint style="info" %}
-When a computer is using Microsoft's Windows LAPS agent, and it is configured to store its password in Azure AD, then password rotation is not possible. Azure AD does not provide an API that AMS can use to indicate to the machine that the password should be rotated. 
+When a computer is using Microsoft's Windows LAPS agent, and it is configured to store its password in Microsoft Entra, then password rotation is not possible. Entra does not provide an API that AMS can use to indicate to the machine that the password should be rotated. 
 
 You can however use the built-in [PostAuthenticationActions and PostAuthenticationResetDelay policy settings](https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-management-policy-settings#postauthenticationresetdelay) to trigger the password change after logon.
 {% endhint %}

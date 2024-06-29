@@ -2,11 +2,11 @@
 
 The Access Manager web service allows you to choose one of several types of authentication providers. It is recommended to use modern authentication using a mechanism such as OpenID Connect, where an identity provider can provider high assurance authentication utilizing passwordless or multifactor authentication.
 
-Access Manager supports modern identity providers such as Azure AD and Okta out of the box.
+Access Manager supports modern identity providers such as Microsoft Entra and Okta out of the box.
 
 ## OpenID Connect
 
-OpenID Connect is the preferred authentication provider. Coupled with a modern IDP like Azure AD or Okta, you can provide strong authentication to your application, backed up by multifactor authentication. See the guides for setting up Access Manager to work with [Azure AD](../../configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md) or [Okta](../../configuration/setting-up-authentication/setting-up-authentication-with-okta.md).
+OpenID Connect is the preferred authentication provider. Coupled with a modern IDP like Microsoft Entra or Okta, you can provide strong authentication to your application, backed up by multifactor authentication. See the guides for setting up Access Manager to work with [Microsoft Entra](../../configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md) or [Okta](../../configuration/setting-up-authentication/setting-up-authentication-with-okta.md).
 
 Using OpenID Connect requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 

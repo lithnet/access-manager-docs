@@ -21,7 +21,7 @@ Internet access is not required for the Access Manager service to operate, unles
 | --- | --- | --- |
 | Be notified when new updates are available for the Access Manager service | packages.lithnet.io | TCP 443 |
 | Enable devices to authenticate to the Access Manager API | graph.microsoft.com login.microsoftonline.com | TCP 443 |
-| Azure AD authentication for end users | login.microsoftonline.com | TCP 443 |
+| Entra ID authentication for end users | login.microsoftonline.com | TCP 443 |
 | OpenID Connect authentication | The hostname specified in the issuer/authority field of the OIDC setup page | TCP 443 |
 
 ## Access Manager Agent

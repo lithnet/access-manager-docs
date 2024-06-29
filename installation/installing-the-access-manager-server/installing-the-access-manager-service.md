@@ -105,7 +105,7 @@ You will need to restart the service to pick up the new group membership in the 
 Now that you have the core application set up, you can configure the Access Manager features you are interested in;
 
 * [Setting up Microsoft LAPS](../../configuration/deploying-features/setting-up-microsoft-laps.md)
-* [Setting up Lithnet LAPS for Active Directory, Azure AD, macOS and Linux](../../configuration/deploying-features/setting-up-lithnet-laps/)
+* [Setting up Lithnet LAPS for Active Directory, Microsoft Entra, macOS and Linux](../../configuration/deploying-features/setting-up-lithnet-laps/)
 * [Setting up JIT access for computers](../../configuration/deploying-features/jit/setting-up-jit-for-computers.md)
 * [Setting up JIT access for roles](../../configuration/deploying-features/jit/setting-up-jit-for-roles.md)
 * [Setting up BitLocker access](../../configuration/deploying-features/setting-up-bitlocker-access.md)

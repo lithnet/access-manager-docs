@@ -12,7 +12,7 @@ You don't need to complete the steps after configuring the policy and testing th
 
 ### Step 2: Test LAPS Access
 
-Before configuring Access Manager, it's a good idea to make sure that LAPS is working natively first. Using the Azure AD or Intune management portal, make sure you can see and retrieve the LAPS passwords for your test devices.
+Before configuring Access Manager, it's a good idea to make sure that LAPS is working natively first. Using the Microsoft Entra or Intune management portal, make sure you can see and retrieve the LAPS passwords for your test devices.
 
 Once you are confident that it is all working, you can move onto the next step of installing Access Manager.
 

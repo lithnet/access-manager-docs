@@ -31,7 +31,7 @@
 
 * [Setting up Authentication](configuration/setting-up-authentication/README.md)
   * [Setting up authentication with ADFS](configuration/setting-up-authentication/setting-up-authentication-with-adfs.md)
-  * [Setting up authentication with Azure AD](configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md)
+  * [Setting up authentication with Microsoft Entra ID](configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md)
   * [Setting up authentication with Okta](configuration/setting-up-authentication/setting-up-authentication-with-okta.md)
   * [Setting up smart card authentication](configuration/setting-up-authentication/setting-up-smart-card-authentication.md)
   * [Setting up integrated windows authentication](configuration/setting-up-authentication/setting-up-integrated-windows-authentication.md)

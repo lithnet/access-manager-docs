@@ -121,6 +121,12 @@ Specifies the type of HTTP request to make. This will almost always be `POST`, b
 
 Specifies the `Content-Type` header used in the HTTP request. This will almost always be `application/json` for a JSON payload. If your web hook target requires a different value, then specify that here.
 
+#### Custom HTTP headers
+
+Specifies any additional HTTP headers to be included in the HTTP request. All header values are securely encrypted within the Access Manager database.
+
+Clicking the `Add...` button will allow you to add additional headers for this webhook.
+
 #### Audit message content
 
 Edits the JSON file used as a template for an audit event.

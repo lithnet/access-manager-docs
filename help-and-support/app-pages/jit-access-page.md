@@ -44,7 +44,7 @@ Select the type of group to create. There is rarely a reason to change this from
 
 The AMS service checks every 60 seconds for new computers in the domain, and will create a group for any new computers it finds. Once an hour, the service will do a full synchronization of groups and computers. Only at this time, will missing computers be detected, and groups deleted if the mapping is configured to do so.
 
-#### Unix Attributes
+#### Unix GID
 
 If you intend to use JIT groups on Linux machines that are bound to Active Directory, you may require a `gid` attribute to be configured for your JIT groups.
 

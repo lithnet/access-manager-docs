@@ -1,10 +1,10 @@
-# Setting up authentication with Azure AD
+# Setting up authentication with Miicrosoft Entra ID
 
 The following guide will assist you in configuring your application to use Azure Active Directory for authentication.
 
-## Part 1: Configure a new application in Azure AD
+## Part 1: Configure a new application in Entra ID
 
-1. Log into [portal.azure.com](https://portal.azure.com) with administrative credentials, select `All services` and select `Azure Active Directory`
+1. Log into [portal.azure.com](https://portal.azure.com) with administrative credentials, select `All services` and select `Microsoft Entra ID`
 2. Select `App registrations` and click `New application registration`
 3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (Lithnet only - Single tenant)` as the supported account type
 4. In the `redirect URI` field, enter the base URL where your Access Manager web app is hosted followed by `/auth` (e.g. `https://accessmanager.lithnet.local/auth`)
@@ -20,8 +20,8 @@ The following guide will assist you in configuring your application to use Azure
 1. Open the Lithnet Access Manager Service Configuration Tool
 2. Select the `App configuration\User Authentication` page
 3. Select `Open ID Connect` as the authentication provider
-4. Use the `application id` obtained from the Azure AD setup process as the `client ID` value
-5. Specify the `client secret` obtained from the Azure AD setup process.
+4. Use the `application id` obtained from the Entra ID setup process as the `client ID` value
+5. Specify the `client secret` obtained from the Entra ID setup process.
 6. Set the authority as appropriate for your tenant (e.g. for `lithnet.io` it would be `https://login.microsoftonline.com/lithnet.io`)
 
 ![!](../../images/ui-page-authentication-oidc-azure.png)

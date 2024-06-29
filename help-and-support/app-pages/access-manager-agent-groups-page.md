@@ -17,7 +17,7 @@ The following groups are built-in, and their membership is automatically manged 
 | AMS Windows devices      | Devices running a Windows operating system that were registered using a registration key      |
 | AMS Linux devices        | Devices running a Linux operating system that were registered using a registration key        |
 | AMS macOS devices        | Devices running a macOS operating system that were registered using a registration key        |
-| Microsoft Entra Windows devices | Devices running a Windows operating system that were registered using Azure AD authentication |
+| Microsoft Entra Windows devices | Devices running a Windows operating system that were registered using Microsoft Entra authentication |
 
 Note, built in groups cannot be edited or deleted.
 

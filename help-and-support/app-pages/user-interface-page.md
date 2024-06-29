@@ -65,3 +65,24 @@ Specify how many characters should be in each group in the phonetic breakdown. T
 #### Preview password
 
 Type any value in here to see the result of your settings on the output of broken-down password
+
+
+## Error messages
+
+You can optionally configure custom messages and/or links to appear on error pages.
+
+For example, if a user is unauthorized to request access to a computer, you could provide them organization-specific help information.
+
+![](../../images/ui-page-user-interface-error-messages.png)
+
+#### Show custom help message on error pages
+
+If this box is checked, the text in the `Custom help message` box will appear below any error messages that appear in the Access Manager web app.
+
+#### Show custom help link on error pages
+
+If this box is checked, a button will appear below any error messages that appear in the Access Manager web app.
+
+The name of this button will be the value of the `Custom help link title`, and the button will redirect users to the link specified in the `Custom help link URL` field.
+
+The `Custom help link URL` should be a fully-qualified URL, including a protocol prefix (e.g. `https://`).

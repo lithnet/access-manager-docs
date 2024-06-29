@@ -10,7 +10,7 @@ It is fully compatible and works out-of-the-box with Microsoft LAPS (legacy and 
 
 Access Manager provides a granular permission model, coupled with a detailed auditing system, both of which are extensible using PowerShell.
 
-Modern authentication is a key feature of Access Manager, with support for OpenID Connect, allowing strong authentication and MFA with cloud-based identity providers such as Azure AD and Okta. On-premises providers have not been forgotten, with full support for WS-Federation (ADFS), smart cards, and if you need it, integrated windows authentication.
+Modern authentication is a key feature of Access Manager, with support for OpenID Connect, allowing strong authentication and MFA with cloud-based identity providers such as Microsoft Entra ID and Okta. On-premises providers have not been forgotten, with full support for WS-Federation (ADFS), smart cards, and if you need it, integrated windows authentication.
 
 #### Defend against ransomware and other lateral movement-based attacks
 
@@ -34,7 +34,13 @@ Whether you use Microsoft LAPS, or the Lithnet Access Manager agent, the user ex
 
 **RapidLAPS - Passwordless LAPS login & elevation**
 
-TODO
+Have you ever had to communicate a LAPS password over the phone? Are you tired of having to type in a complicated LAPS password over and over again, just to install some software?
+
+With *RapidLAPS*, using just a QR code, or PIN, you can log into any LAPS-enabled computer, without ever having to type a long and complicated password!
+
+*RapidLAPS* integrates into the Windows lock screen and UAC prompts, allowing you to speed up the LAPS process wherever you use local admin accounts.
+
+The great news is that this feature works, hether you are using Windows LAPS, legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
 
 **Just-in-time administrative access to computers**
 
@@ -70,7 +76,7 @@ The webhook functionality makes it really easy to get alerts via Slack or Micros
 
 **Modern authentication options**
 
-The web app supports traditional integrated windows authentication, as well as external authentication providers such as [ADFS](configuration/setting-up-authentication/setting-up-authentication-with-adfs.md) or 3rd party OpenID Connect providers such as [Azure AD](configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md) and [Okta](configuration/setting-up-authentication/setting-up-authentication-with-okta.md). Using an external authentication provider allows you the option of providing additional protections for the application such as multifactor authentication.
+The web app supports traditional integrated windows authentication, as well as external authentication providers such as [ADFS](configuration/setting-up-authentication/setting-up-authentication-with-adfs.md) or 3rd party OpenID Connect providers such as [Microsoft Entra ID](configuration/setting-up-authentication/setting-up-authentication-with-azure-ad.md) and [Okta](configuration/setting-up-authentication/setting-up-authentication-with-okta.md). Using an external authentication provider allows you the option of providing additional protections for the application such as multifactor authentication.
 
 #### Download the app
 

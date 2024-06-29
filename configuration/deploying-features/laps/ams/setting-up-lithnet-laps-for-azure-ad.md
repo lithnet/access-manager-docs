@@ -2,7 +2,7 @@
 
 This guide will walk you through the steps to configure the Access Manager service, and the Access Manager agent to support managing LAPS passwords for Entra-joined Windows 10 and higher devices.
 
-## Step 1: Set up the AMS directory and configure the Azure AD tenant
+## Step 1: Set up the AMS directory and configure the Microsoft Entra tenant
 
 The Lithnet Access Manager agent uses the Access Manager directory to store passwords for Entra-joined devices.
 
@@ -20,7 +20,7 @@ On the the `Access Manager Agent/Agent registration` page, ensure that the `Allo
 
 ## Step 4: Install the Access Manager Agent
 
-Follow the guide to [install the agent](../../../../installation/installation/installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md), making sure you select 'Azure Active Directory authentication' when prompted by the installer, and enter your AAD tenant ID when prompted.
+Follow the guide to [install the agent](../../../../installation/installation/installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md), making sure you select 'Azure Active Directory authentication' when prompted by the installer, and enter your Entra tenant ID when prompted.
 
 The installation guide provides command lines for silently installing the MSI, which can be used with automated deployment tools such as Microsoft Intune. Configuring these deployment tools is out of scope for this guide.
 
@@ -37,7 +37,7 @@ From the `Authorization rules/Computers` page, select `Add...` to create a new r
 Select `Edit Permissions...` to open the ACL editor. Assign the appropriate users and groups permission to read the local admin password.
 
 {% hint style="info" %}
-For Azure AD devices, only the `Local admin password` and `Local admin password history` permissions are valid.
+For Entra devices, only the `Local admin password` and `Local admin password history` permissions are valid.
 {% endhint %}
 
 ![](../../../../images/ui-page-authz-editsecurity-laps-only.png)

@@ -49,8 +49,7 @@ Enterprise edition customers benefit from the following capabilities when they d
 | Support for domain-joined Windows devices   |![](/images/check3.png) | ![](/images/check3.png) |
 | Support for non-domain joined Windows clients  | Limited to 100 devices   | ![](/images/check3.png) |
 | Support for macOS devices (Intel and arm64) | Limited to 100 devices   | ![](/images/check3.png) |
-| Support for Azure AD joined Windows 10 and higher devices  | Limited to 100 devices   | ![](/images/check3.png) |
-| Support for Azure AD registered Windows 10 and higher devices | Limited to 100 devices   | ![](/images/check3.png) |
+| Support for Microsoft Entra-joined Windows 10 and higher devices  | Limited to 100 devices   | ![](/images/check3.png) |
 | Support for Linux distributions (x64, arm64, arm32) <sup>2</sup> | Limited to 100 devices   | ![](/images/check3.png) |
 
 ### Just-in-time access features
@@ -68,7 +67,7 @@ Enterprise edition customers benefit from the following capabilities when they d
 
 ### Authentication features
 
-Access Manager supports several authentication mechanisms. You can use a modern authentication provider like Azure AD or Okta to add MFA support to your Access Manager instance.
+Access Manager supports several authentication mechanisms. You can use a modern authentication provider like Microsoft Entra ID or Okta to add MFA support to your Access Manager instance.
 
 | Feature   |   Community Edition   |   Enterprise Edition  |
 | --------------------------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -132,4 +131,4 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 1. Requires the use of the Lithnet Access Manager Agent
 2. See the page on [supported Linux operating systems](installation/system-requirements.md) for more details
 3. Requires the use of the Lithnet Access Manager Agent or the Microsoft Windows LAPS client
-4. Not supported when using the Microsoft Windows LAPS client and storing the password in Azure AD
+4. Not supported when using the Microsoft Windows LAPS client and storing the password in Microsoft Entra

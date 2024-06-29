@@ -6,7 +6,7 @@ Integrated Windows Authentication is only supported on standalone Access Manager
 The following guide will assist you in configuring your application to use Integrated Windows Authentication (IWA).
 
 {% hint style="warning" %}
-Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multifactor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [Azure AD](setting-up-authentication-with-azure-ad.md) and [Okta](setting-up-authentication-with-okta.md).
+Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multifactor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [Microsoft Entra ID](setting-up-authentication-with-azure-ad.md) and [Okta](setting-up-authentication-with-okta.md).
 {% endhint %}
 
 

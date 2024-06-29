@@ -1,6 +1,7 @@
 # Setting the AMS directory for Lithnet LAPS agents
 
-When using the Lithnet Access Manager Agent (AMA) on devices that are not joined to an Active Directory (non-windows devices, Azure AD devices, and standalone Windows devices), the agent stores passwords in the Access Manager Directory.
+When using the Lithnet Access Manager Agent (AMA) on devices, no matter if those devices are joined to an Active Directory, Microsoft Entra, or not joined to a domain at all (e.g., non-Windows devices or standalone Windows devices), the AMA stores encrypted passwrods in the Access Manager Directory.
+
 
 ## Step 1: Enable the AMS directory
 

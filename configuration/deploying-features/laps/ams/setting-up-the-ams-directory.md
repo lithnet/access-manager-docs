@@ -4,7 +4,7 @@
 
 The Lithnet Access Manager Agent (AMA) supports managing local administrator accounts and passwords on Windows, macOS and Linux devices, no matter how those devices are configured.
 
-When using the Lithnet Access Manager Agent (AMA) on devices that are not joined to an Active Directory (non-Windows devices, Azure AD devices, and standalone Windows devices), the AMA stores passwords in the Access Manager Directory.
+When using the Lithnet Access Manager Agent (AMA) on devices, no matter if those devices are joined to an Active Directory, Microsoft Entra, or not joined to a domain at all (e.g., non-Windows devices or standalone Windows devices), the AMA stores encrypted passwrods in the Access Manager Directory.
 
 > Note: The Lithnet Access Manager Agent can co-exist with Windows LAPS, in the instance where you wish to use a feature such as *RapidLAPS* while retaining your existing Windows LAPS configuraiton.
 
@@ -83,4 +83,4 @@ If you are not using Entra ID for authentication, or you'd like to create a sepa
 You may need to wait a minute or two for the secret and delegation to become active
 {% endhint %}
 
-Access Manager is now configured to support Azure AD joined and registered devices.
+Access Manager is now configured to support Microsoft Entra joined devices.
