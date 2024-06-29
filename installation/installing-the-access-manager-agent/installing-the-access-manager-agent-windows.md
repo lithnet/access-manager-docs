@@ -11,9 +11,9 @@ We recommend using a configuration management tool such as SCCM to deploy the ag
 
 ## Determine your authentication mode
 
-When using the AMS directory to store passwords, you must determine what authentication mode you are going to use.
+When using the AMS server to store passwords, you must determine what authentication mode you are going to use.
 
-Microsoft Entra-joined devices, can use their Entra certificate to automatically authenticate to the AMS server. You'll need the Microsoft Entra tenant ID to configure Entra auth.
+Microsoft Entra-joined devices can use their Entra certificate to automatically authenticate to the AMS server. You'll need the Microsoft Entra tenant ID to configure Entra auth.
 
 Other devices must use a registration key, obtained from the AMS server to authenticate. These devices will create their own authentication certificate, and use the registration key a single time, to register their certificate with the server. Once this is successful, they will no longer need the registration key, and it will be deleted from the system.
 
@@ -33,12 +33,12 @@ TODO
 
 You can install the MSI packages silently using the following command lines
 
-### Silent installation in Active Directory password storage mode
+### Silent installation for domain-joined Windows devices
 
-Use the following command line to install the agent in Active Directory mode
+Use the following command line to install the agent in Active Directory authentication mode
 
 ```
-msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=0 AUTHMODE=0
+msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=1 SERVER=ams.lithnet.local 
 ```
 
 ### Silent installation for Microsoft Entra-joined devices
@@ -46,15 +46,15 @@ msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=0 AUTHMODE=0
 Use the following command line to install the agent in Microsoft Entra mode, replacing the `SERVER` and `AZUREADTENANTID` values are appropriate
 
 ```
-msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=1 AUTHMODE=2 SERVER=ams.lithnet.local AZUREADTENANTID=YYYY
+msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=2 SERVER=ams.lithnet.local AZUREADTENANTID=YYYY
 ```
 
 ### Silent installation for standalone Windows devices
 
-Use the following command line to install the agent in AMS directory mode, replacing the `SERVER` and `REGISTRATIONKEY` values are appropriate
+Use the following command line to install the agent in AMS registration mode, replacing the `SERVER` and `REGISTRATIONKEY` values are appropriate
 
 ```
-msiexec /i Lithnet.AccessManager.Agent.msi /qn AMSSERVERENABLED=1 AUTHMODE=4 SERVER=ams.lithnet.local REGISTRATIONKEY=XXXX
+msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=4 SERVER=ams.lithnet.local REGISTRATIONKEY=XXXX
 ```
 
 ## Viewing log files

@@ -28,11 +28,6 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 * x86 Windows 10 or later
 * arm64 Windows 10 or later
 
-#### Password storage
-
-* Domain joined clients will store their password in the Active Directory. This requires Active Directory schema extensions to be present.
-* Non domain-joined clients will store their password in the AMS directory.
-
 ### macOS requirements
 
 #### Supported versions
@@ -40,10 +35,6 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 * macOS 12 (Monterey) (Intel or ARM64)
 * macOS 13 (Ventura) (Intel or ARM64)
 * macOS 14 (Sonoma) (Intel or ARM64)
-
-#### Password storage
-
-* macOS devices will store their password in the AMS directory.
 
 ### Linux requirements
 

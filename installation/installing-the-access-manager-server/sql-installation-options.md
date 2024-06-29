@@ -173,6 +173,6 @@ Server=tcp:amsdb.xxxxx.us-east-1.rds.amazonaws.com,1433;Initial Catalog=AccessMa
 7. Once these steps are complete, you can run the AMS installer, and provide the connection string when prompted.
 
 ## Security considerations
-It is important to secure access to your database. It contains information used by computers to authenticate to the AMS directory, as well as their group membership. 
+It is important to secure access to your database. It contains information used by computers to authenticate to the AMS server, as well as their group membership. 
 
 We recommend that if possible, the database server is kept dedicated for Access Manager, and not shared with other applications. Administrators of the database server should be restricted to AMS admins only. 

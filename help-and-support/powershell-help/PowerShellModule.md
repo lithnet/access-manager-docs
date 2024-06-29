@@ -32,6 +32,9 @@ Gets AMS devices
 ### [Get-AmsDeviceRegistrationKey](Get-AmsDeviceRegistrationKey.md)
 Gets device registration keys
 
+### [Get-AmsFveRecoveryKey](Get-AmsFveRecoveryKey.md)
+Gets full-volume encryption (i.e., BitLocker) recovery keys
+
 ### [Get-AmsGroup](Get-AmsGroup.md)
 Gets AMS groups
 

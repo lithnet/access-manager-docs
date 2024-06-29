@@ -12,7 +12,6 @@ The agent will check-in with the AMS server at regular intervals, updating it's 
 
 If as password change is required, the agent will rotate the password of a local administrator account of your choosing with a randomly-generated password or passphrase, encrypts the password, and securely submits the password to the AMS server to be stored in it's internal database.
 
-
 The following guide outlines the steps required to enable the AMS directory service.
 
 ## Step 1: Enable API support

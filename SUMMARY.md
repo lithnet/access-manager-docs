@@ -50,17 +50,15 @@
       * [Preparing the AMS directory](configuration/deploying-features/agent/setting-up-the-ams-directory.md)
       * [Setting up the AMS directory for the Access Manager Agent](configuration/deploying-features/agent/configuring-lithnet-laps-for-the-ams-directory.md)
 
-      * [Configuring Access Manager Agent policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies.md)
-        * [Configuring Lithnet Access Manager Agent password policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-password.md)
-        * [Configuring Lithnet Access Manager Agent RapidLAPS policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-rapidlaps.md)
-        * [Configuring Lithnet Access Manager Agent BitLocker policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-bitlocker.md)
+      * [Configuring the Access Manager Agent](configuration/deploying-features/agent/setting-up-lithnet-laps-policies.md)
+        * [Setting up password management for the Access Manager Agent](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-password.md)
+        * [Setting up RapidLAPS for the Access Manager Agent](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-rapidlaps.md)
+        * [Setting up BitLocker recovery for the Access Manager Agent](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-bitlocker.md)
       * Installing the Access Manager Agent
         * [Install the Access Manager Agent for domain-joined Windows devices](configuration/deploying-features/agent/setting-up-lithnet-laps-for-windows.md)
         * [Install the Access Manager Agent for standalone Windows devices](configuration/deploying-features/agent/setting-up-lithnet-laps-for-standalone-windows.md)
         * [Install the Access Manager Agent for Entra-joined devices](configuration/deploying-features//agent/setting-up-lithnet-laps-for-azure-ad.md)
         * [Install the Access Manager Agent for macOS and Linux](configuration/deploying-features/agent/setting-up-lithnet-laps-for-macos-and-linux.md)
-
-
 * [Importing authorization rules](configuration/importing/README.md)
   * [Import Microsoft LAPS permissions from Active Directory](configuration/importing/importing-microsoft-laps-permissions.md)
   * [Importing BitLocker permissions from Active Directory](configuration/importing/importing-bitlocker-permissions.md)
@@ -88,6 +86,9 @@
   * [KB000008: AMS is unable to JIT into privileged groups such as Domain Admins](help-and-support/support-articles/kb000008.md)
 
 * [Advanced help topics](help-and-support/advanced-help-topics/README.md)
+  * [Agent policy development](help-and-support/advanced-help-topics/agent-policy-development.md)
+  * [RapidLAPS](help-and-support/advanced-help-topics/rapidlaps.md)
+  * [Passphrases & wordlists](help-and-support/advanced-help-topics/passphrases-and-wordlists.md)
   * [Ports and traffic flows](help-and-support/advanced-help-topics/ports-and-traffic-flows.md)
   * [Internet access requirements](help-and-support/advanced-help-topics/internet-access-requirements.md)
   * [Access evaluation in Access Manager Service (AMS)](help-and-support/advanced-help-topics/access-evaluation.md)
@@ -106,6 +107,7 @@
   * [Get-AmsComputerAuthorizationRule](help-and-support/powershell-help/Get-AmsComputerAuthorizationRule.md)
   * [Get-AmsDevice](help-and-support/powershell-help/Get-AmsDevice.md)
   * [Get-AmsDeviceRegistrationKey](help-and-support/powershell-help/Get-AmsDeviceRegistrationKey.md)
+  * [Get-AmsFveRecoveryKey](help-and-support/powershell-help/Get-AmsFveRecoveryKey.md)
   * [Get-AmsGroup](help-and-support/powershell-help/Get-AmsGroup.md)
   * [Get-AmsGroupMembers](help-and-support/powershell-help/Get-AmsGroupMembers.md)
   * [Get-AmsHostConfig](help-and-support/powershell-help/Get-AmsHostConfig.md)

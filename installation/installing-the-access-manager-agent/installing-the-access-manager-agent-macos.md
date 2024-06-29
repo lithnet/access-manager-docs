@@ -8,15 +8,15 @@ The agent itself runs using launchd, and as it requires access to reset the root
 
 ### OS requirements
 
-The agent requires OSX 10.15 or later. Packages are available for both Intel and M-series Macs.
+The agent requires macOS 12 or later. Packages are available for both Intel and M-series Macs.
 
 ## Download the agent
 Download the agent for the appropriate architecture from the downloads page, or directly from the package repository using the script below.
 ```shell
 if [[ $(uname -m) == 'arm64' ]]; then 
-    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.0/arm64/stable -o ~/accessmanageragent.pkg
+    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v3.0/arm64/stable -o ~/accessmanageragent.pkg
 else
-    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.0/x64/stable -o ~/accessmanageragent.pkg
+    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v3.0/x64/stable -o ~/accessmanageragent.pkg
 fi
 ```
 
