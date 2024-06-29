@@ -49,16 +49,16 @@
   * Access Manager Agent
       * [Preparing the AMS directory](configuration/deploying-features/agent/setting-up-the-ams-directory.md)
       * [Setting up the AMS directory for the Access Manager Agent](configuration/deploying-features/agent/configuring-lithnet-laps-for-the-ams-directory.md)
-  
-      * [Configuring Lithnet Access Manager Agent policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies.md)
+
+      * [Configuring Access Manager Agent policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies.md)
         * [Configuring Lithnet Access Manager Agent password policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-password.md)
         * [Configuring Lithnet Access Manager Agent RapidLAPS policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-rapidlaps.md)
         * [Configuring Lithnet Access Manager Agent BitLocker policies](configuration/deploying-features/agent/setting-up-lithnet-laps-policies-bitlocker.md)
-
-      * [Install the Access Manager Agent for domain-joined Windows devices](configuration/deploying-features/agent/setting-up-lithnet-laps-for-windows.md)
-      * [Install the Access Manager Agent for standalone Windows devices](configuration/deploying-features/agent/setting-up-lithnet-laps-for-standalone-windows.md)
-      * [Install the Access Manager Agent for Entra-joined devices](configuration/deploying-features//agent/setting-up-lithnet-laps-for-azure-ad.md)
-      * [Install the Access Manager Agent for macOS and Linux](configuration/deploying-features/agent/setting-up-lithnet-laps-for-macos-and-linux.md)
+      * Installing the Access Manager Agent
+        * [Install the Access Manager Agent for domain-joined Windows devices](configuration/deploying-features/agent/setting-up-lithnet-laps-for-windows.md)
+        * [Install the Access Manager Agent for standalone Windows devices](configuration/deploying-features/agent/setting-up-lithnet-laps-for-standalone-windows.md)
+        * [Install the Access Manager Agent for Entra-joined devices](configuration/deploying-features//agent/setting-up-lithnet-laps-for-azure-ad.md)
+        * [Install the Access Manager Agent for macOS and Linux](configuration/deploying-features/agent/setting-up-lithnet-laps-for-macos-and-linux.md)
 
 
 * [Importing authorization rules](configuration/importing/README.md)
