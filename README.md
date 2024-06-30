@@ -42,6 +42,8 @@ With *RapidLAPS*, using just a QR code, or PIN, you can log into any LAPS-enable
 
 The great news is that this feature works, hether you are using Windows LAPS, legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
 
+![](.gitbook/assets/rapidlaps.gif)
+
 **Just-in-time administrative access to computers**
 
 Using the same web interface, users can request that their account be added to a group that is a member of the local administrators group of the computer. This access is temporary and automatically removed after the allowed time period.
