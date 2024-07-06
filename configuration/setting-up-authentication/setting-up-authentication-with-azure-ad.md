@@ -5,12 +5,12 @@ The following guide will assist you in configuring your application to use Azure
 ## Part 1: Configure a new application in Entra ID
 
 1. Log into [portal.azure.com](https://portal.azure.com) with administrative credentials, select `All services` and select `Microsoft Entra ID`
-2. Select `App registrations` and click `New application registration`
-3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (Lithnet only - Single tenant)` as the supported account type
-4. In the `redirect URI` field, enter the base URL where your Access Manager web app is hosted followed by `/auth` (e.g. `https://accessmanager.lithnet.local/auth`)
+2. Select `Manage`, `App registrations` and click `New registration`
+3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (My org only - Single tenant)` as the supported account type
+4. In the `redirect URI` field, select `Web` as the platform type, and enter the base URL where your Access Manager web app is hosted followed by `/auth` (e.g. `https://accessmanager.lithnet.local/auth`)
 5. Click `Register`
-6. Take note of the `Application ID` value, this is our OpenID Connect client ID
-7. From the left-hand menu, click `Authentication`. Set the Logout URL to be the same as your base URL, with `/auth/logout` appended to it. (e.g. `https://accessmanager.lithnet.local/auth/logout`)
+6. Take note of the `Application (client) ID` value, this is our OpenID Connect client ID
+7. From the left-hand menu, click `Manage` then `Authentication`. Set the `front-channel logout URL` to be the same as your base URL, with `/auth/logout` appended to it. (e.g. `https://accessmanager.lithnet.local/auth/logout`)
 8. Save the settings
 9. From the `API permissions` page, use the `grant admin consent` option to prevent users from being prompted for their consent when logging into the app. 
 10. From the `Certificates and secrets` page, click `new client secret`, give your secret a name, and then take note of the value provided.

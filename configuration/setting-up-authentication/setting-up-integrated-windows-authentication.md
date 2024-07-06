@@ -1,7 +1,4 @@
 # Setting up integrated windows authentication
-{% hint style="info" %}
-Integrated Windows Authentication is only supported on standalone Access Manager instances. It can not be used in clustered or load balanced deployments.
-{% endhint %}
 
 The following guide will assist you in configuring your application to use Integrated Windows Authentication (IWA).
 
@@ -9,24 +6,13 @@ The following guide will assist you in configuring your application to use Integ
 Note, that we recommend that you use a strong authentication mechanism such as OpenID Connect, where you have the ability to enforce multifactor authentication on users attempting to access your application. Access Manager fully supports modern OIDC providers such as [Microsoft Entra ID](setting-up-authentication-with-azure-ad.md) and [Okta](setting-up-authentication-with-okta.md).
 {% endhint %}
 
-
 ## Part 1: Configure the SPN
+To ensure kerberos authentication works correctly you'll need to register an SPN for the Access Manager service account.
 
-Lithnet Access Manager uses kernel-mode authentication, which means the computer account, rather than the service account is used to authenticate the client. This means that the Kerberos service principal name must be applied to the computer account, rather than the service account.
+The SPN must be in the format of `HTTP/{dnsName}` where `{dnsName}` is the external-facing DNS hostname used by the clients.
 
-If your web URL hostname is different to your machines AD hostname, then you'll need to register an SPN for this hostname.
-
-Run the following command to set the SPN. Replace {dnsName} with the hostname web clients will use to access the service and {computerNetBIOSName} with the AD computer name
-
-```
-setspn -s HTTP/{dnsName} {computerNetBIOSName}
-```
-
-For a website called `accessmanager.lithnet.local` running on computer `AMSWEB01`, the command would be
-
-```
-setspn -s HTTP/accessmanager.lithnet.local AMSWEB01
-```
+If this SPN is not set correctly, the following warning will appear in the `Service account` section of the `Host configuration` page. You can use the "Set SPN..." script to correct the problem.
+![](../../images/spn-warning.png)
 
 ## Part 2: Configure Lithnet Access Manager
 

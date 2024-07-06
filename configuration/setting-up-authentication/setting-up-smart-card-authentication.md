@@ -20,7 +20,7 @@ To use smart card authentication, where the smart cards are issued by an Active 
 More advanced scenarios are supported through the use of being able to provide your own additional mandatory EKUs, or restricting authentication to specific issuers. Seek advice from your internal team that manages smart card issuance to if you are not sure if any of these settings are required.
 
 ## Identity resolution mode
-In line with the certificate-based authentication changes announced by Microsoft in [KB5014754](https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16), Access Manager by default now only accepts certificates containing the user's SID in an extension with OID `1.3.6.1.4.1.311.25.2`.
+In line with the certificate-based authentication changes announced by Microsoft in [KB5014754](https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16), Access Manager by default now only accepts certificates containing the user's SID in an extension with OID `1.3.6.1.4.1.311.25.2`, or contained in a [SAN URL extension with the prefix](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-pkca/e8fd2c1d-50d3-493a-9b58-5e453850c567) `tag:microsoft.com,2022-09-14:sid:`.
 
 If you are using older-style certificates, you need to select `Enable weak identity bindings` and select `enable UPN mapping`.
 
@@ -51,7 +51,7 @@ In certain scenarios - such as Access Manager running behind a TLS-terminating l
 
 However, some load balancers or reverse proxies include a feature called 'Certificate Forwarding', where the load balancer validates the certificate, and passes the user's public key along as a header to the backend server (in this case, Access Manager).
 
-This option allows you to specifiy a header which Access Manager will use to extract user certificates from for authentication.
+This option allows you to specify a header which Access Manager will use to extract user certificates from for authentication.
 
 It is important to note that, unless properly secured, any user may send this header to the Access Manager server - allowing impersonation. Therefore, Access Manager requires that you specify particular load balancers or proxies you expect to be using this feature. By default, even when enabled, Access Manager will reject all certificate headers unless the allowlists are populated.
 
