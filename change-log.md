@@ -1,4 +1,11 @@
 # Change log
+## v2.0.9530 7th July 2024
+### Access Manager Service
+- \[FIX\] Fixes an issue where a password rollback event does not correctly re-promote the current password
+- \[FIX\] Fixes a handle leak when making calls to a domain controller
+
+### Access Manager Agent
+- \[FEATURE\] Adds support for Ubuntu 24.04
 
 ## v2.0.9519 27rd February 2024
 ### Access Manager Service
