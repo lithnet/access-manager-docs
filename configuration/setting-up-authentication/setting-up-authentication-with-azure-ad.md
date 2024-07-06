@@ -1,4 +1,4 @@
-# Setting up authentication with Miicrosoft Entra ID
+# Setting up authentication with Microsoft Entra ID
 
 The following guide will assist you in configuring your application to use Azure Active Directory for authentication.
 
