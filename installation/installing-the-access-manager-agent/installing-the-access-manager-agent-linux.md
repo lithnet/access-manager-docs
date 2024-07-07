@@ -32,7 +32,7 @@ If you are installing the agent for the first time, simply run:
 > sudo dnf install LithnetAccessManagerAgent3
 > ```
 
-If you are *upgrading* the agent from version 2, ensure you include the `--allowerasing` to ensure the installation process can remove the old agent and migrate configuration:
+If you are *upgrading* the agent from version 2, ensure you include the `--allowerasing` argument to ensure the installation process can remove the old agent and migrate configuration:
 
 > ```shell
 > # Upgrade the agent (from version 2 to version 3)
@@ -58,7 +58,7 @@ If you are installing the agent for the first time, simply run:
 > sudo dnf install LithnetAccessManagerAgent3
 > ```
 
-If you are *upgrading* the agent from version 2, ensure you include the `--allowerasing` to ensure the installation process can remove the old agent and migrate configuration:
+If you are *upgrading* the agent from version 2, ensure you include the `--allowerasing` argument to ensure the installation process can remove the old agent and migrate configuration:
 
 > ```shell
 > # Upgrade the agent (from version 2 to version 3)
@@ -105,14 +105,24 @@ echo \
   https://packages.lithnet.io/linux/deb/prod/repos/debian/ \
   $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/lithnet.list > /dev/null
 ​
-# Fetch the new repo and install the agent (version 3)
+# Fetch the new repo
 sudo apt update
-sudo apt install lithnetaccessmanageragent3
 ```
 
-### Installing the agent on **Ubuntu** using the Lithnet repo
+If you are installing the agent for the first time, simply run:
+> ```shell
+> # Install the agent
+> sudo apt install lithnetaccessmanageragent3
+> ```
 
-TODO: v2->v3 upgrade
+If you are *upgrading* the agent from version 2, ensure you include the `--autoremove` argument to ensure the installation process can remove the old agent and migrate configuration:
+
+> ```shell
+> # Upgrade the agent (from version 2 to version 3)
+> sudo apt install lithnetaccessmanageragent3 --autoremove
+> ```
+
+### Installing the agent on **Ubuntu** using the Lithnet repo
 
 ```shell
 #!/bin/bash
@@ -136,10 +146,22 @@ echo \
   https://packages.lithnet.io/linux/deb/prod/repos/ubuntu/ \
   $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/lithnet.list > /dev/null
 ​
-# Fetch the new repo and install the agent (version 3)
+# Fetch the new repo
 sudo apt update
-sudo apt install lithnetaccessmanageragent3
 ```
+
+If you are installing the agent for the first time, simply run:
+> ```shell
+> # Install the agent
+> sudo apt install lithnetaccessmanageragent3
+> ```
+
+If you are *upgrading* the agent from version 2, ensure you include the `--autoremove` argument to ensure the installation process can remove the old agent and migrate configuration:
+
+> ```shell
+> # Upgrade the agent (from version 2 to version 3)
+> sudo apt install lithnetaccessmanageragent3 --autoremove
+> ```
 
 ### Installing the agent manually on Debian-based distributions
 
