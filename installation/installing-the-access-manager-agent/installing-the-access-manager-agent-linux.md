@@ -17,46 +17,71 @@ The agent is build using Microsoft .NET 8.0. Ensure the distribution you are usi
 ### Installing the agent on **Fedora** using the Lithnet repo
 
 ```shell
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 ​
 # Ensure that the right DNF components are available
 sudo dnf -y install dnf-plugins-core
 ​
 # Add the Lithnet Fedora repository
 sudo dnf config-manager --add-repo https://packages.lithnet.io/config/rpm/fedora/lithnet.repo 
-​
-# Install the agent (version 3)
-sudo dnf install LithnetAccessManagerAgent3
 ```
+
+If you are installing the agent for the first time, simply run:
+> ```shell
+> # Install the agent
+> sudo dnf install LithnetAccessManagerAgent3
+> ```
+
+If you are *upgrading* the agent from version 2, ensure you include the `--allowerasing` to ensure the installation process can remove the old agent and migrate configuration:
+
+> ```shell
+> # Upgrade the agent (from version 2 to version 3)
+> sudo dnf install LithnetAccessManagerAgent3 --allowerasing
+> ```
+
 
 ### Installing the agent on **Red Hat** using the Lithnet repo
 
 ```shell
- #!/usr/bin/env bash
+#!/usr/bin/env bash
 ​
 # Ensure that the right DNF components are available
 sudo dnf -y install dnf-plugins-core
 ​
 # Add the Lithnet Fedora repository
 sudo dnf config-manager --add-repo https://packages.lithnet.io/config/rpm/rhel/lithnet.repo 
-​
-# Install the agent (version 3)
-sudo dnf install LithnetAccessManagerAgent3
 ```
 
-### Installing the agent manually on RPM-based distributions
+If you are installing the agent for the first time, simply run:
+> ```shell
+> # Install the agent
+> sudo dnf install LithnetAccessManagerAgent3
+> ```
 
-TODO: data package
+If you are *upgrading* the agent from version 2, ensure you include the `--allowerasing` to ensure the installation process can remove the old agent and migrate configuration:
+
+> ```shell
+> # Upgrade the agent (from version 2 to version 3)
+> sudo dnf install LithnetAccessManagerAgent3 --allowerasing
+> ```
+
+### Installing the agent manually on RPM-based distributions
 
 Use the appropriate package management tool to install the agent
 
 ```shell
+# Download the Access Manager Agent data package
+curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v3.0/noarch/stable -o ~/accessmanager-data.rpm
+sudo dnf install ~/accessmanager-data.rpm
+
 # Download the x64 Access Manager Agent
 curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v3.0/x64/stable -o ~/accessmanager.rpm
 sudo dnf install ~/accessmanager.rpm
 ```
 
 ### Installing the agent on **Debian** using the Lithnet repo
+
+TODO: v2->v3 upgrade
 
 ```shell
 #!/bin/bash
@@ -87,6 +112,8 @@ sudo apt install lithnetaccessmanageragent3
 
 ### Installing the agent on **Ubuntu** using the Lithnet repo
 
+TODO: v2->v3 upgrade
+
 ```shell
 #!/bin/bash
 ​
@@ -116,11 +143,14 @@ sudo apt install lithnetaccessmanageragent3
 
 ### Installing the agent manually on Debian-based distributions
 
-TODO: data package
-
 Use the appropriate package management tool to install the agent
 
 ```shell
+# Download the Access Manager Agent data package
+curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v3.0/noarch/stable -o ~/accessmanager-data.deb
+sudo apt install ~/accessmanager-data.deb
+
+# Download the x64 Access Manager Agent
 curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v3.0/x64/stable -o ~/accessmanager.deb
 sudo apt install ~/accessmanager.deb
 ```
