@@ -40,7 +40,7 @@ With *RapidLAPS*, using just a QR code, or PIN, you can log into any LAPS-enable
 
 *RapidLAPS* integrates into the Windows lock screen and UAC prompts, allowing you to speed up the LAPS process wherever you use local admin accounts.
 
-The great news is that this feature works, hether you are using Windows LAPS, legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
+The great news is that this feature works, whether you are using Windows LAPS, legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
 
 ![](.gitbook/assets/rapidlaps.gif)
 
