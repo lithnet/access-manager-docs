@@ -1,5 +1,5 @@
 # SQL installation options
-Access Manager requires a Microsoft SQL Server 2017 or higher database. The setup program can install a pre-configured instance of SQL express, or you can choose to use an existing SQL server, or even an Azure SQL database.
+Access Manager requires a Microsoft SQL Server 2019 or higher database. The setup program can install a pre-configured instance of SQL express, or you can choose to use an existing SQL server, or even an Azure SQL database.
 
 ## Using the pre-configured SQL Express instance
 During installation, you can choose to have a pre-configured instance of SQL Express installed. The installer will create and configure a new SQL express instance (named `AMS`) on the local machine. Access to the database will be restricted to local administrators and the AMS service account.

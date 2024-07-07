@@ -16,18 +16,17 @@ You can configure connectivity to a Splunk instance using the `Splunk Settings` 
 
 You can configure HEC endpoints and tokens for use with Access Manager for both [Splunk Cloud](https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/UsetheHTTPEventCollector#Configure_HTTP_Event_Collector_on_Splunk_Cloud_Platform) and [Splunk Enterprise](https://docs.splunk.com/Documentation/SplunkCloud/latest/Data/UsetheHTTPEventCollector#Configure_HTTP_Event_Collector_on_Splunk_Enterprise).
 
-
 ### Splunk Settings
 
 ![](../../images/ui-page-auditing-splunk.png)
 
 #### Enabled
 
-Indicates if Splunk audit log fowarding is currently enabled. If it is not enabled, audit events will not be sent to Splunk.
+Indicates if Splunk audit log forwarding is currently enabled. If it is not enabled, audit events will not be sent to Splunk.
 
 #### Required
 
-This setting needs very careful consideration before turning this flag on. When enabled, AMS will wait to grant access to the user until the audit log is delivered to Splunk. If Splunk takes a long time to process the audit log - or connectivity to Splunk is lost - this will result in the user waiting a long time for their access request to process on the web page (or timing out completely). Only enable this setting if auditing to the notification channel is critical.
+This setting needs very careful consideration before turning this flag on. When enabled, AMS will wait to grant access to the user until the audit log is delivered to Splunk. If Splunk takes a long time to process the audit log, or connectivity to Splunk is lost, this will result in the user will be denied access to the resource they requested. Only enable this setting if auditing to the notification channel is critical.
 
 #### HTTP event collector host
 
@@ -37,11 +36,11 @@ This is the fully-qualified domain name (FQDN) to use for connecting to the Splu
 
 The protocol to use when connecting to the Splunk HEC endpoint. Defaults to HTTPS.
 
-Optionally, you can disable certificate verification for the HEC endpoint's certificiate, if required.
+Optionally, you can disable certificate verification for the HEC endpoint's certificate, if required.
 
 #### Port
 
-The port to use when connecting to the Splunk HEC endpoint; 
+The port to use when connecting to the Splunk HEC endpoint.
 
 #### HEC token
 

@@ -1,4 +1,4 @@
-# Access Manager Agent - Agent Registration page
+# Agent registration page
 
 The `Agent registration` page provides the ability to configure how Access Manager Agents can register with the Access Manager server.
 
@@ -9,36 +9,37 @@ The `Agent registration` page provides the ability to configure how Access Manag
 
 ### Allow agents to register using Windows (negotiate) authentication
 
-Enabling Windows authentication allows Active Directory-joined devices to use their machine identity to authenticate to the Access Manager directory.
+Enabling Windows authentication allows Active Directory-joined devices to use their machine identity to authenticate to the Access Manager server.
 
-If this setting is enabled, devices can use Kerberos to authenticate to the Access Manager server.
+If this setting is enabled, devices can use Windows authentication (kerberos or NTLM) to authenticate to the Access Manager server.
 
-By default, NTLM authentication is *disabled*, as it has been formally [deprecated by Microsoft](https://learn.microsoft.com/en-us/windows/whats-new/deprecated-features#deprecated-features) due to it's inherent [security weaknesses and vulnerabilities](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-10/security/threat-protection/security-policy-settings/network-security-restrict-ntlm-ntlm-authentication-in-this-domain#security-considerations). We highly recommend keeping NTLM authentication *disabled* unless explicitly required.
+Clients will use Kerberos whenever available to authenticate to the AMS server. However, Kerberos requires that clients have line-of-site to a domain controller. If you are registering devices that are not on the corporate network at registration time, you will need to enable NTLM authentication as well.
+
+Once an agent has registered, line-of-site to a domain controller is no longer required. The agent creates a AMS-specific authentication certificate and registers that with the server to use going forward.
 
 {% hint style="info" %}
-If you wish to allow agents to register with their Active Directory identity, you will need to configure a service prinicipal name (SPN) on the service account used by the Access Manager Service.
+If you wish to allow agents to register with their Active Directory identity, you will need to configure a service principal name (SPN) on the service account used by the Access Manager Service.
 
-If this SPN is not set, the following warning will appear in the `Service account` section of the `Host configuration` page:
+If this SPN is not set, the following warning will appear in the `Service account` section of the `Host configuration` page. Use the `Set SPN...` script to configure the correct SPN for the service account.
+
 ![](../../images/spn-warning.png)
 {% endhint %}
 
 ### Allow agents to register using Microsoft Entra authentication
 
-Enabling Microsoft Entra support allows Windows 10 and higher devices that are *joined* to Microsoft Entra to authenticate to the Access Manager directory. These devices will use their Microsoft Entra credentials to register with AMS.
+Enabling Microsoft Entra support allows Windows 10 and higher devices that are joined to Microsoft Entra to authenticate to the Access Manager server. These devices will use their Microsoft Entra credentials to register with AMS.
 
 ### Allow agents to register using a registration key
 
-Enabling support for key-based device registration allows support for devices that are not joined to an Active Directory or Microsoft Entra.
+Enabling support for key-based registration allows support for devices that are not joined to an Active Directory or Microsoft Entra.
 
 You must enable key-based device registration in order to support non-domain joined devices running macOS, Linux, and/or Windows.
 
-
 ## Registration key settings
 
-create and manage device registration keys. A registration key is required for a device to register with the AMS service, when an alternative form of authentication, such as Windows or Microsoft Entra authentication is not available.
+A registration key is required for a device to register with the AMS service, when an alternative form of authentication, such as Windows or Microsoft Entra authentication is not available.
 
 A registration key is used by a device only once, to allow it to register its own unique set of credentials with the AMS server, which is used from that point on.
-
 
 ### Configuring a registration key
 

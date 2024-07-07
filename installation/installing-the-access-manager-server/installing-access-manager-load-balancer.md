@@ -2,7 +2,7 @@
 
 ![](../../images/badge-enterprise-edition-rocket.svg) High availability is an [Enterprise edition feature](../../access-manager-editions.md)
 
-Access Manager is fully supported in load-balanced environments. You can have a load-balanced web app farm, and a separate API farm, or a single farm for both.
+Access Manager is fully supported in load-balanced environments. You can have a load-balanced web app farm, and a separate agent API farm, or a single farm for both.
 
 ## Requirements
 * If the load balancer 'hides' the real client IP address (e.g. a 'application/layer 7' load balancer), it must support supplying the client IP address in the X-Forwarded-For header
@@ -24,7 +24,12 @@ Access Manager is fully supported in load-balanced environments. You can have a 
 
 ### 3. Install Access Manager Service on the remaining nodes
 * Repeat the installation process for the next node. Make sure to use the same service account, connection string, and TLS certificate on each server. 
-> Settings on the `Host configuration` page will need to be configured per-node. All other settings are stored centrally in the database. Therefore, you will not need to provide the license key after installing it on the first node.
+
+{% hint style="info" %}
+ Settings on the `Host configuration` page will need to be configured per-node. All other settings are stored centrally in the database. Therefore, you will not need to provide the license key after installing it on the first node.
+{% endhint %}
+
+If you want to separate web access from agent API access, you can create multiple individual load balanced farms with different nodes in each. Select the appropriate services on the `Host configuration` page for the role that the specific node will play. Ensure that the `External host name` field matches the name of the load balanced endpoint that either agents or web app users will connect to.
 
 ### 4. Configure the IP address detection settings
 * If the load balancer 'hides' the real client IP address (e.g. a 'application/layer 7' load balancer), you must configure the IP address detection settings in the app. If you are using a 'transport layer' load balancer, such as Microsoft NLB, you can skip this step.
@@ -42,4 +47,4 @@ Access Manager is fully supported in load-balanced environments. You can have a 
 If you are load balancing the web app, the load balancer can be configured to make a `HTTP GET` call to the `/health-check` endpoint to determine host availability. A HTTP `200 OK` response indicates the service is healthy. Any other response should be treated as a failure. Health check requests must be performed over HTTPS.
 
 ### API
-If you are load balancing the API host, you can make a HTTP GET call to the `api/v1.0/health-check` endpoint to determine host availability. A HTTP `200 OK` response indicates the service is healthy. Any other response should be treated as a failure. Health check requests must be performed over HTTPS.
+If you are load balancing the agent API, you can make a HTTP GET call to the `api/v3.0/health-check` endpoint to determine host availability. A HTTP `200 OK` response indicates the service is healthy. Any other response should be treated as a failure. Health check requests must be performed over HTTPS.

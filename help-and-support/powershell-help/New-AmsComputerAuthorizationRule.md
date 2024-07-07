@@ -16,7 +16,10 @@ Creates a new computer authorization rule
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> [-PrincipalsAllowedLaps <Object[]>]
  [-PrincipalsDeniedLaps <Object[]>] [-PrincipalsAllowedLapsHistory <Object[]>]
- [-PrincipalsDeniedLapsHistory <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
+ [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
+ [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
  [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
@@ -35,7 +38,10 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AuthorizationScriptPath 
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> [-PrincipalsAllowedLaps <Object[]>]
  [-PrincipalsDeniedLaps <Object[]>] [-PrincipalsAllowedLapsHistory <Object[]>]
- [-PrincipalsDeniedLapsHistory <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
+ [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
+ [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
  [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
@@ -55,6 +61,9 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> -Aut
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
  [-PrincipalsAllowedLaps <Object[]>] [-PrincipalsDeniedLaps <Object[]>]
  [-PrincipalsAllowedLapsHistory <Object[]>] [-PrincipalsDeniedLapsHistory <Object[]>]
+ [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
+ [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
+ [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
  [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
@@ -75,11 +84,15 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
 New-AmsComputerAuthorizationRule -AdComputer <String> [-PrincipalsAllowedJit <Object[]>]
  [-PrincipalsDeniedJit <Object[]>] [-PrincipalsAllowedLaps <Object[]>] [-PrincipalsDeniedLaps <Object[]>]
  [-PrincipalsAllowedLapsHistory <Object[]>] [-PrincipalsDeniedLapsHistory <Object[]>]
- [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>] [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
+ [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
+ [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### AD computer target authorized by script
@@ -89,7 +102,8 @@ New-AmsComputerAuthorizationRule -AdComputer <String> -AuthorizationScriptPath <
  [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### AD group target authorized by ACL
@@ -97,11 +111,15 @@ New-AmsComputerAuthorizationRule -AdComputer <String> -AuthorizationScriptPath <
 New-AmsComputerAuthorizationRule -AdGroup <String> [-PrincipalsAllowedJit <Object[]>]
  [-PrincipalsDeniedJit <Object[]>] [-PrincipalsAllowedLaps <Object[]>] [-PrincipalsDeniedLaps <Object[]>]
  [-PrincipalsAllowedLapsHistory <Object[]>] [-PrincipalsDeniedLapsHistory <Object[]>]
- [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>] [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
+ [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
+ [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### AD group target authorized by script
@@ -110,7 +128,8 @@ New-AmsComputerAuthorizationRule -AdGroup <String> -AuthorizationScriptPath <Str
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### AD container target authorized by ACL
@@ -118,11 +137,15 @@ New-AmsComputerAuthorizationRule -AdGroup <String> -AuthorizationScriptPath <Str
 New-AmsComputerAuthorizationRule -AdContainer <String> [-PrincipalsAllowedJit <Object[]>]
  [-PrincipalsDeniedJit <Object[]>] [-PrincipalsAllowedLaps <Object[]>] [-PrincipalsDeniedLaps <Object[]>]
  [-PrincipalsAllowedLapsHistory <Object[]>] [-PrincipalsDeniedLapsHistory <Object[]>]
- [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>] [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
+ [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
+ [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### AD container target authorized by script
@@ -132,14 +155,18 @@ New-AmsComputerAuthorizationRule -AdContainer <String> -AuthorizationScriptPath 
  [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### AMS computer target authorized by ACL
 ```
 New-AmsComputerAuthorizationRule -AmsComputerId <String> [-PrincipalsAllowedLaps <Object[]>]
  [-PrincipalsDeniedLaps <Object[]>] [-PrincipalsAllowedLapsHistory <Object[]>]
- [-PrincipalsDeniedLapsHistory <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
+ [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
+ [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
  [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
@@ -158,7 +185,10 @@ New-AmsComputerAuthorizationRule -AmsComputerId <String> -AuthorizationScriptPat
 ```
 New-AmsComputerAuthorizationRule -AmsGroupId <String> [-PrincipalsAllowedLaps <Object[]>]
  [-PrincipalsDeniedLaps <Object[]>] [-PrincipalsAllowedLapsHistory <Object[]>]
- [-PrincipalsDeniedLapsHistory <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
+ [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
+ [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
  [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
@@ -499,7 +529,7 @@ The list of principals who are allowed BitLocker access to this computer.
 
 ```yaml
 Type: Object[]
-Parameter Sets: AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
 Aliases:
 
 Required: False
@@ -559,7 +589,7 @@ The list of principals who are not allowed BitLocker access to this computer.
 
 ```yaml
 Type: Object[]
-Parameter Sets: AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
 Aliases:
 
 Required: False
@@ -637,6 +667,111 @@ Type: AuditReasonFieldState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Hidden, Optional, Required
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainControllerName
+The name of a domain controller to use when performing the JIT operation against
+
+```yaml
+Type: String
+Parameter Sets: AD computer target authorized by ACL, AD computer target authorized by script, AD group target authorized by ACL, AD group target authorized by script, AD container target authorized by ACL, AD container target authorized by script
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DoNotUseRemoteDcLocator
+Specifies that the AMS service should not attempt to use the target computer's DCLocator service to find a domain controller to perform the JIT operation against
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: AD computer target authorized by ACL, AD computer target authorized by script, AD group target authorized by ACL, AD group target authorized by script, AD container target authorized by ACL, AD container target authorized by script
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteName
+The name of the site to use when trying to find a domain controller to perform the JIT operation against
+
+```yaml
+Type: String
+Parameter Sets: AD computer target authorized by ACL, AD computer target authorized by script, AD group target authorized by ACL, AD group target authorized by script, AD container target authorized by ACL, AD container target authorized by script
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrincipalsAllowedRapidLapsElevation
+The list of principals who are allowed RapidLAPS elevation access to this computer.
+
+```yaml
+Type: Object[]
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrincipalsAllowedRapidLapsLogin
+The list of principals who are allowed RapidLAPS login access to this computer.
+
+```yaml
+Type: Object[]
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrincipalsDeniedRapidLapsElevation
+The list of principals who are not allowed RapidLAPS elevation access to this computer.
+
+```yaml
+Type: Object[]
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -PrincipalsDeniedRapidLapsLogin
+The list of principals who are not allowed RapidLAPS login access to this computer.
+
+```yaml
+Type: Object[]
+Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Aliases:
 
 Required: False
 Position: Named

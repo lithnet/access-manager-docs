@@ -58,9 +58,9 @@ If configured, Access Manager will compute a `gid` for the group like so:
 
 When picking an offset, ensure that it is significantly large enough to prevent clashes with already-allocated `gid`s in your environment.
 
-> Note: This may not be required if your Linux/AD binding makes use of automatic ID mapping. For example, [SSSD](https://sssd.io/docs/ad/ad-provider.html#configuring-active-directory-to-use-posix-attributes) can be configured to automatically map Active Directory security identifiers (SIDs) to POSIX-style [`uid` and `gid` identifiers](https://en.wikipedia.org/wiki/User_identifier).
-
-
+{% hint style="info" %}
+This may not be required if your Linux/AD binding makes use of automatic ID mapping. For example, [SSSD](https://sssd.io/docs/ad/ad-provider.html#configuring-active-directory-to-use-posix-attributes) can be configured to automatically map Active Directory security identifiers (SIDs) to POSIX-style [`uid` and `gid` identifiers](https://en.wikipedia.org/wiki/User_identifier).
+{% endhint %}
 
 ## JIT mode
 

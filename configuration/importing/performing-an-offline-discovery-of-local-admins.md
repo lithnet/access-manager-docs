@@ -20,7 +20,9 @@ Download the [New-LocalAdminReportShare.ps1](https://github.com/lithnet/access-m
 
 We'll use the folder and share name `local-admin-reports` throughout this guide. If you change the name of the share, take note to replace it where it is mentioned throughout this guide.
 
-> Note, as the data contained from these reports will eventually be uploaded into Access Manager, you need to minimize access to the share, to limit the ability for a malicious actor to add unexpected authorization entries. The provided scripts minimize the risks by implementing tight security controls around the data that is gathered, but you should still check and validate that the rules created match the permissions you expect to see.
+{% hint style="warning" %}
+As the data contained from these reports will eventually be uploaded into Access Manager, you need to minimize access to the share, to limit the ability for a malicious actor to add unexpected authorization entries. The provided scripts minimize the risks by implementing tight security controls around the data that is gathered, but you should still check and validate that the rules created match the permissions you expect to see.
+{% endhint %}
 
 ## Download the data collection scripts
 

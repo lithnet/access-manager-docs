@@ -1,18 +1,17 @@
-# Lithnet LAPS configuration page (Active Directory)
-
-![](../../images/badge-enterprise-edition-rocket.svg) Lithnet LAPS is an [Enterprise edition feature](../../access-manager-editions.md)
+# Lithnet LAPS (deprecated) page
 
 {% hint style="warning" %}
-**Note**: The "Lithnet LAPS in Active Directory" feature was deprecated in v3.0 of Access Manager.
-
-Access Manager Agent v3.0 no longer stored passwords in the Active Directory Schema; and support for the legacy "v2.0" agent will be removed in a future release of Access Manager.
+**Note**:
+Access Manager Agent v3 no longer stores passwords in the Active Directory, and support for the legacy v2 agent will be removed in a future release of Access Manager.
 
 We recommend migrating any existing v2.0 agents utilizing this feature to AMSv3 agents, which securely store passwords for Active Directory-joined machines in the AMS database directly.
 
 Ensure that your AMS server is up to date *before* deploying the AMS v3 agent to devices in your environment.
 
-For more information on planning your AMS v3 migration, see our [upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
+For more information on planning your AMS v3 migration, see our [upgrading from Access Manager v2 to v3](../../installation/upgrading-from-v2.md) guide.
 {% endhint %}
+
+The settings on this page only apply to the v2 Access Manager agent, when configured to store passwords in Active Directory. It does not apply to v3 agents at all.
 
 ![](../../images/ui-page-directory-configuration-active-directory-lithnet-laps.png)
 
@@ -22,9 +21,22 @@ A list of forests is shown along with an indication of the deployment status of 
 
 You can use the `Deploy Schema...` button to access a script that will deploy the Lithnet Access Manager schema to the selected forest. You'll need to run this script as a member of the Schema Admins group in the forest you need to update.
 
+## Password retrieval
+This setting controls whether the Access Manager Server will attempt to retrieve passwords from the `lithnetLocalAdminPassword` attribute in Active Directory.
+
+If you did not deploy the AMSv2 agent to store passwords in Active Directory, this this option should be disabled.
+
+Where the Access Manager v2 agent is in use and storing passwords in Active Directory, you'll need to ensure this option is enabled.
+
+Once you have migrated all your agents to v3, disable this option, to speed up password lookups.
+
 ## Permissions
 
-If you want to use the Lithnet Access Manager agent instead of the Microsoft LAPS agent, to take advantage of the password history and encryption capabilities, then you'll need to delegate appropriate permission for the AMS service account to read those passwords.
+{% hint style="info" %}
+You do not need to delegate permissions if you are using Access Manager v3 agent
+{% endhint %}
+
+If you are using the v2 agent, you'll need to delegate appropriate permission for the AMS service account to read those passwords.
 
 Click the `Delegate permissions` button to generate a script to do this automatically.
 
@@ -32,7 +44,11 @@ Copy or save the script, modify the `$OU` variable as appropriate, and run it in
 
 ## Encryption
 
-Each forest in the domain must have an encryption certificate published in order to deploy the Lithnet Access Manager Agent. Select a forest from the drop-down list, to see the encryption certificates available for that forest. Only one certificate can be published at any one time.
+{% hint style="info" %}
+You do not need to create an encryption certificate if you are using Access Manager v3 agent
+{% endhint %}
+
+Each forest in the domain, where the v2 agent is in use, must have an encryption certificate published in order to deploy the Lithnet Access Manager Agent. Select a forest from the drop-down list, to see the encryption certificates available for that forest. Only one certificate can be published at any one time.
 
 You can rotate these certificates as often as you like, but you need to ensure that the certificate used to encrypt a given password is available for as long as it is stored in the directory. Agents cannot decrypt their own passwords, so once they have encrypted it with a given certificate, it can only be decrypted with the same certificate.
 

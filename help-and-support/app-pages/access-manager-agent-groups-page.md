@@ -1,6 +1,6 @@
-# Access Manager Agent Groups page
+# Groups page
 
-The `groups` page provides the ability to create and manage AMS groups. AMS groups are stored in the Access Manager directory, and can contain devices that are registered with AMS. Groups can then be used in authorization rules, and for the application of password policies.
+The `groups` page provides the ability to create and manage AMS groups. AMS groups are stored in the Access Manager database, and can contain devices that are registered with AMS. Groups can then be used in authorization rules, and for the application of password policies.
 
 ![](../../images/ui-page-access-manager-agent-groups.png)
 

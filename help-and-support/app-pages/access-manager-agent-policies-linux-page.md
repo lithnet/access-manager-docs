@@ -1,4 +1,4 @@
-# Access Manager Agent Policies (Linux) Page
+# Linux policies page
 
 The `Linux policies` page in the `Access Manager Agent/Agent policies` area of Access Manager allows you to configure policies for devices running Access Manager Agent for Linux (version 3.0 or higher).
 
@@ -23,13 +23,17 @@ The first tab of the Linux agent policy configuration screen configures general 
 
 Specify the name for the custom agent policy.
 
-> Note: This field is not configurable for the default policy.
+{% hint style="info" %}
+Note: This field is not configurable for the default policy.
+{% endhint %}
 
 #### Policy is enabled
 
 Determines whether the custom agent policy is enabled for targeting.
 
-> Note: This field is not configurable for the default policy.
+{% hint style="info" %}
+Note: This field is not configurable for the default policy.
+{% endhint %}
 
 #### Agent check-in interval (minutes)
 
@@ -49,7 +53,9 @@ If no policy is configured with a target that captures the given device, the dev
 For this reason, it is important to consider the order in which your policies are organised; as a rule of thumb, policies with more specific targets should be placed *higher* in the list than more generically-targeted policies.
 {% endhint %}
 
-> Note: This field is not configurable for the default policy.
+{% hint style="info" %}
+Note: This field is not configurable for the default policy.
+{% endhint %}
 
 ### Password settings
 The second tab of the Linux agent policy configuration screen - `Passwords` - configures password management and composition settings.
@@ -72,8 +78,10 @@ You can optionally configure the following settings for managing local accounts:
 #### History
 
 * __Maximum password age (days)__: The maximum number of days before the password must be rotated. For example, if this is set to 7, then the password would be rotated after 7 days.
-* __Number of previous passwords to keep__: The number of historical passwords to store in the Access Manager directory.
+* __Number of previous passwords to keep__: The number of historical passwords to store in the Access Manager database.
 * __Number of days to keep previous passwords__: The number of days to keep historical passwords for; setting this field to "0" disables aging out of historical passwords.
+
+See [Password history and retention](../../help-and-support/advanced-help-topics/password-history-retention.md) for more information how how these settings work to ensure you have the right number of passwords retained.
 
 #### Composition
 

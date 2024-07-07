@@ -2,23 +2,18 @@
 
 ## Access Manager Service Downloads
 
-### Access Manager Service (Version 3)
+### Access Manager Service
 | Item | Operating system | Architecture |
 | --- | --- | --- |
 | Lithnet Access Manager Service v3 | Windows Server 2016 or higher | [x64](https://packages.lithnet.io/win/access-manager-service/v3.0/x64/stable)  |
 
-### Access Manager Service (Version 2)
-| Item | Operating system | Architecture |
-| --- | --- | --- |
-| Lithnet Access Manager Service v2 | Windows Server 2016 or higher | [x64](https://packages.lithnet.io/win/access-manager-service/v2.0/x64/stable)  |
-
 ## Access Manager Agent Downloads
 
-### Access Manager Agent (Version 3)
+### Access Manager Agent
 {% hint style="warning" %}
 **Note**: Access Manager Agent v3 is only compatible with a server running Access Manager Service v3.
 
-Ensure that your AMS server is up to date *before* deploying the AMS v3 agent to devices in your environment.
+Ensure that your AMS server has been upgraded to v3 *before* deploying the AMS v3 agent to devices in your environment.
 
 For more information on planning your AMS v3 migration, see our [upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
 {% endhint %}
@@ -38,6 +33,14 @@ For more information on planning your AMS v3 migration, see our [upgrading from 
 | | | [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.0/arm64/stable) |
 | macOS | macOS 12 or higher | [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/x64/stable) |
 | macOS | macOS 12 or higher | [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/arm64/stable) |
+
+## Previous versions
+
+### Access Manager Service (Version 2)
+| Item | Operating system | Architecture |
+| --- | --- | --- |
+| Lithnet Access Manager Service v2 | Windows Server 2016 or higher | [x64](https://packages.lithnet.io/win/access-manager-service/v2.0/x64/stable)  |
+
 
 ### Access Manager Agent (Version 2)
 
@@ -64,4 +67,3 @@ For more information on planning your AMS v3 migration, see our [upgrading from 
 | | | [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v2.0/arm64/stable) |
 | macOS | macOS 10.15 or higher | [x64](https://packages.lithnet.io/macos/access-manager-agent/v2.0/x64/stable) |
 | macOS | macOS 11 or higher | [arm64](https://packages.lithnet.io/macos/access-manager-agent/v2.0/arm64/stable) |
-

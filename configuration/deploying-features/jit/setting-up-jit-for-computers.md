@@ -2,7 +2,7 @@
 
 Lithnet Access Manager supports granting temporary administrative access to computers using a simple just-in-time (JIT) access model.
 
-Rather than having administrators permanently being a member of each computer's local administrator group, they can use Access Manager to grant themselves administrative access on a temporary as-needed basis.
+Rather than having administrators being a permanent member of each computer's local administrator group, they can use Access Manager to grant themselves administrative access on a temporary and as-needed basis.
 
 By removing all permanent administrators from your computers, you increase the difficulty of a successful lateral-movement based attack.
 
@@ -41,9 +41,13 @@ From the `Directory Configuration/Active Directory/Just-in-time access` page, yo
 
 Select the OU that contains the computers you want to create JIT groups for and select a different OU where the JIT groups should be created.
 
-> It is recommended that the JIT group OU be dedicated to Access Manager JIT groups only. If the OU contains other groups, and the `delete groups in this OU that do not have matching computers` option is selected, those other groups will be deleted by Access Manager.
+{% hint style="warning" %}
+It is recommended that the JIT group OU be dedicated to Access Manager JIT groups only. If the OU contains other groups, and the `delete groups in this OU that do not have matching computers` option is selected, those other groups will be deleted by Access Manager.
+{% endhint %}
 
-> **WARNING** Given that anyone with access to modify group membership in this OU can effectively become an admin of any computer managed by JIT, you must take care to secure the OU and ensure only Access Manager has access to the objects within it.
+{% hint style="danger" %}
+Given that anyone with access to modify group membership in this OU can effectively become an admin of any computer managed by JIT, you must take care to secure the OU and ensure only Access Manager has access to the objects within it.
+{% endhint %}
 
 Select a group name template, making sure to include the `%computerName%` variable. For each computer found in the specified OU, AMS will use this template to create the group. For a computer called `PC1`, a template of `JIT-%computerName%` will result in the group being called `JIT-PC1`. You'll need to use this name template name when creating the authorization rule that grants users access to these computers.
 
@@ -75,7 +79,9 @@ It is recommended that you only turn this on after appropriate testing, and once
 
 If you have additional users or groups that should also be in the local administrators group, then you can add those to the list. Remember, in order to prevent lateral movement with administrator rights, no accounts should have permanent administrative rights. Use this feature temporarily, to assist in an orderly transition to removing permanent admin rights, or in very limited circumstances.
 
-> Note, if you are currently using the older Windows `Restricted groups` policies, you'll need to convert that membership to use the new group-policy preferences style. The `restricted groups` policy does not allow use of the `%computername%` variable. The functionality provided by restricted groups is available in group policy preferences.
+{% hint style="info" %}
+If you are currently using the older Windows `Restricted groups` policies, you'll need to convert that membership to use the new group-policy preferences style. The `restricted groups` policy does not allow use of the `%computername%` variable. The functionality provided by restricted groups is available in group policy preferences.
+{% endhint %}
 
 ## Step 4: Assign access
 

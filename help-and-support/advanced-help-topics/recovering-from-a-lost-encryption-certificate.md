@@ -3,7 +3,7 @@ If you lose access to the encryption certificate's private key, any current and 
 
 In order to restore local admin password access to your environment, you need to publish a new key, and force the agents to generate a new password and encrypt it with that key.
 
-## Recovery steps for Lithnet LAPS for the Access Manager Directory
+## Recovery steps for passwords stored in Access Manager
 ### Step 1: Generate a new certificate
 From the Access Manager Service configuration tool, visit the `Access Manager Agent/Password settings` click `Generate new...` to create a new certificate. 
 
@@ -18,10 +18,11 @@ On the `Access Manager Agent/Devices` page, select all the appropriate devices a
 
 Unfortunately, password history is not recoverable.
 
-## Recovery steps for Lithnet LAPS for Active Directory
+## Recovery steps for Lithnet LAPS passwords stored in Active Directory (deprecated)
+These steps only apply to cases where you have the v2 agent configured on Active Directory-managed devices, storing passwords in Active Directory
 
 ### Step 1: Generate a new certificate
-From the Access Manager Service configuration tool, visit the `Directory Configuration/Active Directory/Lithnet LAPS page`, select the forest you need to recover from the drop-down list, and click `Generate new...`. 
+From the Access Manager Service configuration tool, visit the `Directory Configuration/Active Directory/Lithnet LAPS page (deprecated)`, select the forest you need to recover from the drop-down list, and click `Generate new...`. 
 
 ### Step 2: Backup the new certificate
 Once the certificate has been generated, click `Export...` to back up the certificate. Choose a strong password, and keep this file safe, preferably in an offline location.

@@ -26,7 +26,7 @@ If you just want to set up a quick test environment, you can use a single server
 
 Once Access Manager is installed, you need to grant it the permissions it needs to read passwords from the directory, and assign access to your users.
 
-Follow the steps in the [configuration guide for Microsoft LAPS](/configuration/deploying-features/setting-up-microsoft-laps.md) to correctly delegate and assign user permissions.
+Follow the steps in the [configuration guide for Microsoft LAPS](../../configuration/deploying-features/laps/setting-up-microsoft-laps.md) to correctly delegate and assign user permissions.
 
 ### Step 6: Test user access
 

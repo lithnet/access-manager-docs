@@ -13,7 +13,7 @@ Sets one or more AMS host configuration parameters
 ## SYNTAX
 
 ```
-Set-AmsHostConfig [-ApiEnabled <Boolean>] [-WebAppEnabled <Boolean>] [-ApiHostname <String>]
+Set-AmsHostConfig [-AgentAccessEnabled <Boolean>] [-WebAppEnabled <Boolean>] [-ExternalHostname <String>]
  [-LogPath <String>] [-ConfigPath <String>] [-ConnectionString <String>] [-SkipConnectionStringValidation]
  [<CommonParameters>]
 ```
@@ -47,36 +47,6 @@ PS C:\> Set-AmsHostConfig -LogPath "C:\Logs\AMS"
 This example changes the log location to "C:\Logs\AMS"
 
 ## PARAMETERS
-
-### -ApiEnabled
-Enables or disables the API service
-
-```yaml
-Type: Boolean
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -ApiHostname
-Sets the hostname for the API service. This is the hostname that agents use to connect to the service, and must match exactly what is configured on the client side.
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
 
 ### -ConfigPath
 The path where the applications config files are stored
@@ -141,6 +111,36 @@ Accept wildcard characters: False
 
 ### -WebAppEnabled
 Enables or disables the web app
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ExternalHostname
+Sets the external hostname for the service. This is the hostname that agents use to connect to the service, and must match exactly what is configured on the client side.
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AgentAccessEnabled
+Enables or disables agent access to this service
 
 ```yaml
 Type: Boolean

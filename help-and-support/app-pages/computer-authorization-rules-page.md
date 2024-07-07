@@ -25,10 +25,11 @@ A target is a computer, group, or container that you want to grant access to. A 
 * An Active Directory domain, organizational unit, or container
 * An Active Directory group
 * An Active Directory computer object
-* An Microsoft Entra device
-* An Microsoft Entra group
-* An AMS-registered device
-* An AMS-registered group
+* A Microsoft Entra tenant
+* A Microsoft Entra device
+* A Microsoft Entra group
+* An AMS managed device
+* An AMS managed group
 
 A target can be in any domain visible to AMS, including domains from forests that trust the forest where AMS resides, an Microsoft Entra device or group, or an AMS-managed device or group.
 

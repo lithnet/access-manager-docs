@@ -5,10 +5,13 @@ Managing local admin passwords safely and securely relies on having a mechanism 
 ## Option 1: Lithnet Access Manager agent 
 Lithnet Access Manager has its own agent that can be used to manage the local admin passwords of your devices. It has full support for encrypted passwords, password history, and is not just supported on Windows, but macOS and Linux as well.
 
+As well as managing LAPS passwords in much the same way as the Microsoft agent, it adds support for backing up BitLocker recovery codes from any Windows device, and enables our new RapidLAPS passwordless LAPS login capability.
+
 Pros
 - Supports Windows, macOS, and Linux
 - Encrypts all passwords, along with password history support
 - Support for "passwordless" elevation and LAPS login with *RapidLAPS* (Windows only)
+- Backs up BitLocker recovery keys (Windows only)
 - Supports Windows Server 2016 and higher, as well as Windows 10 and higher
 - Supports Active Directory joined, Entra ID joined, as well as standalone Windows devices
 
@@ -19,7 +22,6 @@ Cons
 - You wish to use the *RapidLAPS* feature on Windows devices.
 - You have macOS and Linux devices you want to support
 - You have Windows devices not joined to a domain
-- You want fully encrypted local admin passwords in all scenarios
 - You want one LAPS client solution for your entire Windows and non-Windows fleet
 
 {% hint style="info" %}
@@ -81,35 +83,38 @@ The Microsoft agents works only on Windows AD or Microsoft Entra-joined devices.
 
 | Operating system    |   Microsoft Legacy LAPS Agent  |  Microsoft Windows LAPS Agent  |   Lithnet Access Manager Agent   |
 | --- | --- | --- | --- |
-|  Windows Vista, Windows 7 and Windows 8 |   ![](../../images/check3.png)  |  ![](../../images/dash.png)  |   ![](../../images/dash.png)  |
-| Windows 8.1  |   ![](../../images/check3.png)  |  ![](../../images/dash.png)  | ![](../../images/dash.png)  |
-|  Windows 10  |   ![](../../images/check3.png)  |  ![](../../images/check3.png)  |   ![](../../images/check3.png)  |
-| Windows 11 and higher |  ![](../../images/check3.png)  |    ![](../../images/check3.png)   |   ![](../../images/check3.png)  |
-| Windows Server 2012 R2  |   ![](../../images/check3.png)  |  ![](../../images/dash.png)  |  ![](../../images/dash.png)   |
-| Windows Server 2016 |   ![](../../images/check3.png)  |  ![](../../images/dash.png)  |   ![](../../images/check3.png)  |
-| Windows Server 2019 and higher  |   ![](../../images/check3.png)  |    ![](../../images/check3.png)   |   ![](../../images/check3.png)  |
-| macOS<sup>[1]</sup> |  ![](../../images/dash.png)  |  ![](../../images/dash.png)  |   ![](../../images/check3.png)  |
-| Linux<sup>[1]</sup> |  ![](../../images/dash.png)  |  ![](../../images/dash.png)  |   ![](../../images/check3.png)  |
+|  Windows Vista, Windows 7 and Windows 8 |   ![](../images/check3.png)  |  ![](../images/dash.png)  |   ![](../images/dash.png)  |
+| Windows 8.1  |   ![](../images/check3.png)  |  ![](../images/dash.png)  | ![](../images/dash.png)  |
+|  Windows 10  |   ![](../images/check3.png)  |  ![](../images/check3.png)  |   ![](../images/check3.png)  |
+| Windows 11 and higher |  ![](../images/check3.png)  |    ![](../images/check3.png)   |   ![](../images/check3.png)  |
+| Windows Server 2012 R2  |   ![](../images/check3.png)  |  ![](../images/dash.png)  |  ![](../images/dash.png)   |
+| Windows Server 2016 |   ![](../images/check3.png)  |  ![](../images/dash.png)  |   ![](../images/check3.png)  |
+| Windows Server 2019 and higher  |   ![](../images/check3.png)  |    ![](../images/check3.png)   |   ![](../images/check3.png)  |
+| macOS<sup>\[1\]</sup> |  ![](../images/dash.png)  |  ![](../images/dash.png)  |   ![](../images/check3.png)  |
+| Linux<sup>\[1\]</sup> |  ![](../images/dash.png)  |  ![](../images/dash.png)  |   ![](../images/check3.png)  |
 
-_1. See the [downloads page](../downloads.md) for detailed operating system support for macOS and Linux agents._
+_1. See the [downloads page](../installation/downloads.md) for detailed operating system support for macOS and Linux agents._
 
 ## Supported join types
 | Join type | Microsoft Legacy LAPS Agent | Microsoft Windows LAPS Agent | Lithnet Access Manager Agent |
 | --- | --- |--- |--- |
-| Active Directory joined devices |   ![](../../images/check3.png) |   ![](../../images/check3.png) |   ![](../../images/check3.png) |
-| Entra ID joined devices | ![](../../images/dash.png) |   ![](../../images/check3.png) |   ![](../../images/check3.png) |
-| Non-domain joined devices (workgroup) | ![](../../images/dash.png) | ![](../../images/dash.png) |   ![](../../images/check3.png) |
+| Active Directory joined devices |   ![](../images/check3.png) |   ![](../images/check3.png) |   ![](../images/check3.png) |
+| Entra ID joined devices | ![](../images/dash.png) |   ![](../images/check3.png) |   ![](../images/check3.png) |
+| Non-domain joined devices (workgroup) | ![](../images/dash.png) | ![](../images/dash.png) |   ![](../images/check3.png) |
 
 ## Feature comparison
 
 | Feature     |   Microsoft Legacy LAPS Agent  |  Microsoft Windows LAPS Agent  |  Lithnet Access Manager Agent   |
 | --- | --- | --- | --- |
-| Regularly rotates the local admin password  |   ![](../../images/check3.png)  |    ![](../../images/check3.png) |    ![](../../images/check3.png)  |
-| Stores a history of previous local admin passwords |  ![](../../images/dash.png) |    ![](../../images/check3.png)  |    ![](../../images/check3.png)  |
-| Stores passwords in plain-text  |   ![](../../images/check3.png)  |  ![](../../images/dash.png) 1 |  ![](../../images/dash.png)  |
-| Encrypts passwords    |  ![](../../images/dash.png)  | ![](../../images/check3.png)  |    ![](../../images/check3.png)  |   
-| Write passwords to Entra ID |![](../../images/dash.png)  |    ![](../../images/check3.png)   |![](../../images/dash.png) |
-| Write passwords to the AMS server  |  ![](../../images/dash.png)  |  ![](../../images/dash.png)  |   ![](../../images/check3.png)  |
+| Regularly rotates the local admin password  |   ![](../images/check3.png)  |    ![](../images/check3.png) |    ![](../images/check3.png)  |
+| Stores a history of previous local admin passwords |  ![](../images/dash.png) |    ![](../images/check3.png)  |    ![](../images/check3.png)  |
+| Stores passwords in plain-text  |   ![](../images/check3.png)  |  ![](../images/dash.png) 1 |  ![](../images/dash.png)  |
+| Encrypts passwords    |  ![](../images/dash.png)  | ![](../images/check3.png)  |    ![](../images/check3.png)  |   
+| Writes passwords to Active Directory |   ![](../images/check3.png)  |    ![](../images/check3.png) |   ![](../images/dash.png) |
+| Write passwords to Entra ID |![](../images/dash.png)  |    ![](../images/check3.png)   |![](../images/dash.png) |
+| Write passwords to the AMS server  |  ![](../images/dash.png)  |  ![](../images/dash.png)  |   ![](../images/check3.png)  |
+| Backups up BitLocker recovery keys to AMS  |  ![](../images/dash.png)  |  ![](../images/dash.png)  |   ![](../images/check3.png)  |
+| Enables passwordless login and elevation via RapidLAPS  |  ![](../images/dash.png)  |  ![](../images/dash.png)  |   ![](../images/check3.png)  |
 
 _1. Windows LAPS can store passwords in plain text if configured_
 
@@ -117,9 +122,9 @@ _1. Windows LAPS can store passwords in plain text if configured_
 
 | | Legacy LAPS thick client | Windows LAPS AD property pages | Windows LAPS PowerShell | Entra Admin Portal | Access Manager Service|
 | --- | --- | --- | --- | --- | --- |
-| Microsoft Legacy LAPS passwords stored in AD | ![](../../images/check3.png)  | ![](../../images/check3.png) | ![](../../images/check3.png)  | ![](../../images/dash.png) | ![](../../images/check3.png) | 
-| Microsoft Windows LAPS passwords stored in AD |![](../../images/dash.png) | ![](../../images/check3.png)| ![](../../images/check3.png)  | ![](../../images/dash.png) |  ![](../../images/check3.png)  |
-| Microsoft Windows LAPS passwords stored in Microsoft Entra |![](../../images/dash.png) | ![](../../images/dash.png)  | ![](../../images/check3.png)  | ![](../../images/check3.png)  |  ![](../../images/check3.png)  |
-| Access Manager Agent passwords |   ![](../../images/dash.png)  |  ![](../../images/dash.png)  |![](../../images/dash.png)  |  ![](../../images/dash.png)  |   ![](../../images/check3.png)  |
+| Microsoft Legacy LAPS passwords stored in AD | ![](../images/check3.png)  | ![](../images/check3.png) | ![](../images/check3.png)  | ![](../images/dash.png) | ![](../images/check3.png) | 
+| Microsoft Windows LAPS passwords stored in AD |![](../images/dash.png) | ![](../images/check3.png)| ![](../images/check3.png)  | ![](../images/dash.png) |  ![](../images/check3.png)  |
+| Microsoft Windows LAPS passwords stored in Microsoft Entra |![](../images/dash.png) | ![](../images/dash.png)  | ![](../images/check3.png)  | ![](../images/check3.png)  |  ![](../images/check3.png)  |
+| Access Manager Agent passwords |   ![](../images/dash.png)  |  ![](../images/dash.png)  |![](../images/dash.png)  |  ![](../images/dash.png)  |   ![](../images/check3.png)  |
 
 

@@ -1,4 +1,4 @@
-# Access Manager Agent Policies (Windows) Page
+# Windows policies page
 
 The `Windows policies` page in the `Access Manager Agent/Agent policies` area of Access Manager allows you to configure policies for devices running Access Manager Agent for Windows (version 3.0 or higher)
 
@@ -23,13 +23,17 @@ The first tab of the Windows agent policy configuration screen configures genera
 
 Specify the name for the custom agent policy.
 
-> Note: This field is not configurable for the default policy.
+{% hint style="info" %}
+Note: This field is not configurable for the default policy.
+{% endhint %}
 
 #### Policy is enabled
 
 Determines whether the custom agent policy is enabled for targeting.
 
-> Note: This field is not configurable for the default policy.
+{% hint style="info" %}
+Note: This field is not configurable for the default policy.
+{% endhint %}
 
 #### Agent check-in interval (minutes)
 
@@ -49,7 +53,9 @@ If no policy is configured with a target that captures the given device, the dev
 For this reason, it is important to consider the order in which your policies are organised; as a rule of thumb, policies with more specific targets should be placed *higher* in the list than more generically-targeted policies.
 {% endhint %}
 
-> Note: This field is not configurable for the default policy.
+{% hint style="info" %}
+Note: This field is not configurable for the default policy.
+{% endhint %}
 
 ### Password settings
 The second tab of the Windows agent policy configuration screen - `Passwords` - configures password management and composition settings.
@@ -61,7 +67,9 @@ The second tab of the Windows agent policy configuration screen - `Passwords` - 
 
 Configures whether the Access Manager Agent should attempt to manage and rotate the local administrator password on the device.
 
-> Note: if Windows LAPS (new or legacy) is configured to manage the password on a machine, the Access Manager Agent will refuse to change the password, to ensure consistency.
+{% hint style="warning" %}
+If Microsoft LAPS (new or legacy) is configured to manage the password on a machine, the Access Manager Agent's password change capability will be disabled, to ensure consistency.
+{% endhint %}
 
 #### Account to manage
 
@@ -77,8 +85,10 @@ You can optionally configure the following settings for managing local accounts:
 #### History
 
 * __Maximum password age (days)__: The maximum number of days before the password must be rotated. For example, if this is set to 7, then the password would be rotated after 7 days.
-* __Number of previous passwords to keep__: The number of historical passwords to store in the Access Manager directory.
+* __Number of previous passwords to keep__: The number of historical passwords to store in the Access Manager database.
 * __Number of days to keep previous passwords__: The number of days to keep historical passwords for; setting this field to "0" disables aging out of historical passwords.
+
+See [Password history and retention](../../help-and-support/advanced-help-topics/password-history-retention.md) for more information how how these settings work to ensure you have the right number of passwords retained.
 
 #### Composition
 
@@ -114,12 +124,11 @@ If the `Generation mode` is set to __"Passphrase"__, the following configuration
     * *Numbers & Symbols*: Add extra numbers & symbols somewhere in the passphrase
 * __Number of extra characters__: The number of extra characters to add to the passphrase, as specified above.
 
-
 ### RapidLAPS settings (Windows only)
 
 The third tab of the Windows agent policy configuration screen - `RapidLAPS` - configures the RapidLAPS feature of the Access Manager Agent.
 
-*RapidLAPS* integrates into the Windows lock screen and UAC prompts, allowing you to speed up the LAPS process wherever you use local admin accounts. With *RapidLAPS*, using just a QR code, or PIN, you can remotely authorize and log into any LAPS-enabled computer, without ever having to type a long and complicated password.
+*RapidLAPS* integrates into the Windows login screen and admin elevation prompts, allowing you to speed up the LAPS process wherever you use local admin accounts. With *RapidLAPS*, using just a QR code, or PIN, you can remotely authorize and log into any LAPS-enabled computer, without ever having to type a long and complicated password.
 
 This feature works whether you are using Windows LAPS, legacy LAPS, or the Access Manager agent to manage your LAPS passwords.
 
@@ -127,11 +136,11 @@ This feature works whether you are using Windows LAPS, legacy LAPS, or the Acces
 
 #### Enable RapidLAPS for login
 
-When configured, this setting will add a "Login with Lithnet RapidLAPS" tile to the Windows lock screen, allowing login to the local administrator account via Access Manager.
+When configured, this setting will add a "Login with Lithnet RapidLAPS" tile to the Windows login screen, allowing login to the local administrator account via Access Manager.
 
 #### Enable RapidLAPS for elevation
 
-When configured, this setting will add an "Elevate with Lithnet RapidLAPS" tile to the Windows UAC prompt, allowing elevation of applications, installers, and system actions with the local administrator account via Access Manager.
+When configured, this setting will add an "Elevate with Lithnet RapidLAPS" tile to the Windows admin elevation prompt, allowing elevation of applications, installers, and system actions with the local administrator account via Access Manager.
 
 #### User prompts
 
@@ -162,14 +171,18 @@ The fourth tab of the Windows agent policy configuration screen - `BitLocker` - 
 
 ![](../../images/ui-page-access-manager-agent-agent-policies-windows-policies-edit-bitlocker.png)
 
+{% hint style="info" %}
+Note that the Access Manager Agent does not enable BitLocker on any devices. These settings only specify which BitLocker keys should be backed up, if they are found on the system.
+{% endhint %}
+
 #### Enable backup of OS drive encryption keys
 
-If configured, the Access Manager Agent will securely backup BitLocker encryption keys for "OS drives" to the Access Manager directory.
+If configured, the Access Manager Agent will securely backup BitLocker encryption keys for the volume that Windows is installed to the Access Manager server.
 
 #### Enable backup of fixed drive encryption keys
 
-If configured, the Access Manager Agent will securely backup BitLocker encryption keys for "fixed drives" to the Access Manager directory.
+If configured, the Access Manager Agent will securely backup BitLocker encryption keys for fixed devices, excluding the drive windows is installed to the Access Manager server.
 
 #### Enable backup of removable drive encryption keys
 
-If configured, the Access Manager Agent will securely backup BitLocker encryption keys for "removable drives" to the Access Manager directory.
+If configured, the Access Manager Agent will securely backup BitLocker encryption keys for removable drives such as USB sticks to the Access Manager server.

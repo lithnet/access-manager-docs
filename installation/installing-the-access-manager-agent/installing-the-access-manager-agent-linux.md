@@ -10,7 +10,7 @@ The agent itself runs using systemd, and as it requires access to reset the root
 
 ### .NET requirements
 
-The agent is build using Microsoft .NET 6.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 6.0](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) for more information.
+The agent is build using Microsoft .NET 8.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) for more information.
 
 ## Agent installation
 
@@ -129,7 +129,7 @@ sudo apt install ~/accessmanager.deb
 
 Extract the archive to the root file system, allowing the files to be placed in their correct location. See the `File location` section below for more information on what files get unpacked and where.
 
-While you do not need to install the .NET package itself, as the agent contains all the .NET components it needs to run, there are certain dependencies required by .NET, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the .NET 6.0 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that .NET requires, and install these yourself.
+While you do not need to install the .NET package itself, as the agent contains all the .NET components it needs to run, there are certain dependencies required by .NET, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the .NET 8.0 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that .NET requires, and install these yourself.
 
 Run the following command to register the service with systemd
 
@@ -141,19 +141,35 @@ Continue to the `Configuring the agent` section below.
 
 ## Configuring the agent
 
-Once the package is installed, it must be configured to talk to your AMS server. You can run the following command to perform an interactive installation
+Once the package is installed, it must be configured to talk to your AMS server. You can run the following command to perform an interactive installation.
+
+If your device is joined to an Active Directory domain, you can use Windows authentication (kerberos) to authenticate to the AMS server. Otherwise, you will need to create a registration key on the AMS server and use that instead.
 
 ```shell
 /opt/LithnetAccessManagerAgent/Lithnet.AccessManager.Agent --setup
 ```
 
+{% hint style="warning" %}
+If the hostname provided does not match exactly the `External host name` value configured on the [Host configuration page](../../help-and-support/app-pages/host-configuration-page.md), the agent will fail to connect to the server
+{% endhint %}
+
 To perform a non-interactive installation, use the following command, replacing the server name, and registration key as appropriate. You can generate new registration keys using the AMS configuration tool.
 
+Install the agent using a registration key
 ```shell
 /opt/LithnetAccessManagerAgent/Lithnet.AccessManager.Agent --server ams.lithnet.local --registration-key XXXX
 ```
 
+Install the agent using Windows authentication (kerberos)
+```shell
+/opt/LithnetAccessManagerAgent/Lithnet.AccessManager.Agent --server ams.lithnet.local --registration-mode iwa 
+```
+
 Check the log using the instructions in the `Viewing the log files` section below to ensure the agent registered correctly.
+
+## Validate agent installation
+
+On the Access Manager server, go to the `Access Manager Agent/Devices` page, and ensure that the devices you installed the agent on have appeared in the device list. If you configured your registration key to require manual approval, you must approve the devices before they can be accessed.
 
 ## Restarting the agent
 

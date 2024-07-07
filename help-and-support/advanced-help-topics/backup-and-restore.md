@@ -21,11 +21,13 @@ In the event that the service cannot decrypt its own master key, you'll be promp
 
 ### Backing up the encryption certificates
 
-If you have deployed the Access Manager Agent, and are using the encrypted password functionality, you'll need to ensure you have a backup of your password encryption certificate, and it's private key. There is one encryption certificate per forest.
+If you have deployed the Access Manager Agent, you'll need to ensure you have a backup of your password encryption certificates, and their private key. 
 
-From the `Directory configuration/Active Directory/Lithnet LAPS` page, select the forest that contains the certificate you want to back up, and click `View Certificate`. From the `Details` tab, click `Copy to file`, making sure to select the option to export the private key when prompted. Choose a very strong password, and store the resulting PFX somewhere very safe. Preferably in offline storage. Remember that access to this key will allow someone to decrypt all the local admin passwords in your domain.
+From the `Access Manager Agent/Password settings` page, export the certificates that appear here. Choose a very strong password, and store the resulting PFX somewhere very safe. Preferably in offline storage. Remember that access to this key will allow someone to decrypt all the local admin passwords in your environment.
 
-Repeat the process for the encryption certificates located on the `Directory configuration/Access Manager directory/Lithnet LAPS` page.
+If you have have legacy (v2) agents in your environment, you'll also need to backup the certificates used to encrypt passwords stored in Active Directory. The v3 agent does not store passwords in AD, so you can skip this step if you only have v3 agents deployed. 
+
+From the `Directory configuration/Active Directory/Lithnet LAPS (deprecated)` page, select the forest that contains the certificate you want to back up, and click `View Certificate`. From the `Details` tab, click `Copy to file`, making sure to select the option to export the private key when prompted. 
 
 ## Restoring AMS from a backup
 
@@ -49,7 +51,7 @@ Repeat the process for the encryption certificates located on the `Directory con
 
 If you have an encryption key backup you want to restore, then use the AMS configuration tool to import the PFX file into the database.
 
-This can be performing using the `import` button on either the `Access Manager Agent/Password settings` or `Directory configuration/Active Directory/Lithnet LAPS`, depending on which type of encryption certificate it is.
+This can be performing using the `import` button on either the `Access Manager Agent/Password settings` or `Directory configuration/Active Directory/Lithnet LAPS (deprecated)`, depending on which type of encryption certificate it is.
 
 ## Recovering from a lost encryption certificate private key
 

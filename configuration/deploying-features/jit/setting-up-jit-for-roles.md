@@ -1,6 +1,6 @@
 # Setting up just-in-time access to roles
 
-![](../../../images/badge-enterprise-edition-rocket.svg) JIT for roles is an [Enterprise edition feature](../../access-manager-editions.md)
+![](../../../images/badge-enterprise-edition-rocket.svg) JIT for roles is an [Enterprise edition feature](../../../access-manager-editions.md)
 
 Lithnet Access Manager allows you to define a role, based on an Active Directory group, that users are allowed to request access to on a temporary basis. 
 

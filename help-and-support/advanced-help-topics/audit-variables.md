@@ -30,15 +30,17 @@ This group of attributes represents the result of the access evaluation
 | `Response.TargetType` | `Computer` or `Role` | The type of resource that was evaluated |
 | `Response.IsSuccess` | `true` or `false` | Indicates if access was granted to the resource |
 | `Response.IsFailure` | `true` or `false` | Indicates if access was denied to the resource |
+| `Response.IsApproved` | `true` or `false` | Indicates if access was approved to the resource |
 | `Response.NotificationChannels` | string | A comma-separated list of audit channels IDs that apply to this access response |
 | `Response.MatchedRule` | string | The ID of the authorization rule that was used to make the access decision |
 | `Response.MatchedRuleDescription` | string | The 'description' field from the authorization rule that was used to make the access decision |
 | `Response.ExpireAfter` | TimeSpan | The duration of time that access was granted for | 
 | `Response.Code` | `Success`, `NoMatchingRuleForTarget`, `NoMatchingRuleForUser`, `ExplicitlyDenied`, `UserRateLimitExceeded`, `IpRateLimitExceeded` | The result of the authorization decision. Codes other than `Success` represent an 'access denied' response. | 
-| `Response.AccessType` | `None`, `LocalAdminPassword`, `LocalAdminPasswordHistory`, `Jit`, `Bitlocker` | The type of access that was granted |
+| `Response.AccessType` | `None`, `LocalAdminPassword`, `LocalAdminPasswordHistory`, `Jit`, `Bitlocker`, `DeviceLogin`, `DeviceElevation` | The type of access that was granted |
 | `Response.AccessTypeDescription` | string | The friendly name of the type of access that was granted |
 | `Response.AccessExpiryDate` | DateTime | The date and time when the user's access will expire, expressed in local server time |
 | `Response.Message` | string | A user-friendly message describing the outcome of the access decision |
+| `Response.WorkflowResult` | `None`, `Approved`, `Rejected`, `Pending` | The approval result of the workflow operation |
 
 ## `User` element
 This group of attributes represents the user who performed the access request
@@ -76,83 +78,45 @@ If the authorization request was for a computer, then this property will be popu
 | `Computer.AuthorityId` | string | The ID of the authority where the computer is located |
 | `Computer.AuthorityDeviceId` | string | The unique ID for the device, specific to the device's authority |
 
-## RapidLAPS - `DeviceLogin` element
+## `RapidLapsLogin` element
 If the authorization request was for workstation login/unlock via *RapidLAPS*, then this property will be populated with information about the *RapidLAPS* login request
 
 | Property | Format/Type | Description |
 | --- | --- | ----- |
-| `DeviceLogin.Type` | string | The type of *RapidLAPS* request, will always be "Logon" |
-| `DeviceLogin.DeviceLoginAccountName` | string | The local account used for RapidLAPS login |
-| `DeviceLogin.UsageScenario` | string | A description of where in the operating system the request occured from (e.g., `Logon`, `UnlockWorkstation`) |
-| `DeviceLogin.Responses` | Response[] |  *See below* |
-| `DeviceLogin.LoggedOnUsers` | LoggedOnUser[] |  *See below* |
+| `RapidLapsLogin.Type` | string | The type of RapidLAPS request, will always be `Logon` |
+| `RapidLapsLogin.DeviceLoginAccountName` | string | The local account used for RapidLAPS login |
+| `RapidLapsLogin.UsageScenario` | string | A description of where in the operating system the request occurred from (e.g., `Logon`, `UnlockWorkstation`) |
+| `RapidLapsLogin.Responses` | Response[] |  *See below* |
+| `RapidLapsLogin.LoggedOnUsers` | LoggedOnUser[] |  *See below* |
 
-### `Response` data structure
-The `DeviceLogin.Responses` field contains a list of responses to any prompts defined in the RapidLAPS policy.
-
-| Property | Format/Type | Description |
-| --- | --- | ----- |
-| `Id` | string | Unique identifier for the prompt message |
-| `Label` | string | The human-readable label for the prompt |
-| `Type` | string | The type of prompt (e.g., Text, Checkbox, etc.) |
-| `Value` | string | The value provided as an answer to the prompt |
-
-### `LoggedOnUser` data structure
-The `DeviceLogin.LoggedOnUsers` field contains a list of users logged into the machine at the time of the request.
-
-| Property | Format/Type | Description |
-| --- | --- | ----- |
-| `UserName` | string | The user's username |
-| `SessionID` | int | The user's Windows Session ID |
-| `IsRemoteSession` | bool | Indicates if the user was logged in remotely |
-
-## RapidLAPS - `DeviceElevation` element
+## `RapidLapsElevation` element
 If the authorization request was for UAC elevation via *RapidLAPS*, then this property will be populated with information about the *RapidLAPS* elevation request
 
 | Property | Format/Type | Description |
 | --- | --- | ----- |
-| `DeviceElevation.Type` | string | The type of *RapidLAPS* request, will always be "Elevation" |
-| `DeviceElevation.DeviceLoginAccountName` | string | The local account used for RapidLAPS elevation |
-| `DeviceElevation.ComOperationName` | string | The name of the COM operation the user is attempting to elevate (if applicable) |
-| `DeviceElevation.SessionID` | string | The requesting user's Session ID |
-| `DeviceElevation.ProcessID` | string | The parent process ID of the elevation (if applicable) |
-| `DeviceElevation.ProcessName` | string | The parent process name of the elevation (if applicable) |
-| `DeviceElevation.ElevationType` | string | |
-| `DeviceElevation.RequesterUsername` | string | The username of the user requesting elevation |
-| `DeviceElevation.RequesterSid` | string | The security identifier (SID) of the user requesting elevation |
-| `DeviceElevation.RequesterDisplayName` | string | The displau name of the user requesting elevation |
-| `DeviceElevation.ProductName` | string | The product name of the executable being elevated (if applicable) |
-| `DeviceElevation.Publisher` | string | The publisher name of the executable being elevated (if applicable) |
-| `DeviceElevation.FileDescription` | string | The file descrption of the executable being elevated (if applicable) |
-| `DeviceElevation.CredUIFlags` | string | The internal flags passed to CredUI (e.g., the credential selector in UAC). [GitHub](https://github.com/lithnet/windows-credential-provider/blob/b010d4ff3f3ff41eac0479e6c8c373907227ad2a/src/Lithnet.CredentialProvider/Enums/CredUIWinFlags.cs) |
-| `DeviceElevation.ConsentUIFlags` | string | The internal flags passed to ConsentUI (e.g., UAC). For more information, see our `windows-credential-provider` repository on [GitHub](https://github.com/lithnet/windows-credential-provider/blob/b010d4ff3f3ff41eac0479e6c8c373907227ad2a/src/Lithnet.CredentialProvider/Enums/ConsentUIFlags.cs) |
-| `DeviceElevation.UsageScenario` | string | A description of where in the operating system the request occured from; will always be "CredUI" |
-| `DeviceElevation.Responses` | Response[] | *See below* |
-| `DeviceElevation.LoggedOnUsers` | LoggedOnUser[] | *See below* |
-| `DeviceElevation.Hashes` | string[] | A list of hashes of the executable the user is attempting to run |
-| `DeviceElevation.Signature` | Signature | Contains signing information |
-
-### `Response` data structure
-The `DeviceElevation.Responses` field contains a list of responses to any prompts defined in the RapidLAPS policy.
-
-| Property | Format/Type | Description |
-| --- | --- | ----- |
-| `Id` | string | Unique identifier for the prompt message |
-| `Label` | string | The human-readable label for the prompt |
-| `Type` | string | The type of prompt (e.g., Text, Checkbox, etc.) |
-| `Value` | string | The value provided as an answer to the prompt |
-
-### `LoggedOnUser` data structure
-The `DeviceElevation.LoggedOnUsers` field contains a list of users logged into the machine at the time of the request.
-
-| Property | Format/Type | Description |
-| --- | --- | ----- |
-| `UserName` | string | The user's username |
-| `SessionID` | int | The user's Windows Session ID |
-| `IsRemoteSession` | bool | Indicates if the user was logged in remotely |
+| `RapidLapsElevation.Type` | string | The type of *RapidLAPS* request, will always be "Elevation" |
+| `RapidLapsElevation.DeviceLoginAccountName` | string | The local account used for RapidLAPS elevation |
+| `RapidLapsElevation.ComOperationName` | string | The name of the COM operation the user is attempting to elevate (if applicable) |
+| `RapidLapsElevation.SessionID` | string | The requesting user's Session ID |
+| `RapidLapsElevation.ProcessID` | string | The parent process ID of the elevation (if applicable) |
+| `RapidLapsElevation.ProcessName` | string | The parent process name of the elevation (if applicable) |
+| `RapidLapsElevation.ElevationType` | string | |
+| `RapidLapsElevation.RequesterUsername` | string | The username of the user requesting elevation |
+| `RapidLapsElevation.RequesterSid` | string | The security identifier (SID) of the user requesting elevation |
+| `RapidLapsElevation.RequesterDisplayName` | string | The display name of the user requesting elevation |
+| `RapidLapsElevation.ProductName` | string | The product name of the executable being elevated (if applicable) |
+| `RapidLapsElevation.Publisher` | string | The publisher name of the executable being elevated (if applicable) |
+| `RapidLapsElevation.FileDescription` | string | The file description of the executable being elevated (if applicable) |
+| `RapidLapsElevation.CredUIFlags` | string | The internal flags passed to CredUI (e.g., the credential selector in UAC). [GitHub](https://github.com/lithnet/windows-credential-provider/blob/b010d4ff3f3ff41eac0479e6c8c373907227ad2a/src/Lithnet.CredentialProvider/Enums/CredUIWinFlags.cs) |
+| `RapidLapsElevation.ConsentUIFlags` | string | The internal flags passed to ConsentUI (e.g., UAC). For more information, see our `windows-credential-provider` repository on [GitHub](https://github.com/lithnet/windows-credential-provider/blob/b010d4ff3f3ff41eac0479e6c8c373907227ad2a/src/Lithnet.CredentialProvider/Enums/ConsentUIFlags.cs) |
+| `RapidLapsElevation.UsageScenario` | string | A description of where in the operating system the request occurred from; will always be "CredUI" |
+| `RapidLapsElevation.Responses` | Response[] | *See below* |
+| `RapidLapsElevation.LoggedOnUsers` | LoggedOnUser[] | *See below* |
+| `RapidLapsElevation.Hashes` | string[] | A list of hashes of the executable the user is attempting to run |
+| `RapidLapsElevation.Signature` | Signature | Contains signing information |
 
 ### `Signature` data structure
-The `DeviceElevation.Signature` field contains information about the code signing of the executable run by the user.
+The `RapidLapsElevation.Signature` field contains information about the code signing of the executable run by the user.
 
 | Property | Format/Type | Description |
 | --- | --- | ----- |
@@ -180,3 +144,22 @@ The `SignatureCertificate` data structure represents the elements of an *X.509* 
 | `IssuerDisplayName` | string | The certificate issuer's display name |
 | `NotBefore` | DateTime | The issuance date of the certificate |
 | `NotAfter` | DateTime | The expiry date of the certificate |
+
+### `Response` data structure
+The `RapidLapsLogin.Responses` and `RapidLapsElevation.Responses` fields contain a list of responses to any prompts defined in the RapidLAPS policy.
+
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `Id` | string | Unique identifier for the prompt message |
+| `Label` | string | The human-readable label for the prompt |
+| `Type` | string | The type of prompt (e.g., Text, Checkbox, etc.) |
+| `Value` | string | The value provided as an answer to the prompt |
+
+### `LoggedOnUser` data structure
+The `RapidLapsLogin.LoggedOnUsers` and `RapidLapsElevation.Responses` fields contain a list of users logged into the machine at the time of the request.
+
+| Property | Format/Type | Description |
+| --- | --- | ----- |
+| `UserName` | string | The user's username |
+| `SessionID` | integer | The user's Windows Session ID |
+| `IsRemoteSession` | boolean | Indicates if the user was logged in remotely |

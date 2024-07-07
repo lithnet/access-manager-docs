@@ -1,8 +1,8 @@
-# Access Manager Agent Devices page
+# Devices page
 
-![](../../images/badge-enterprise-edition-rocket.svg) You can manage up to 100 devices for free in the Access Manager directory. Managing more than 100 devices is an [Enterprise edition feature](../../access-manager-editions.md)
+![](../../images/badge-enterprise-edition-rocket.svg) You can manage up to 100 devices for free. Managing more than 100 devices is an [Enterprise edition feature](../../access-manager-editions.md)
 
-The `devices` page contains a list of all devices that are registered with the Access Manager directory.
+The `Devices` page contains a list of all devices that are registered with the Access Manager service.
 
 ![](../../images/ui-page-access-manager-agent-devices.png)
 

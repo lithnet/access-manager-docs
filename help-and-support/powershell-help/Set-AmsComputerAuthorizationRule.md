@@ -18,7 +18,8 @@ Set-AmsComputerAuthorizationRule -Id <String> [-JitGroupName <String>] [-JitMaxi
  [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to a Microsoft Entra tenant
@@ -27,7 +28,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> [-JitGroupNa
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
  [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to a Microsoft Entra group
@@ -37,7 +39,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> -AadGroupId 
  [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to a Microsoft Entra computer
@@ -47,7 +50,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> -AadComputer
  [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AD computer
@@ -56,7 +60,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AdComputer <String> [-JitGroupNam
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
  [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AD group
@@ -65,7 +70,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AdGroup <String> [-JitGroupName <
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
  [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AD container
@@ -74,7 +80,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AdContainer <String> [-JitGroupNa
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
  [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AMS computer
@@ -83,7 +90,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AmsComputerId <String> [-JitGroup
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
  [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AMS group
@@ -92,7 +100,8 @@ Set-AmsComputerAuthorizationRule -Id <String> -AmsGroupId <String> [-JitGroupNam
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
  [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Modify the rule ACL
@@ -105,11 +114,16 @@ Set-AmsComputerAuthorizationRule -Id <String> [-AddPrincipalsAllowedJit <Object[
  [-RemovePrincipalsAllowedLapsHistory <Object[]>] [-AddPrincipalsDeniedLapsHistory <Object[]>]
  [-RemovePrincipalsDeniedLapsHistory <Object[]>] [-AddPrincipalsAllowedBitLocker <Object[]>]
  [-RemovePrincipalsAllowedBitLocker <Object[]>] [-AddPrincipalsDeniedBitLocker <Object[]>]
- [-RemovePrincipalsDeniedBitLocker <Object[]>] [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>]
- [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
- [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-RemovePrincipalsDeniedBitLocker <Object[]>] [-AddPrincipalsAllowedRapidLapsLogin <Object[]>]
+ [-RemovePrincipalsAllowedRapidLapsLogin <Object[]>] [-AddPrincipalsDeniedRapidLapsLogin <Object[]>]
+ [-RemovePrincipalsDeniedRapidLapsLogin <Object[]>] [-AddPrincipalsAllowedRapidLapsElevation <Object[]>]
+ [-RemovePrincipalsAllowedRapidLapsElevation <Object[]>] [-AddPrincipalsDeniedRapidLapsElevation <Object[]>]
+ [-RemovePrincipalsDeniedRapidLapsElevation <Object[]>] [-JitGroupName <String>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
+ [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Modify the rule authorization script
@@ -118,7 +132,8 @@ Set-AmsComputerAuthorizationRule -Id <String> [-AuthorizationScriptPath <String>
  [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
  [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
  [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -727,6 +742,186 @@ Type: AuditReasonFieldState
 Parameter Sets: (All)
 Aliases:
 Accepted values: Hidden, Optional, Required
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AutoDcLocator
+Specifies that the AMS service should automatically find a domain controller to perform the JIT operation against
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DomainControllerName
+The name of a domain controller to use when performing the JIT operation against
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -DoNotUseRemoteDcLocator
+Specifies that the AMS service should not attempt to use the target computer's DCLocator service to find a domain controller to perform the JIT operation against
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -SiteName
+The name of the site to use when trying to find a domain controller to perform the JIT operation against
+
+```yaml
+Type: String
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPrincipalsAllowedRapidLapsElevation
+Principals to add to the allow RapidLAPS elevation access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPrincipalsAllowedRapidLapsLogin
+Principals to add to the allow RapidLAPS login access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPrincipalsDeniedRapidLapsElevation
+Principals to add to the deny RapidLAPS elevation access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AddPrincipalsDeniedRapidLapsLogin
+Principals to add to the deny RapidLAPS login access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePrincipalsAllowedRapidLapsElevation
+Principals to remove from the allow RapidLAPS elevation access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePrincipalsAllowedRapidLapsLogin
+Principals to remove from the allow RapidLAPS login access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePrincipalsDeniedRapidLapsElevation
+Principals to remove from the deny RapidLAPS elevation access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemovePrincipalsDeniedRapidLapsLogin
+Principals to remove from the deny RapidLAPS login access list
+
+```yaml
+Type: Object[]
+Parameter Sets: Modify the rule ACL
+Aliases:
 
 Required: False
 Position: Named

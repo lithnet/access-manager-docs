@@ -34,7 +34,7 @@ The Access Manager web interface is the main feature of the product that your su
 | Show the local admin username <sup>3</sup> | ![](/images/dash.png) | ![](/images/check3.png) |
 | Trigger LAPS password change when the password has been accessed <sup>4 | ![](/images/check3.png) | ![](/images/check3.png) |
 
-Learn more about [the differences between the Microsoft and Lithnet LAPS Agents](installation/installing-the-access-manager-agent/choosing-between-the-microsoft-and-lithnet-laps-agents.md).
+Learn more about [the differences between the Microsoft and Lithnet LAPS Agents](help-and-support/choosing-between-the-microsoft-and-lithnet-laps-agents.md).
 
 ### Lithnet Access Manager Agent password management features
 

@@ -38,17 +38,33 @@ sudo installer -pkg ~/accessmanageragent.pkg -target /
 
 Once the package is installed, it must be configured to talk to your AMS server. You can run the following command to perform an interactive installation
 
+If your device is joined to an Active Directory domain, you can use Windows authentication (kerberos) to authenticate to the AMS server. Otherwise, you will need to create a registration key on the AMS server and use that instead.
+
 ```shell
 sudo /Library/Application\ Support/Lithnet/AccessManagerAgent/Core/Lithnet.AccessManager.Agent --setup
 ```
 
+{% hint style="warning" %}
+If the hostname provided does not match exactly the `External host name` value configured on the [Host configuration page](../../help-and-support/app-pages/host-configuration-page.md), the agent will fail to connect to the server
+{% endhint %}
+
 To perform a non-interactive installation, use the following command, replacing the server name, and registration key as appropriate. You can generate new registration keys using the AMS configuration tool.
 
+Install the agent using a registration key
 ```shell
 sudo /Library/Application\ Support/Lithnet/AccessManagerAgent/Core/Lithnet.AccessManager.Agent --server ams.lithnet.local --registration-key XXXX
 ```
 
+Install the agent using Windows authentication (kerberos)
+```shell
+sudo /Library/Application\ Support/Lithnet/AccessManagerAgent/Core/Lithnet.AccessManager.Agent --server ams.lithnet.local --registration-mode iwa 
+```
+
 Check the log using the instructions in the `Viewing the log files` section below to ensure the agent registered correctly.
+
+## Validate agent installation
+
+On the Access Manager server, go to the `Access Manager Agent/Devices` page, and ensure that the devices you installed the agent on have appeared in the device list. If you configured your registration key to require manual approval, you must approve the devices before they can be accessed.
 
 ## Restarting the agent
 

@@ -4,30 +4,28 @@
 
 In order to install the Access Manager Agent, the following prerequisites must be met
 
-1. Windows 8.1 or Windows Server 2012 R2 or later
-2. [.NET Framework Runtime](https://dotnet.microsoft.com/download) 4.7.2 or later installed
+1. Windows 10 or Windows Server 2016 or later
+2. [.NET Framework Runtime](https://dotnet.microsoft.com/download) 4.7.2 or later installed for x86 and x64 versions of Windows
+2. [.NET Framework Runtime](https://dotnet.microsoft.com/download) 4.8.1 or later installed for arm64 versions of Windows
 
 We recommend using a configuration management tool such as SCCM to deploy the agent to your fleet.
 
 ## Determine your authentication mode
 
-When using the AMS server to store passwords, you must determine what authentication mode you are going to use.
+Active Directory-joined devices can use their machine identity to automatically authenticate to the AMS server.
 
-Microsoft Entra-joined devices can use their Entra certificate to automatically authenticate to the AMS server. You'll need the Microsoft Entra tenant ID to configure Entra auth.
+Microsoft Entra-joined devices can use their Entra certificate to automatically authenticate to the AMS server. 
 
 Other devices must use a registration key, obtained from the AMS server to authenticate. These devices will create their own authentication certificate, and use the registration key a single time, to register their certificate with the server. Once this is successful, they will no longer need the registration key, and it will be deleted from the system.
 
 ## Download and install the Access Manager Agent
 
-1. Download the latest version of the agent from the [releases](https://github.com/lithnet/access-manager/releases/latest) page. Take note that you must install the x64 version on 64-bit machines, and the x86 version on 32-bit machines.
-2. Run the AMA installation package. When prompted, choose the password storage location appropriate for your environment.
-3. If you are using the AMS directory, you'll be prompted to select the authentication type you'd like to use. You can use Microsoft Entra authentication, if the agent is running on a Windows 10 Microsoft Entra-joined device. If the installer can detect the Azure tenant ID from the workstation's join information, it will be pre-populated here. Otherwise, you'll need to provide the tenant ID yourself.
+1. Download the latest version of the agent from the [downloads](../downloads.md) page. Take note that you must install the x64 version on 64-bit machines, and the x86 version on 32-bit machines.
+2. Run the agent installation package. When prompted, enter the server name, and choose the registration mode you'd like to use for the agent
 
-> If your device is not Microsoft Entra-joined, you'll need to use a registration key to authenticate the agent to the AMS server. 
-
-TODO
-
-1. If you are using the agent in Active Directory mode, you'll need to configure the agent via a group policy. Follow the [setup guide for Lithnet LAPS for Active Directory](../../configuration/deploying-features/setting-up-lithnet-laps/setting-up-lithnet-laps-for-active-directory.md) for the correct process of setting up the relevant group policy settings. Agents using AMS directory mode get their password policy from the AMS server, and do not use group policy at all.
+{% hint style="warning" %}
+If the hostname provided does not match exactly the `External host name` value configured on the [Host configuration page](../../help-and-support/app-pages/host-configuration-page.md), the agent will fail to connect to the server
+{% endhint %}
 
 ## Deploying the agent silently
 
@@ -43,10 +41,10 @@ msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=1 SERVER=ams.lithnet.loc
 
 ### Silent installation for Microsoft Entra-joined devices
 
-Use the following command line to install the agent in Microsoft Entra mode, replacing the `SERVER` and `AZUREADTENANTID` values are appropriate
+Use the following command line to install the agent in Microsoft Entra mode, replacing the `SERVER`  value as appropriate
 
 ```
-msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=2 SERVER=ams.lithnet.local AZUREADTENANTID=YYYY
+msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=2 SERVER=ams.lithnet.local 
 ```
 
 ### Silent installation for standalone Windows devices
@@ -56,6 +54,10 @@ Use the following command line to install the agent in AMS registration mode, re
 ```
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=4 SERVER=ams.lithnet.local REGISTRATIONKEY=XXXX
 ```
+
+## Validate agent installation
+
+On the Access Manager server, go to the `Access Manager Agent/Devices` page, and ensure that the devices you installed the agent on have appeared in the device list. If you configured your registration key to require manual approval, you must approve the devices before they can be accessed.
 
 ## Viewing log files
 

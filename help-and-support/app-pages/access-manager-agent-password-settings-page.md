@@ -1,6 +1,6 @@
-# Access Manager Agent - Password Settings Page
+# Password settings page
 
-The `Password settings` page provides the ability to configure how Access Manager Agent passwords are encrypted, and provides the ability to configure wordlists for use in constructing passphrases.
+The `Password settings` page provides the ability to configure how Access Manager Agent passwords are encrypted, and provides the ability to configure word lists for use in constructing passphrases.
 
 ![](../../images/ui-page-access-manager-agent-password-settings.png)
 
@@ -10,7 +10,7 @@ AMS registered devices encrypt their passwords using a certificate provided by t
 
 When configuring LAPS for the first time, you'll need to create an encryption certificate, making sure to back it up to a location where it will be kept safe and secure.
 
-If the encryption certificate is lost, passwords stored in the AMS directory are unrecoverable.
+If the encryption certificate is lost, passwords stored in the AMS database are unrecoverable.
 
 ### List columns
 
@@ -44,36 +44,36 @@ See the guide on [restoring an encryption certificate from backup](../advanced-h
 
 If you've lost the private key, you can force the agents to set new passwords and encrypt them with a new key by reading the [recovering from a lost encryption certificate](../advanced-help-topics/recovering-from-a-lost-encryption-certificate.md) guide. Unfortunately, there is no way to recover the encrypted password history.
 
-## Passphrase wordlists
+## Passphrase word lists
 
-When Access Manager Agent policies are configured to generate passphrases for use with local administrator accounts, they do so using *word lists* - lists of thousands of unique words that are delivered to clients in order for them to generarte secure passphrases.
+When Access Manager Agent policies are configured to generate passphrases for use with local administrator accounts, they do so using *word lists* - lists of thousands of unique words that are delivered to clients in order for them to generate secure passphrases.
 
 By default, Access Manager comes bundled with one word list: the [EFF diceware wordlist](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt) from the [Electronic Frontier Foundation](https://www.eff.org/dice), containing 7776 unique English words for use in passphrases.
 
-If, for example, you wish to generate passphrases in a language better suited to your userbase, you can import your own wordlists with which Access Manager can generate passphrases.
+If, for example, you wish to generate passphrases in a language better suited to your user base, you can import your own word lists with which Access Manager can generate passphrases.
 
-You can find a list of "diceware" word lists in other languages for use with Access Mananger [here](https://theworld.com/~reinhold/diceware.html#Diceware%20in%20Other%20Languages|outline).
+You can find a list of "diceware" word lists in other languages for use with Access Manager [here](https://theworld.com/~reinhold/diceware.html#Diceware%20in%20Other%20Languages|outline).
 
-### Importing wordlists
+### Importing word lists
 
-To import a wordlist, first select `Add...` at the bottom of the "Passphrase wordlists" section of the page.
+To import a word list, first select `Add...` at the bottom of the "Passphrase word lists" section of the page.
 
 ![](../../images/ui-page-access-manager-agent-password-settings-wordlist.png)
 
 #### Name
 
-A name for the wordlist, used in Agent Policy configuration
+A name for the word list, used in Agent Policy configuration
 
 #### Description
 
-A description for the wordlist
+A description for the word list
 
 #### Language
 
-Select a language for the wordlist
+Select a language for the word list
 
 #### Words
 
-In order to add words to a wordlist, you can click the `Import words from txt file` button in the bottom righthand corner of the window.
+In order to add words to a word list, you can click the `Import words from txt file` button in the bottom right-hand corner of the window.
 
 This file should be formatted such that there is one word per line in ASCII-format (no special characters); and at least 2,000 words are included.

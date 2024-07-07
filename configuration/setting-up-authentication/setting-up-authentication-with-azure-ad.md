@@ -4,16 +4,9 @@ The following guide will assist you in configuring your application to use Azure
 
 ## Part 1: Configure a new application in Entra ID
 
-1. Log into [portal.azure.com](https://portal.azure.com) with administrative credentials, select `All services` and select `Microsoft Entra ID`
-2. Select `Manage`, `App registrations` and click `New registration`
-3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (My org only - Single tenant)` as the supported account type
-4. In the `redirect URI` field, select `Web` as the platform type, and enter the base URL where your Access Manager web app is hosted followed by `/auth` (e.g. `https://accessmanager.lithnet.local/auth`)
-5. Click `Register`
-6. Take note of the `Application (client) ID` value, this is our OpenID Connect client ID
-7. From the left-hand menu, click `Manage` then `Authentication`. Set the `front-channel logout URL` to be the same as your base URL, with `/auth/logout` appended to it. (e.g. `https://accessmanager.lithnet.local/auth/logout`)
-8. Save the settings
-9. From the `API permissions` page, use the `grant admin consent` option to prevent users from being prompted for their consent when logging into the app. 
-10. From the `Certificates and secrets` page, click `new client secret`, give your secret a name, and then take note of the value provided.
+Follow the steps in [Creating an Entra app for Access Manager](../../help-and-support/advanced-help-topics/creating-an-entra-app.md) to create the app registration for Access Manager. Take note of the tenant ID, client ID and secret created here as they will be used in the next step.
+
+Ensure that the appropriate API permissions have been granted for the `User authentication using OpenID Connect` scenario.
 
 ## Part 2: Configure Lithnet Access Manager
 

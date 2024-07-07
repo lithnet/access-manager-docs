@@ -2,6 +2,15 @@
 
 ![](../../images/badge-enterprise-edition-rocket.svg) High availability is an [Enterprise edition feature](../../access-manager-editions.md)
 
+{% hint style="info" %}
+Running Access Manager in a failover cluster is deprecated as of v3.0, and support will be removed in a future version of the product. 
+
+We recommend [installing Access Manager behind a load balancer](installing-access-manager-load-balancer.md) for new deployments going forward.
+
+Note, that connecting Access Manager to a database stored in an SQL failover cluster remains supported.
+
+{% endhint %}
+
 ## Prerequisites
 
 Installing Access Manager in a failover cluster requires the following;
@@ -14,7 +23,9 @@ Installing Access Manager in a failover cluster requires the following;
 * An external SQL server, or an SQL server that is installed in the same cluster where Access Manager will be installed
 * You must meet the hardware and storage requirements for a [Microsoft failover cluster](https://docs.microsoft.com/en-us/windows-server/failover-clustering/clustering-requirements)
 
-> Note: It is not supported to use SQL express when deploying Access Manager into a Failover Cluster
+{% hint style="info" %}
+It is not supported to use SQL express when deploying Access Manager into a Failover Cluster
+{% endhint %}
 
 ## Installation procedure
 

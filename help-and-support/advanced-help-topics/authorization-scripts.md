@@ -55,62 +55,42 @@ Scripts that take longer than 30 seconds to complete will be terminated by Acces
 
 The user object has the following properties you can access
 
-#### MsDsPrincipalName
-
-The NT4-style name of the user (e.g. `DOMAIN\user`)
-
-#### Sid
-
-The Security Identifier of the user (e.g. `S-1-5-x`)
-
-#### SamAccountName
-
-The samAccountName of the user (e.g. `user`)
-
-#### DisplayName
-
-The display name of the user
-
-#### UserPrincipalName
-
-The user's UPN (e.g. `user@domain.local`)
-
-#### Description
-
-The value of the description field in active directory, if present
-
-#### EmailAddress
-
-The user's email address (e.g. `user@domain.com`)
-
-#### GivenName
-
-The user's given name
-
-#### Surname
-
-The user's surname
+| Property Name | Type | Description |
+| --- | --- | --- |
+| `Description` | string | The value of the description field in active directory, if present |
+| `DisplayName` | string | The display name of the user |
+| `DistinguishedName` | string | The DN of the user from Active Directory |
+| `EmailAddress` | string | The user's email address (e.g. `user@domain.com`) |
+| `GivenName` | string | The user's given name |
+| `Guid` | Guid | The object GUID from the directory object |
+| `MsDsPrincipalName` | string | The NT4-style name of the user (e.g. `DOMAIN\user`) |
+| `SamAccountName` | string | The samAccountName of the user (e.g. `user`) |
+| `Sid` | string | The Security Identifier of the user (e.g. `S-1-5-x`) |
+| `Surname` | string | The user's surname |
+| `UserPrincipalName` | string | The user's UPN (e.g. `user@domain.local`) |
 
 ### `$computer` object
 
 The computer object has the following properties you can access
 
-#### MsDsPrincipalName
+| Property Name | Type | Description |
+| --- | --- | --- |
+| `Description` | string | The value of the description field in active directory, if present |
+| `DisplayName` | string | The display name of the computer |
+| `DnsHostName` | string | The user's email address (e.g. `user@domain.com`) |
+| `AuthorityId` | string | The identifier that represents the authority ID that manages the computer |
+| `AuthorityDeviceId` | string | An identifier, specific to the authority type, that uniquely represents the computer object |
+| `AuthorityType` | `ActiveDirectory`, `AzureActiveDirectory`, `Ams` | The type of authority that manages the computer |
+| `FullyQualifiedName` | string | The fully qualified name of the computer.  (e.g. `DOMAIN\PC1$`) |
+| `Name` | string | The name of the computer (e.g. `PC1`) |
+| `ObjectId` | string | The computer's unique AMS object ID |
 
-The NT4-style name of the computer (e.g. `DOMAIN\PC1$`)
+If the computer is an Active Directory-joined computer, then the following additional properties may be available
+| Property Name | Type | Description |
+| --- | --- | --- |
+| `DistinguishedName` | string | The DN of the user from Active Directory |
+| `Guid` | Guid | The object GUID from the directory object |
+| `MsDsPrincipalName` | string | The NT4-style name of the computer (e.g. `DOMAIN\PC1$`) |
+| `SamAccountName` | string | The samAccountName of the computer (e.g. `PC1`) |
+| `Sid` | string | The Security Identifier of the computer (e.g. `S-1-5-x`) |
 
-#### Sid
-
-The Security Identifier of the computer (e.g. `S-1-5-x`)
-
-#### SamAccountName
-
-The samAccountName of the computer (e.g. `PC1`)
-
-#### DisplayName
-
-The display name of the computer
-
-#### Description
-
-The value of the description field in active directory, if present

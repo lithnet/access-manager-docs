@@ -10,9 +10,9 @@ The Lithnet Access Manager Service requires Windows Server 2016 or higher.
 
 * [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.8 or later installed
 * [.NET Hosting Bundle](hhttps://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.6 or later installed
-* Microsoft SQL Express 2019 (if hosting the database locally), SQL Server 2017 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
+* Microsoft SQL Express 2019 (if hosting the database locally), SQL Server 2019 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
 
-## Access Manager Agent (AMA) Operating System Support
+## Access Manager Agent Operating System Support
 
 The Lithnet Access Manager agent is supported on Windows, macOS, and Linux. Each operating system family has slightly different requirements.
 
@@ -48,7 +48,7 @@ The agent runs on .NET 8.0 and should work on any Linux distribution supported b
 
 Lithnet provides packages for RPM and Debian-based distributions, as well as tar.gz file for use with others.
 
-See the [Microsoft guide for supported operating systems for .NET 6.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md)
+See the [Microsoft guide for supported operating systems for .NET 8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md)
 
 The following operating system versions have been tested and are fully supported by Lithnet.
 
@@ -66,7 +66,3 @@ The following operating system versions have been tested and are fully supported
 | Fedora       | 39      | x64/arm64    |
 | Debian       | 11      | x64/arm64    |
 | Debian       | 12      | x64/arm64    |
-
-#### Password storage
-
-* Linux devices will store their password in the AMS directory.

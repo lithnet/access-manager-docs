@@ -2,21 +2,23 @@
 
 ## Do I need to deploy the Lithnet Access Manager Agent?
 
-The Lithnet Access Manager Agent is only required in certain scenarios. The Access Manager Server is capable of reading LAPS passwords set by Microsoft's legacy LAPS agent, the new Windows LAPS agent, as well as the Access Manager Agent.
+The Lithnet Access Manager agent is an optional component you can deploy in your environment that provides a host of additional features that compliments the Access Manager server.
 
-Read our guide on [Choosing a local admin password strategy](../installation/installing-the-access-manager-agent/choosing-between-the-microsoft-and-lithnet-laps-agents.md) to learn more about the differences between using the Microsoft LAPS agent and the Lithnet Access Manager Agent.
+You should deploy the agent when you want to take advantage of the following capabilities
+* Using the RapidLAPS passwordless LAPS login feature
+* Using passphrases for LAPS passwords, instead of random characters
+* Backing up BitLocker recovery keys from AD-joined, Entra-joined, and standalone Windows devices
+* Managing the root password on macOS and linux devices
+
+If you want to use our RapidLAPS feature for passwordless LAPS login and elevation, then the Access Manager Agent is required, however it does not need to be configured to manage the LAPS password itself. The agent can be deployed, and RapidLAPS enabled, while the Microsoft agent manages the LAPS password itself.
+
+Read our guide on [Choosing a local admin password strategy](choosing-between-the-microsoft-and-lithnet-laps-agents.md) to learn more about the differences between using the Microsoft LAPS agent and the Lithnet Access Manager Agent.
 
 ## How are directory passwords encrypted?
 
 Lithnet Access Manager uses public-key cryptography to protect directory passwords. The Access Manager Service (AMS) creates a public and private key pair (RSA-PSS 4096-bit), and stores the private key in the service certificate store.
 
-The Access Manager agent (AMA) obtains the public key from either the directory, or the AMS server itself. It then generates a unique encryption key and salt and uses AES-CBC-256 to encrypt the password with this key. The AES key is encrypted with the public key of the encryption certificate and the resulting blob converted to base-64 text and stored along with the thumbprint of the certificate used to encrypt the key material.
-
-## How do clients obtain the encryption certificate?
-
-When using the Access Manager agent in Active Directory mode, the encryption certificate is located in the Configuration naming context, in the `caCertificate` attribute of an object with the name `CN=AccessManagerConfig,CN=Lithnet,CN=Services,CN=Configuration,DC=X`
-
-When using the Access Manager agent in AMS directory mode, the encryption certificate is provided to the clients by the AMS server when they check in to see if their password needs to be changed.
+The Access Manager agent obtains the public key from the AMS server as part of its policy. It then generates a unique encryption key and salt and uses AES-CBC-256 to encrypt the password with this key. The AES key is encrypted with the public key of the encryption certificate and the resulting blob converted to base-64 text and stored along with the thumbprint of the certificate used to encrypt the key material.
 
 ## Can I rotate the encryption certificate?
 

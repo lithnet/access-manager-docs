@@ -5,8 +5,8 @@
 In order to install the Access Manager Service, the following prerequisites must be met;
 
 1. Windows Server 2016 or later
-2. [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
-3. [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime) 6.0.10 or later installed
+2. [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime) 8.0.6 or later installed
+3. [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime) 8.0.6 or later installed
 4. Microsoft SQL Express 2019, if hosting the database locally, or a separate SQL Standard or Enterprise edition server. (SQL express is installed by default)
 5. If you plan to use SQL Express, but the server you are installing on does not have an internet connection, then [download the SQL Express installer](https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLEXPR_x64_ENU.exe) and copy it to the server. You'll be asked to specify the installation file during setup.
 6. A TLS certificate for the AMS website
@@ -32,7 +32,7 @@ New-SelfSignedCertificate -DnsName "ams.domain.local" -CertStoreLocation "cert:\
 ## Step 3: Download and install the AMS service
 
 1. Download the latest version from the [downloads](../downloads.md) page.
-2. Download and install the [.NET Desktop runtime and the .NET hosting bundle](https://dotnet.microsoft.com/download/dotnet-core/6.0/runtime), or if your server has internet access, you can let the installer download and install these for you
+2. Download and install the [.NET Desktop runtime and the .NET hosting bundle](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime), or if your server has internet access, you can let the installer download and install these for you
 3. Run the AMS installation package. Follow the prompts to install the application and provide the service account created in step 1 when prompted.
 
 ## Step 4: Configure the host
@@ -104,8 +104,8 @@ You will need to restart the service to pick up the new group membership in the 
 
 Now that you have the core application set up, you can configure the Access Manager features you are interested in;
 
-* [Setting up Microsoft LAPS](../../configuration/deploying-features/setting-up-microsoft-laps.md)
-* [Setting up Lithnet LAPS for Active Directory, Microsoft Entra, macOS and Linux](../../configuration/deploying-features/setting-up-lithnet-laps/)
+* [Setting up Microsoft LAPS](../../configuration/deploying-features/laps/setting-up-microsoft-laps.md)
+* [Setting up Lithnet LAPS for Active Directory, Microsoft Entra, macOS and Linux](../../configuration/deploying-features/laps/setting-up-lithnet-laps.md)
 * [Setting up JIT access for computers](../../configuration/deploying-features/jit/setting-up-jit-for-computers.md)
 * [Setting up JIT access for roles](../../configuration/deploying-features/jit/setting-up-jit-for-roles.md)
-* [Setting up BitLocker access](../../configuration/deploying-features/setting-up-bitlocker-access.md)
+* [Setting up BitLocker access](../../configuration/deploying-features/fve-backup/setting-up-bitlocker-access.md)
