@@ -81,8 +81,6 @@ sudo dnf install ~/accessmanager.rpm
 
 ### Installing the agent on **Debian** using the Lithnet repo
 
-TODO: v2->v3 upgrade
-
 ```shell
 #!/bin/bash
 ​

@@ -55,6 +55,9 @@ Use the following command line to install the agent in AMS registration mode, re
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=4 SERVER=ams.lithnet.local REGISTRATIONKEY=XXXX
 ```
 
+## Group policy configuration
+If the agents are joined to an Active Directory domain, you can use [group policy](../../help-and-support/advanced-help-topics/group-policy-configuration.md) to configure the server that agents should connect to.
+
 ## Validate agent installation
 
 On the Access Manager server, go to the `Access Manager Agent/Devices` page, and ensure that the devices you installed the agent on have appeared in the device list. If you configured your registration key to require manual approval, you must approve the devices before they can be accessed.
