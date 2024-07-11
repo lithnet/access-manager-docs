@@ -1,4 +1,15 @@
 # Change log
+
+## v2.0.9538 12th July 2024
+### Access Manager Service
+- \[FIX\] Fixes an issue where the installer could not upgrade instances uses an encrypted connection string
+- \[FIX\] Fixes an issue with the installer not correctly detecting .NET desktop runtime installation
+- \[SECURITY\] Addressed issue in System.Text.Json [CVE-2024-30105](https://github.com/dotnet/announcements/issues/315)
+
+### Access Manager Agent
+- \[FIX\] Fixes an issue where chpasswd may fail on linux by increasing the default timeout for commands running on unix-based hosts to 15 seconds
+- \[FIX\] Fixes an issue with macOS uninstall script not working
+
 ## v2.0.9530 7th July 2024
 ### Access Manager Service
 - \[FIX\] Fixes an issue where a password rollback event does not correctly re-promote the current password
