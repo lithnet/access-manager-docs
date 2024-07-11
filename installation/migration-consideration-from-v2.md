@@ -32,6 +32,11 @@ See the guides for [configuring Lithnet LAPS](../configuration/deploying-feature
 
 You can also set up new features that the v3 agent unlocks by following the [configuring RapidLAPS](../configuration/deploying-features/rapidlaps/setting-up-rapid-laps.md), and [configuring BitLocker backup](../configuration/deploying-features/fve-backup/setting-up-bitlocker-ams.md) guides.
 
+### SPN migration required when using Windows authentication for users
+When user authentication was configured to use integrated windows authentication, Access Manager v2 employed the use of kernel-mode authentication. This required that the SPN for the web site be registered against the AMS computer object.
+
+In AMSv3, the Access Manager service uses user-mode authentication, and as such, the SPN must be moved to the AMS service account. The [migration guide](upgrading-from-v2.md) provides the steps required to do this.
+
 ## Access Manager Agent
 
 {% hint style="warning" %}

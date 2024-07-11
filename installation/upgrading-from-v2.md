@@ -23,8 +23,41 @@ The v3 license is compatible with the v2 server so it can be installed in advanc
 
 You do not need the v3 license to perform the upgrade, however, if you proceed without it, the server will be downgraded to community edition after the update.
 
+#### Migrate your service principal name
+
+When user authentication was configured to use integrated windows authentication, Access Manager v2 employed the use of kernel-mode authentication. This required that the SPN for the web site be registered against the AMS computer object.
+
+In AMSv3, the Access Manager service uses user-mode authentication, and as such, the SPN must be moved to the AMS service account. 
+
+First use the `setspn -q` command to query for the presence of the AMS SPN. The SPN will be in the format of `HTTP/servername`. In this example, replace `ams.dev.lithnet.local` with the external host name configured for your application.
+
+```powershell
+C:\> setspn -q HTTP/ams.dev.lithnet.local
+Checking domain DC=dev,DC=lithnet,DC=local
+CN=AMS1,CN=Computers,DC=dev,DC=lithnet,DC=local
+        HTTP/ams.dev.lithnet.local
+
+Existing SPN found!
+```
+
+If the SPN was not found, then this step is not required.
+
+If the SPN is found, and it is associated with the computer object, it must be removed using `setspn -D`
+
+```powershell
+C:\> setspn -D http/ams.dev.lithnet.local AMS1
+```
+
+Once it has been removed, you can add it to the AMS service account
+
+```powershell
+C:\> setspn -S http/ams.dev.lithnet.local svc-lithnetams
+```
+
 ### Method 1: In-place upgrade
 The in-place upgrade process from Access Manager v2 to v3 is very straight forward. You simply install the new version of AMS over the top, and the application will update the database and relevant configuration settings.
+
+If you are using AMS in a highly available load balanced configuration, stop all the nodes in the farm first, and upgrade each one at a time. Once a node has been upgraded, it can be restarted. However v2 nodes and v3 nodes must not be operating at the same time.
 
 As a best practice precaution, you should take a backup of the server and database before performing the upgrade.
 
