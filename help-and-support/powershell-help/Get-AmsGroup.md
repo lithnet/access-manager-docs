@@ -28,7 +28,8 @@ Get-AmsGroup -Id <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet gets AMS groups by their name, SID, or ID value. When used without parameters, it returns all AMS groups
+This cmdlet gets AMS groups by their name, SID, or ID value.
+When used without parameters, it returns all AMS groups
 
 ## EXAMPLES
 
@@ -113,11 +114,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.GroupPSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

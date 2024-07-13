@@ -25,7 +25,7 @@ Export-AmsServerDiagnostics -File <String> [-Force] [<CommonParameters>]
 PS C:\> Export-AmsServerDiagnostics -File c:\diagnostics.zip
 ```
 
-This example exports the diagnostics to a file called `c:\diagnostics.zip`
+This example exports the diagnostics to a file called \`c:\diagnostics.zip\`
 
 ## PARAMETERS
 
@@ -54,7 +54,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -65,7 +65,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Void

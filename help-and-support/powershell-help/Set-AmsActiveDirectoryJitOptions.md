@@ -28,7 +28,7 @@ This cmdlet allows you to configure the behavior of the JIT engine for Active Di
 PS C:\> Set-AmsActiveDirectoryJitOptions -JitMode JitScheduler
 ```
 
-Sets the JIT engine to use its internal scheduler, rather than the Active Directory privileged access management feature (PAM). 
+Sets the JIT engine to use its internal scheduler, rather than the Active Directory privileged access management feature (PAM).
 
 ### Example 2
 ```powershell
@@ -47,7 +47,9 @@ Sets the Active Directory JIT group creation scheduler to perform delta checks e
 ## PARAMETERS
 
 ### -JitMode
-Specifies the mechanism that AMS will use to perform JIT operations against Active Directory. Specifying `Auto` will use the Active Directory PAM feature, if it is available, otherwise the JIT scheduler will be used. Specifying `JitScheduler` will force the use of the scheduler, even if PAM is available.
+Specifies the mechanism that AMS will use to perform JIT operations against Active Directory.
+Specifying \`Auto\` will use the Active Directory PAM feature, if it is available, otherwise the JIT scheduler will be used.
+Specifying \`JitScheduler\` will force the use of the scheduler, even if PAM is available.
 
 ```yaml
 Type: String
@@ -63,7 +65,11 @@ Accept wildcard characters: False
 ```
 
 ### -DcLocatorMode
-Specifies the mechanisms that AMS will use to find the best domain controller to perform the Active Directory JIT operation for computer access requests. When set to `Default`, AMS will first try `RemoteDcLocator` which will contact the target computer, to ask which DC it is currently connected to. If it is not successful, AMS attempts a `SiteLookup` to try and match the computers IP address to an AD site, and that site's domain controller. Finally, if that is not successful, AMS will use its `LocalDcLocator` service to find its own DC and perform the group operation there. If you find JIT requests are taking a long time to process, set this value to `SiteLookup,LocalDcLocator` to bypass the `RemoteDcLocator` lookup process.
+Specifies the mechanisms that AMS will use to find the best domain controller to perform the Active Directory JIT operation for computer access requests.
+When set to \`Default\`, AMS will first try \`RemoteDcLocator\` which will contact the target computer, to ask which DC it is currently connected to.
+If it is not successful, AMS attempts a \`SiteLookup\` to try and match the computers IP address to an AD site, and that site's domain controller.
+Finally, if that is not successful, AMS will use its \`LocalDcLocator\` service to find its own DC and perform the group operation there.
+If you find JIT requests are taking a long time to process, set this value to \`SiteLookup,LocalDcLocator\` to bypass the \`RemoteDcLocator\` lookup process.
 
 ```yaml
 Type: JitDcLocatorMode
@@ -129,11 +135,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.JitConfigurationOptionsPSObject
-
 ## NOTES
 
 ## RELATED LINKS

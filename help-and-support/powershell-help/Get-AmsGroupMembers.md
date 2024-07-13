@@ -33,7 +33,7 @@ Gets the membership of the group represented by the specified ID
 PS C:\> Get-AmsGroup -Name 'My devices' | Get-AmsGroupMembers
 ```
 
-Gets the membership of the `my devices` group, by passing the group object into the pipeline
+Gets the membership of the \`my devices\` group, by passing the group object into the pipeline
 
 ## PARAMETERS
 
@@ -58,11 +58,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.DevicePSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

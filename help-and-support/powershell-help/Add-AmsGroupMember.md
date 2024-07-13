@@ -26,12 +26,12 @@ This cmdlet adds an AMS device to an AMS group
 PS C:\> Get-AmsGroup -Name 'My group' | Add-AmsGroupMember -Devices (Get-AmsDevice -Name 'PC1')
 ```
 
-This example gets the AMS group named `My group` and pipes it through to the `Add-AmsGroupMember` cmdlet which gets the device named `PC1` to add to the group
+This example gets the AMS group named \`My group\` and pipes it through to the \`Add-AmsGroupMember\` cmdlet which gets the device named \`PC1\` to add to the group
 
 ## PARAMETERS
 
 ### -Devices
-A list of device IDs, or device objects, obtained from the `Get-AmsDevice` cmdlet.
+A list of device IDs, or device objects, obtained from the \`Get-AmsDevice\` cmdlet.
 
 ```yaml
 Type: Object[]
@@ -66,7 +66,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Void

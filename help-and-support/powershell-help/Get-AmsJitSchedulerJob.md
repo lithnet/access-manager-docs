@@ -23,7 +23,7 @@ Get-AmsJitSchedulerJob [-Id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet can be used to see the pending JIT removal tasks that are waiting in the scheduler. 
+This cmdlet can be used to see the pending JIT removal tasks that are waiting in the scheduler.
 
 ## EXAMPLES
 
@@ -60,7 +60,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -102,12 +102,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.ActiveDirectoryGroupMemberRemovalJobDetailsPSObject
-
 ## NOTES
-In an Active Directory forest, with the `Privilege Access Management` feature enabled, AMS will use TTL-based group membership for Active Directory JIT tasks. The AMS JIT scheduler will not be used, and no jobs will appear in the scheduler queue
+In an Active Directory forest, with the \`Privilege Access Management\` feature enabled, AMS will use TTL-based group membership for Active Directory JIT tasks.
+The AMS JIT scheduler will not be used, and no jobs will appear in the scheduler queue
 
 ## RELATED LINKS

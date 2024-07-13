@@ -26,7 +26,8 @@ Get-AmsLocalAdminPassword -AuthorityDeviceId <String> -AuthorityId <String> -Aut
 ## DESCRIPTION
 This cmdlet gets the local admin password of the specified computer.
 
-Note, this cmdlet is not subject to the authorization rules and audit events. Only AMS administrators can call this cmdlet.
+Note, this cmdlet is not subject to the authorization rules and audit events.
+Only AMS administrators can call this cmdlet.
 
 ## EXAMPLES
 
@@ -35,26 +36,27 @@ Note, this cmdlet is not subject to the authorization rules and audit events. On
 PS C:\> Get-AmsLocalAdminPassword -ComputerName "PC1"
 ```
 
-Returns the local admin password for the computer named `PC1`
+Returns the local admin password for the computer named \`PC1\`
 
 ### Example 2
 ```powershell
 PS C:\> Get-AmsLocalAdminPassword -ComputerName "DEV\SERVER1"
 ```
 
-Returns the local admin password for the Active Dircetory computer named `SERVER1` int he `DEV` domain
+Returns the local admin password for the Active Directory computer named \`SERVER1\` int he \`DEV\` domain
 
 ### Example 3
 ```powershell
 PS C:\> Get-AmsDevice -Name "macos12" |  Get-AmsLocalAdminPassword
 ```
 
-Returns the local admin password for the AMS-managed computer named `macos12`
+Returns the local admin password for the AMS-managed computer named \`macos12\`
 
 ## PARAMETERS
 
 ### -ComputerName
-The name of the computer object. This can be a simple name like `PC1` or a fully qualified name like `DOMAIN\PC1`
+The name of the computer object.
+This can be a simple name like \`PC1\` or a fully qualified name like \`DOMAIN\PC1\`
 
 ```yaml
 Type: String
@@ -119,11 +121,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.PasswordPSObject
-
 ## NOTES
 
 ## RELATED LINKS

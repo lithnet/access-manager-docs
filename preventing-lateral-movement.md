@@ -22,6 +22,8 @@ Fortunately, Lithnet Access Manager Service (AMS) provides mobile-friendly web-b
 
 The Enterprise Edition of Access Manager includes the Lithnet Access Manager agent which can be used to manage the local admin password where Microsoft LAPS isn't or can't be used. It does not require Active Directory to operate, and therefore allows us to support macOS, Linux, non-domain joined Windows devices, as well as Microsoft Entra joined devices. You can of course also use it on Active Directory joined devices, and benefit from the other advanced features of the agent.
 
+For ultimate ease-of-use, the Access Manager Agent provides a new RapidLAPS capability. This allows users to log into devices using a QR code or PIN, and eliminates the need to ever type in a long and complicated LAPS password.
+
 For added protection, it is highly recommended that you [deny local accounts access to the computer over the network](https://support.microsoft.com/en-au/help/4488256/how-to-block-remote-use-of-local-accounts-in-windows). This will ensure that the local admin password cannot be used over the network at all. It will only work for local logins.
 
 ## 2. Removing everyone from the local administrators group

@@ -26,7 +26,8 @@ Get-AmsFveRecoveryKey -AuthorityDeviceId <String> -AuthorityId <String> -Authori
 ## DESCRIPTION
 This cmdlet gets the full-volume encryption keys (e.g., BitLocker keys) of the specified computer.
 
-Note, this cmdlet is not subject to the authorization rules and audit events. Only AMS administrators can call this cmdlet.
+Note, this cmdlet is not subject to the authorization rules and audit events.
+Only AMS administrators can call this cmdlet.
 
 ## EXAMPLES
 
@@ -35,21 +36,21 @@ Note, this cmdlet is not subject to the authorization rules and audit events. On
 PS C:\> Get-AmsFveRecoveryKey -ComputerName "PC1"
 ```
 
-Returns the full-volume encryption keys for the computer named `PC1`
+Returns the full-volume encryption keys for the computer named \`PC1\`
 
 ### Example 2
 ```powershell
 PS C:\> Get-AmsFveRecoveryKey -ComputerName "DEV\SERVER1"
 ```
 
-Returns the full-volume encryption keys for the Active Dircetory computer named `SERVER1` int he `DEV` domain
+Returns the full-volume encryption keys for the Active Dircetory computer named \`SERVER1\` int he \`DEV\` domain
 
 ### Example 3
 ```powershell
 PS C:\> Get-AmsDevice -Name "macos12" |  Get-AmsFveRecoveryKey
 ```
 
-Returns the full-volume encryption keys for the AMS-managed computer named `macos12`
+Returns the full-volume encryption keys for the AMS-managed computer named \`macos12\`
 
 ## PARAMETERS
 
@@ -100,7 +101,8 @@ Accept wildcard characters: False
 ```
 
 ### -ComputerName
-The name of the computer object. This can be a simple name like `PC1` or a fully qualified name like `DOMAIN\PC1`
+The name of the computer object.
+This can be a simple name like \`PC1\` or a fully qualified name like \`DOMAIN\PC1\`
 
 ```yaml
 Type: String
@@ -120,11 +122,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.FveRecoveryKeyPSObject
-
 ## NOTES
 
 ## RELATED LINKS

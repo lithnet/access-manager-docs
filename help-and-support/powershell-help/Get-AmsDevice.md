@@ -23,7 +23,9 @@ Get-AmsDevice -Id <String> [-ApprovalState <ApprovalState>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet retrieves AMS devices from the server. It can retrieve individual devices by name, by ID, and approval state. When used without parameters, it will return all AMS devices
+This cmdlet retrieves AMS devices from the server.
+It can retrieve individual devices by name, by ID, and approval state.
+When used without parameters, it will return all AMS devices
 
 ## EXAMPLES
 
@@ -39,7 +41,7 @@ Returns all AMS registered devices
 PS C:\> Get-AmsDevice -Name "PC1"
 ```
 
-Returns the AMS device named `PC1`
+Returns the AMS device named \`PC1\`
 
 ### Example 3
 ```powershell
@@ -109,11 +111,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.DevicePSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

@@ -17,7 +17,8 @@ Remove-AmsDeviceRegistrationKey -Id <String> [-Force] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet permanently deletes a registration key from the system. Devices will no longer be able to use the key to register with the AMS system.
+This cmdlet permanently deletes a registration key from the system.
+Devices will no longer be able to use the key to register with the AMS system.
 
 ## EXAMPLES
 
@@ -45,7 +46,7 @@ Searches for a registration key with the specified name and removes it
 ## PARAMETERS
 
 ### -Force
-Removes the registration key without prompting for confirmation 
+Removes the registration key without prompting for confirmation
 
 ```yaml
 Type: SwitchParameter
@@ -54,7 +55,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -80,11 +81,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Void
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

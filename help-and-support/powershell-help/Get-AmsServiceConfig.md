@@ -5,28 +5,28 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-AmsActiveDirectoryJitOptions
+# Get-AmsServiceConfig
 
 ## SYNOPSIS
-Gets the current Active Directory JIT configuration
+The cmdlet gets the service-wide configuration for the Access Manager service
 
 ## SYNTAX
 
 ```
-Get-AmsActiveDirectoryJitOptions [<CommonParameters>]
+Get-AmsServiceConfig [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet gets the current configuration of the Active Directory JIT service
+Returns an object containing the service-wide configuration for the Access Manager service
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> Get-AmsActiveDirectoryJitOptions
+PS C:\> Get-AmsServiceConfig
 ```
 
-This example gets the current configuration of the Active Directory JIT service
+{{ Add example description here }}
 
 ## PARAMETERS
 
@@ -36,9 +36,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
+
 ## OUTPUTS
 
-### Lithnet.AccessManager.PowerShell.JitConfigurationOptionsPSObject
+### Lithnet.AccessManager.PowerShell.ServiceConfigPSObject
+
 ## NOTES
 
 ## RELATED LINKS

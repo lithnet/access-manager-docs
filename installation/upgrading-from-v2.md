@@ -19,7 +19,7 @@ The v3 server can host both v2 and v3 agents.
 #### Update your license
 If you are an enterprise edition customer, ensure you have your v3 license applied before you perform the upgrade. Contact Lithnet support if you do not have this.
 
-The v3 license is compatible with the v2 server so it can be installed in advance.
+The v3 license is compatible with the v2 server so it can be installed in advance of the upgrade.
 
 You do not need the v3 license to perform the upgrade, however, if you proceed without it, the server will be downgraded to community edition after the update.
 

@@ -33,7 +33,7 @@ Note: The use of this cmdlet requires Access Manager Enterprise Edition
 PS C:\> New-AmsRoleAuthorizationRule -Name "Rocketship production admin" -GroupName "DOMAIN\Rocketship-Prod-Admins" -MaximumAccessDuration 8:30:00 -PrincipalsAllowedJit "DOMAIN\Rocketship-authorized-admins"
 ```
 
-Creates a new authorization rule, that allows members of the group `DOMAIN\Rocketship-authorized-admins` to become members of the `DOMAIN\Rocketship-Prod-Admins` group for a maximum duration of 8 hours and 30 minutes.
+Creates a new authorization rule, that allows members of the group \`DOMAIN\Rocketship-authorized-admins\` to become members of the \`DOMAIN\Rocketship-Prod-Admins\` group for a maximum duration of 8 hours and 30 minutes.
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -93,7 +93,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -287,11 +287,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.RoleAuthorizationRulePSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

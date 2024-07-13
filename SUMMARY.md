@@ -55,7 +55,6 @@
   * [Importing BitLocker permissions from Active Directory](configuration/importing/importing-bitlocker-permissions.md)
   * [Importing local administrator group membership from domain-joined Windows devices](configuration/importing/importing-local-administrators-group-membership.md)
   * [Import mappings from a CSV file](configuration/importing/importing-mappings-from-a-csv-file.md)
-  * [Importing rules from the Lithnet LAPS web app](configuration/importing/importing-rules-from-lithnet-laps-web-app.md)
   * [Performing an offline discovery of local admins](configuration/importing/performing-an-offline-discovery-of-local-admins.md)
 
 ## Help and support
@@ -108,6 +107,7 @@
   * [Get-AmsLocalAdminPassword](help-and-support/powershell-help/Get-AmsLocalAdminPassword.md)
   * [Get-AmsLocalAdminPasswordHistory](help-and-support/powershell-help/Get-AmsLocalAdminPasswordHistory.md)
   * [Get-AmsRoleAuthorizationRule](help-and-support/powershell-help/Get-AmsRoleAuthorizationRule.md)
+  * [Get-AmsServiceConfig](help-and-support/powershell-help/Get-AmsServiceConfig.md)
   * [New-AmsComputerAuthorizationRule](help-and-support/powershell-help/New-AmsComputerAuthorizationRule.md)
   * [New-AmsDeviceRegistrationKey](help-and-support/powershell-help/New-AmsDeviceRegistrationKey.md)
   * [New-AmsGroup](help-and-support/powershell-help/New-AmsGroup.md)
@@ -127,6 +127,7 @@
   * [Set-AmsGroup](help-and-support/powershell-help/Set-AmsGroup.md)
   * [Set-AmsHostConfig](help-and-support/powershell-help/Set-AmsHostConfig.md)
   * [Set-AmsRoleAuthorizationRule](help-and-support/powershell-help/Set-AmsRoleAuthorizationRule.md)
+  * [Set-AmsServiceConfig](help-and-support/powershell-help/Set-AmsServiceConfig.md)
 * [Application help pages](help-and-support/app-pages)
   * [Host configuration page](help-and-support/app-pages/host-configuration-page.md)
   * App Configuration

@@ -17,7 +17,8 @@ Get-AmsComputerAuthorizationRule [-Id <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-When called without any parameters, this cmdlet returns all the computer authorization rules currently on the server. When the ID parameter is specified, it returns the rule matching that ID.
+When called without any parameters, this cmdlet returns all the computer authorization rules currently on the server.
+When the ID parameter is specified, it returns the rule matching that ID.
 
 ## EXAMPLES
 
@@ -58,12 +59,10 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.ComputerAuthorizationRulePSObject
 ## NOTES
-
 Use of this cmdlet requires an Enterprise Edition license.
 
 ## RELATED LINKS

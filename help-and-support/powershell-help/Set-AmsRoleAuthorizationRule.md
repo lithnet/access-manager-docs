@@ -40,14 +40,14 @@ Renames a role
 PS C:\> Set-AmsRoleAuthorizationRule -Id 'a984d40c-8b22-4009-83ac-f38b7b341cc4' -AddPrincipalsAllowedJit "DOMAIN\user1"
 ```
 
-Adds `Domain\user1` to the list of users who are allowed to access this role
+Adds \`Domain\user1\` to the list of users who are allowed to access this role
 
 ### Example 3
 ```powershell
 PS C:\> Get-AmsRoleAuthorizationRule -Name "My role" | Set-AmsRoleAuthorizationRule -AddPrincipalsDeniedJit "DOMAIN\user1"
 ```
 
-Get a rule by its name, and adds `Domain\user1` to the list of users who are denied to access this role
+Get a rule by its name, and adds \`Domain\user1\` to the list of users who are denied to access this role
 
 ### Example 4
 ```powershell
@@ -351,11 +351,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.RoleAuthorizationRulePSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

@@ -17,7 +17,8 @@ Get-AmsHostConfig [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet gets the current configuration of the AMS host where this PowerShell cmdlet is run. Host configuration is specific to the individual host, and is not shared by cluster members. 
+This cmdlet gets the current configuration of the AMS host where this PowerShell cmdlet is run.
+Host configuration is specific to the individual host, and is not shared by cluster members.
 
 ## EXAMPLES
 
@@ -36,7 +37,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.HostConfigurationOptionsPSObject

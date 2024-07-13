@@ -160,7 +160,7 @@ Updates the rule to use the specified authorization script
 PS C:\> Set-AmsComputerAuthorizationRule -Id '8a2ac32c-3fe8-478f-9550-9e6630d8f07a' -AdGroup "DOMAIN\AccountingServers"
 ```
 
-Targets the rule to the `AccountingServers` AD group
+Targets the rule to the \`AccountingServers\` AD group
 
 ## PARAMETERS
 
@@ -444,7 +444,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -459,7 +459,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -489,7 +489,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -534,7 +534,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -760,7 +760,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -790,7 +790,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -936,11 +936,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.ComputerAuthorizationRulePSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

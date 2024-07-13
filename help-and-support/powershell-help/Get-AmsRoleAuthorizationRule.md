@@ -28,7 +28,8 @@ Get-AmsRoleAuthorizationRule [-Id <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-When called without any parameters, this cmdlet returns all the role authorization rules currently on the server. When the ID parameter is specified, it returns the rule matching that ID.
+When called without any parameters, this cmdlet returns all the role authorization rules currently on the server.
+When the ID parameter is specified, it returns the rule matching that ID.
 
 ## EXAMPLES
 
@@ -44,7 +45,7 @@ Returns all the role authorization rules on the server
 PS C:\> Get-AmsRoleAuthorizationRule -Name "My custom role"
 ```
 
-Returns the role authorization rule with the name `My custom role`
+Returns the role authorization rule with the name \`My custom role\`
 
 ### Example 3
 ```powershell
@@ -91,11 +92,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.RoleAuthorizationRulePSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

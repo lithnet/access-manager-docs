@@ -33,7 +33,7 @@ Removes a device by its known ID
 PS C:\> Get-AmsDevice -Name "PC1" | Remove-AmsDevice
 ```
 
-Get a device named `PC1` and permanently deletes it
+Get a device named \`PC1\` and permanently deletes it
 
 ## PARAMETERS
 
@@ -47,7 +47,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -73,7 +73,6 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Void

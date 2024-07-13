@@ -13,13 +13,14 @@ Sets one or more AMS host configuration parameters
 ## SYNTAX
 
 ```
-Set-AmsHostConfig [-AgentAccessEnabled <Boolean>] [-WebAppEnabled <Boolean>] [-ExternalHostname <String>]
+Set-AmsHostConfig [-ApiEnabled <Boolean>] [-WebAppEnabled <Boolean>] [-ExternalHostname <String>]
  [-LogPath <String>] [-ConfigPath <String>] [-ConnectionString <String>] [-SkipConnectionStringValidation]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to specify settings that apply to the specific host where the cmdlet is run. These settings are not shared between hosts in a farm, and must be set on each individual AMS server where appropriate.
+This cmdlet allows you to specify settings that apply to the specific host where the cmdlet is run.
+These settings are not shared between hosts in a farm, and must be set on each individual AMS server where appropriate.
 
 Note, you must restart the service after making changes with this cmdlet for those changes to take effect.
 
@@ -30,7 +31,8 @@ Note, you must restart the service after making changes with this cmdlet for tho
 PS C:\> Set-AmsHostConfig -ApiEnabled $true -ApiHostName "ams.lithnet.local"
 ```
 
-This example enables the AMS API, specifying a hostname of "ams.lithnet.local". This is the hostname that agents use to connect to the service, and must match exactly what is configured on the client side.
+This example enables the AMS API, specifying a hostname of "ams.lithnet.local".
+This is the hostname that agents use to connect to the service, and must match exactly what is configured on the client side.
 
 ### Example 2 - Turn off the Web app
 ```powershell
@@ -47,6 +49,21 @@ PS C:\> Set-AmsHostConfig -LogPath "C:\Logs\AMS"
 This example changes the log location to "C:\Logs\AMS"
 
 ## PARAMETERS
+
+### -ApiEnabled
+Enables or disables the API service
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -ConfigPath
 The path where the applications config files are stored
@@ -104,7 +121,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -125,25 +142,11 @@ Accept wildcard characters: False
 ```
 
 ### -ExternalHostname
-Sets the external hostname for the service. This is the hostname that agents use to connect to the service, and must match exactly what is configured on the client side.
+Sets the external hostname for the service.
+This is the hostname that agents use to connect to the service, and must match exactly what is configured on the client side.
 
 ```yaml
 Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -AgentAccessEnabled
-Enables or disables agent access to this service
-
-```yaml
-Type: Boolean
 Parameter Sets: (All)
 Aliases:
 
@@ -160,11 +163,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.HostConfigurationOptionsPSObject
-
 ## NOTES
 
 ## RELATED LINKS

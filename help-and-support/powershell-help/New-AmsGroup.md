@@ -66,11 +66,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.GroupPSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

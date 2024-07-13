@@ -214,28 +214,30 @@ PS C:\> $group = Get-AmsGroup -Name "My devices"
 PS C:\> New-AmsComputerAuthorizationRule -AmsGroupId $group.Id -PrincipalsAllowedLaps 'DOMAIN\AuthorizedLapsReaders' -LapsMaximumAccessDuration 1:00:00
 ```
 
-This example creates a new authorization rule, that allows all members of the `DOMAIN\AuthorizedLapsReaders` group to access the LAPS password for all devices in the AMS group named `My devices`, and expires the LAPS password after one hour.
+This example creates a new authorization rule, that allows all members of the \`DOMAIN\AuthorizedLapsReaders\` group to access the LAPS password for all devices in the AMS group named \`My devices\`, and expires the LAPS password after one hour.
 
 ### Example 2
 ```powershell
 PS C:\> New-AmsComputerAuthorizationRule -AadTenantId '2b693132-7e65-4603-b508-910a2b4487c8' -PrincipalsAllowedLaps 'DOMAIN\AuthorizedLapsReaders' -UserRequestReason Required
 ```
 
-This example creates a new authorization rule, that allows all members of the `DOMAIN\AuthorizedLapsReaders` group to access the LAPS password for all devices in the specified Microsoft Entra tenant, and specifies that the user must provide a reason when requesting access to the LAPS password
+This example creates a new authorization rule, that allows all members of the \`DOMAIN\AuthorizedLapsReaders\` group to access the LAPS password for all devices in the specified Microsoft Entra tenant, and specifies that the user must provide a reason when requesting access to the LAPS password
 
 ### Example 3
 ```powershell
 PS C:\> New-AmsComputerAuthorizationRule -AdContainer 'OU=Devices,DC=domain,DC=local' -PrincipalsAllowedLaps 'DOMAIN\AuthorizedLapsReaders' -NotificationChannelsSuccess 'Email domain admins' -NotificationChannelsFailure 'Email domain admins'
 ```
 
-This example creates a new authorization rule, that allows all members of the `DOMAIN\AuthorizedLapsReaders` group to access the LAPS password for all devices in the specified Active Directory OU. It also specifies the audit channels to notify on the event a user triggers this rule.
+This example creates a new authorization rule, that allows all members of the \`DOMAIN\AuthorizedLapsReaders\` group to access the LAPS password for all devices in the specified Active Directory OU.
+It also specifies the audit channels to notify on the event a user triggers this rule.
 
 ### Example 4
 ```powershell
 PS C:\> New-AmsComputerAuthorizationRule -AdGroup 'DOMAIN\FinanceServers' -PrincipalsAllowedJit 'DOMAIN\FinanceAdmins' -RuleExpiryDate "2025-03-01"
 ```
 
-This example creates a new authorization rule, that allows all members of the `DOMAIN\FinaanceAdmins` group to JIT into the servers contained within the `FinanceServers` group. The rule is set to expire on 1st March 2025
+This example creates a new authorization rule, that allows all members of the \`DOMAIN\FinanceAdmins\` group to JIT into the servers contained within the \`FinanceServers\` group.
+The rule is set to expire on 1st March 2025
 
 ## PARAMETERS
 
@@ -399,7 +401,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -414,7 +416,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -459,7 +461,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -700,7 +702,7 @@ Aliases:
 
 Required: False
 Position: Named
-Default value: None
+Default value: False
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
@@ -786,11 +788,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### None
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.ComputerAuthorizationRulePSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

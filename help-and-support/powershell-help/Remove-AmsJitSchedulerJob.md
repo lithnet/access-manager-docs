@@ -17,7 +17,8 @@ Remove-AmsJitSchedulerJob [-Id] <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-The AMS JIT scheduler is responsible for removing JIT access from a user when their access time has expired. This cmdlet allows you to remove a job from the queue.
+The AMS JIT scheduler is responsible for removing JIT access from a user when their access time has expired.
+This cmdlet allows you to remove a job from the queue.
 
 ## EXAMPLES
 
@@ -51,12 +52,11 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Void
-
 ## NOTES
-In an Active Directory forest, with the `Privilege Access Management` feature enabled, AMS will use TTL-based group membership for Active Directory JIT tasks. The AMS JIT scheduler will not be used, and no jobs will appear in the scheduler queue
+In an Active Directory forest, with the \`Privilege Access Management\` feature enabled, AMS will use TTL-based group membership for Active Directory JIT tasks.
+The AMS JIT scheduler will not be used, and no jobs will appear in the scheduler queue
 
 ## RELATED LINKS

@@ -28,7 +28,8 @@ Get-AmsDeviceRegistrationKey -Key <String> [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-This cmdlet allows you to retrieve a device registration key by name, ID, or the key itself. When used without parameters, it will return all registration keys.
+This cmdlet allows you to retrieve a device registration key by name, ID, or the key itself.
+When used without parameters, it will return all registration keys.
 
 ## EXAMPLES
 
@@ -113,11 +114,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### Lithnet.AccessManager.PowerShell.RegistrationKeyPSObject
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 

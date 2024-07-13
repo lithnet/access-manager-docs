@@ -17,7 +17,9 @@ Add-AmsDeviceRegistrationKeyGroup -Id <String> -Groups <Object[]> [<CommonParame
 ```
 
 ## DESCRIPTION
-A registration key can be associated with one or more AMS groups. When a device uses this key to register, it will automatically be added to the associated groups. This cmdlet allows you to add an AMS group to an existing registration key.
+A registration key can be associated with one or more AMS groups.
+When a device uses this key to register, it will automatically be added to the associated groups.
+This cmdlet allows you to add an AMS group to an existing registration key.
 
 ## EXAMPLES
 
@@ -29,7 +31,8 @@ PS C:\> Get-AmsDeviceRegistrationKey -Name 'my example key' | Add-AmsDeviceRegis
 ## PARAMETERS
 
 ### -Groups
-A collection of groups to add. This can be a group ID string, or a group object obtained from the `Get-AmsGroup` cmdlet
+A collection of groups to add.
+This can be a group ID string, or a group object obtained from the \`Get-AmsGroup\` cmdlet
 
 ```yaml
 Type: Object[]
@@ -64,11 +67,9 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ## INPUTS
 
 ### System.String
-
 ## OUTPUTS
 
 ### System.Void
-
 ## NOTES
 Use of this cmdlet requires an Enterprise Edition license.
 
