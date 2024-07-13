@@ -1,16 +1,18 @@
 # Migration considerations for migrating from Access Manager v2 to v3
 
-Upgrading your environment from version 2 to version 3 of Access Manager requires some careful planning has things have changed. 
+Upgrading your environment from version 2 to version 3 of Access Manager requires some careful planning as things have changed.
 
 ## Access Manager Server
 
 ### Enterprise edition license key update required
-If you are using the Enterprise edition of Access Manager, you will require a new license key. Enterprise edition customers should contact Lithnet support to obtain their v3 license prior to upgrading if they have no already done so.
+If you are an Access Manager *enterprise edition* customer, you will require a new license key to support AMSv3.
+
+Existing *enterprise edition* customers should contact [Lithnet support](https://lithnet.io/support) to obtain an AMSv3 license prior to upgrading if they have no already done so.
 
 ### Community edition no longer allows web app customization
-Access Manager v2 allowed community edition users to customize some elements of the web app such as branding and custom logo use. 
+Access Manager v2 allowed *community edition* users to customize some elements of the web app such as branding and custom logo use.
 
-In Access Manager v3, customization of the web app is an enterprise edition feature.
+In Access Manager v3, customization of the web app is now an *enterprise edition* feature.
 
 Community edition users upgrading from v2 to v3 will revert to the default settings of the web app.
 
@@ -64,7 +66,7 @@ The Access Manager agent package has been renamed from `LithnetAccessManagerAgen
 
 The `LithnetAccessManagerAgent3` supersedes the previous agent, and migrates the config, so the upgrade process should be seamless.
 
-Please read the [linux installation guide](installing-the-access-manager-agent/installing-the-access-manager-agent-linux.md) guide for full details.
+Please read the [Linux installation guide](installing-the-access-manager-agent/installing-the-access-manager-agent-linux.md) guide for full details.
 
-### Arm32 packages are no longer available
-Due to an incompatibility with .NET 8 and arm32, Lithnet are currently unable to provide an arm32 agent for Access Manager v3. You can continue to use the v2 agent on these devices, and upgrade your server to v3. Advanced features, such as passphrases will no tbe available on these devices, and they will remain managed by legacy AMSv2 policies.
+### ARM32 packages are no longer available
+Due to an incompatibility with [.NET 8 and ARM32](https://github.com/dotnet/core/discussions/9285), Lithnet is currently unable to provide an ARM32 agent for Access Manager v3. You can continue to use the v2 agent on these devices, and upgrade your server to v3. Advanced features, such as passphrases will not be available on these devices, and they will remain managed by legacy AMSv2 policies.

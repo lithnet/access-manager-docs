@@ -2,7 +2,7 @@
 
 Lithnet Access Manager comes in [two editions](access-manager-editions.md).
 
-Community edition is the core product that is free for all organizations to use. It is community supported through our GitHub site, and allows organizations to build in-depth defenses against lateral movement-based attacks using existing technology such as Microsoft LAPS.
+Community edition is the core product that is free for all organizations to use. It is community supported through our GitHub site, and allows organizations to build in-depth defences against lateral movement-based attacks using existing technology such as Microsoft LAPS.
 
 Enterprise edition contains additional [features and functionality](access-manager-editions.md), such as support for operating systems and scenarios that Microsoft LAPS doesn't support. It is a licensed product, that comes with enterprise support. To obtain a quote for Enterprise edition, please fill out the [request for quotation](https://lithnet.io/products/access-manager/#ams-quote) form.
 

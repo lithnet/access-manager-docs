@@ -71,7 +71,7 @@ The agent now supports passphrases, backing up BitLocker recovery keys for Windo
 * The v3 Access Manager Agent can only communicate with a v3 server. Therefore, the Access Manager Server must be upgraded to v3 before upgrading the clients to v3. Note, that v2 agents will continue to work with the v3 server.
 * The Access Manager Agent no longer supports using Entra-based authentication for Entra-registered devices. The device must be Entra-joined to be able use Entra authentication.
 * Windows 8.1 and Windows Server 2012 are no longer supported. 
-* Support for agents running on arm32-based Linux operating systems is no longer available
+* Support for agents running on ARM32-based Linux operating systems is no longer available
 
 ### Deprecated features
 * The Lithnet Access Manager custom Active Directory schema is no longer used by the agent
