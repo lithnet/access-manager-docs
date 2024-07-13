@@ -16,6 +16,7 @@ Before you change the service account, make sure the database permissions allow 
 If you wish to allow agents to register with their Active Directory identity, or allow users to authenticate with Windows Authentication, you will need to configure a service principal name (SPN) on the service account used by the Access Manager Service.
 
 If this SPN is not set, the following warning will appear in the `Service account` section of the `Host configuration` page:
+
 ![](../../images/spn-warning.png)
 {% endhint %}
 
