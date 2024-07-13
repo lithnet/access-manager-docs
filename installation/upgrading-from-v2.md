@@ -59,7 +59,7 @@ The in-place upgrade process from Access Manager v2 to v3 is very straight forwa
 
 If you are using AMS in a highly available load-balanced configuration:
 1. Stop the 'Lithnet Access Manager' service on all nodes in the farm.
-2. Upgrade AMS on each node at a time by running the ['Access Manager Service' installer](../downloads.md).
+2. Upgrade AMS on each node at a time by running the ['Access Manager Service' installer](downloads.md).
   - Once a node has been upgraded, the Access Manager can be safely restarted.
   - However, note that v2 nodes and v3 nodes must not be operating at the same time.
 
@@ -84,8 +84,8 @@ AMSv3 agents require new policies to be created.
 View the following guides for configuring your policies for the various supported features:
 
 * [Setting up Lithnet LAPS](../configuration/deploying-features/laps/setting-up-lithnet-laps.md)
-* [Setting up RapidLAPS](../configuration/deploying-features/rapidlaps/setting-up-rapid-laps.md), 
-* [Setting up BitLocker backup](../configuration/deploying-features/fve-backup/setting-up-bitlocker-ams.md) guides.
+* [Setting up RapidLAPS](../configuration/deploying-features/rapidlaps/setting-up-rapid-laps.md)
+* [Setting up BitLocker backup](../configuration/deploying-features/fve-backup/setting-up-bitlocker-ams.md)
 
 ### Deploy Windows agents
 The Windows agent can be deployed directly over the top of the existing v2 agent as an in-place upgrade.

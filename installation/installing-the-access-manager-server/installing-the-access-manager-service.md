@@ -108,4 +108,4 @@ Now that you have the core application set up, you can configure the Access Mana
 * [Setting up Lithnet LAPS for Active Directory, Microsoft Entra, macOS and Linux](../../configuration/deploying-features/laps/setting-up-lithnet-laps.md)
 * [Setting up JIT access for computers](../../configuration/deploying-features/jit/setting-up-jit-for-computers.md)
 * [Setting up JIT access for roles](../../configuration/deploying-features/jit/setting-up-jit-for-roles.md)
-* [Setting up BitLocker access](../../configuration/deploying-features/fve-backup/setting-up-bitlocker-access.md)
+* [Setting up BitLocker access](../../configuration/deploying-features/fve-backup/setting-up-bitlocker.md)

@@ -21,7 +21,7 @@ In order to support accurate logging of audit events in line with new features s
 
 Updated versions of the slack, teams, and email templates are provided for use in the `templates` folder of the application install directory. These are not applied by default.
 
-#### Agent policies
+### Agent policies
 Agent policies from Access Manager v2 will be imported as "Legacy agent v2 policies". They will continue to work as they do today. 
 
 However, before deploying v3 agents, you'll need to create v3 agent policies, as the legacy v2 agent policies are not used by the new agent. 
