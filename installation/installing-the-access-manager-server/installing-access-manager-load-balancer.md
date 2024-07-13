@@ -29,7 +29,9 @@ Access Manager is fully supported in load-balanced environments. You can have a 
  Settings on the `Host configuration` page will need to be configured per-node. All other settings are stored centrally in the database. Therefore, you will not need to provide the license key after installing it on the first node.
 {% endhint %}
 
-If you want to separate web access from agent API access, you can create multiple individual load balanced farms with different nodes in each. Select the appropriate services on the `Host configuration` page for the role that the specific node will play. Ensure that the `External host name` field matches the name of the load balanced endpoint that either agents or web app users will connect to.
+If you want to separate web access from agent API access, you can create multiple individual load balanced farms with different nodes in each. Select the appropriate services on the `Host configuration` page for the role that the specific node will play. You'll need to configure the farm host names for the API and web app as shown in step 6.
+
+Otherwise, if the farm will service both API and web app users, then ensure that the `External host name` field matches the name of the load balanced endpoint that both the agents and web app users will connect to.
 
 ### 4. Configure the IP address detection settings
 * If the load balancer 'hides' the real client IP address (e.g. a 'application/layer 7' load balancer), you must configure the IP address detection settings in the app. If you are using a 'transport layer' load balancer, such as Microsoft NLB, you can skip this step.
@@ -41,6 +43,17 @@ If you want to separate web access from agent API access, you can create multipl
 ### 5. Configure the load balancer
 * Configure the load balancer to point to the nodes of the farm.
 * If your load balancer provides customizable probes or health checks, see the 'Load balancer probes/Heath check` section below.
+
+### 6. Configure the external host name
+If you are deploying separate farms for the web app and API, you'll need to configure farm-wide external host names for each instance. 
+
+Using PowerShell, configure the host names that agents and users will be using for the API and web app respectively
+
+```powershell
+Set-AmsServiceConfig -FarmApiHostName "api.mycompany.com" -FarmWebAppHostName "app.mycompany.com"
+```
+
+This only needs to be configured on one node, but all nodes need to be restarted after this setting change.
 
 ## Load balancer probes/Health checks
 ### Web app
