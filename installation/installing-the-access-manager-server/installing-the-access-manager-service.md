@@ -50,7 +50,7 @@ Click `File`, then `Save`.
 
 ## Step 5: Configure your authentication provider
 
-AMS supports several authentication providers. Read the guide on [configuring authentication](../../configuration/setting-up-authentication/) and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
+AMS supports several authentication providers. Read the guide on [configuring authentication](../../../configuration/setting-up-authentication/) and choose an authentication provider. We strongly recommend using a modern authentication provider that supports strong authentication and can enforce multifactor authentication. While integrated windows authentication is provided, we recommend you only use this for testing purposes.
 
 ## Step 6: Configure outbound email settings
 
