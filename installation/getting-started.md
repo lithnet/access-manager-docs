@@ -29,13 +29,14 @@ An agent is not required for the other features of AMS, such as just-in-time adm
 ## Configuring features
 
 Once you've installed AMS, you use the following guides to configure specific features as needed.
-
+* __RapidLAPS__
+    * [Setting up RapidLAPS](../configuration/deploying-features/rapidlaps/setting-up-rapid-laps.md)
+* __LAPS__
+    * [Setting up Microsoft LAPS for Active Directory](../configuration/deploying-features/laps/setting-up-microsoft-laps.md)
+    * [Setting up Microsoft LAPS for Azure Active Directory](../configuration/deploying-features/laps/setting-up-microsoft-laps-for-aad.md)
+    * [Setting up Lithnet LAPS](../configuration/deploying-features/laps/setting-up-lithnet-laps.md)
 * __Just-in-time access (JIT)__
     * [Setting up JIT access for computers](../configuration/deploying-features/jit/setting-up-jit-for-computers.md)
     * [Setting up JIT access for roles](../configuration/deploying-features/jit/setting-up-jit-for-roles.md)
-* __LAPS__
-    * [Setting up Microsoft LAPS for Active Directory](../configuration/deploying-features/setting-up-microsoft-laps.md)
-    * [Setting up Microsoft LAPS for Azure Active Directory](../configuration/deploying-features/setting-up-microsoft-laps-for-aad.md)
-    * [Setting up Lithnet LAPS](../configuration/deploying-features/setting-up-lithnet-laps/)
 * __BitLocker Recovery__
-    * [Setting up BitLocker access](../configuration/deploying-features/fve-backup/setting-up-bitlocker-access.md)
+    * [Setting up BitLocker access](../configuration/deploying-features/fve-backup/setting-up-bitlocker.md)
