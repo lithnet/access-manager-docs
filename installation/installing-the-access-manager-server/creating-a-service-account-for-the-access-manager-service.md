@@ -48,7 +48,7 @@ Please change the `$accountName` and `$amsServerName` variables as needed for yo
 # Set the following values as appropriate for your environment
 #-------------------------------------------------------------------------
 
-$amsServerName = "$(env.MachineName)" # Set this to the name of the server you are installing AMS on,
+$amsServerName = "$($env:ComputerName)" # Set this to the name of the server you are installing AMS on,
 $accountName = "svc-lithnetams"
 $description = "Service account for the Lithnet Access Manager Service"
 
@@ -109,7 +109,7 @@ if ($remainingTime -gt 0)
 
 try 
 {
-    New-ADServiceAccount -Name $accountName -AccountNotDelegated $true -Description $description -Enabled $true -KerberosEncryptionType AES256, AES128 -SamAccountName $accountName -ErrorAction Stop
+    New-ADServiceAccount -Name $accountName -AccountNotDelegated $true -Description -RestrictToOutboundAuthenticationOnly $description -Enabled $true -KerberosEncryptionType AES256, AES128 -SamAccountName $accountName -ErrorAction Stop
 }
 catch
 {

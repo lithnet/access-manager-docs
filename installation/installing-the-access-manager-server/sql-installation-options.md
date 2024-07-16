@@ -15,7 +15,7 @@ For larger installations of Access Manager, you should consider using SQL server
 
 If you are using the high-availability feature of Access Manager, you cannot use SQL Express. The SQL instance will need to be installed on a separate computer. Alternatively, use an Azure SQL or Amazon RDS database configured for high availability.
 
-If you plan to use SQL Express, but the server you are installing on does not have an internet connection, then [download the SQL Express installer](https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLEXPR_x64_ENU.exe) and copy it to the server. You'll be prompted to provide this file during setup.
+If you plan to use SQL Express, but the server you are installing on does not have an internet connection, then [download the SQL Express installer](https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLEXPR_x64_ENU.exe) and copy it to the server. You'll be prompted to provide this file during setup.
 
 ## Using SQL Standard or Enterprise Edition
 If you are running Access Manager in a large environment, or SQL express is otherwise not suitable, you can set up the AMS database on an SQL instance of your choosing. You must manually set up your instance, and create the database, before running the installer. During installation, you will be prompted for the server and instance name. 
@@ -120,11 +120,11 @@ EXEC sp_addrolemember 'db_owner', 'svc-lithnetams';
 ```
 
 6. Run the code to create a user in the database for the service account to use
-7. From the menu on the left-hand side, select `Connection Strings`, and copy the `ADO.NET` connection string
+7. From the menu on the left-hand side, expand `Settings`, select `Connection Strings`, and copy the `ADO.NET (sql authentication)` connection string
 8. Modify the username and password in the connection string to contain the username and password you created earlier. Your connection string should look similar to below
 
 ```
-Server=tcp:ams.database.windows.net,1433;Initial Catalog=AccessManager;Persist Security Info=False;User ID=svc-lithnetams;Password=your-password-here;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
+Server=tcp:ams.database.windows.net,1433;Initial Catalog=AccessManager;Persist Security Info=False;User ID=svc-lithnetams;Password='your-password-here';MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;
 ```
 9. Once these steps are complete, you can run the AMS installer, and provide the connection string when prompted.
 

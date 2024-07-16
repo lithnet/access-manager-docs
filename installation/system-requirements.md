@@ -8,9 +8,9 @@ The Lithnet Access Manager Service requires Windows Server 2016 or higher.
 
 #### Dependencies
 
-* [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.6 or later installed
-* [.NET Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.6 or later installed
-* Microsoft SQL Express 2019 (if hosting the database locally), SQL Server 2019 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
+* [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.0 or later installed
+* [.NET Hosting Bundle](hhttps://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.0 or later installed
+* Microsoft SQL Express 2022 (if hosting the database locally), SQL Server 2019 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
 
 ## Access Manager Agent Operating System Support
 

@@ -7,13 +7,12 @@ You only need a single app registration for the Access Manager instance. Just en
 # Step 1: Configure a new application in Entra ID
 
 1. Log into portal.azure.com with administrative credentials, select `More services` and select `Microsoft Entra ID`
-2. Select `App registrations` and click `New application registration`
-3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (This org only - Single tenant)` as the supported account type
+2. From the left hand menu, expand `Manage`, select `App registrations` and click `New registration`
+3. Enter `Lithnet Access Manager` or another suitable application name, and select `Accounts in this organizational directory only (Single tenant)` as the supported account type
 4. Click `Register`
 5. Take note of the `Application ID` value, this is our `client ID`
-6. Save the settings
-7. Take note of the Directory/Tenant ID from the main application page
-8. From the `Certificates and secrets` page, click `new client secret`, give your secret a name, and then take note of the value provided.
+6. Take note of the Directory/Tenant ID 
+7. From the `Certificates and secrets` page, click `new client secret`, give your secret a name, and then take note of the value provided.
 
 If you want to enable user authentication via OIDC, then you'll also need to complete the following steps
 1. From the left-hand menu, click `Manage` then `Authentication`. Click `Add a platform`.
@@ -24,8 +23,8 @@ If you want to enable user authentication via OIDC, then you'll also need to com
 
 # Step 2: Grant directory permissions
 
-1. From the `API permissions` page, click `Add permission` and grant the following API permissions, relevant to your scenario
-2. Ensure that you have selected `Grant admin consent` for each item.
+1. From the `API permissions` page, click `Add permission`, choose `Microsoft Graph`, followed by `Application permissions` and grant the API permissions shown in the tables below, relevant to your scenario
+2. Once you have added the permissions, click on `Grant admin consent`, and ensure each permission shows a status of `Granted for <tenant name>`.
    
 ### User authentication using OpenID Connect
 
