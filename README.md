@@ -55,7 +55,7 @@ Using the same self-service interface, entitled users can request access to the 
 
 ![](images/web-request-jit-roles.gif)
 
-## Building on security fundamentals and closing gaps
+## Strengthening security and closing gaps
 Deploying LAPS is a great way to protect devices, but how do you then keep LAPS passwords themselves safe? Attackers have tools that allow them to harvest LAPS passwords from Active Directory, and without the proper monitoring in place, it can happen without tripping any alarms. 
 
 Access Manager isn't just about improving usability, it also uplifts the security of your LAPS solution.
