@@ -18,7 +18,7 @@ Access Manager provides a new feature called RapidLAPS. It's a passwordless LAPS
 
 This means you can log into the LAPS account, without ever having to type or even know the LAPS password!
 
-<img src ="./images/RapidLAPS_Login.gif" width="700"/>
+<img src ="./images/RapidLAPS_Login.gif" />
 
 It also integrates with the Windows admin elevation prompt (run as administrator), allowing you to review and approve the app and user requesting administrative access.
 
@@ -27,7 +27,7 @@ While RapidLAPS works in the most common scenarios, there will be times when you
 
 Whether you are using Microsoft legacy LAPS, new Windows LAPS, or the Access Manager Agent, your LAPS passwords are always available via a single mobile-friendly, web-based app. Simply type in the computer name, and Access Manager will find the password and present it. Whether the LAPS password is stored in Active Directory, Microsoft Entra, or AMS itself, the process is seamless to the user.
 
-<img src ="./images/web-request-laps.gif" width="700"/>
+<img src ="./images/web-request-laps.gif" />
 
 We make sure we use fonts where you can actually see the difference between a lower-case L and a capital I. We also show a breakdown of the password using the NATO phonetic alphabet to make it easy to read it out to someone. You can even have Access Manager read the password with its text-to-speech capability!
 
@@ -45,7 +45,7 @@ Rather than granting them permanent access to these computers, you can grant the
 
 Using the same web interface, they request JIT access to a computer, and their account is added to the local administrators group of the computer. This access is temporary and automatically removed after the allowed time period.
 
-<img src ="./images/web-request-jit.gif" width="700"/>
+<img src ="./images/web-request-jit.gif" />
 
 ### Just-in-time access to custom roles
 
@@ -53,7 +53,7 @@ It's not just computers that you can provide just-in-time access for. Any Active
 
 Using the same self-service interface, entitled users can request access to the role at any time. Access Manager will then add them to the corresponding Active Directory group, and automatically remove them when the allowed time period has elapsed.
 
-<img src ="./images/web-request-jit-roles.gif" width="700"/>
+<img src ="./images/web-request-jit-roles.gif" />
 
 ## Building on security fundamentals and closing gaps
 Deploying LAPS is a great way to protect devices, but how do you then keep LAPS passwords themselves safe? Attackers have tools that allow them to harvest LAPS passwords from Active Directory, and without the proper monitoring in place, it can happen without tripping any alarms. 
@@ -86,7 +86,7 @@ The Access Manager agent extends LAPS support to these operating systems, and al
 ### The Access Manager web app is a multi-purpose tool
 We want to be the one-stop-shop for managing privileged access to endpoints, so using the same web app that allows users to access LAPS passwords, we've enabled other scenarios like retrieving BitLocker recovery passwords and providing just-in-time access to computers and roles.
 
-<img src ="./images/web-request-bitlocker.gif" width="700"/>
+<img src ="./images/web-request-bitlocker.gif"/>
 
 ### Access Manager is extensible
 We know that each organization has its own individual needs that need to be taken into account when deploying solutions to manage and delegate privileged access. We've built Access Manager to be extensible through PowerShell, allowing you to bring your own custom auditing and authorization solutions to the product.
