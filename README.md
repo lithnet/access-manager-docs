@@ -20,7 +20,8 @@ This means you can log into the LAPS account, without ever having to type or eve
 
 It also integrates with the Windows admin elevation prompt (run as administrator), allowing you to review and approve the app and user requesting administrative access.
 
-![](.gitbook/assets/rapidlaps.gif)
+{% embed url="./images/rapidlaps_login.mp4" %}
+![](./images/rapidlaps_login.mp4)
 
 ### Access Manager makes LAPS passwords easy to get to
 While RapidLAPS works in the most common scenarios, there will be times when you do need to access the LAPS password directly. If you have to use the LAPS password, Access Manager makes it as easy as possible to get them.
