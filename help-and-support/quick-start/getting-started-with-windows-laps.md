@@ -10,7 +10,7 @@ It's MFA-ready with native support for Entra ID, Okta, ADFS, and even smart card
 
 When combined, Windows LAPS and Lithnet Access Manager make the perfect pair ❤
 
-![](../../.gitbook/assets/web-request-laps.gif)
+<img src ="../../images/web-request-laps.gif" width="500"/>
 
 We've prepared some quick-start guides for getting started with the new Windows LAPS, and accessing those passwords with Lithnet Access Manager:
 
