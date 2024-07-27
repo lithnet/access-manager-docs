@@ -68,7 +68,7 @@ Access Manager provides support for modern authentication options like OpenID Co
 ### Access Manager prevents mass-harvesting of LAPS passwords
 If an attacker gets their hands on credentials that have permission to read LAPS passwords from Active Directory, there's nothing stopping them from extracting all the LAPS passwords for your organization in seconds.
 
-Access Manager prevents this by implementing rate limiting for all access request. You can set per-user and per-IP address rate limits, to mitigate the damage that can be done in the event a person with AMS access has their credentials compromised.
+Access Manager prevents this by implementing rate limiting for all access requests. You can set per-user and per-IP address rate limits, to mitigate the damage that can be done in the event a person with AMS access has their credentials compromised.
 
 ### Access Manager improves visibility of LAPS access events
 The out-of-box auditing story for Microsoft LAPS leaves a lot to be desired. Have you ever had to search event logs to try and find out who accessed a LAPS password in Active Directory? Were the right audit events even turned on when you needed them? How many domain controller event logs did you have to search through to find what you needed?
