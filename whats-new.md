@@ -45,7 +45,7 @@ This means that wherever your devices are, or the directory they're tied to - ma
 * Retrieval of Lithnet encrypted LAPS passwords from Active Directory. 
 
 ### Removed features
-* Entra-registered clients running the Access Manager agent can no longer use Entra authentication. Devices must be be Entra-joined in order to authenticate with the Access Manager server.
+* Entra-registered clients running the Access Manager agent can no longer use Entra authentication. Devices must be Entra-joined in order to authenticate with the Access Manager server.
   * *Note*: Entra ID-registered devices can still register with AMS via *registration tokens*.
 
 ### Changed features
