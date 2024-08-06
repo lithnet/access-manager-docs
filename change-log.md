@@ -1,4 +1,7 @@
 # Change log
+## v2.0.9540 2nd August 2024
+### Access Manager Service
+- \[FEATURE\] Adds support for excluding forests and domains from being rendered in the UI via the Get-AmsServiceConfig and Set-AmsServiceConfig cmdlets. This is useful for cases where some domains may not be reachable from the AMS server, and cause the UI to hang when navigating and saving.
 
 ## v2.0.9538 12th July 2024
 ### Access Manager Service
