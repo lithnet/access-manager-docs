@@ -1,5 +1,9 @@
 # Change log
 
+## v3.0.1208 6th August 2024
+### Access Manager service
+- \[FIX\] Fixes an issue where agents using windows auth couldn't authenticate if only windows authentication was enabled in the agent registration config
+
 ## v3.0.1206 30th July 2024
 - Initial release.
 
