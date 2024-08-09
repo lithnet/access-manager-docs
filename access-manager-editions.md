@@ -99,6 +99,7 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 | Send audit notifications via email   | ![](/images/check3.png) | ![](/images/check3.png) |
 | Send audit notifications via custom PowerShell scripts | ![](/images/check3.png) | ![](/images/check3.png) |
 | Send audit notifications to Splunk HEC | ![](/images/dash.png) | ![](/images/check3.png) |
+
 ### Infrastructure
 
 | Feature   |   Community Edition   |   Enterprise Edition  |
@@ -106,7 +107,6 @@ Access Manager supports several authentication mechanisms. You can use a modern 
 | Multi-domain support  | ![](/images/check3.png) | ![](/images/check3.png) |
 | Cross-forest trust support  | ![](/images/check3.png) | ![](/images/check3.png) |
 | Single-server deployments   | ![](/images/check3.png) | ![](/images/check3.png) |
-| Windows Failover cluster deployments | ![](/images/dash.png) | ![](/images/check3.png) |
 | Load-balanced deployments   | ![](/images/dash.png) | ![](/images/check3.png) |
 
 ### Authorization features
