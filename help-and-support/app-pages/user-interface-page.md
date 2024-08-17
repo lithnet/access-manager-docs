@@ -36,7 +36,13 @@ When this option is enabled, Access Manager will accept computer access requests
 
 `https://accessmanager.lithnet.local/Computer/AccessRequest?ComputerName=PC1`
 
-## Password phonetics
+## Password display options
+
+#### Show QR code for passwords
+When this option is enabled, Access Manager will display a 'Show QR' button next to passwords shown in the web app. This QR code can be scanned with a compatible 2D scanner that simulates keyboard input to enter the password directly into a device.
+
+#### Show QR code for BitLocker Keys
+When this option is enabled, Access Manager will display a 'Show QR' button next to BitLocker keys shown in the web app. This QR code can be scanned with a compatible 2D scanner that simulates keyboard input to enter the BitLocker directly into a device.
 
 #### Disable text-to-speech function
 

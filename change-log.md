@@ -1,4 +1,10 @@
 # Change log
+## v3.0.1216 17th August 2023
+### Access Manager service
+- \[FIX\] Fixes an issue where users could not authenticate with WS-Federation
+- \[FIX\] Fixes an issue where RapidLAPS UI prompts set in the default policy would duplicate
+- \[FEATURE\] Adds support for showing LAPS passwords and BitLocker recovery keys as QR codes that can be scanned with a 2D barcode scanner. (Enterprise edition feature)
+
 
 ## v3.0.1210 6th August 2024
 ### Access Manager service
