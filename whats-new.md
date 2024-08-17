@@ -81,3 +81,4 @@ The agent now supports passphrases, backing up BitLocker recovery keys for Windo
 * The Lithnet Access Manager Agent for ARM64 versions of Windows requires .NET Framework 4.8.1
 * The Lithnet Access Manager Agent for x86 and x64 versions of Windows requires .NET Framework 4.7.2 or higher
 * Group Policy is no longer used to manage the Access Manager Agent for Windows. All policy settings are configured via agent policies on the Access Manager Server
+* Customization of the web app, including adding a custom logo, is now an [enterprise edition](./access-manager-editions.md) feature.
