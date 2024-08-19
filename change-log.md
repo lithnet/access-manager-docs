@@ -1,5 +1,9 @@
 # Change log
-## v3.0.1217 17th August 2023
+## v3.0.1218 19th August 2024
+### Access Manager service
+- \[FIX\] Fixes an issue where community edition users may receive and error when trying to use RapidLAPS
+
+## v3.0.1217 17th August 2024
 ### Access Manager service
 - \[FIX\] Fixes an issue where users could not authenticate with WS-Federation
 - \[FIX\] Fixes an issue where RapidLAPS UI prompts set in the default policy would duplicate
