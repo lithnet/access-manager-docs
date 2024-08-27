@@ -76,6 +76,7 @@
   * [KB000006: Migrating the Access Manager Database](help-and-support/support-articles/kb000006.md)
   * [KB000007: Adding JIT groups via Group Policy doesn't work with NTLM Disabled](help-and-support/support-articles/kb000007.md)
   * [KB000008: AMS is unable to JIT into privileged groups such as Domain Admins](help-and-support/support-articles/kb000008.md)
+  * [KB000009: Access Manager may return an out-of-date LAPS password, or no password at all](help-and-support/support-articles/kb000009.md)
 
 * [Advanced help topics](help-and-support/advanced-help-topics)
   * [Creating an Entra app registration or Access Manager](help-and-support/advanced-help-topics/creating-an-entra-app.md)
