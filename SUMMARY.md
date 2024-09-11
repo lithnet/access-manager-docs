@@ -62,6 +62,7 @@
 * [Frequently asked Questions](help-and-support/frequently-asked-questions.md)
 * [Troubleshooting](help-and-support/troubleshooting.md)
 * [Quick start guides](help-and-support/quick-start/README.md)
+* [Product lifecycle](help-and-support/lifecycle.md)
 * [Choosing between the Lithnet and Microsoft agent for LAPS](help-and-support/choosing-between-the-microsoft-and-lithnet-laps-agents.md)
   * [Getting started with Windows LAPS and Lithnet Access Manager](help-and-support/quick-start/getting-started-with-windows-laps.md)
   * [Getting started with Windows LAPS for Active Directory](help-and-support/quick-start/getting-started-with-windows-laps-for-ad.md)
