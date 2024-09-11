@@ -1,5 +1,5 @@
 # Change log
-## v3.0.1228 11th September 2024
+## v3.0.1229 11th September 2024
 ### Access Manager service
 - \[FEATURE\] Adds support for Windows 11 24H2 based agents
 - \[FEATURE\] Adds support for offering both negotiate and NTLM authenticate to web clients
