@@ -109,7 +109,7 @@ if ($remainingTime -gt 0)
 
 try 
 {
-    New-ADServiceAccount -Name $accountName -AccountNotDelegated $true -Description -RestrictToOutboundAuthenticationOnly $description -Enabled $true -KerberosEncryptionType AES256, AES128 -SamAccountName $accountName -ErrorAction Stop
+    New-ADServiceAccount -Name $accountName -AccountNotDelegated $true -Description $description -RestrictToOutboundAuthenticationOnly -Enabled $true -KerberosEncryptionType AES256, AES128 -SamAccountName $accountName -ErrorAction Stop
 }
 catch
 {
