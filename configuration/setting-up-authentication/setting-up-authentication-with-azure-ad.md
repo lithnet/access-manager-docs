@@ -1,6 +1,6 @@
 # Setting up authentication with Microsoft Entra ID
 
-The following guide will assist you in configuring your application to use Azure Active Directory for authentication.
+The following guide will assist you in configuring your application to use Microsoft Entra for authentication.
 
 ## Part 1: Configure a new application in Entra ID
 

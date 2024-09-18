@@ -20,7 +20,7 @@ You'll need to first install and configure the Access Manager Service applicatio
 
 If you plan on providing access to local admin passwords with Access Manager, you'll need to deploy and configure either the Microsoft LAPS agent, or the Lithnet Access Manager agent, to your devices, in order to rotate and store the LAPS passwords.
 
-If you simply want to provide access to LAPS passwords already stored in your Active Directory or Azure Active Directory, then you can skip this step.
+If you simply want to provide access to LAPS passwords already stored in your Active Directory or Microsoft Entra, then you can skip this step.
 
 You can read more details in our guide for [choosing between the Microsoft and Lithnet LAPS agents](../help-and-support/choosing-between-the-microsoft-and-lithnet-laps-agents.md).
 
@@ -33,7 +33,7 @@ Once you've installed AMS, you use the following guides to configure specific fe
     * [Setting up RapidLAPS](../configuration/deploying-features/rapidlaps/setting-up-rapid-laps.md)
 * __LAPS__
     * [Setting up Microsoft LAPS for Active Directory](../configuration/deploying-features/laps/setting-up-microsoft-laps.md)
-    * [Setting up Microsoft LAPS for Azure Active Directory](../configuration/deploying-features/laps/setting-up-microsoft-laps-for-aad.md)
+    * [Setting up Microsoft LAPS for Microsoft Entra](../configuration/deploying-features/laps/setting-up-microsoft-laps-for-aad.md)
     * [Setting up Lithnet LAPS](../configuration/deploying-features/laps/setting-up-lithnet-laps.md)
 * __Just-in-time access (JIT)__
     * [Setting up JIT access for computers](../configuration/deploying-features/jit/setting-up-jit-for-computers.md)
