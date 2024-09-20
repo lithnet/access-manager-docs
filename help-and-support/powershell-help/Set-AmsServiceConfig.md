@@ -14,7 +14,7 @@ This cmdlet allows you to set the service-wide configuration for the Access Mana
 
 ```
 Set-AmsServiceConfig [-FarmApiHostName <String>] [-FarmApiPort <Int32>] [-FarmWebAppHostName <String>]
- [-FarmWebAppPort <Int32>] [<CommonParameters>]
+ [-FarmWebAppPort <Int32>] [-ForestsToIgnore <String[]>] [-DomainsToIgnore <String[]>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -30,6 +30,21 @@ PS C:\> Set-AmsServiceConfig -FarmApiHostName "api.mycompany.com" -FarmWebAppHos
 This example sets the external host names for the AMS farm
 
 ## PARAMETERS
+
+### -DomainsToIgnore
+Specifies a list of trusted domains that should be ignored by AMS as they are typically unreachable
+
+```yaml
+Type: String[]
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
 
 ### -FarmApiHostName
 Specifies the external host name that agents will use to connect to the AMS farm.
@@ -85,6 +100,21 @@ If this value is not set, the default port of 443 is used
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForestsToIgnore
+Specifies a list of trusted forests that should be ignored by AMS as they are typically unreachable
+
+```yaml
+Type: String[]
 Parameter Sets: (All)
 Aliases:
 
