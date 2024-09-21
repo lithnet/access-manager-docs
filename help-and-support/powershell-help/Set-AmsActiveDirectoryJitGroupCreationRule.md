@@ -15,7 +15,7 @@ Sets one or more properties of an excisting just-in-time Active Directory group 
 ```
 Set-AmsActiveDirectoryJitGroupCreationRule -Id <String> [-ComputerOU <String>] [-CreateUnixGid <Boolean>]
  [-EnableJitGroupDeletion <Boolean>] [-GroupDescription <String>] [-GroupNameTemplate <String>]
- [-GroupOU <String>] [-GroupType <ActiveDirectoryGroupType>] [-PreferredDC <String>] [-Subtree <Boolean>]
+ [-GroupOU <String>] [-GroupType <ActiveDirectoryGroupType>] [-Subtree <Boolean>]
  [-UnixGidAttributeName <String>] [-UnixGidStartRange <Int32>] [<CommonParameters>]
 ```
 
@@ -153,22 +153,6 @@ Accept pipeline input: True (ByPropertyName)
 Accept wildcard characters: False
 ```
 
-### -PreferredDC
-The preferred domain controller to use when creating groups.
-Leave blank to automatically choose a domain controller
-
-```yaml
-Type: String
-Parameter Sets: (All)
-Aliases:
-
-Required: False
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
 ### -Subtree
 Specifies if AMS should search child organizational units of the 'ComputerOU' for computer objects
 
@@ -200,7 +184,7 @@ Accept wildcard characters: False
 ```
 
 ### -UnixGidStartRange
-The starting range of unix GIDs to use
+The starting range of Unix GIDs to use
 
 ```yaml
 Type: Int32
