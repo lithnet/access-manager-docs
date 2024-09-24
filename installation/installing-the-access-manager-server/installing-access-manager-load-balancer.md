@@ -7,6 +7,7 @@ Access Manager is fully supported in load-balanced environments. You can have a 
 ## Requirements
 * If the load balancer 'hides' the real client IP address (e.g. a 'application/layer 7' load balancer), it must support supplying the client IP address in the X-Forwarded-For header
 * The load balancer must support load balancing both HTTP and HTTPS. 'SSL offloading' is not supported.
+* The load balancer must be configured to use sticky sessions/session persistence
 * A Lithnet Access Manager enterprise edition license
 * At least one Windows Server 2012 R2 domain controller in the domain where AMS will be installed
 * The [KDS root key](https://docs.microsoft.com/en-us/windows-server/security/group-managed-service-accounts/create-the-key-distribution-services-kds-root-key) in the domain must be enabled
@@ -43,6 +44,7 @@ Otherwise, if the farm will service both API and web app users, then ensure that
 ### 5. Configure the load balancer
 * Configure the load balancer to point to the nodes of the farm.
 * If your load balancer provides customizable probes or health checks, see the 'Load balancer probes/Heath check` section below.
+* Configure session persistence to ensure client communications don't flip between server nodes
 
 ### 6. Configure the external host name
 If you are deploying separate farms for the web app and API, you'll need to configure farm-wide external host names for each instance. 
