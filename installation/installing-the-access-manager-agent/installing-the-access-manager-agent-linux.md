@@ -50,7 +50,7 @@ Use the appropriate package management tool to install the agent
 
 ```shell
 # Download the x64 Access Manager Agent
-curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.rpm
+curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.rpm
 sudo dnf install ~/accessmanager.rpm
 ```
 
@@ -117,7 +117,7 @@ sudo apt install lithnetaccessmanageragent
 Use the appropriate package management tool to install the agent
 
 ```shell
-curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.deb
+curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.deb
 sudo apt install ~/accessmanager.deb
 ```
 

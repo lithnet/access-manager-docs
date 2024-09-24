@@ -14,9 +14,9 @@ The agent requires OSX 10.15 or later. Packages are available for both Intel and
 Download the agent for the appropriate architecture from the downloads page, or directly from the package repository using the script below.
 ```shell
 if [[ $(uname -m) == 'arm64' ]]; then 
-    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.0/arm64/stable -o ~/accessmanageragent.pkg
+    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.1/arm64/stable -o ~/accessmanageragent.pkg
 else
-    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.0/x64/stable -o ~/accessmanageragent.pkg
+    curl -fssL https://packages.lithnet.io/macos/access-manager-agent/v2.1/x64/stable -o ~/accessmanageragent.pkg
 fi
 ```
 
