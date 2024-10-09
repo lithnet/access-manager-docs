@@ -4,7 +4,7 @@
 - \[FIX\] Fixes an issue where an error occurs in the web app when approving a RapidLAPS request without providing a mandatory reason
 - \[FIX\] Fixes an issue with the Get-AmsFveRecoveryKey cmdlet
 - \[FIX\] Fixes an issue where a PowerShell authorization rule could crash the Access Manager service
-- \[FIX\] Fixes an issue agents < v3.0.1229 with server version v3.0.1229 may change their passwords too frequently
+- \[FIX\] Fixes an issue where agents < v3.0.1229 with server version v3.0.1229 may change their passwords too frequently
 - \[FEATURE\] Adds an option to the Get-AmsLocalAdminPassword cmdlet to get all active passwords from all providers
 - \[FEATURE\] Adds support for hiding the various tabs in the web app (Enterprise edition feature)
 - \[FEATURE\] Adds new cmdlets for adding JIT group creation rules via PowerShell
