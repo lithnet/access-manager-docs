@@ -1,4 +1,19 @@
 # Change log
+## v3.0.1257 9th October 2024
+### Access Manager service
+- \[FIX\] Fixes an issue where an error occurs in the web app when approving a RapidLAPS request without providing a mandatory reason
+- \[FIX\] Fixes an issue with the Get-AmsFveRecoveryKey cmdlet
+- \[FIX\] Fixes an issue where a PowerShell authorization rule could crash the Access Manager service
+- \[FIX\] Fixes an issue agents < v3.0.1229 with server version v3.0.1229 may change their passwords too frequently
+- \[FEATURE\] Adds an option to the Get-AmsLocalAdminPassword cmdlet to get all active passwords from all providers
+- \[FEATURE\] Adds support for hiding the various tabs in the web app (Enterprise edition feature)
+- \[FEATURE\] Adds new cmdlets for adding JIT group creation rules via PowerShell
+
+### Access Manager agent
+- \[FIX\] Fixes an issue where RapidLAPS elevation requests on the RTM version of Windows 11 24H2 would fail to launch the elevated process
+- \[FEATURE\] Adds support for macOS 15-based agents
+- \[FEATURE\] Adds support for specifying the HTTPS port on the agent configuration command line
+
 ## v3.0.1229 11th September 2024
 ### Access Manager service
 - \[FEATURE\] Adds support for Windows 11 24H2 based agents

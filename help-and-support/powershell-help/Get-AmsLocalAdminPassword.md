@@ -14,13 +14,13 @@ Gets the local admin password of the specified device
 
 ### Get password by computer name (Default)
 ```
-Get-AmsLocalAdminPassword [-ComputerName] <String> [<CommonParameters>]
+Get-AmsLocalAdminPassword [-ComputerName] <String> [-AllProviders] [<CommonParameters>]
 ```
 
 ### Get password by device authority information
 ```
 Get-AmsLocalAdminPassword -AuthorityDeviceId <String> -AuthorityId <String> -AuthorityType <AuthorityType>
- [<CommonParameters>]
+ [-AllProviders] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -112,6 +112,21 @@ Required: True
 Position: Named
 Default value: None
 Accept pipeline input: True (ByPropertyName)
+Accept wildcard characters: False
+```
+
+### -AllProviders
+Returns all current passwords from all providers
+
+```yaml
+Type: SwitchParameter
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
