@@ -37,10 +37,10 @@ This database contains the app configuration and encrypted device passwords, so 
 
 ### Changed features
 * Accessing encrypted passwords in Active Directory set by the Lithnet Access Manager Agent is now an Enterprise Edition feature
-* The Lithnet Access Manager Service now requires Microsoft .NET 6.0 (was previously built on Microsoft .NET Core 3.1 which is EOL in December 2022)
+* The Lithnet Access Manager Service now requires Microsoft .NET 8.0 
 
 ## What's new in the Lithnet Access Manager Agent
-Our agent is now based on Microsoft .NET 6.0, opening up cross-platform capabilities on operating systems when .NET is supported.
+Our agent is now based on Microsoft .NET 8.0, opening up cross-platform capabilities on operating systems when .NET is supported.
 
 ### New features
 * Added support for managing local admin password on Azure AD-joined Windows devices

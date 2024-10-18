@@ -10,7 +10,7 @@ The agent itself runs using systemd, and as it requires access to reset the root
 
 ### .NET requirements
 
-The agent is build using Microsoft .NET 6.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 6.0](https://github.com/dotnet/core/blob/main/release-notes/6.0/supported-os.md) for more information.
+The agent is build using Microsoft .NET 9.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) for more information.
 
 ## Agent installation
 
@@ -50,7 +50,7 @@ Use the appropriate package management tool to install the agent
 
 ```shell
 # Download the x64 Access Manager Agent
-curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.rpm
+curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.rpm
 sudo dnf install ~/accessmanager.rpm
 ```
 
@@ -117,7 +117,7 @@ sudo apt install lithnetaccessmanageragent
 Use the appropriate package management tool to install the agent
 
 ```shell
-curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v2.0/x64/stable -o ~/accessmanager.deb
+curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.deb
 sudo apt install ~/accessmanager.deb
 ```
 
@@ -125,7 +125,7 @@ sudo apt install ~/accessmanager.deb
 
 Extract the archive to the root file system, allowing the files to be placed in their correct location. See the `File location` section below for more information on what files get unpacked and where.
 
-While you do not need to install the .NET package itself, as the agent contains all the .NET components it needs to run, there are certain dependencies required by .NET, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the .NET 6.0 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that .NET requires, and install these yourself.
+While you do not need to install the .NET package itself, as the agent contains all the .NET components it needs to run, there are certain dependencies required by .NET, that if are not present, will prevent the agent from running. If you run into this issue, you may wish to install the .NET 8.0 package to automatically obtain the dependencies, or [review the list of dependencies](https://docs.microsoft.com/en-us/dotnet/core/install/linux-scripted-manual) that .NET requires, and install these yourself.
 
 Run the following command to register the service with systemd
 

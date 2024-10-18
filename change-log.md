@@ -1,4 +1,15 @@
 # Change log
+## v2.1.1029 18th October 2024
+v2.1 of Access Manager moves from .NET 6 to .NET 8, to ensure extended support with the .NET Lifecycle. Please check the [.NET compatibility matrix here](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md), as some platforms such as RHEL7 are no longer supported.
+
+### Access Manager Service
+- \[CHANGE\] .NET 8 ASP.NET and Desktop runtimes are now required to install the Access Manager Service
+
+### Access Manager Agent
+- \[CHANGE\] .NET 8 is now used for the Linux agents. Due to .NET compatibility issues, arm32 builds are no longer supported. 
+- \[CHANGE\] .NET 8 is now used for the macOS agents. 
+- \[CHANGE\] The arm64 build of the Windows agent now uses .NET Framework 4.8.1, rather than .NET Core, as the framework version is built into the operating system.
+
 ## v2.0.9540 2nd August 2024
 ### Access Manager Service
 - \[FEATURE\] Adds support for excluding forests and domains from being rendered in the UI via the Get-AmsServiceConfig and Set-AmsServiceConfig cmdlets. This is useful for cases where some domains may not be reachable from the AMS server, and cause the UI to hang when navigating and saving.
