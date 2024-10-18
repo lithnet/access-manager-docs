@@ -39,7 +39,7 @@ For more information on planning your AMS v3 migration, see our [upgrading from 
 ### Access Manager Service (Version 2)
 | Item | Operating system | Architecture |
 | --- | --- | --- |
-| Lithnet Access Manager Service v2 | Windows Server 2016 or higher | [x64](https://packages.lithnet.io/win/access-manager-service/v2.0/x64/stable)  |
+| Lithnet Access Manager Service v2 | Windows Server 2016 or higher | [x64](https://packages.lithnet.io/win/access-manager-service/v2.1/x64/stable)  |
 
 
 ### Access Manager Agent (Version 2)
