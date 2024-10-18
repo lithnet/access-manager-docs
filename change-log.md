@@ -1,5 +1,5 @@
 # Change log
-## v2.1.XXXX
+## v2.1.1029 18th October 2024
 v2.1 of Access Manager moves from .NET 6 to .NET 8, to ensure extended support with the .NET Lifecycle. Please check the [.NET compatibility matrix here](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md), as some platforms such as RHEL7 are no longer supported.
 
 ### Access Manager Service
