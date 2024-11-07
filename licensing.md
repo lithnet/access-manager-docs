@@ -8,4 +8,4 @@ Enterprise edition contains features and functionality that support more advance
 
 While Access Manager is in the beta phase, Enterprise edition licenses are built-in to each release. These licenses are valid for 90 days from the date of the release. An updated version will be provided approximately once per month, extending the license automatically for a further 90 days.
 
-To discuss licensing or to obtain trial licenses, please email `support@lithnet.io`.
+To discuss licensing or to obtain trial licenses, please email `contact@lithnet.io`.
