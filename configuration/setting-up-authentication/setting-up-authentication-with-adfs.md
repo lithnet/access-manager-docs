@@ -24,3 +24,8 @@ The following guide will assist you in configuring your application to use Activ
 3. Select `WS-Federation` as the authentication provider type
 4. In the `metadata` field, provide the metadata URL for your ADFS server (usually something like `https://adfs.lithnet.local/FederationMetadata/2007-06/FederationMetadata.xml`)
 5. Enter the base URL of your application in the `Realm` field.
+
+## Alternative claim mapping
+AMS maps `upn`, `sid` and `onprem_sid` claims automatically if they are found in the response from the IDP. 
+
+If you need to use an attribute other than those, you can configure a custom claim mapping using [PowerShell](/help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)

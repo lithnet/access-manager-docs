@@ -30,3 +30,8 @@ The following guide will assist you in configuring your application to use Okta 
 ## Enable multifactor authentication
 
 We strongly recommend modifying your application sign-on policy to require multifactor authentication for the use of this app.
+
+## Alternative claim mapping
+AMS maps `upn`, `sid` and `onprem_sid` claims automatically if they are found in the response from the IDP. 
+
+If you need to use an attribute other than those, you can configure a custom claim mapping using [PowerShell](/help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)

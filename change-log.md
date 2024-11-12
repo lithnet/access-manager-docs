@@ -1,4 +1,20 @@
 # Change log
+## v3.0.1270 13th November 2024
+### Access Manager service
+- \[FIX\] Fixes an issue where the `Request.Target` parameter was null on a PowerShell audit request
+- \[FIX\] Modifies log files to be in UTC time
+- \[FIX\] Fixes an issue where the button to select the custom logo displayed by the web app could not be clicked with the mouse
+- \[FIX\] Fixes an issue where changing settings on AD JIT Group creation rule doesn't trigger a re-sync
+- \[FEATURE\] Adds a new `-ForceFullSync` parameter to the `Set-AmsActiveDirectoryJitGroupCreationRule` cmdlet
+- \[FEATURE\] Adds support for automatically mapping OpenID Connect and WS-Federation claims for `sid` and `onprem_sid`, in addition to the default value of `upn`. SID claims will take precedence over UPN claims due to their immutability.
+- \[FEATURE\] Adds new [cmdlets](/help-and-support/powershell-help/Add-AmsIdpClaimMapping.md) for modifying OpenID Connect and WS-Federation claim mappings. You can now use custom attributes instead of `upn` for mapping to Active Directory users
+- \[FEATURE\] Adds event logging for the use of the `Get-AmsLocalAdminPassword` cmdlets
+
+### Access Manager agent
+- \[FIX\] Fixes an issue where RapidLAPS may not working after performing an in-place agent upgrade to v3.0.1257
+- \[FIX\] Fixes an issue where the Access Manager agent can cause high CPU consumption on the logon screen on Windows 24H2 builds
+- \[FIX\] Modifies log files to be in UTC time
+
 ## v3.0.1257 9th October 2024
 ### Access Manager service
 - \[FIX\] Fixes an issue where an error occurs in the web app when approving a RapidLAPS request without providing a mandatory reason

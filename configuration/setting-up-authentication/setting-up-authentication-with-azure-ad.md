@@ -22,3 +22,8 @@ Ensure that the appropriate API permissions have been granted for the `User auth
 ## Part 3: Enable multifactor authentication
 
 For further security, you can set up a conditional access policy to require multifactor authentication for the app
+
+## Alternative claim mapping
+AMS maps `upn`, `sid` and `onprem_sid` claims automatically if they are found in the response from the IDP. 
+
+If you need to use an attribute other than those, you can configure a custom claim mapping using [PowerShell](/help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)

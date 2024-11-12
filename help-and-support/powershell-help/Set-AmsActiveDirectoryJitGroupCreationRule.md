@@ -16,7 +16,7 @@ Sets one or more properties of an excisting just-in-time Active Directory group 
 Set-AmsActiveDirectoryJitGroupCreationRule -Id <String> [-ComputerOU <String>] [-CreateUnixGid <Boolean>]
  [-EnableJitGroupDeletion <Boolean>] [-GroupDescription <String>] [-GroupNameTemplate <String>]
  [-GroupOU <String>] [-GroupType <ActiveDirectoryGroupType>] [-Subtree <Boolean>]
- [-UnixGidAttributeName <String>] [-UnixGidStartRange <Int32>] [<CommonParameters>]
+ [-UnixGidAttributeName <String>] [-UnixGidStartRange <Int32>] [-ForceFullSync] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -188,6 +188,21 @@ The starting range of Unix GIDs to use
 
 ```yaml
 Type: Int32
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -ForceFullSync
+Forces a full sync the next time the JIT group worker runs
+
+```yaml
+Type: SwitchParameter
 Parameter Sets: (All)
 Aliases:
 
