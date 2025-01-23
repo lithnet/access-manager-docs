@@ -1,4 +1,21 @@
 # Change log
+## v3.0.1292 23rd January 2025
+### Access Manager service
+- \[FEATURE\] JIT computer and role access times can now be selected in days/hours/minutes
+- \[FEATURE\] Computer and role authorization rule lists are now full-text searchable
+- \[FEATURE\] Computer and role authorization rules now save immediately after editing. There is no need to 'save' the global config to commit the rule changes
+- \[FEATURE\] Re-architects computer and role authorization rules to better support instances with thousands of rules
+- \[FEATURE\] Adds support for enterprise customers to be able to manage the service via PowerShell remoting
+- \[FEATURE\] Improves content security policy and permission policy on the web app
+
+- \[FIX\] Fixes an issue where editing a role changes its position in the list
+- \[FIX\] Fixes an issue where searching on a role name did not return expected results
+- \[FIX\] Fixes an issue where searching on a role CSV export did not contain all details
+- \[FIX\] Fixes an UI crash when editing a password generation policy, but providing an invalid combination of settings
+- \[FIX\] Fixes an issue where the AD JIT group creation job can get stuck in a broken state and not create any new groups
+- \[FIX\] Fixes validation logic on splunk hostname
+- \[FIX\] Fixes an issue were an internal error in the web app redirects to a 404 page
+
 ## v3.0.1270 13th November 2024
 ### Access Manager service
 - \[FIX\] Fixes an issue where the `Request.Target` parameter was null on a PowerShell audit request

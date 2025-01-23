@@ -19,8 +19,9 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> [-PrincipalsAllowedLaps <
  [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
  [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
  [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
- [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
- [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>]
+ [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -28,8 +29,8 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> [-PrincipalsAllowedLaps <
 ### Microsoft Entra tenant target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AuthorizationScriptPath <String>
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -41,8 +42,9 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> [-Pr
  [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
  [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
  [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
- [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
- [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>]
+ [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -50,8 +52,8 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> [-Pr
 ### Microsoft Entra group target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadGroupId <String> -AuthorizationScriptPath <String>
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -64,8 +66,8 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
  [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
  [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
  [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -73,8 +75,9 @@ New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
 ### Microsoft Entra computer target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AadTenantId <String> -AadComputerId <String>
- -AuthorizationScriptPath <String> [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
- [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ -AuthorizationScriptPath <String> [-LapsMaximumAccessDuration <TimeSpan>]
+ [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -87,9 +90,9 @@ New-AmsComputerAuthorizationRule -AdComputer <String> [-PrincipalsAllowedJit <Ob
  [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
  [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
  [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
- [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>]
+ [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
  [-DomainControllerName <String>] [<CommonParameters>]
@@ -98,9 +101,9 @@ New-AmsComputerAuthorizationRule -AdComputer <String> [-PrincipalsAllowedJit <Ob
 ### AD computer target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AdComputer <String> -AuthorizationScriptPath <String>
- [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>]
+ [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
  [-DomainControllerName <String>] [<CommonParameters>]
@@ -114,9 +117,9 @@ New-AmsComputerAuthorizationRule -AdGroup <String> [-PrincipalsAllowedJit <Objec
  [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
  [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
  [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
- [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>]
+ [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
  [-DomainControllerName <String>] [<CommonParameters>]
@@ -125,8 +128,9 @@ New-AmsComputerAuthorizationRule -AdGroup <String> [-PrincipalsAllowedJit <Objec
 ### AD group target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AdGroup <String> -AuthorizationScriptPath <String> [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
  [-DomainControllerName <String>] [<CommonParameters>]
@@ -140,9 +144,9 @@ New-AmsComputerAuthorizationRule -AdContainer <String> [-PrincipalsAllowedJit <O
  [-PrincipalsAllowedBitLocker <Object[]>] [-PrincipalsDeniedBitLocker <Object[]>]
  [-PrincipalsAllowedRapidLapsLogin <Object[]>] [-PrincipalsDeniedRapidLapsLogin <Object[]>]
  [-PrincipalsAllowedRapidLapsElevation <Object[]>] [-PrincipalsDeniedRapidLapsElevation <Object[]>]
- [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>]
+ [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
  [-DomainControllerName <String>] [<CommonParameters>]
@@ -151,9 +155,9 @@ New-AmsComputerAuthorizationRule -AdContainer <String> [-PrincipalsAllowedJit <O
 ### AD container target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AdContainer <String> -AuthorizationScriptPath <String>
- [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>]
+ [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
  [-DomainControllerName <String>] [<CommonParameters>]
@@ -166,8 +170,9 @@ New-AmsComputerAuthorizationRule -AmsComputerId <String> [-PrincipalsAllowedLaps
  [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
  [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
  [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
- [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
- [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>]
+ [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -175,8 +180,8 @@ New-AmsComputerAuthorizationRule -AmsComputerId <String> [-PrincipalsAllowedLaps
 ### AMS computer target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AmsComputerId <String> -AuthorizationScriptPath <String>
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -188,8 +193,9 @@ New-AmsComputerAuthorizationRule -AmsGroupId <String> [-PrincipalsAllowedLaps <O
  [-PrincipalsDeniedLapsHistory <Object[]>] [-PrincipalsAllowedBitLocker <Object[]>]
  [-PrincipalsDeniedBitLocker <Object[]>] [-PrincipalsAllowedRapidLapsLogin <Object[]>]
  [-PrincipalsDeniedRapidLapsLogin <Object[]>] [-PrincipalsAllowedRapidLapsElevation <Object[]>]
- [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension]
- [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-PrincipalsDeniedRapidLapsElevation <Object[]>] [-LapsMaximumAccessDuration <TimeSpan>]
+ [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -197,8 +203,8 @@ New-AmsComputerAuthorizationRule -AmsGroupId <String> [-PrincipalsAllowedLaps <O
 ### AMS group target authorized by script
 ```
 New-AmsComputerAuthorizationRule -AmsGroupId <String> -AuthorizationScriptPath <String>
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disabled] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [<CommonParameters>]
 ```
@@ -773,6 +779,36 @@ The list of principals who are not allowed RapidLAPS login access to this comput
 ```yaml
 Type: Object[]
 Parameter Sets: Microsoft Entra tenant target authorized by ACL, Microsoft Entra group target authorized by ACL, Microsoft Entra computer target authorized by ACL, AD computer target authorized by ACL, AD group target authorized by ACL, AD container target authorized by ACL, AMS computer target authorized by ACL, AMS group target authorized by ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JitDefaultAccessDuration
+The amount of time the user is offered to access this computer via JIT by default. This value cannot be greater than the value defined in MaximumAccessDurationJit
+
+```yaml
+Type: TimeSpan
+Parameter Sets: AD computer target authorized by ACL, AD computer target authorized by script, AD group target authorized by ACL, AD group target authorized by script, AD container target authorized by ACL, AD container target authorized by script
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LapsDefaultAccessDuration
+The amount of time the user is offered to access this computer's LAPS password by default. This value cannot be greater than the value defined in MaximumAccessDurationLaps
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
 Aliases:
 
 Required: False

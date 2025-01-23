@@ -15,7 +15,7 @@ Sets one or more AMS host configuration parameters
 ```
 Set-AmsHostConfig [-AgentAccessEnabled <Boolean>] [-WebAppEnabled <Boolean>] [-ExternalHostname <String>]
  [-LogPath <String>] [-ConfigPath <String>] [-ConnectionString <String>] [-SkipConnectionStringValidation]
- [<CommonParameters>]
+ [-RemoteManagementEnabled <Boolean>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -144,6 +144,21 @@ Accept wildcard characters: False
 
 ### -AgentAccessEnabled
 Enables or disables agent access to this service
+
+```yaml
+Type: Boolean
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -RemoteManagementEnabled
+Enables or disables remote management of this service (Requires enterprise edition license). Please note there are security implications to enabling remote management. Ensure that the use of PS remoting, named pipes and SMB is appropriately restricted to trusted hosts
 
 ```yaml
 Type: Boolean

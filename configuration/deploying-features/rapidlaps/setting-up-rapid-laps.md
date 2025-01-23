@@ -20,15 +20,14 @@ Follow the steps in [Enabling agent support on the AMS server](../../../installa
 
 Deploy the [Access Manager agent to your devices](../../../installation/installing-the-access-manager-agent/installing-the-access-manager-agent.md).
 
-
-## Step 4: Configure Access Manager Agent policy
+## Step 3: Configure Access Manager Agent policy
 AMS uses *agent policies* to configure the behavior of Lithnet Access Manager agents.
 
 From the `Access Manager agent/Agent policies/Windows policies` page, find or create a policy that applies to the computers you want to enable RapidLAPS for.
 
 See the guide on [creating and managing policies](../../../help-and-support/advanced-help-topics/setting-up-agent-policies.md) for more information on policy targeting and creation.
 
-## Step 5. Configure RapidLAPS scenarios
+## Step 4: Configure RapidLAPS scenarios
 
 ![](../../../images/ui-page-access-manager-agent-agent-policies-windows-policies-edit-rapidlaps.png)
 
@@ -39,7 +38,7 @@ First, select which scenarios in Windows you wish to enable RapidLAPS.
 | Enable RapidLAPS for logins | When configured, this setting will add a "Login with RapidLAPS" tile to the Windows login screen, allowing login to the local administrator account via Access Manager. |
 | Enable RapidLAPS for elevation | When configured, this setting will add an "Elevate with Lithnet RapidLAPS" tile to the Windows admin consent (UAC)() prompt, allowing elevation of applications, installers, and system actions with the local administrator account via Access Manager. |
 
-## Step 6. Configure prompts for user input
+## Step 5: Configure prompts for user input
 
 Optionally, you can present users with a series of prompts whenever they login or elevate with RapidLAPS. Responses to these prompts are delivered to the server if a login or elevation is attempted, and are presented to the user authorizing the request in the Access Manager web app (as well as being stored in the audit log).
 
@@ -62,7 +61,7 @@ The following options are configurable for user prompts:
 * `Drop-down list`-specific fields
     * __List options__: A list of options a user can select in the drop down
 
-## Step 7. Create computer authorization rules for RapidLAPS
+## Step 6: Create computer authorization rules for RapidLAPS
 
 Once the policy is configured, you can now configure individual users and groups who can approve RapidLAPS logins or elevations using the AMS configuration tool.
 
@@ -74,7 +73,7 @@ Select `Edit Permissions...` to open the ACL editor. Assign the appropriate user
 
 If you'd like to be notified when someone requests RapidLAPS login or elevation, select the notification channels you'd like to send to for success and failure events.
 
-## Step 8: Validate access
+## Step 7: Validate access
 Once the policy has had time to propagate to the device, you can begin the validation process. If the policy has been processed, on the login screen, you will see a `Login with RapidLAPS` tile on the bottom left corner of the screen.
 
 ![](../../../images/rapidlaps-login-screen.png)

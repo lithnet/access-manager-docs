@@ -15,7 +15,8 @@ Sets the properties of an AMS authorization rule
 ### None (Default)
 ```
 Set-AmsComputerAuthorizationRule -Id <String> [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>]
- [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
+ [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
+ [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
  [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
  [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
  [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
@@ -25,83 +26,89 @@ Set-AmsComputerAuthorizationRule -Id <String> [-JitGroupName <String>] [-JitMaxi
 ### Set the rule target to a Microsoft Entra tenant
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to a Microsoft Entra group
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> -AadGroupId <String>
- [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
- [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
- [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>]
+ [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
+ [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to a Microsoft Entra computer
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AadTenantId <String> -AadComputerId <String>
- [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension]
- [-LapsMaximumAccessDuration <TimeSpan>] [-LapsAllowExtension] [-Description <String>]
- [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
- [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
- [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
- [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitGroupName <String>] [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>]
+ [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>]
+ [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
+ [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
+ [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
+ [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AD computer
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AdComputer <String> [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AD group
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AdGroup <String> [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AD container
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AdContainer <String> [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AMS computer
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AmsComputerId <String> [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Set the rule target to an AMS group
 ```
 Set-AmsComputerAuthorizationRule -Id <String> -AmsGroupId <String> [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Modify the rule ACL
@@ -119,21 +126,23 @@ Set-AmsComputerAuthorizationRule -Id <String> [-AddPrincipalsAllowedJit <Object[
  [-RemovePrincipalsDeniedRapidLapsLogin <Object[]>] [-AddPrincipalsAllowedRapidLapsElevation <Object[]>]
  [-RemovePrincipalsAllowedRapidLapsElevation <Object[]>] [-AddPrincipalsDeniedRapidLapsElevation <Object[]>]
  [-RemovePrincipalsDeniedRapidLapsElevation <Object[]>] [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ### Modify the rule authorization script
 ```
 Set-AmsComputerAuthorizationRule -Id <String> [-AuthorizationScriptPath <String>] [-JitGroupName <String>]
- [-JitMaximumAccessDuration <TimeSpan>] [-JitAllowExtension] [-LapsMaximumAccessDuration <TimeSpan>]
- [-LapsAllowExtension] [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable]
- [-Notes <String>] [-UserRequestReasonRequirement <AuditReasonFieldState>]
- [-NotificationChannelsSuccess <String[]>] [-NotificationChannelsFailure <String[]>] [-AutoDcLocator]
- [-DoNotUseRemoteDcLocator] [-SiteName <String>] [-DomainControllerName <String>] [<CommonParameters>]
+ [-JitMaximumAccessDuration <TimeSpan>] [-JitDefaultAccessDuration <TimeSpan>] [-JitAllowExtension]
+ [-LapsMaximumAccessDuration <TimeSpan>] [-LapsDefaultAccessDuration <TimeSpan>] [-LapsAllowExtension]
+ [-Description <String>] [-RuleExpiryDate <DateTime>] [-Disable] [-Enable] [-Notes <String>]
+ [-UserRequestReasonRequirement <AuditReasonFieldState>] [-NotificationChannelsSuccess <String[]>]
+ [-NotificationChannelsFailure <String[]>] [-AutoDcLocator] [-DoNotUseRemoteDcLocator] [-SiteName <String>]
+ [-DomainControllerName <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
@@ -921,6 +930,36 @@ Principals to remove from the deny RapidLAPS login access list
 ```yaml
 Type: Object[]
 Parameter Sets: Modify the rule ACL
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -JitDefaultAccessDuration
+The amount of time the user is offered to access this computer via JIT by default. This value cannot be greater than the value defined in MaximumAccessDurationJit
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
+Aliases:
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -LapsDefaultAccessDuration
+The amount of time the user is offered to access this computer's LAPS password by default. This value cannot be greater than the value defined in MaximumAccessDurationLaps
+
+```yaml
+Type: TimeSpan
+Parameter Sets: (All)
 Aliases:
 
 Required: False
