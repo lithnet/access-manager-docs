@@ -79,6 +79,7 @@
   * [KB000009: Access Manager may return an out-of-date LAPS password, or no password at all](help-and-support/support-articles/kb000009.md)
   * [KB000010: The Access Manager agents fail to register on macOS 15 (Sequoia)](help-and-support/support-articles/kb000010.md)
   * [KB000011: Users report delays in obtaining just-in-time access via AD](help-and-support/support-articles/kb000011.md)
+  * [KB000012: Troubleshooting Windows authentication in the Access Manager Web App](help-and-support/support-articles/kb000012.md)
 * [Advanced help topics](help-and-support/advanced-help-topics)
   * [Creating an Entra app registration or Access Manager](help-and-support/advanced-help-topics/creating-an-entra-app.md)
   * [Setting up agent policies](help-and-support/advanced-help-topics/setting-up-agent-policies.md)
