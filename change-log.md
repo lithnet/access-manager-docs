@@ -1,5 +1,5 @@
 # Change log
-## v3.0.1292 23rd January 2025
+## v3.0.1294 28th January 2025
 ### Access Manager service
 - \[FEATURE\] JIT computer and role access times can now be selected in days/hours/minutes
 - \[FEATURE\] Computer and role authorization rule lists are now full-text searchable
