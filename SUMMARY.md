@@ -80,6 +80,7 @@
   * [KB000010: The Access Manager agents fail to register on macOS 15 (Sequoia)](help-and-support/support-articles/kb000010.md)
   * [KB000011: Users report delays in obtaining just-in-time access via AD](help-and-support/support-articles/kb000011.md)
   * [KB000012: Troubleshooting Windows authentication in the Access Manager Web App](help-and-support/support-articles/kb000012.md)
+  * [KB000013: Access Manager cannot be installed on Windows Server 2016 with TLS 1.0 disabled](help-and-support/support-articles/kb000013.md)
 * [Advanced help topics](help-and-support/advanced-help-topics)
   * [Creating an Entra app registration or Access Manager](help-and-support/advanced-help-topics/creating-an-entra-app.md)
   * [Setting up agent policies](help-and-support/advanced-help-topics/setting-up-agent-policies.md)
