@@ -1,4 +1,12 @@
 # Change log
+
+## v3.0.1309 7th March 2025
+### Access Manager service
+- \[FIX\] Fixes an issue a computer authorization rule may not show the display name when viewed via PowerShell
+- \[FIX\] Fixes an issue RapidLAPS authorization failures do not show the type of RapidLAPS request in the log or audit event data sets
+- \[FIX\] Fixes an issue where deleting the final authorization rule in the list would not clear the rule from the cache
+- \[FIX\] Adds rate limiting to RapidLAPS PIN entry requests
+
 ## v3.0.1302 30th January 2025
 ### Access Manager service
 - \[FEATURE\] JIT computer and role access times can now be selected in days/hours/minutes
