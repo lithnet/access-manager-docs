@@ -1,5 +1,12 @@
 # Change log
 
+## v3.0.1312 7th April 2025
+### Access Manager service
+- \[FEATURE\] Improves error message shown when a user tries to log in but their AD account is locked out
+
+### Access Manager agent
+- \[FIX\] Fixes an issue where NTLM authentication may fail and the agent is unable to register
+
 ## v3.0.1309 7th March 2025
 ### Access Manager service
 - \[FIX\] Fixes an issue a computer authorization rule may not show the display name when viewed via PowerShell
