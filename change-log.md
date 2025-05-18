@@ -1,5 +1,12 @@
 # Change log
 
+## v3.0.1325 15th May 2025
+### Access Manager service
+- \[FIX\] Fixes an issue where Access Manager may be unable to read LAPS passwords or BitLocker recovery keys stored in Active Directory, if a Windows Server 2025 domain controller is in the domain.
+
+### Access Manager agent
+- \[FIX\] Improves messages logged when Windows LAPS or legacy LAPS is active on the machine to better identify which policy is active
+
 ## v3.0.1312 7th April 2025
 ### Access Manager service
 - \[FEATURE\] Improves error message shown when a user tries to log in but their AD account is locked out
