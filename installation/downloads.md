@@ -31,8 +31,8 @@ For more information on planning your AMS v3 migration, see our [upgrading from 
 | | Debian 11, 12<br> Ubuntu 20.04, 22.04, 24.04 | [arm64](https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v3.0/arm64/stable) |
 | Linux<br> (Other distros) | Tarball | [x64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.0/x64/stable) | 
 | | | [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.0/arm64/stable) |
-| macOS | macOS 12 or higher | [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/x64/stable) |
-| macOS | macOS 12 or higher | [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/arm64/stable) |
+| macOS | macOS 13 or higher | [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/x64/stable) |
+| macOS | macOS 13 or higher | [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/arm64/stable) |
 
 ## Previous versions
 

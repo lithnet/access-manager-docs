@@ -32,9 +32,9 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 
 #### Supported versions
 
-* macOS 12 (Monterey) (Intel or ARM64)
 * macOS 13 (Ventura) (Intel or ARM64)
 * macOS 14 (Sonoma) (Intel or ARM64)
+* macOS 15 (Sequoia) (Intel or ARM64)
 
 ### Linux requirements
 
