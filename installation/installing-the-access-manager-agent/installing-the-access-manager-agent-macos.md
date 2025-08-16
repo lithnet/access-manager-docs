@@ -66,6 +66,10 @@ Check the log using the instructions in the `Viewing the log files` section belo
 
 On the Access Manager server, go to the `Access Manager Agent/Devices` page, and ensure that the devices you installed the agent on have appeared in the device list. If you configured your registration key to require manual approval, you must approve the devices before they can be accessed.
 
+## Secure token support
+
+From v3.0.1480, Access Manager has support for managing the passwords of admin accounts with secure token enabled. Read the [guide on enabling secure token support](../../help-and-support/advanced-help-topics/enabling-secure-token-support-macos.md) for more info.
+
 ## Restarting the agent
 
 The Lithnet Access Manager Agent runs as a daemon using launchd. You can use standard launchd commands to start, stop and restart the agent.

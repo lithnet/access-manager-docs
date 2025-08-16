@@ -2,7 +2,10 @@
 
 This document provides a comprehensive reference to the command line interface (CLI) for the Lithnet Access Manager Agent. The agent supports different commands based on the operating system platform (Windows, macOS, or Linux).
 
-> Note these command line options are available in agent versions 3.0.1480 and later
+{% hint style="info" %}
+These command line options are available in agent versions 3.0.1480 and later. For agent versions less than 3.0.1480, please refer to the [legacy command line reference](agent-command-line-legacy.md)
+{% endhint %}
+
 
 ## Global Options
 

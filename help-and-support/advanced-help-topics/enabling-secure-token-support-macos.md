@@ -1,14 +1,20 @@
 # Enabling Secure Token Support for macOS
 
+{% hint style="info" %}
+This feature is currently in preview. 
+{% endhint %}
+
 This document explains how to configure Lithnet Access Manager to work with macOS accounts that have secure token enabled.
 
-> **Note:** Secure token support requires Access Manager Agent version 3.0.1480 or later. Older agent versions will detect secure token and report an error that they are unable to change the password.
+{% hint style="info" %}
+Secure token support requires Access Manager Agent version 3.0.1480 or later. Older agent versions will detect secure token and report an error that they are unable to change the password.
+{% endhint %}
 
 ## Overview of Secure Token
 
-Secure token is a macOS security feature introduced in macOS High Sierra (10.13) that provides additional cryptographic protection for user accounts, particularly administrator accounts. It is part of Apple's broader security architecture that includes FileVault disk encryption and secure boot processes.
+Secure token is a macOS security feature introduced in macOS High Sierra (10.13). It is an encryption key protected by the user's password that allows them access to perform security-sensitive operations such as enabling FileVault, approving operating system updates and system and kernel extensions.
 
-When secure token is enabled for an account, the user's password becomes cryptographically tied to the system's security framework. This fundamentally changes how password management works for the account.
+As this encryption key is protected by the user's password, this fundamentally changes how password management works for the account.
 
 The most important difference is that **passwords cannot be reset directly** when secure token is enabled - they can only be **changed** using the current password. This means that any password modification requires knowledge of the existing password first, unlike accounts without secure token where passwords can be reset directly without knowing the current password. 
 
@@ -42,6 +48,11 @@ For accounts with secure token enabled, Access Manager uses the new functionalit
 
 This process allows you to enable secure token for accounts already managed by Access Manager.
 
+{% hint style="info" %}
+Access Manager is unable to programmatically enable secure token, as only a user with a secure token can enable secure token for another user. You'll need to determine a way to enable secure token for the managed admin account using an external process such as an MDM tool or a script-based solution. 
+{% endhint %}
+
+
 **Steps:**
 
 1. **Deploy agent version 3.0.1480 or later** to the macOS computer
@@ -74,7 +85,7 @@ This process allows you to enable secure token for accounts already managed by A
    sudo sysadminctl -secureTokenStatus username
    ```
 
-**Note:** If you need to reset the account's password manually to use another method of enabling secure token (such as a specific MDM requirement), you can skip steps 2 and 3 above. Instead, run the `set` command after enabling secure token to ensure Access Manager has the updated password:
+**Note:** If you need to reset the account's password manually to use another method of enabling secure token with a known password, you can skip steps 2 and 3 above. Instead, run the `set` command after enabling secure token to provide Access Manager with the updated password:
 
 ```bash
 sudo Lithnet.AccessManager.Agent secure-token-support set --username adminuser --password current-password
@@ -136,13 +147,3 @@ sudo Lithnet.AccessManager.Agent secure-token-support set --username adminuser -
 **Cause:** Agent version is older than 3.0.1480.
 
 **Solution:** Upgrade the Access Manager Agent to version 3.0.1480 or later.
-
-## Best Practices
-
-1. **Always verify secure token status** before configuring support
-2. **Use the interactive password prompt** when possible to avoid passwords in command history
-3. **Test password changes** after initial configuration to ensure everything works correctly
-4. **Monitor agent logs** for any password change failures
-5. **Keep stored passwords in sync** - if you change a password outside of Access Manager, update the stored password immediately
-
-For additional help with secure token configuration, consult the Access Manager documentation or contact support.
