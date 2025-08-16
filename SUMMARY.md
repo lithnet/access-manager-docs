@@ -97,6 +97,7 @@
   * [Backup and Restore](help-and-support/advanced-help-topics/backup-and-restore.md)
   * [Event ID reference](help-and-support/advanced-help-topics/event-ids.md)
   * [Group policy configuration](help-and-support/advanced-help-topics/group-policy-configuration.md)
+  * [Agent command line reference](help-and-support/advanced-help-topics/agent-command-line.md)
 * [PowerShell reference](help-and-support/powershell-help/PowerShellModule.md)
   * [Add-AmsDeviceRegistrationKeyGroup](help-and-support/powershell-help/Add-AmsDeviceRegistrationKeyGroup.md)
   * [Add-AmsGroupMember](help-and-support/powershell-help/Add-AmsGroupMember.md)
