@@ -68,7 +68,7 @@ On the Access Manager server, go to the `Access Manager Agent/Devices` page, and
 
 ## Secure token support
 
-From v3.0.1480, Access Manager has support for managing the passwords of admin accounts with secure token enabled. Read the [guide on enabling secure token support](../../help-and-support/advanced-help-topics/enabling-secure-token-support-macos.md) for more info.
+From v3.0.1500, Access Manager has support for managing the passwords of admin accounts with secure token enabled. Read the [guide on enabling secure token support](../../help-and-support/advanced-help-topics/enabling-secure-token-support-macos.md) for more info.
 
 ## Restarting the agent
 

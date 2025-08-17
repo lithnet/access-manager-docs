@@ -1,9 +1,9 @@
 # Lithnet Access Manager Agent Command Line Reference (Legacy)
 
-This document provides a reference for command line options for the Lithnet Access Manager Agent versions prior to 3.0.1480.
+This document provides a reference for command line options for the Lithnet Access Manager Agent versions prior to 3.0.1500.
 
 {% hint style="info" %}
-This documentation applies to agent versions less than 3.0.1480. For agent versions 3.0.1480 and later, please refer to the [updated command line reference](agent-command-line.md) which uses a new structured command format.
+This documentation applies to agent versions less than 3.0.1500. For agent versions 3.0.1500 and later, please refer to the [updated command line reference](agent-command-line.md) which uses a new structured command format.
 {% endhint %}
 
 ## Global Options
@@ -135,7 +135,7 @@ If you encounter issues:
 
 1. Ensure you're running with administrator rights
 2. Check the agent logs
-3. For agent versions 3.0.1480 and later, refer to the [updated command line reference](agent-command-line.md)
+3. For agent versions 3.0.1500 and later, refer to the [updated command line reference](agent-command-line.md)
 4. Try resetting the agent with `--reset --force`
 
 For additional help, consult the full Lithnet Access Manager documentation.

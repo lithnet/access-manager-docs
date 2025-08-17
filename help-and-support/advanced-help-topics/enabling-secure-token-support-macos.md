@@ -7,7 +7,7 @@ This feature is currently in preview.
 This document explains how to configure Lithnet Access Manager to work with macOS accounts that have secure token enabled.
 
 {% hint style="info" %}
-Secure token support requires Access Manager Agent version 3.0.1480 or later. Older agent versions will detect secure token and report an error that they are unable to change the password.
+Secure token support requires Access Manager Agent version 3.0.1500 or later. Older agent versions will detect secure token and report an error that they are unable to change the password.
 {% endhint %}
 
 ## Overview of Secure Token
@@ -30,17 +30,17 @@ This will return either "ENABLED" or "DISABLED" for the specified user.
 
 ## Secure Token Handling in Access Manager
 
-Secure token support was added to Access Manager in agent version 3.0.1480. Prior versions do not support secure token and will report an error when attempting to manage accounts that have it enabled. Agent version 3.0.1480 and later now support both secure token enabled and non-secure token accounts.
+Secure token support was added to Access Manager in agent version 3.0.1500. Prior versions do not support secure token and will report an error when attempting to manage accounts that have it enabled. Agent version 3.0.1500 and later now support both secure token enabled and non-secure token accounts.
 
 ### Accounts Without Secure Token
 
 For accounts without secure token enabled, Access Manager continues to operate exactly as it did in previous versions. It **resets** the password directly using the `dscl` command without requiring knowledge of the current password. This allows Access Manager to change the password immediately without any prior setup or configuration.
 
-However, there is one important change in version 3.0.1480 and later: Access Manager now encrypts and stores the current password for all accounts after each password change. This means that if secure token is enabled for an account at a later date, Access Manager can immediately switch to changing the password instead of resetting it, without requiring any additional configuration.
+However, there is one important change in version 3.0.1500 and later: Access Manager now encrypts and stores the current password for all accounts after each password change. This means that if secure token is enabled for an account at a later date, Access Manager can immediately switch to changing the password instead of resetting it, without requiring any additional configuration.
 
 ### Accounts With Secure Token Enabled
 
-For accounts with secure token enabled, Access Manager uses the new functionality added in version 3.0.1480 to handle macOS security restrictions. It **changes** the password using `dscl -passwd` which requires the current password to be provided. Access Manager leverages the encrypted copy of the current password that it stores locally after each password change. When secure token is detected, the agent automatically switches from password reset mode to password change mode. If secure token becomes disabled for an account, Access Manager will automatically fall back to password reset mode.
+For accounts with secure token enabled, Access Manager uses the new functionality added in version 3.0.1500 to handle macOS security restrictions. It **changes** the password using `dscl -passwd` which requires the current password to be provided. Access Manager leverages the encrypted copy of the current password that it stores locally after each password change. When secure token is detected, the agent automatically switches from password reset mode to password change mode. If secure token becomes disabled for an account, Access Manager will automatically fall back to password reset mode.
 
 ## How to Set Up Secure Token Support
 
@@ -55,7 +55,7 @@ Access Manager is unable to programmatically enable secure token, as only a user
 
 **Steps:**
 
-1. **Deploy agent version 3.0.1480 or later** to the macOS computer
+1. **Deploy agent version 3.0.1500 or later** to the macOS computer
 
 2. **Ensure the agent has an encrypted copy of the current password:**
    - Wait for the next password change interval based on your Access Manager policy, OR
@@ -144,6 +144,6 @@ sudo Lithnet.AccessManager.Agent secure-token-support set --username adminuser -
 
 **Problem:** Error messages about being unable to change passwords for secure token accounts.
 
-**Cause:** Agent version is older than 3.0.1480.
+**Cause:** Agent version is older than 3.0.1500.
 
-**Solution:** Upgrade the Access Manager Agent to version 3.0.1480 or later.
+**Solution:** Upgrade the Access Manager Agent to version 3.0.1500 or later.
