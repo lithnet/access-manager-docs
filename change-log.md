@@ -1,5 +1,15 @@
 # Change log
 
+## v3.0.1519 18th August 2025
+### Access Manager service
+- \[FEATURE\] Improves server side logging on password provider selection
+
+### Access Manager agent
+- \[FEATURE\] Adds preview support for managing the passwords of [secure token-enabled accounts on macOS](/help-and-support/advanced-help-topics/enabling-secure-token-support-macos.md)
+- \[FEATURE\] Added a new [command line structure](/help-and-support/advanced-help-topics/agent-command-line.md)
+- \[FIX\] Fixes an issue where RapidLAPS may not be available for up to an hour after the machine boots if the server is not contactable
+- \[FIX\] Fixes an issue with integrated windows auth on macos and linux
+
 ## v3.0.1325 15th May 2025
 ### Access Manager service
 - \[FIX\] Fixes an issue where Access Manager may be unable to read LAPS passwords or BitLocker recovery keys stored in Active Directory, if a Windows Server 2025 domain controller is in the domain.

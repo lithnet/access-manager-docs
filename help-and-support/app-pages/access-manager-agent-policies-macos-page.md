@@ -67,10 +67,10 @@ The second tab of the macOS agent policy configuration screen - `Passwords` - co
 
 Configures whether the Access Manager Agent should attempt to manage and rotate the local administrator password on the device.
 
-{% hint style="warning" %}
-Currently, Access Manager Agent for macOS cannot manage accounts with _secure token_ enabled.
+{% hint style="info" %}
+Starting from version 3.0.1500 and later, Access Manager Agent supports managing the password for accounts with  _secure token_ enabled. However, Access Manager is unable to enable secure token for accounts. This must be done via an external process.
 
-This means that any account managed by Access Manager cannot be used to unlock FileVault volumes - including when machines are booting from being powered off.
+Read the [secure token setup](../advanced-help-topics/enabling-secure-token-support-macos.md) guide for more information.
 {% endhint %}
 
 #### Account to manage
