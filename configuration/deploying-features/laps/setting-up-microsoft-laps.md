@@ -21,6 +21,14 @@ If you are using the new Windows LAPS along with the encrypted password function
 
 ![!](../../../images/group-policy-microsoft-laps-encryptors.png)
 
+{% hint style="info" %}
+When configuring the `Configure authorized password decryptors` policy setting, you must explicitly include all users and groups that should have permission to decrypt LAPS passwords. This includes any additional users beyond the AMS service account that you want to grant decryption capabilities to.
+
+We strongly recommend including the `Domain admins` group in the authorized decryptors list to ensure administrative access is maintained for break-glass and emergency scenarios.
+
+It is important to understand that when the `Configure authorized password decryptors` policy setting is configured with any value, it overrides the default behavior. By default, when this policy is not configured, the `Domain admins` group automatically has decryption permissions. However, once you specify any group or user in this policy setting, the default permissions are no longer applied, and you must explicitly include the `Domain admins` group (or any other required administrative groups) in the authorized decryptors list to maintain their access.
+{% endhint %}
+
 ## Step 3: Assign access
 
 The final step is to create an authorization rule, granting permission for your selected users and groups to access the LAPS passwords for the specified computers.
