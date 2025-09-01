@@ -71,11 +71,11 @@ Use the appropriate package management tool to install the agent
 
 ```shell
 # Download the Access Manager Agent data package
-curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v3.0/noarch/stable -o ~/accessmanager-data.rpm
+curl -L https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/noarch/stable -o ~/accessmanager-data.rpm
 sudo dnf install ~/accessmanager-data.rpm
 
 # Download the x64 Access Manager Agent
-curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v3.0/x64/stable -o ~/accessmanager.rpm
+curl -L https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/x64/stable -o ~/accessmanager.rpm
 sudo dnf install ~/accessmanager.rpm
 ```
 
@@ -167,11 +167,11 @@ Use the appropriate package management tool to install the agent
 
 ```shell
 # Download the Access Manager Agent data package
-curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v3.0/noarch/stable -o ~/accessmanager-data.deb
+curl -L https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/noarch/stable -o ~/accessmanager-data.deb
 sudo apt install ~/accessmanager-data.deb
 
 # Download the x64 Access Manager Agent
-curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v3.0/x64/stable -o ~/accessmanager.deb
+curl -L https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/x64/stable -o ~/accessmanager.deb
 sudo apt install ~/accessmanager.deb
 ```
 
