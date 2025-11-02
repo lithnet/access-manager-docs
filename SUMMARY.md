@@ -100,7 +100,8 @@
   * [Agent command line reference](help-and-support/advanced-help-topics/agent-command-line.md)
   * [Agent command line reference (legacy)](help-and-support/advanced-help-topics/agent-command-line-legacy.md)
   * [Enabling secure token support on macOS](help-and-support/advanced-help-topics/enabling-secure-token-support-macos.md)
-* [PowerShell reference](help-and-support/powershell-help/PowerShellModule.md)
+  * [TLS certificate automation](help-and-support/advanced-help-topics/tls-certificate-automation.md)
+* [PowerShell reference](help-and-support/powershell-help/PowerShellModule.md)4
   * [Add-AmsDeviceRegistrationKeyGroup](help-and-support/powershell-help/Add-AmsDeviceRegistrationKeyGroup.md)
   * [Add-AmsGroupMember](help-and-support/powershell-help/Add-AmsGroupMember.md)
   * [Add-AmsIdpClaimMapping](help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)
