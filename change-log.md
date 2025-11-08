@@ -1,4 +1,18 @@
 # Change log
+## v3.0.1548 8th November 2025
+### Access Manager service
+- \[FEATURE\] Adds support for CommonMark markdown rendering in the policy messages shown to users in the web app 
+- \[FIX\] Fixes an issue where the service is unable to resolve a Entra hostname with a `$` character in it
+- \[FIX\] Fixes a `NullReferenceException` that may occur on a newly built AMS instance
+
+### Access Manager agent
+- \[FEATURE\] Adds support for macOS 26
+- \[FEATURE\] Adds support for Debian 13 
+- \[FEATURE\] Adds support for RedHat Enterprise Linux 10 
+- \[FEATURE\] Adds support for Fedora 42
+- \[FIX\] Fixes an issue where the Windows x64 agent could be installed on an arm64 machine
+- \[FIX\] **BREAKING CHANGE** Updates the `Origin` and `Label` fields of the Debian-based repos to `Lithnet` which will require manual acceptance when upgrading via apt. This change was required to support automatic upgrades via apt.
+- \[FIX\] Fixes an issue where the service unit file was marked as a conf file on Debian-based systems, preventing auto-upgrades via apt.
 
 ## v3.0.1519 18th August 2025
 ### Access Manager service
