@@ -35,6 +35,7 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 * macOS 13 (Ventura) (Intel or ARM64)
 * macOS 14 (Sonoma) (Intel or ARM64)
 * macOS 15 (Sequoia) (Intel or ARM64)
+* macOS 26 (Tahoe) (ARM64)
 
 ### Linux requirements
 
@@ -50,7 +51,7 @@ Lithnet provides packages for RPM and Debian-based distributions, as well as tar
 
 See the [Microsoft guide for supported operating systems for .NET 8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md)
 
-The following operating system versions have been tested and are fully supported by Lithnet.
+The following operating system versions have been tested and are supported by Lithnet while they are within their vendor support lifecycle:
 
 | Distribution | Version | Architecture |
 | ------------ | ------- | ------------ |
@@ -59,10 +60,15 @@ The following operating system versions have been tested and are fully supported
 | Ubuntu       | 24.04   | x64/arm64    |
 | RHEL         | 8       | x64/arm64    |
 | RHEL         | 9       | x64/arm64    |
+| RHEL         | 10       | x64/arm64    |
 | Fedora       | 35      | x64/arm64    |
 | Fedora       | 36      | x64/arm64    |
 | Fedora       | 37      | x64/arm64    |
 | Fedora       | 38      | x64/arm64    |
 | Fedora       | 39      | x64/arm64    |
+| Fedora       | 40      | x64/arm64    |
+| Fedora       | 41      | x64/arm64    |
+| Fedora       | 42      | x64/arm64    |
 | Debian       | 11      | x64/arm64    |
 | Debian       | 12      | x64/arm64    |
+| Debian       | 13      | x64/arm64    |

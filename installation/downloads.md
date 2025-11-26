@@ -24,11 +24,11 @@ For more information on planning your AMS v3 migration, see our [upgrading from 
 | | | [x64](https://packages.lithnet.io/win/access-manager-agent/v3.0/x64/stable)  |
 | Windows | Windows 10 or higher | [arm64](https://packages.lithnet.io/win/access-manager-agent/v3.0/arm64/stable) |
 | Linux<br>(RPM-based distros) || [install via repo](./installing-the-access-manager-agent/installing-the-access-manager-agent-linux.md#installing-the-agent-on-red-hat-using-the-lithnet-repo) |
-| | RHEL 8, 9<br>Fedora 35, 36, 37, 38, 39 | [x64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/x64/stable) |
-| | RHEL 8, 9<br>Fedora 35, 36, 37, 38, 39| [arm64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/arm64/stable) |
+| | RHEL 8, 9, 10<br>Fedora 35, 36, 37, 38, 39, 40, 41, 42 | [x64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/x64/stable) |
+| | RHEL 8, 9, 10<br>Fedora 35, 36, 37, 38, 39, 40, 41, 42| [arm64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/arm64/stable) |
 | Linux<br>(DEB-based distros)  || [install via repo](./installing-the-access-manager-agent/installing-the-access-manager-agent-linux.md#installing-the-agent-on-debian-using-the-lithnet-repo) |
-| | Debian 11, 12<br> Ubuntu 20.04, 22.04, 24.04 | [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/x64/stable) |
-| | Debian 11, 12<br> Ubuntu 20.04, 22.04, 24.04 | [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/arm64/stable) |
+| | Debian 11, 12, 13<br> Ubuntu 20.04, 22.04, 24.04 | [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/x64/stable) |
+| | Debian 11, 12, 13<br> Ubuntu 20.04, 22.04, 24.04 | [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/arm64/stable) |
 | Linux<br> (Other distros) | Tarball | [x64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.0/x64/stable) | 
 | | | [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.0/arm64/stable) |
 | macOS | macOS 13 or higher | [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/x64/stable) |
