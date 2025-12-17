@@ -1,9 +1,8 @@
-# Agent registration page
+# Access Manager Agent - Agent registration page
 
 The `Agent registration` page provides the ability to configure how Access Manager Agents can register with the Access Manager server.
 
-
-![](../../images/ui-page-access-manager-agent-agent-registration.png)
+![](../../.gitbook/assets/ui-page-access-manager-agent-agent-registration.png)
 
 ## Agent registration settings
 
@@ -22,7 +21,7 @@ If you wish to allow agents to register with their Active Directory identity, yo
 
 If this SPN is not set, the following warning will appear in the `Service account` section of the `Host configuration` page. Use the `Set SPN...` script to configure the correct SPN for the service account.
 
-![](../../images/spn-warning.png)
+<img src="../../.gitbook/assets/spn-warning.png" alt="" data-size="original">
 {% endhint %}
 
 ### Allow agents to register using Microsoft Entra authentication
@@ -43,7 +42,7 @@ A registration key is used by a device only once, to allow it to register its ow
 
 ### Configuring a registration key
 
-![](../../images/ui-page-access-manager-agent-agent-registration-edit-registration-key.png)
+![](../../.gitbook/assets/ui-page-access-manager-agent-agent-registration-edit-registration-key.png)
 
 When you create a new registration key, a unique string value is automatically generated. You must assign a friendly name to this key, and optionally set parameters around reuse and approval.
 

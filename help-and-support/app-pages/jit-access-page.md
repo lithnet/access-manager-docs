@@ -1,6 +1,6 @@
 # Just-in-time access configuration page
 
-![](../../images/ui-page-directory-configuration-active-directory-jit.png)
+![](../../.gitbook/assets/ui-page-directory-configuration-active-directory-jit.png)
 
 Lithnet Access Manager supports granting access to computers using a just-in-time access model.
 
@@ -24,7 +24,7 @@ Select `Enable automatic JIT group creation` and press the `Add...` button to cr
 
 ### JIT group mapping
 
-![](../../images/ui-page-directory-configuration-active-directory-jit-group-mapping.png)
+![](../../.gitbook/assets/ui-page-directory-configuration-active-directory-jit-group-mapping.png)
 
 #### Computer OU
 
@@ -48,9 +48,10 @@ The AMS service checks every 60 seconds for new computers in the domain, and wil
 
 If you intend to use JIT groups on Linux machines that are bound to Active Directory, you may require a `gid` attribute to be configured for your JIT groups.
 
-In the instance where your Active Directory domain has been configured with the [Identity Management for UNIX](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731178(v=ws.11)?redirectedfrom=MSDN) components, Access Manager can generate `gidNumber` attributes for JIT groups, such that they are visible by Unix machines.
+In the instance where your Active Directory domain has been configured with the [Identity Management for UNIX](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc731178\(v=ws.11\)?redirectedfrom=MSDN) components, Access Manager can generate `gidNumber` attributes for JIT groups, such that they are visible by Unix machines.
 
 If configured, Access Manager will compute a `gid` for the group like so:
+
 * The group will be created in Active Directory, and the [security identifier (SID)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers) is retrieved.
 * The domain-unique [relative identifier (RID)](https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/manage/understand-security-identifiers#security-identifier-architecture) is extracted from the SID.
 * The GID is computed as `gid = rid + <offset>`, where offset is configured to ensure the generated identifiers do not clash with existing identifiers in your environment.

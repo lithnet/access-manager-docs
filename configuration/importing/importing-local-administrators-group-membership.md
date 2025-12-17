@@ -17,15 +17,15 @@ If these conditions cannot be met, it is recommended that you perform an [offlin
 
 Using the Lithnet Access Manager Configuration Tool, navigate to the `Authorization rules/computers` page, and click `Import authorization rules...`
 
-![](../../images/ui-page-authorization-rules-computers.png)
+![](../../.gitbook/assets/ui-page-authorization-rules-computers.png)
 
 ## Select the import type
 
-Select the local administrators import type, and click `Next` ![](../../images/ui-page-import-type-localadminrpc.png)
+Select the local administrators import type, and click `Next` ![](../../.gitbook/assets/ui-page-import-type-localadminrpc.png)
 
 ## Specify discovery settings
 
-![](../../images/ui-page-import-container-localadminrpc.png)
+![](../../.gitbook/assets/ui-page-import-container-localadminrpc.png)
 
 First, select the container that holds the computers that you want to import the permissions from. Access Manager will attempt to connect to each computer object found in this section of the directory tree, and obtain the membership of its local admin group.
 
@@ -41,13 +41,13 @@ You can also choose to ignore certain computers from the import process. For the
 
 On this page, you can specify the settings for the newly created authorization rules. Choose the permissions you want to assign to the discovered users, and any notifications channels that should apply.
 
-![](../../images/ui-page-import-rulesettings.png)
+![](../../.gitbook/assets/ui-page-import-rulesettings.png)
 
 ## Review discovery results
 
 Once the discovery process has completed, you can review the proposed rules before committing them to the authorization store.
 
-![](../../images/ui-page-import-results.png)
+![](../../.gitbook/assets/ui-page-import-results.png)
 
 ### Merge settings
 

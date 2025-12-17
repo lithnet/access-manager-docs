@@ -11,9 +11,10 @@ OpenID Connect is the preferred authentication provider. Coupled with a modern I
 Using OpenID Connect requires that your identity provider pass a `upn` claim containing the on-premises Active Directory UPN of your users.
 
 ### Sign out mode
+
 When users click the logout button, you can choose for them to be logged out of the application, or have Access Manager request that the user be signed out of the IDP (where supported by the IDP).
 
-![](../../images/ui-page-authentication-oidc-azure.png)
+![](../../.gitbook/assets/ui-page-authentication-oidc-azure.png)
 
 ## WS-Federation
 
@@ -27,9 +28,10 @@ Certificate-based authentication is provided by Access Manager, with the optiona
 
 Read the [guide for setting up smart card authentication](../../configuration/setting-up-authentication/setting-up-smart-card-authentication.md) to learn more about supported certificate mappings and attributes.
 
-![](../../images/ui-page-authentication-smartcard.png)
+![](../../.gitbook/assets/ui-page-authentication-smartcard.png)
 
 ### Require 'Smart Card Logon' enhanced key usage
+
 Enabling this setting requires that user's certificate must contain the `Smart Card Logon` EKU.
 
 ### Additional mandatory EKUs
@@ -52,7 +54,7 @@ This option allows you to import a specific certificate authority's certificate 
 
 In certain scenarios - such as Access Manager running behind a TLS-terminating load balancer - certificate authentication may not work out of the box. Because the TLS connection is re-encrypted before it reaches Access Manager, the client certificate is not passed along to the server.
 
-However, some load balancers or reverse proxies include a feature called *Certificate Forwarding*, where the load balancer validates the certificate, and passes the user's public key along as a header to the backend server (in this case, Access Manager).
+However, some load balancers or reverse proxies include a feature called _Certificate Forwarding_, where the load balancer validates the certificate, and passes the user's public key along as a header to the backend server (in this case, Access Manager).
 
 This option allows you to specify a header which Access Manager will use to extract user certificates from for authentication.
 
@@ -60,11 +62,11 @@ It is important to note that, unless properly secured, any user may send this he
 
 ## Integrated Windows Authentication
 
-The Integrated Windows Authentication (IWA) provider allows users to log in with NTLM or Kerberos authentication. 
+The Integrated Windows Authentication (IWA) provider allows users to log in with NTLM or Kerberos authentication.
 
 Ensure you read the guide on [setting up windows authentication](../../configuration/setting-up-authentication/setting-up-integrated-windows-authentication.md) to learn how to correctly configure the SPN.
 
-![](../../images/ui-page-authentication-iwa.png)
+![](../../.gitbook/assets/ui-page-authentication-iwa.png)
 
 ### Authentication Scheme
 
@@ -75,8 +77,11 @@ Select one of the following authentication options
 * Negotiate: Use Kerberos if possible, otherwise fall back to NTLM
 
 ## Sign-in restrictions
+
 ### Authorized users and groups
+
 Specify the users and groups that should be allowed to log into this service, or leave the field blank to allow anyone who successfully authenticates to log in
 
 ### Denied users and groups
+
 Add any users and groups that should be denied login to this service. Users in this group will not be able to log in even if they are in the `Authorization users and groups` list.

@@ -1,10 +1,11 @@
 # Enabling agent support on the AMS server
 
-![](../../images/badge-enterprise-edition-rocket.svg) Managing more than 100 devices requires an  [Enterprise edition license](../../access-manager-editions.md)
+![](<../../.gitbook/assets/badge-enterprise-edition-rocket (1).svg>) Managing more than 100 devices requires an [Enterprise edition license](../../access-manager-editions.md)
 
 The Lithnet Access Manager agent is an optional component you can deploy in your environment that provides a host of additional features that compliments the Access Manager server.
 
 You should deploy the agent when you want to take advantage of the following capabilities
+
 * Using the RapidLAPS passwordless LAPS login feature
 * Using passphrases for LAPS passwords, instead of random characters
 * Backing up BitLocker recovery keys from AD-joined, Entra-joined, and standalone Windows devices
@@ -16,32 +17,32 @@ The following guide outlines the steps required to enable agent support on the A
 
 From the `Host configuration` page, tick `Enable agents to communicate with this host`, and specify the host name clients will use to connect to the server. This must match the DNS name in the active TLS/SSL certificate, or clients will be unable to connect.
 
-![](../../images/ui-page-host-configuration.png)
+![](../../.gitbook/assets/ui-page-host-configuration.png)
 
 {% hint style="info" %}
 If you wish to allow agents to register with their Active Directory identity, you will need to configure a service principal name (SPN) on the service account used by the Access Manager Service.
 
 If this SPN is not set, the following warning will appear in the `Service account` section of the `Host configuration` page:
 
---
+\--
 
-![](../../images/spn-warning.png)
+<img src="../../.gitbook/assets/spn-warning.png" alt="" data-size="original">
 {% endhint %}
 
-Use the script provided to correctly set the SPN on the AMS service account.
-../../images/spn-warning.png
+Use the script provided to correctly set the SPN on the AMS service account. ../../images/spn-warning.png
 
 ## Step 2: Enable device registration modes
 
-From the `Access Manager Agent/Agent registration` page, select the methods devices will use to  register with the AMS server:
-- Windows authentication can be used to automatically register agents on Active Directory-joined devices
-- Microsoft Entra authentication can be used to register agents on Entra-joined devices.
-- Registration keys can be configured to register agents on all other devices.
+From the `Access Manager Agent/Agent registration` page, select the methods devices will use to register with the AMS server:
 
-![](../../images/ui-page-access-manager-agent-agent-registration.png)
+* Windows authentication can be used to automatically register agents on Active Directory-joined devices
+* Microsoft Entra authentication can be used to register agents on Entra-joined devices.
+* Registration keys can be configured to register agents on all other devices.
+
+![](../../.gitbook/assets/ui-page-access-manager-agent-agent-registration.png)
 
 {% hint style="info" %}
-Devices require line-of-site to a domain controller to register using with Windows authentication. If you have devices that will not have line-of-site to a domain controller at registration time (e.g. workstations that might be off the network), then ensure you select the option to enable NTLM authentication. 
+Devices require line-of-site to a domain controller to register using with Windows authentication. If you have devices that will not have line-of-site to a domain controller at registration time (e.g. workstations that might be off the network), then ensure you select the option to enable NTLM authentication.
 
 Windows authentication is only used for the initial agent registration, and line-of-site to a domain controller is not required for normal operations.
 {% endhint %}
@@ -53,6 +54,7 @@ If you do not plan on using Microsoft Entra authentication, then the setup proce
 If you enable devices to register with Microsoft Entra authentication, you must register your Entra ID tenant details, and grant permission for the service to read device information from the directory.
 
 ### Create the Entra app registration
+
 Follow the steps in [Creating an Entra app for Access Manager](../../help-and-support/advanced-help-topics/creating-an-entra-app.md) to create the app registration for Access Manager. Take note of the tenant ID, client ID and secret created here as they will be used in the next step.
 
 Ensure that the appropriate API permissions have been granted for the `Deploying the Access Manager Agent to Entra-joined devices` scenario.

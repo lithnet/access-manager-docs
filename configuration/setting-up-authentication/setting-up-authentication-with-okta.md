@@ -15,7 +15,7 @@ The following guide will assist you in configuring your application to use Okta 
 9. From the new app page, copy the `client ID` and `client secret` value for use later in the setup process
 10. Select `Directory` from the main menu bar, and select `Profile editor`. Find the `Lithnet Access Manager` app in the list, and click the app name to open the profile editor.
 11. Click `Add attribute` and create a new attribute with a display name and variable name of `upn`, of data type `string`. Select `attribute required` and select `personal` as the attribute type. Save the new attribute
-12. Click the `Mappings` button. Scroll down until you fine the `upn` attribute in the right hand app attributes column, and on the left side, select the Okta attribute that contains the Active Directory UPN (e.g. aduser.userPrincipalName). Change the arrow to `Apply mapping on user create and update` 
+12. Click the `Mappings` button. Scroll down until you fine the `upn` attribute in the right hand app attributes column, and on the left side, select the Okta attribute that contains the Active Directory UPN (e.g. aduser.userPrincipalName). Change the arrow to `Apply mapping on user create and update`
 
 ## Configure Lithnet Access Manager
 
@@ -25,13 +25,14 @@ The following guide will assist you in configuring your application to use Okta 
 4. Enter the URL of your Okta tenant in the `Issuer/Authority` field
 5. Enter the client ID and secret obtained from the Okta setup process
 
-![](../../images/ui-page-authentication-oidc-okta.png)
+![](../../.gitbook/assets/ui-page-authentication-oidc-okta.png)
 
 ## Enable multifactor authentication
 
 We strongly recommend modifying your application sign-on policy to require multifactor authentication for the use of this app.
 
 ## Alternative claim mapping
-AMS maps `upn`, `sid` and `onprem_sid` claims automatically if they are found in the response from the IDP. 
 
-If you need to use an attribute other than those, you can configure a custom claim mapping using [PowerShell](/help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)
+AMS maps `upn`, `sid` and `onprem_sid` claims automatically if they are found in the response from the IDP.
+
+If you need to use an attribute other than those, you can configure a custom claim mapping using [PowerShell](../../help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)

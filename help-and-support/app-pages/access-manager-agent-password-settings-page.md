@@ -1,8 +1,8 @@
-# Password settings page
+# Access Manager Agent - Password settings page
 
 The `Password settings` page provides the ability to configure how Access Manager Agent passwords are encrypted, and provides the ability to configure word lists for use in constructing passphrases.
 
-![](../../images/ui-page-access-manager-agent-password-settings.png)
+![](../../.gitbook/assets/ui-page-access-manager-agent-password-settings.png)
 
 ## Encryption certificates
 
@@ -46,7 +46,7 @@ If you've lost the private key, you can force the agents to set new passwords an
 
 ## Passphrase word lists
 
-When Access Manager Agent policies are configured to generate passphrases for use with local administrator accounts, they do so using *word lists* - lists of thousands of unique words that are delivered to clients in order for them to generate secure passphrases.
+When Access Manager Agent policies are configured to generate passphrases for use with local administrator accounts, they do so using _word lists_ - lists of thousands of unique words that are delivered to clients in order for them to generate secure passphrases.
 
 By default, Access Manager comes bundled with one word list: the [EFF diceware wordlist](https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt) from the [Electronic Frontier Foundation](https://www.eff.org/dice), containing 7776 unique English words for use in passphrases.
 
@@ -58,7 +58,7 @@ You can find a list of "diceware" word lists in other languages for use with Acc
 
 To import a word list, first select `Add...` at the bottom of the "Passphrase word lists" section of the page.
 
-![](../../images/ui-page-access-manager-agent-password-settings-wordlist.png)
+![](../../.gitbook/assets/ui-page-access-manager-agent-password-settings-wordlist.png)
 
 #### Name
 

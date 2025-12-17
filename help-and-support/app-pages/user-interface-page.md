@@ -1,6 +1,6 @@
 # User interface configuration page
 
-![](../../images/ui-page-user-interface.png)
+![](../../.gitbook/assets/ui-page-user-interface.png)
 
 ## Branding
 
@@ -29,9 +29,11 @@ Used to optionally shows a custom heading on the access request page
 Used to optionally show a custom message on the access request page
 
 #### Request type display order
+
 You can reorder this list to change the display order of the request type options shown when a user requests access to a computer.
 
 #### Enable users to supply computer names in access request URLs
+
 When this option is enabled, Access Manager will accept computer access requests with the computer name in the URL. For example, to access a computer named `PC`, a user could use the following URL.
 
 `https://accessmanager.lithnet.local/Computer/AccessRequest?ComputerName=PC1`
@@ -39,9 +41,11 @@ When this option is enabled, Access Manager will accept computer access requests
 ## Password display options
 
 #### Show QR code for passwords
+
 When this option is enabled, Access Manager will display a 'Show QR' button next to passwords shown in the web app. This QR code can be scanned with a compatible 2D scanner that simulates keyboard input to enter the password directly into a device.
 
 #### Show QR code for BitLocker Keys
+
 When this option is enabled, Access Manager will display a 'Show QR' button next to BitLocker keys shown in the web app. This QR code can be scanned with a compatible 2D scanner that simulates keyboard input to enter the BitLocker directly into a device.
 
 #### Disable text-to-speech function
@@ -72,14 +76,13 @@ Specify how many characters should be in each group in the phonetic breakdown. T
 
 Type any value in here to see the result of your settings on the output of broken-down password
 
-
 ## Error messages
 
 You can optionally configure custom messages and/or links to appear on error pages.
 
 For example, if a user is unauthorized to request access to a computer, you could provide them organization-specific help information.
 
-![](../../images/ui-page-user-interface-error-messages.png)
+![](../../.gitbook/assets/ui-page-user-interface-error-messages.png)
 
 #### Show custom help message on error pages
 

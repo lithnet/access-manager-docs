@@ -1,19 +1,18 @@
-# Lithnet LAPS (deprecated) page
+# Lithnet LAPS configuration page (Active Directory)
 
 {% hint style="warning" %}
-**Note**:
-Access Manager Agent v3 no longer stores passwords in the Active Directory, and support for the legacy v2 agent will be removed in a future release of Access Manager.
+**Note**: Access Manager Agent v3 no longer stores passwords in the Active Directory, and support for the legacy v2 agent will be removed in a future release of Access Manager.
 
 We recommend migrating any existing v2.0 agents utilizing this feature to AMSv3 agents, which securely store passwords for Active Directory-joined machines in the AMS database directly.
 
-Ensure that your AMS server is up to date *before* deploying the AMS v3 agent to devices in your environment.
+Ensure that your AMS server is up to date _before_ deploying the AMS v3 agent to devices in your environment.
 
 For more information on planning your AMS v3 migration, see our [upgrading from Access Manager v2 to v3](../../installation/upgrading-from-v2.md) guide.
 {% endhint %}
 
 The settings on this page only apply to the v2 Access Manager agent, when configured to store passwords in Active Directory. It does not apply to v3 agents at all.
 
-![](../../images/ui-page-directory-configuration-active-directory-lithnet-laps.png)
+![](../../.gitbook/assets/ui-page-directory-configuration-active-directory-lithnet-laps.png)
 
 ## Schema
 
@@ -22,6 +21,7 @@ A list of forests is shown along with an indication of the deployment status of 
 You can use the `Deploy Schema...` button to access a script that will deploy the Lithnet Access Manager schema to the selected forest. You'll need to run this script as a member of the Schema Admins group in the forest you need to update.
 
 ## Password retrieval
+
 This setting controls whether the Access Manager Server will attempt to retrieve passwords from the `lithnetLocalAdminPassword` attribute in Active Directory.
 
 If you did not deploy the AMSv2 agent to store passwords in Active Directory, this this option should be disabled.

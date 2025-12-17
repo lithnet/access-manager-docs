@@ -1,9 +1,11 @@
 # Host configuration page
+
 Settings on this page apply to the physical host computer only. If you have more than one Access Manager server, these settings will be unique to each server.
 
-![](../../images/ui-page-host-configuration.png)
+![](../../.gitbook/assets/ui-page-host-configuration.png)
 
 ## App version and updates
+
 Shows the current application version, and optionally shows you if there is a new version of the application available. You can prevent the application from checking for updates, by disabling the `Enable update checks` option. Note that this only checks to see if updates are available. Updates must always be downloaded and installed manually.
 
 ## Service account
@@ -17,7 +19,7 @@ If you wish to allow agents to register with their Active Directory identity, or
 
 If this SPN is not set, the following warning will appear in the `Service account` section of the `Host configuration` page:
 
-![](../../images/spn-warning.png)
+<img src="../../.gitbook/assets/spn-warning.png" alt="" data-size="original">
 {% endhint %}
 
 ## TLS/SSL Certificate
@@ -34,8 +36,8 @@ Shows how long until the currently selected certificate expires.
 
 ### Services
 
-* __Enable users to access the web app on this host__: When enabled, this host will serve the Access Manager web app. You can disable this if you want to have a host that is used only by agents or only for configuration.
-* __Enable agents to communicate with this host__: When enabled, the Access Manager agent API is activated, allowing devices with the Lithnet Access Manager Agent installed to communicate with this server and manage their local admin passwords. 
+* **Enable users to access the web app on this host**: When enabled, this host will serve the Access Manager web app. You can disable this if you want to have a host that is used only by agents or only for configuration.
+* **Enable agents to communicate with this host**: When enabled, the Access Manager agent API is activated, allowing devices with the Lithnet Access Manager Agent installed to communicate with this server and manage their local admin passwords.
 
 ### External host name
 
@@ -51,9 +53,9 @@ If this value differs from the AMS server name configured in the agent at instal
 
 ### Port bindings
 
-* __HTTP Port__:  The HTTP port that the application will listen on. The default is port `80`.
-    * Note: this port is only used to redirect connections to HTTPS. The application won't serve content over non HTTPS connections.
-* __HTTPS Port__:  The HTTPS port that the application will listen on. The default is port `443`.
+* **HTTP Port**: The HTTP port that the application will listen on. The default is port `80`.
+  * Note: this port is only used to redirect connections to HTTPS. The application won't serve content over non HTTPS connections.
+* **HTTPS Port**: The HTTPS port that the application will listen on. The default is port `443`.
 
 ### Hostname binding
 

@@ -1,6 +1,6 @@
 # IP Address detection configuration page
 
-![](../../images/ui-page-ip-detection.png)
+![](../../.gitbook/assets/ui-page-ip-detection.png)
 
 ## Proxy settings
 

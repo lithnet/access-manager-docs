@@ -1,6 +1,6 @@
-# Microsoft Entra Directory configuration page
+# Microsoft Entra configuration page
 
-![](../../images/ui-page-directory-configuration-azure-active-directory.png)
+![](../../.gitbook/assets/ui-page-directory-configuration-azure-active-directory.png)
 
 ## Tenant configuration
 

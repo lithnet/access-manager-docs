@@ -17,7 +17,7 @@ The following guide will assist you in configuring your application to use Activ
 
 ## Part 2: Configure Lithnet Access Manager
 
-![!](../../images/ui-page-authentication-wsfed-adfs.png)
+![!](../../.gitbook/assets/ui-page-authentication-wsfed-adfs.png)
 
 1. Open the Lithnet Access Manager Service Configuration Tool
 2. Select the `App configuration\User Authentication` page
@@ -26,6 +26,7 @@ The following guide will assist you in configuring your application to use Activ
 5. Enter the base URL of your application in the `Realm` field.
 
 ## Alternative claim mapping
-AMS maps `upn`, `sid` and `onprem_sid` claims automatically if they are found in the response from the IDP. 
 
-If you need to use an attribute other than those, you can configure a custom claim mapping using [PowerShell](/help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)
+AMS maps `upn`, `sid` and `onprem_sid` claims automatically if they are found in the response from the IDP.
+
+If you need to use an attribute other than those, you can configure a custom claim mapping using [PowerShell](../../help-and-support/powershell-help/Add-AmsIdpClaimMapping.md)

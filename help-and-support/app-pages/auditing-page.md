@@ -2,7 +2,7 @@
 
 Access Manager always logs events to the Windows event log, but you can also have it deliver notifications via email, web hooks, or even PowerShell.
 
-![](../../images/ui-page-auditing.png)
+![](../../.gitbook/assets/ui-page-auditing.png)
 
 ## Windows event log
 
@@ -18,7 +18,7 @@ You can configure HEC endpoints and tokens for use with Access Manager for both 
 
 ### Splunk Settings
 
-![](../../images/ui-page-auditing-splunk.png)
+![](../../.gitbook/assets/ui-page-auditing-splunk.png)
 
 #### Enabled
 
@@ -92,7 +92,7 @@ A friendly name that is used through the configuration tool to refer to this not
 
 ## SMTP Channels
 
-![](../../images/ui-page-auditing-smtp-edit-channel.png)
+![](../../.gitbook/assets/ui-page-auditing-smtp-edit-channel.png)
 
 #### Audit message content
 
@@ -106,7 +106,7 @@ A list of email recipients that the audit notification should be sent to
 
 ## Webhook Channels
 
-![](../../images/ui-page-auditing-webhook-edit-channel.png)
+![](../../.gitbook/assets/ui-page-auditing-webhook-edit-channel.png)
 
 #### URL
 
@@ -134,7 +134,7 @@ AMS comes with sample JSON templates for Microsoft Teams and Slack that you can 
 
 ## PowerShell Channels
 
-![](../../images/ui-page-auditing-powershell-edit-channel.png)
+![](../../.gitbook/assets/ui-page-auditing-powershell-edit-channel.png)
 
 #### Script
 

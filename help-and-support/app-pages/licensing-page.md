@@ -1,8 +1,8 @@
-# Licensing configuration page
+# AMS License configuration page
 
 The licensing page allows you to manage and view your license information.
 
-![](../../images/ui-page-licensing.png)
+![](../../.gitbook/assets/ui-page-licensing.png)
 
 Community edition users will have the option to enter a license key to upgrade to enterprise edition. See the [licensing](../../licensing.md) page for more information.
 

@@ -1,11 +1,12 @@
 # Backup and Restore
 
 ## Backing up the AMS server
+
 All the data for your AMS instance is stored in the AMS database. It is important that you regularly back up this database, and ensure that the backups are stored safely.
 
 If you chose to install AMS using the pre-configuration SQL express instance, then you can configure backups through the `App configuration/Database` screen.
 
-![](../../images/ui-page-database.png)
+![](../../.gitbook/assets/ui-page-database.png)
 
 If you are using Azure SQL, Amazon RDS, or an external SQL server instance, you must configure the backups manually on those host platforms.
 
@@ -15,26 +16,26 @@ The AMS master key protects all sensitive information inside the database. It is
 
 From the `App config/Security` page, ensure that you have created a recovery password, and store this password in an offline, secure location.
 
-![](../../images/ui-page-security.png)
+![](../../.gitbook/assets/ui-page-security.png)
 
 In the event that the service cannot decrypt its own master key, you'll be prompted for a recovery password when you launch the configuration tool.
 
 ### Backing up the encryption certificates
 
-If you have deployed the Access Manager Agent, you'll need to ensure you have a backup of your password encryption certificates, and their private key. 
+If you have deployed the Access Manager Agent, you'll need to ensure you have a backup of your password encryption certificates, and their private key.
 
 From the `Access Manager Agent/Password settings` page, export the certificates that appear here. Choose a very strong password, and store the resulting PFX somewhere very safe. Preferably in offline storage. Remember that access to this key will allow someone to decrypt all the local admin passwords in your environment.
 
-If you have have legacy (v2) agents in your environment, you'll also need to backup the certificates used to encrypt passwords stored in Active Directory. The v3 agent does not store passwords in AD, so you can skip this step if you only have v3 agents deployed. 
+If you have have legacy (v2) agents in your environment, you'll also need to backup the certificates used to encrypt passwords stored in Active Directory. The v3 agent does not store passwords in AD, so you can skip this step if you only have v3 agents deployed.
 
-From the `Directory configuration/Active Directory/Lithnet LAPS (deprecated)` page, select the forest that contains the certificate you want to back up, and click `View Certificate`. From the `Details` tab, click `Copy to file`, making sure to select the option to export the private key when prompted. 
+From the `Directory configuration/Active Directory/Lithnet LAPS (deprecated)` page, select the forest that contains the certificate you want to back up, and click `View Certificate`. From the `Details` tab, click `Copy to file`, making sure to select the option to export the private key when prompted.
 
 ## Restoring AMS from a backup
 
 ### Restoring the database when using the pre-configured SQL Express instance
 
 * Stop the Lithnet Access Manager service using the Windows services console.
-* Download and install [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16) 
+* Download and install [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 * Once installed, connect to the SQL express instance using the server and instance of `.\AMS` in the `Server` field
 * Follow [the steps located in this guide](https://docs.microsoft.com/en-us/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-ver16) for performing the actual restore.
 * Once the database has been restored, restart the Lithnet Access Manager Service from the services console

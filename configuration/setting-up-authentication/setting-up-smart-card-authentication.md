@@ -15,11 +15,12 @@ To use smart card authentication, where the smart cards are issued by an Active 
 3. Select `Require smart card login extended key usage`
 4. Select `Trust only Enterprise CAs registered in this domains NTAuth store`
 
-![authentication\_smart card](../../images/ui-page-authentication-smartcard.png)
+![authentication\_smart card](../../.gitbook/assets/ui-page-authentication-smartcard.png)
 
 More advanced scenarios are supported through the use of being able to provide your own additional mandatory EKUs, or restricting authentication to specific issuers. Seek advice from your internal team that manages smart card issuance to if you are not sure if any of these settings are required.
 
 ## Identity resolution mode
+
 In line with the certificate-based authentication changes announced by Microsoft in [KB5014754](https://support.microsoft.com/en-us/topic/kb5014754-certificate-based-authentication-changes-on-windows-domain-controllers-ad2c23b0-15d8-4340-a468-4d4f3b188f16), Access Manager by default now only accepts certificates containing the user's SID in an extension with OID `1.3.6.1.4.1.311.25.2`, or contained in a [SAN URL extension with the prefix](https://learn.microsoft.com/en-us/openspecs/windows_protocols/ms-pkca/e8fd2c1d-50d3-493a-9b58-5e453850c567) `tag:microsoft.com,2022-09-14:sid:`.
 
 If you are using older-style certificates, you need to select `Enable weak identity bindings` and select `enable UPN mapping`.
@@ -59,17 +60,19 @@ It is important to note that, unless properly secured, any user may send this he
 
 #### Nginx Reverse Proxy
 
-1. Configure the server to receive client certificates with the [ssl_verify_client directive](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_verify_client).
+1. Configure the server to receive client certificates with the [ssl\_verify\_client directive](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_verify_client).
 2. Configure the `X-Client-Cert` header to be forwarded to Access Manager.
 
-This forwards the [$ssl_client_escaped_cert](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#var_ssl_client_escaped_cert) variable, which is a URL-encoded version of the client certificate:
+This forwards the [$ssl\_client\_escaped\_cert](https://nginx.org/en/docs/http/ngx_http_ssl_module.html#var_ssl_client_escaped_cert) variable, which is a URL-encoded version of the client certificate:
 
-    ```
-    # To avoid a client falsifying the header, first unset it.
-    proxy_set_header Accept-Encoding "";
-    proxy_set_header X-Client-Cert $ssl_client_escaped_cert;
-    ```
+````
+```
+# To avoid a client falsifying the header, first unset it.
+proxy_set_header Accept-Encoding "";
+proxy_set_header X-Client-Cert $ssl_client_escaped_cert;
+```
+````
 
-####  Citrix ADC
+#### Citrix ADC
 
 You can follow [this guide](https://support.citrix.com/article/CTX217167/how-to-pass-client-certificate-to-backend-applications-that-requires-client-certificate-for-user-authentication-sslbridge) to insert to forward the client certificate as a header to Access Manager.

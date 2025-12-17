@@ -7,16 +7,16 @@ Note, that we recommend that you use a strong authentication mechanism such as O
 {% endhint %}
 
 ## Part 1: Configure the SPN
+
 To ensure kerberos authentication works correctly you'll need to register an SPN for the Access Manager service account.
 
 The SPN must be in the format of `HTTP/{dnsName}` where `{dnsName}` is the external-facing DNS hostname used by the clients.
 
-If this SPN is not set correctly, the following warning will appear in the `Service account` section of the `Host configuration` page. You can use the "Set SPN..." script to correct the problem.
-![](../../images/spn-warning.png)
+If this SPN is not set correctly, the following warning will appear in the `Service account` section of the `Host configuration` page. You can use the "Set SPN..." script to correct the problem. ![](../../.gitbook/assets/spn-warning.png)
 
 ## Part 2: Configure Lithnet Access Manager
 
-![!](../../images/ui-page-authentication-iwa.png)
+![!](../../.gitbook/assets/ui-page-authentication-iwa.png)
 
 1. Open the Lithnet Access Manager Service Configuration Tool
 2. Select the `App configuration\User authentication` page

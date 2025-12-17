@@ -1,6 +1,6 @@
 # Computer authorization rules page
 
-![](../../images/ui-page-authorization-rules-computers.png)
+![](../../.gitbook/assets/ui-page-authorization-rules-computers.png)
 
 ## Computer authorization rules
 
@@ -18,7 +18,7 @@ The `Save permission report` tool allows you to export a list of all the princip
 
 #### Rule settings
 
-![](../../images/ui-page-authorization-rules-computers-edit-rule-rule-settings.png)
+![](../../.gitbook/assets/ui-page-authorization-rules-computers-edit-rule-rule-settings.png)
 
 A target is a computer, group, or container that you want to grant access to. A target can be one of the following types of object
 
@@ -47,7 +47,7 @@ You can disable an authorization rule by selecting the `disable rule` checkbox. 
 
 #### Access control
 
-![](../../images/ui-page-authorization-rules-computers-edit-rule-access-control.png)
+![](../../.gitbook/assets/ui-page-authorization-rules-computers-edit-rule-access-control.png)
 
 AMS allows you to determine who is authorized to access a target, and what they can access. You can do this through the built-in permission editor or if you have complex authorization rules, you can use a PowerShell script to determine access.
 
@@ -55,40 +55,41 @@ AMS allows you to determine who is authorized to access a target, and what they 
 
 The first is the built-in permission editor. This is where you define an ACL that determines who can access a computer and what type of access they can get.
 
-![](../../images/ui-page-authz-editsecurity-laps.png)
+![](../../.gitbook/assets/ui-page-authz-editsecurity-laps.png)
 
 Add users and groups to this list and select the type of access they should be allowed or denied.
 
-![](../../images/badge-enterprise-edition-rocket.svg) Access to local admin password history is an [Enterprise edition feature](../../access-manager-editions.md)
+![](<../../.gitbook/assets/badge-enterprise-edition-rocket (1).svg>) Access to local admin password history is an [Enterprise edition feature](../../access-manager-editions.md)
 
 **Use a PowerShell script**
 
-![](../../images/badge-enterprise-edition-rocket.svg) PowerShell-based authorization scripts are an [Enterprise edition feature](../../access-manager-editions.md)
+![](<../../.gitbook/assets/badge-enterprise-edition-rocket (1).svg>) PowerShell-based authorization scripts are an [Enterprise edition feature](../../access-manager-editions.md)
 
 You can also use a PowerShell script to determine if a user should be allowed to access a computer. This allows you to call into an external system to make an authorization decision.
 
 See the page on [Authorization scripts](../advanced-help-topics/authorization-scripts.md) for more information on the script format.
 
 #### Request reason
+
 When a user accesses a role, you can prompt them to provide a reason for accessing the role. You can choose to make this prompt mandatory, optional, or not shown at all.
 
 #### Local admin password settings
 
-![](../../images/ui-page-authorization-rules-computers-edit-rule-password-settings.png)
+![](../../.gitbook/assets/ui-page-authorization-rules-computers-edit-rule-password-settings.png)
 
 If at least one of your ACLs allows access to the local admin passwords of the specified targets, then you'll have an option that allows you to choose to expire the local admin password after it has been accessed.
 
 This has the effect of setting the expiry date for the password in the directory to a new date based on the interval you specify. The password be rotated the next time the Microsoft LAPS or Lithnet Access Manager agents check in _after_ this new time. Note, that the Microsoft LAPS client checks the password at group policy refresh time (every \~90 minutes) and the Lithnet Access Manager agent by default, checks every 60 minutes, so rotations may be delayed by these intervals.
 
 {% hint style="info" %}
-When a computer is using Microsoft's Windows LAPS agent, and it is configured to store its password in Microsoft Entra, then password rotation is not possible. Entra does not provide an API that AMS can use to indicate to the machine that the password should be rotated. 
+When a computer is using Microsoft's Windows LAPS agent, and it is configured to store its password in Microsoft Entra, then password rotation is not possible. Entra does not provide an API that AMS can use to indicate to the machine that the password should be rotated.
 
 You can however use the built-in [PostAuthenticationActions and PostAuthenticationResetDelay policy settings](https://learn.microsoft.com/en-us/windows-server/identity/laps/laps-management-policy-settings#postauthenticationresetdelay) to trigger the password change after logon.
 {% endhint %}
 
 #### Just-in-time access settings
 
-![](../../images/ui-page-authorization-rules-computers-edit-rule-jit-settings.png)
+![](../../.gitbook/assets/ui-page-authorization-rules-computers-edit-rule-jit-settings.png)
 
 If at least one of your ACLs allows JIT access to computers matching in the target, then you'll need to specify the JIT group and expiry settings.
 

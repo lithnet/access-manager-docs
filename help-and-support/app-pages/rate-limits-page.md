@@ -1,8 +1,8 @@
 # Rate limit configuration page
 
-Access Manager allows you to limit the number of requests per minute, hour and per day for a given user or IP address. Rate limits are designed to protect against a mass-enumeration attempt, and should be set high enough so that users do not encounter them. 
+Access Manager allows you to limit the number of requests per minute, hour and per day for a given user or IP address. Rate limits are designed to protect against a mass-enumeration attempt, and should be set high enough so that users do not encounter them.
 
-![](../../images/ui-page-rate-limits.png)
+![](../../.gitbook/assets/ui-page-rate-limits.png)
 
 ## Per-user and Per-IP rate limits
 
