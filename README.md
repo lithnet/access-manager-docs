@@ -1,6 +1,6 @@
 # Home
 
-![](.gitbook/assets/access-manager-logo.png)
+<picture><source srcset=".gitbook/assets/Access Manager - Dark - No Border.png" media="(prefers-color-scheme: dark)"><img src=".gitbook/assets/access-manager-logo.png" alt="" width="375"></picture>
 
 Lithnet Access Manager allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way. Our goals are to help you deploy best practice security solutions like LAPS and just-in-time (JIT) access, while minimizing the friction usually associated with deploying such tools.
 
