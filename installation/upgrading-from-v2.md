@@ -17,7 +17,7 @@ The v3 server can host both v2 and v3 agents.
 
 ### Before you upgrade
 #### Update your license
-If you are an Access Manager *enterprise edition* customer, ensure that you have applied an AMSv3 license to your instance of AMS before you perform the upgrade. Contact [Lithnet support](https://lithnet.io/support) if you have not been issued an AMSv3 license key.
+If you are an Access Manager *enterprise edition* customer, ensure that you have applied an AMSv3 license to your instance of AMS before you perform the upgrade. Contact [Lithnet support](https://lithnet.io/support?utm_source=docs&utm_medium=crosslink&utm_campaign=ams-contact) if you have not been issued an AMSv3 license key.
 
 All AMSv3 licenses are compatible with the AMSv2 server; this way, licences can be installed in advance of the upgrade.
 

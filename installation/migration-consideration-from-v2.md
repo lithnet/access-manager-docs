@@ -7,7 +7,7 @@ Upgrading your environment from version 2 to version 3 of Access Manager require
 ### Enterprise edition license key update required
 If you are an Access Manager *enterprise edition* customer, you will require a new license key to support AMSv3.
 
-Existing *enterprise edition* customers should contact [Lithnet support](https://lithnet.io/support) to obtain an AMSv3 license prior to upgrading if they have no already done so.
+Existing *enterprise edition* customers should contact [Lithnet support](https://lithnet.io/support?utm_source=docs&utm_medium=crosslink&utm_campaign=ams-contact) to obtain an AMSv3 license prior to upgrading if they have no already done so.
 
 ### Community edition no longer allows web app customization
 Access Manager v2 allowed *community edition* users to customize some elements of the web app such as branding and custom logo use.
