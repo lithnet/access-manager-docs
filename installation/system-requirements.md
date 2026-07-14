@@ -9,7 +9,7 @@ The Lithnet Access Manager Service requires Windows Server 2016 or higher.
 #### Dependencies
 
 * [.NET Desktop Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.0 or later installed
-* [.NET Hosting Bundle](hhttps://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.0 or later installed
+* [ASP.NET Core Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0/runtime) 8.0.0 or later installed
 * Microsoft SQL Express 2022 (if hosting the database locally), SQL Server 2019 or later (Standard or Enterprise edition), Azure SQL or an Amazon RDS SQL database. (SQL express is installed by default). See the [SQL installation options](installing-the-access-manager-server/sql-installation-options.md) page for more details
 
 ## Access Manager Agent Operating System Support
@@ -32,7 +32,6 @@ The agent requires the installation of .NET Framework 4.7.2 or later if it is no
 
 #### Supported versions
 
-* macOS 13 (Ventura) (Intel or ARM64)
 * macOS 14 (Sonoma) (Intel or ARM64)
 * macOS 15 (Sequoia) (Intel or ARM64)
 * macOS 26 (Tahoe) (ARM64)
@@ -58,6 +57,7 @@ The following operating system versions have been tested and are supported by Li
 | Ubuntu       | 20.04   | x64/arm64    |
 | Ubuntu       | 22.04   | x64/arm64    |
 | Ubuntu       | 24.04   | x64/arm64    |
+| Ubuntu       | 26.04   | x64/arm64    |
 | RHEL         | 8       | x64/arm64    |
 | RHEL         | 9       | x64/arm64    |
 | RHEL         | 10       | x64/arm64    |

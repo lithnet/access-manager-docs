@@ -1,6 +1,8 @@
 # What's new in Lithnet Access Manager v3
 Lithnet Access Manager v3 - the latest major release of Access Manager - is an exciting new release that's sure to revolutionize the way you use LAPS in your organization!
 
+Access Manager v3.1 is now available. See [what's new in v3.1](https://docs.lithnet.io/ams/v3.1/whats-new-in-v3.1).
+
 ## RapidLAPS passwordless login
 We've made typing in long and complicated LAPS passwords a thing of the past!
 

@@ -3,14 +3,14 @@
 ## Access Manager Service installer
 The Access Manager service installer can be operated offline, however, it does require downloading and installing the following dependencies
 - [.NET Desktop Runtime](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime) 8.0.0 or later installed
-- [.NET Hosting Bundle](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime) 8.0.0 or later installed
+- [ASP.NET Core Runtime](https://dotnet.microsoft.com/download/dotnet-core/8.0/runtime) 8.0.0 or later installed
 
-If you plan to use an SQL Express database, then you also need to [download the SQL Express installer](https://download.microsoft.com/download/7/c/1/7c14e92e-bdcb-4f89-b7cf-93543e7112d1/SQLEXPR_x64_ENU.exe) - however, do not install it manually. Copy the file to the server, and the installer will prompt you for the location of the installer, so it can perform the installation using the correct parameters. Installing SQL express manually will result in certain features like backup capability being broken.
+If you plan to use an SQL Express database, then you also need to [download the SQL Express installer](https://download.microsoft.com/download/3/8/d/38de7036-2433-4207-8eae-06e247e17b25/SQLEXPR_x64_ENU.exe) - however, do not install it manually. Copy the file to the server, and the installer will prompt you for the location of the installer, so it can perform the installation using the correct parameters. Installing SQL express manually will result in certain features like backup capability being broken.
 
 For the installer to download the necessary prerequisites itself, the following hosts must be contactable.
 | Capability | Destination host | Destination ports |
 | --- | --- | --- |
-| .NET runtimes | download.visualstudio.microsoft.com | TCP 443 |
+| .NET runtimes | builds.dotnet.microsoft.com | TCP 443 |
 | SQL Express | download.microsoft.com | TCP 443 |
 
 ## Access Manager Service

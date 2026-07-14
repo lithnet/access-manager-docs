@@ -4,6 +4,10 @@
 
 Lithnet Access Manager allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way. Our goals are to help you deploy best practice security solutions like LAPS and just-in-time (JIT) access, while minimizing the friction usually associated with deploying such tools.
 
+{% hint style="info" %}
+Access Manager v3.1 is now available, and is supported until 14 November 2028. See [what's new in v3.1](https://docs.lithnet.io/ams/v3.1/whats-new-in-v3.1) and the [upgrade guide](https://docs.lithnet.io/ams/v3.1/installation/upgrading-from-v3.0).
+{% endhint %}
+
 Access Manager can help reduce the likelihood and impact of a wide-spread compromise in your environment by enabling you to effectively replace permanent administrative access to your workstations and servers.
 
 ### Usability front-and-centre, without compromising security

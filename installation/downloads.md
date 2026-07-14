@@ -1,5 +1,9 @@
 # Downloads
 
+{% hint style="warning" %}
+**Access Manager v3.1 is now available.** This page contains downloads for Access Manager v3.0. For the latest release, go to the [Access Manager v3.1 downloads page](https://docs.lithnet.io/ams/v3.1/installation/downloads).
+{% endhint %}
+
 ## Access Manager Service Downloads
 
 ### Access Manager Service
@@ -27,29 +31,13 @@ For more information on planning your AMS v3 migration, see our [upgrading from 
 | | RHEL 8, 9, 10<br>Fedora 35, 36, 37, 38, 39, 40, 41, 42 | [x64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/x64/stable) |
 | | RHEL 8, 9, 10<br>Fedora 35, 36, 37, 38, 39, 40, 41, 42| [arm64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.0/arm64/stable) |
 | Linux<br>(DEB-based distros)  || [install via repo](./installing-the-access-manager-agent/installing-the-access-manager-agent-linux.md#installing-the-agent-on-debian-using-the-lithnet-repo) |
-| | Debian 11, 12, 13<br> Ubuntu 20.04, 22.04, 24.04 | [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/x64/stable) |
-| | Debian 11, 12, 13<br> Ubuntu 20.04, 22.04, 24.04 | [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/arm64/stable) |
+| | Debian 11, 12, 13<br> Ubuntu 20.04, 22.04, 24.04, 26.04 | [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/x64/stable) |
+| | Debian 11, 12, 13<br> Ubuntu 20.04, 22.04, 24.04, 26.04 | [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.0/arm64/stable) |
 | Linux<br> (Other distros) | Tarball | [x64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.0/x64/stable) | 
 | | | [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.0/arm64/stable) |
-| macOS | macOS 13 or higher | [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/x64/stable) |
-| macOS | macOS 13 or higher | [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/arm64/stable) |
+| macOS | macOS 14 or higher | [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/x64/stable) |
+| macOS | macOS 14 or higher | [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.0/arm64/stable) |
 
 ## Previous versions
 
-### Access Manager Service (Version 2)
-| Item | Operating system | Architecture |
-| --- | --- | --- |
-| Lithnet Access Manager Service v2 | Windows Server 2016 or higher | [x64](https://packages.lithnet.io/win/access-manager-service/v2.1/x64/stable)  |
-
-
-### Access Manager Agent (Version 2)
-
-{% hint style="info" %}
-**Note**: Access Manager Agent v2 is supported by servers running either Access Manager Server v2 or v3.
-
-However, [features introduced in Access Manager v3](../whats-new.md) are not available in these agents.
-
-For more information on planning your AMS v3 migration, see our [upgrading from Access Manager v2 to v3](./upgrading-from-v2.md) guide.
-{% endhint %}
-
-Go to the [Access Manager v2 download page](https://docs.lithnet.io/ams/v2.0/installation/downloads).
+* [Access Manager v2.1 downloads](https://docs.lithnet.io/ams/v2.1/installation/downloads)

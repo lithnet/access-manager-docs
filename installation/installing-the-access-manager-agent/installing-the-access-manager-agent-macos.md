@@ -8,7 +8,7 @@ The agent itself runs using launchd, and as it requires access to reset the root
 
 ### OS requirements
 
-The agent requires macOS 13 or later. Packages are available for both Intel and M-series Macs.
+The agent requires macOS 14 or later. Packages are available for both Intel and M-series Macs.
 
 ## Download the agent
 Download the agent for the appropriate architecture from the downloads page, or directly from the package repository using the script below.
