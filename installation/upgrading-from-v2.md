@@ -88,6 +88,10 @@ View the following guides for configuring your policies for the various supporte
 * [Setting up BitLocker backup](../configuration/deploying-features/fve-backup/setting-up-bitlocker-ams.md)
 
 ### Deploy Windows agents
+
+{% hint style="info" %}
+The v3.1 Windows agent is available for x64 and arm64 only. Devices running 32-bit versions of Windows can continue to use the v3.0 agent until v3.0 reaches its end of support on 10 November 2026.
+{% endhint %}
 The Windows agent can be deployed directly over the top of the existing v2 agent as an in-place upgrade.
 
 For more information, read the guide on [installing the Access Manager agent on Windows](installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md).

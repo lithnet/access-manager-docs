@@ -5,7 +5,7 @@
 In order to install the Access Manager Agent, the following prerequisites must be met
 
 1. Windows 10 or Windows Server 2016 or later
-2. [.NET Framework Runtime](https://dotnet.microsoft.com/download) 4.7.2 or later installed for x86 and x64 versions of Windows
+2. [.NET Framework Runtime](https://dotnet.microsoft.com/download) 4.7.2 or later installed for x64 versions of Windows
 2. [.NET Framework Runtime](https://dotnet.microsoft.com/download) 4.8.1 or later installed for arm64 versions of Windows
 
 We recommend using a configuration management tool such as SCCM to deploy the agent to your fleet.
@@ -20,7 +20,7 @@ Other devices must use a registration key, obtained from the AMS server to authe
 
 ## Download and install the Access Manager Agent
 
-1. Download the latest version of the agent from the [downloads](../downloads.md) page. Take note that you must install the x64 version on 64-bit machines, and the x86 version on 32-bit machines.
+1. Download the latest version of the agent from the [downloads](../downloads.md) page. Take note that you must install the x64 version on 64-bit machines.
 2. Run the agent installation package. When prompted, enter the server name, and choose the registration mode you'd like to use for the agent
 
 {% hint style="warning" %}

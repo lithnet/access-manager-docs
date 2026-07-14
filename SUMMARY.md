@@ -5,6 +5,7 @@
 * [Access Manager Editions](access-manager-editions.md)
 * [Licensing](licensing.md)
 * [What's new in Access Manager v3](whats-new.md)
+* [What's new in v3.1](whats-new-in-v3.1.md)
 * [Change log](change-log.md)
 
 ## Installation
@@ -14,6 +15,7 @@
 * [Downloads](installation/downloads.md)
 * [Upgrading from Access Manager v1](installation/upgrading-from-v1.md)
 * [Upgrading from Access Manager v2](installation/upgrading-from-v2.md)
+* [Upgrading from Access Manager v3.0](installation/upgrading-from-v3.0.md)
   * [Considerations for migrating from Access Manager v2](installation/migration-consideration-from-v2.md)
 * [Installing the Access Manager Server](installation/installing-the-access-manager-server/README.md)
   * [Creating a service account for the Access Manager Service](installation/installing-the-access-manager-server/creating-a-service-account-for-the-access-manager-service.md)

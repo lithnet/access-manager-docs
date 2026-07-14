@@ -64,4 +64,4 @@ This option allows you to control how Access Manager selects a domain controller
 
 ### Notifications
 
-Set the audit notification channels you want to be notified on success or failure events for this rule. See [the auditing](/broken/pages/EQwVKobYKxKObFsJuVce) help topic for information about creating notification channels.
+Set the audit notification channels you want to be notified on success or failure events for this rule. See [the auditing](auditing-page.md) help topic for information about creating notification channels.

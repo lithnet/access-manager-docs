@@ -1,6 +1,8 @@
 # What's new in Lithnet Access Manager v3
 Lithnet Access Manager v3 - the latest major release of Access Manager - is an exciting new release that's sure to revolutionize the way you use LAPS in your organization!
 
+Already running Access Manager 3.0? See [What's new in v3.1](whats-new-in-v3.1.md) for the changes in this release.
+
 ## RapidLAPS passwordless login
 We've made typing in long and complicated LAPS passwords a thing of the past!
 
@@ -49,7 +51,7 @@ This means that wherever your devices are, or the directory they're tied to - ma
   * *Note*: Entra ID-registered devices can still register with AMS via *registration tokens*.
 
 ### Changed features
-* The Lithnet Access Manager Service now requires Microsoft .NET 8.0 
+* The Lithnet Access Manager Service now requires Microsoft .NET 10
 
 ## What's new in the Lithnet Access Manager Agent
 The agent now supports passphrases, backing up BitLocker recovery keys for Windows devices, and enables our new RapidLAPS feature on Windows.
@@ -69,6 +71,7 @@ The agent now supports passphrases, backing up BitLocker recovery keys for Windo
 ### Removed features
 * The Access Manager Agent no longer writes LAPS passwords to Active Directory. All LAPS passwords are saved to the Access Manager server itself.
 * The v3 Access Manager Agent can only communicate with a v3 server. Therefore, the Access Manager Server must be upgraded to v3 before upgrading the clients to v3. Note, that v2 agents will continue to work with the v3 server.
+* Support for 32-bit (x86) versions of Windows has been dropped in v3.1. The Windows agent is available for x64 and arm64 only.
 * The Access Manager Agent no longer supports using Entra-based authentication for Entra-registered devices. The device must be Entra-joined to be able use Entra authentication.
 * Windows 8.1 and Windows Server 2012 are no longer supported. 
 * Support for agents running on ARM32-based Linux operating systems is no longer available
@@ -77,8 +80,8 @@ The agent now supports passphrases, backing up BitLocker recovery keys for Windo
 * The Lithnet Access Manager custom Active Directory schema is no longer used by the agent
 
 ### Changed features
-* The Lithnet Access Manager Agent for macOS and Linux now requires Microsoft .NET 8.0
+* The Lithnet Access Manager Agent for macOS and Linux now requires Microsoft .NET 10
 * The Lithnet Access Manager Agent for ARM64 versions of Windows requires .NET Framework 4.8.1
-* The Lithnet Access Manager Agent for x86 and x64 versions of Windows requires .NET Framework 4.7.2 or higher
+* The Lithnet Access Manager Agent for x64 versions of Windows requires .NET Framework 4.7.2 or higher
 * Group Policy is no longer used to manage the Access Manager Agent for Windows. All policy settings are configured via agent policies on the Access Manager Server
 * Customization of the web app, including adding a custom logo, is now an [enterprise edition](./access-manager-editions.md) feature.
