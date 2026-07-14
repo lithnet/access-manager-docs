@@ -1,4 +1,7 @@
 # What's new in Lithnet Access Manager v2
+
+Access Manager v3.1 is now available. See [what's new in Access Manager v3](https://docs.lithnet.io/ams/v3.1/whats-new) and the [upgrading from v2 guide](https://docs.lithnet.io/ams/v3.1/installation/upgrading-from-v2).
+
 Lithnet Access Manager v2 brings many new and exciting capabilities to our product. We've heard you loud and clear - you want LAPS everywhere in your organization! Well, the Access Manager Agent now supports managing local admin passwords on Azure AD joined and registered devices. We didn't stop there, we've added support for managing the root password on macOS and Linux, and even extended capability to managing LAPS passwords on Windows machines that are not joined to any domain at all!
 
 Our other exciting new, and perhaps most requested feature, is extending our just-in-time access functionality to Active Directory groups. You can now define a role in Access Manager, and authorized users can claim that role, giving them time-limited membership in your customer AD group!

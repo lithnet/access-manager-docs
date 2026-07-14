@@ -2,6 +2,10 @@
 
 ![](<.gitbook/assets/access-manager-logo (1).png>)
 
+{% hint style="warning" %}
+**Access Manager v3.1 is now available.** This documentation is for Access Manager v2.1, which is supported until 10 November 2026. See [what's new in Access Manager v3](https://docs.lithnet.io/ams/v3.1/whats-new) and the [upgrading from v2 guide](https://docs.lithnet.io/ams/v3.1/installation/upgrading-from-v2).
+{% endhint %}
+
 Lithnet Access Manager is a tool that allows you to safely delegate sensitive administrative access to computers in your organization in a modern and user-friendly way.
 
 It provides a web-based interface that allows users to request local admin/root passwords, BitLocker recovery keys, and grant just-in-time administrative access to their own accounts.

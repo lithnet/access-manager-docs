@@ -10,7 +10,7 @@ The agent itself runs using systemd, and as it requires access to reset the root
 
 ### .NET requirements
 
-The agent is build using Microsoft .NET 9.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) for more information.
+The agent is built using Microsoft .NET 8.0. Ensure the distribution you are using is supported See the [Microsoft guide for supported operating systems for .NET 8.0](https://github.com/dotnet/core/blob/main/release-notes/8.0/supported-os.md) for more information.
 
 ## Agent installation
 
@@ -50,7 +50,7 @@ Use the appropriate package management tool to install the agent
 
 ```shell
 # Download the x64 Access Manager Agent
-curl -L https://packages.lithnet.io/linux/rpm/prod/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.rpm
+curl -L https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.rpm
 sudo dnf install ~/accessmanager.rpm
 ```
 
@@ -117,7 +117,7 @@ sudo apt install lithnetaccessmanageragent
 Use the appropriate package management tool to install the agent
 
 ```shell
-curl -L https://packages.lithnet.io/linux/deb/prod/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.deb
+curl -L https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v2.1/x64/stable -o ~/accessmanager.deb
 sudo apt install ~/accessmanager.deb
 ```
 
