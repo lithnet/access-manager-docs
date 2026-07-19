@@ -1,9 +1,3 @@
-{% hint style="warning" icon="clock" %}
-This release line reaches end of life on 14th November 2028. [View upgrade guide →](https://go.lithnet.io/w08n5fe9)
-{% endhint %}
-
-# Change log
-
 {% updates format="full" %}
 
 {% update date="2026-07-19" tags="breaking,security" %}
