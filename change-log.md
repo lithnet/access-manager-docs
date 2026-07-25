@@ -1,7 +1,7 @@
 {% updates format="full" %}
 
-{% update date="2026-07-19" tags="breaking,security" %}
-## v3.1.1089
+{% update date="2026-07-21" tags="breaking,security" %}
+## v3.1.1102
 
 {% hint style="danger" icon="triangle-exclamation" %}
 This release contains breaking changes. Review the details below before upgrading.
@@ -71,14 +71,14 @@ Access Manager v3.1
 
 ### Downloads
 
-- **Service**: [x64](https://packages.lithnet.io/win/access-manager-service/v3.1/x64/LithnetAccessManagerService-3.1.1089.0-x64.exe)
+- **Service**: [x64](https://packages.lithnet.io/win/access-manager-service/v3.1/x64/LithnetAccessManagerService-3.1.1102.0-x64.exe)
 - **Agent**
-  - **Windows**: [x64](https://packages.lithnet.io/win/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-Windows-3.1.1089.0-x64.msi) · [arm64](https://packages.lithnet.io/win/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-Windows-3.1.1089.0-arm64.msi)
+  - **Windows**: [x64](https://packages.lithnet.io/win/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-Windows-3.1.1102.0-x64.msi) · [arm64](https://packages.lithnet.io/win/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-Windows-3.1.1102.0-arm64.msi)
   - **Linux**
-    - **Debian / Ubuntu**: [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1089.0-1_amd64.deb) · [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1089.0-1_arm64.deb)
-    - **RHEL / Fedora**: [x64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3-3.1.1089.0-1.x86_64.rpm) · [arm64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3-3.1.1089.0-1.aarch64.rpm)
-    - **Portable (tar.gz)**: [x64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1089.0-1_x64.tar.gz) · [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1089.0-1_arm64.tar.gz)
-  - **macOS**: [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-macos-3.1.1089.0-x64.pkg) · [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-macos-3.1.1089.0-arm.pkg)
+    - **Debian / Ubuntu**: [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1102.0-1_amd64.deb) · [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1102.0-1_arm64.deb)
+    - **RHEL / Fedora**: [x64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3-3.1.1102.0-1.x86_64.rpm) · [arm64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3-3.1.1102.0-1.aarch64.rpm)
+    - **Portable (tar.gz)**: [x64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1102.0-1_x64.tar.gz) · [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1102.0-1_arm64.tar.gz)
+  - **macOS**: [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-macos-3.1.1102.0-x64.pkg) · [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-macos-3.1.1102.0-arm.pkg)
 
 {% endupdate %}
 
