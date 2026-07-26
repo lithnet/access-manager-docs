@@ -2,6 +2,8 @@
 
 Access Manager v3.1 moves the v3 release line to .NET 10. It contains no functional changes over an up-to-date v3.0 installation. Upgrading extends your support window and updates the operating systems the product supports.
 
+Upgrading from Access Manager v2? The features you're gaining were introduced in v3.0 — see [What's new in Access Manager v3](whats-new.md).
+
 ## Extended support
 
 Access Manager v3.0 reaches its end of support on 10 November 2026, in line with Microsoft .NET 8. Access Manager v3.1 is supported until 14 November 2028. See the [product lifecycle page](help-and-support/lifecycle.md) for all support dates.
