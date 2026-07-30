@@ -2,7 +2,7 @@
 
 Access Manager v3.1 moves the v3 release line to .NET 10. It contains no functional changes over an up-to-date v3.0 installation. Upgrading extends your support window and updates the operating systems the product supports.
 
-Upgrading from Access Manager v2? The features you're gaining were introduced in v3.0 — see [What's new in Access Manager v3](whats-new.md).
+Upgrading from Access Manager v2? The features you're gaining were introduced in v3.0. See [What's new in Access Manager v3](whats-new.md).
 
 ## Extended support
 
@@ -18,4 +18,4 @@ The Access Manager service, and the agents for macOS and Linux, now run on Micro
 * Support for Fedora 43 and Fedora 44 has been added.
 * Support for Debian 11, Ubuntu 20.04, Fedora 35 through 41, and macOS 13 has been removed, as these are not supported by .NET 10.
 
-See [Upgrading from Access Manager v3.0](installation/upgrading-from-v3.0.md) for upgrade steps.
+See [Upgrading from Access Manager v3.0](installation/upgrading-from-v3.0.md) for upgrade steps, and the [downloads page](installation/downloads.md) for the v3.1 installers.

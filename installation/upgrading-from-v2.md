@@ -55,7 +55,7 @@ C:\> setspn -S http/ams.dev.lithnet.local svc-lithnetams
 ```
 
 ### Method 1: In-place upgrade
-The in-place upgrade process from Access Manager v2 to v3 is very straight forward. You can simply install the new version of AMS over the top, and the application will update the database and relevant configuration settings.
+The in-place upgrade process from Access Manager v2 to v3 is very straight forward. You can simply install the [new version of AMS](downloads.md) over the top, and the application will update the database and relevant configuration settings.
 
 If you are using AMS in a highly available load-balanced configuration:
 1. Stop the 'Lithnet Access Manager' service on all nodes in the farm.
@@ -92,7 +92,7 @@ View the following guides for configuring your policies for the various supporte
 {% hint style="info" %}
 The v3.1 Windows agent is available for x64 and arm64 only. Devices running 32-bit versions of Windows can continue to use the v3.0 agent until v3.0 reaches its end of support on 10 November 2026.
 {% endhint %}
-The Windows agent can be deployed directly over the top of the existing v2 agent as an in-place upgrade.
+The Windows agent can be deployed directly over the top of the existing v2 agent as an in-place upgrade. You can download the agent from the [downloads page](downloads.md).
 
 For more information, read the guide on [installing the Access Manager agent on Windows](installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md).
 

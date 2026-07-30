@@ -6,7 +6,7 @@ If you are upgrading from Access Manager v2, follow the [v2 upgrade guide](upgra
 
 ## Upgrading the Access Manager Server
 
-v3.1 is an in-place upgrade from v3.0. Run the v3.1 'Access Manager Service' installer over the top of the existing installation. The v3.0 configuration and database are compatible with v3.1, and no configuration changes are required. The installer automatically installs the required .NET 10 runtime components.
+v3.1 is an in-place upgrade from v3.0. Download the v3.1 ['Access Manager Service' installer](downloads.md) and run it over the top of the existing installation. The v3.0 configuration and database are compatible with v3.1, and no configuration changes are required. The installer automatically installs the required .NET 10 runtime components.
 
 As a best practice precaution, we recommend taking a backup of the server and database before performing the upgrade.
 
@@ -20,3 +20,5 @@ The v3.1 agents install over the top of the existing v3.0 agents on all platform
 
 * The v3.1 Windows agent is available for x64 and arm64 only. Devices running 32-bit versions of Windows can continue to use the v3.0 agent until v3.0 reaches its end of support.
 * The v3.1 agents for Linux and macOS are not available for Debian 11, Ubuntu 20.04, Fedora 35 through 41, or macOS 13, as these operating systems are not supported by .NET 10.
+
+The agent installers are available from the [downloads page](downloads.md). If you installed the Linux agent from the Lithnet package repository, v3.1 is published as an update to the existing package, so a standard package update upgrades the agent. See the installation guides for [Windows](installing-the-access-manager-agent/installing-the-access-manager-agent-windows.md), [macOS](installing-the-access-manager-agent/installing-the-access-manager-agent-macos.md), and [Linux](installing-the-access-manager-agent/installing-the-access-manager-agent-linux.md) for deployment steps.
