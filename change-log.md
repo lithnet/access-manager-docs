@@ -1,5 +1,5 @@
 {% hint style="warning" icon="clock" %}
-**** has been superseded by **v3.1**. This release line reaches end of life on 10th November 2026. [View upgrade guide →](https://go.lithnet.io/hpa0d36k)
+**Access Manager v3.0** has been superseded by **v3.1**. This release line reaches end of life on 10th November 2026. [View upgrade guide →](https://go.lithnet.io/hpa0d36k)
 {% endhint %}
 
 {% updates format="full" %}
