@@ -1,5 +1,55 @@
 {% updates format="full" %}
 
+{% update date="2026-08-12" tags="security" %}
+## v3.1.1114
+
+{% hint style="warning" icon="shield-halved" %}
+This release contains an important security fix. Update recommended.
+{% endhint %}
+
+Access Manager v3.1
+
+### Service
+
+<mark style="color:orange;"><i class="fa-shield-halved">:shield-halved:</i></mark> **Security**
+- Disables the built-in .NET diagnostics interface
+- Updates .NET to resolve the August 2026 security vulnerabilities
+
+<mark style="color:blue;"><i class="fa-wrench">:wrench:</i></mark> **Fixed**
+- Fixes an issue where a trusted domain could fail to be recognised when its name casing differed
+
+### Agent
+
+#### Windows
+
+<mark style="color:blue;"><i class="fa-wrench">:wrench:</i></mark> **Fixed**
+- Fixes an issue where RapidLAPS was unavailable at the logon screen for up to an hour after a device started while the server was unreachable
+
+#### Linux
+
+<mark style="color:orange;"><i class="fa-shield-halved">:shield-halved:</i></mark> **Security**
+- Disables the built-in .NET diagnostics interface
+- Updates .NET to resolve the August 2026 security vulnerabilities
+
+#### macOS
+
+<mark style="color:orange;"><i class="fa-shield-halved">:shield-halved:</i></mark> **Security**
+- Disables the built-in .NET diagnostics interface
+- Updates .NET to resolve the August 2026 security vulnerabilities
+
+### Downloads
+
+- **Service**: [x64](https://packages.lithnet.io/win/access-manager-service/v3.1/x64/LithnetAccessManagerService-3.1.1114.0-x64.exe)
+- **Agent**
+  - **Windows**: [x64](https://packages.lithnet.io/win/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-Windows-3.1.1114.0-x64.msi) · [arm64](https://packages.lithnet.io/win/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-Windows-3.1.1114.0-arm64.msi)
+  - **Linux**
+    - **Debian / Ubuntu**: [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1114.0-1_amd64.deb) · [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1114.0-1_arm64.deb)
+    - **RHEL / Fedora**: [x64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3-3.1.1114.0-1.x86_64.rpm) · [arm64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3-3.1.1114.0-1.aarch64.rpm)
+    - **Portable (tar.gz)**: [x64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1114.0-1_x64.tar.gz) · [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1114.0-1_arm64.tar.gz)
+  - **macOS**: [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-macos-3.1.1114.0-x64.pkg) · [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-macos-3.1.1114.0-arm.pkg)
+
+{% endupdate %}
+
 {% update date="2026-07-21" tags="breaking,security" %}
 ## v3.1.1102
 
@@ -68,17 +118,6 @@ Access Manager v3.1
 
 <mark style="color:red;"><i class="fa-circle-minus">:circle-minus:</i></mark> **Removed**
 - Support for macOS 13 (Ventura) has been removed
-
-### Downloads
-
-- **Service**: [x64](https://packages.lithnet.io/win/access-manager-service/v3.1/x64/LithnetAccessManagerService-3.1.1102.0-x64.exe)
-- **Agent**
-  - **Windows**: [x64](https://packages.lithnet.io/win/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-Windows-3.1.1102.0-x64.msi) · [arm64](https://packages.lithnet.io/win/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-Windows-3.1.1102.0-arm64.msi)
-  - **Linux**
-    - **Debian / Ubuntu**: [x64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1102.0-1_amd64.deb) · [arm64](https://packages.lithnet.io/linux/deb/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1102.0-1_arm64.deb)
-    - **RHEL / Fedora**: [x64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3-3.1.1102.0-1.x86_64.rpm) · [arm64](https://packages.lithnet.io/linux/rpm/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3-3.1.1102.0-1.aarch64.rpm)
-    - **Portable (tar.gz)**: [x64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent3_3.1.1102.0-1_x64.tar.gz) · [arm64](https://packages.lithnet.io/linux/tar/packages/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent3_3.1.1102.0-1_arm64.tar.gz)
-  - **macOS**: [x64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/x64/LithnetAccessManagerAgent-macos-3.1.1102.0-x64.pkg) · [arm64](https://packages.lithnet.io/macos/access-manager-agent/v3.1/arm64/LithnetAccessManagerAgent-macos-3.1.1102.0-arm.pkg)
 
 {% endupdate %}
 
