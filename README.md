@@ -112,4 +112,4 @@ Read our [getting started guide](installation/getting-started.md) to learn how t
 
 ### Other security solutions from Lithnet
 
-We recommend you also look at [Lithnet Password Protection for Active Directory](https://https/lithnet.io/products/password-protection), to help strengthen your environment against commodity password-based attacks.
+We recommend you also look at [Lithnet Password Protection for Active Directory](https://lithnet.io/products/password-protection), to help strengthen your environment against commodity password-based attacks.
