@@ -55,6 +55,18 @@ Use the following command line to install the agent in AMS registration mode, re
 msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=4 SERVER=ams.lithnet.local REGISTRATIONKEY=XXXX
 ```
 
+### Installing the agent without starting it
+
+By default, the installer starts the agent service as soon as the installation completes, and the agent connects to the AMS server on its first run. If you'd like to install or upgrade the agent without starting it, add `NOSTART=1` to the command line. This is useful when a deployment tool applies the agent configuration after installation, or when you're preparing a virtual machine image that shouldn't register with the AMS server before it's sealed.
+
+```
+msiexec /i Lithnet.AccessManager.Agent.msi /qn AUTHMODE=1 SERVER=ams.lithnet.local NOSTART=1
+```
+
+If you're upgrading an agent that is already running, the installer stops the agent to replace its files, and leaves it stopped when the upgrade completes.
+
+The agent service is still configured to start automatically, so it will start the next time the device restarts. If you're preparing an image, don't restart the machine between installing the agent and sealing the image.
+
 ## Group policy configuration
 If the agents are joined to an Active Directory domain, you can use [group policy](../../help-and-support/advanced-help-topics/group-policy-configuration.md) to configure the server that agents should connect to.
 
