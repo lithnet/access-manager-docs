@@ -1,9 +1,5 @@
 # Enabling Secure Token Support for macOS
 
-{% hint style="info" %}
-This feature is currently in preview. 
-{% endhint %}
-
 This document explains how to configure Lithnet Access Manager to work with macOS accounts that have secure token enabled.
 
 {% hint style="info" %}
